@@ -207,25 +207,8 @@ $(document).ready(function(){
 	
 	}
 
-	// LOAD SCRIPT FUNCTION
-	function loadScript(url, callback) {
-		
-		var head = document.getElementsByTagName('head')[0];
-		var script = document.createElement('script');
-		script.type = 'text/javascript';
-		script.src = url;
-		script.onreadystatechange = callback;
-		script.onload = callback;
-		head.appendChild(script);
-		
-	}
-
-
 	// BACKGROUND CONTROLLER
-	loadScript("assets/js/plugins/three.min.js", function() {
-		canvasSphereBackground();
-	});
-
+	canvasSphereBackground();
 
 /**	2. CYCLE
  *****************************************************/
