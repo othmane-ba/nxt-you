@@ -18,7 +18,7 @@
  ------------------------
 
  --  1. Background
- --  2. Cycle
+ --  2. Title animation
 
 
  ******************************************************************/
@@ -210,25 +210,9 @@ $(document).ready(function () {
     // BACKGROUND CONTROLLER
     canvasSphereBackground();
 
-    /**    2. CYCLE
+    /**    2. TITLE ANIMATION
      *****************************************************/
 
-        // VARIBABLES
-    var cycleDuration = 800;
-    var cycleDelay = 6000;
-
-    // CYCLE SLIDESHOW
-    $("#cycle").cycle({
-
-        fx: "scrollVert",
-        timeout: cycleDelay,
-        delay: 0,
-        autoHeight: "container",
-        speed: cycleDuration,
-        slides: ".slide",
-        log: false
-
-    });
-
+    // TODO
 
 });

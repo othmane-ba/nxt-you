@@ -40,7 +40,6 @@ jQuery(window).on('load', function () {
 
     setTimeout(function () {
         $("#page-loader").addClass("hide-this");
-        $('#cycle').cycle("goto", "0");
 
         setTimeout(function () {
             $(".background-content.page-enter-animated").addClass("show");
