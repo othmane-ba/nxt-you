@@ -1,28 +1,28 @@
 /******************************************************************
-	
-	
-	@ Item          Gravity // Coming Soon - Under Construction
-	@ Version       3.6
-	@ Author		Avanzare
-	@ Website		http://themeforest.net/user/avanzare 
-	
+
+
+ @ Item          Gravity // Coming Soon - Under Construction
+ @ Version       3.6
+ @ Author        Avanzare
+ @ Website        http://themeforest.net/user/avanzare
+
 
  ******************************************************************/
 
 /******************************************************************
 
 
-	------------------------
-	-- TABLE OF CONTENTS --
-	------------------------
-	
-	--  1. ReadMe
-	--  2. Overlay Config
-	--  3. Hero Config
- 	--	4. Hero Background Config
-	--  5. Google Analytics
- 
- 
+ ------------------------
+ -- TABLE OF CONTENTS --
+ ------------------------
+
+ --  1. ReadMe
+ --  2. Overlay Config
+ --  3. Hero Config
+ --    4. Hero Background Config
+ --  5. Google Analytics
+
+
  ******************************************************************/
 
 /** 1. README
@@ -31,7 +31,7 @@
 // !!! 1. DO NOT REMOVE QUOTATION MARKS WHEN GIVEN !!!
 // !!! 2. SAVE THE FILE AND REFRESH YOUR BROWSER TO SEE CHANGES !!!
 
-/**	2. OVERLAY CONFIG
+/**    2. OVERLAY CONFIG
  *******************************************************************/
 
 // OVERLAY SKIN OPTION  [ "black" : "white" ]
@@ -108,7 +108,7 @@ var option_hero_background_sphere_dot_color = "#ffffff";
 // BACKGROUND COLOR
 var option_hero_background_sphere_background_color = "#000000";
 
-/**	5. GOOGLE ANALYTICS
+/**    5. GOOGLE ANALYTICS
  *******************************************************************/
 
 // GOOGLE ANALYTICS - [ "on" : "off" ]

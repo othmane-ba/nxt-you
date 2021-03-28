@@ -8,42 +8,38 @@
 	
 
  ******************************************************************/
- 
- 
- /******************************************************************
 
 
-	------------------------
-	-- TABLE OF CONTENTS --
-	------------------------
-	
-	--  1. Typography
-	--  2. Loading
-	--  3. Content
-	--  4. Overlay
-	--  5. Overlay-Content-About
-	--  6. Overlay-Content-Contact
-	--  7. Overlay Skins
-	--  8. Media Queries
- 
- 
- ******************************************************************/
+/******************************************************************
 
 
+   ------------------------
+   -- TABLE OF CONTENTS --
+   ------------------------
+
+   --  1. Typography
+   --  2. Loading
+   --  3. Content
+   --  4. Overlay
+   --  5. Overlay-Content-About
+   --  6. Overlay-Content-Contact
+   --  7. Overlay Skins
+   --  8. Media Queries
+
+
+******************************************************************/
 
 
 /** 1. TYPOGRAPHY
 *******************************************************************/
 
 html,
-body
-{
+body {
     width: 100%;
     height: 100% !important;
 }
 
-body
-{
+body {
     font-weight: 300;
     font-style: normal;
 
@@ -58,8 +54,7 @@ h2,
 h3,
 h4,
 h5,
-h6
-{
+h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
     line-height: auto;
@@ -67,60 +62,49 @@ h6
     color: #fff;
 }
 
-h1
-{
+h1 {
     font-size: 45px;
 }
 
-h2
-{
+h2 {
     font-size: 35px;
 }
 
-h3
-{
+h3 {
     font-size: 30px;
 }
 
-h4
-{
+h4 {
     font-size: 24px;
 }
 
-h5
-{
+h5 {
     font-size: 18px;
 }
 
-h6
-{
+h6 {
     font-size: 16px;
 }
 
-p
-{
+p {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
 
 a,
 a:hover,
-a:focus
-{
+a:focus {
     cursor: pointer;
     -webkit-transition: all 300ms ease;
-            transition: all 300ms ease;
+    transition: all 300ms ease;
     text-decoration: none;
 }
-
-
 
 
 /** 2. LOADING
 *****************************************************************/
 
-#page-loader
-{
+#page-loader {
     position: fixed;
     z-index: 99999;
     bottom: 0;
@@ -132,35 +116,32 @@ a:focus
     background: #111;
 }
 
-#page-loader.hide-this
-{
+#page-loader.hide-this {
     bottom: 100%;
     -webkit-transition: all 800ms cubic-bezier(.540, .086, .000, .980) .2s;
-            transition: all 800ms cubic-bezier(.540, .086, .000, .980) .2s;
+    transition: all 800ms cubic-bezier(.540, .086, .000, .980) .2s;
 }
 
-#page-loader .spinner-container
-{
+#page-loader .spinner-container {
     position: absolute;
     z-index: 200;
     left: 50%;
-	top: 50%;
+    top: 50%;
 
-    -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-#page-loader .spinner-container .css-spinner
-{
+#page-loader .spinner-container .css-spinner {
     display: block;
 
     width: 36px;
     height: 36px;
 
     -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-            transition: all .4s cubic-bezier(.19, 1, .22, 1);
+    transition: all .4s cubic-bezier(.19, 1, .22, 1);
     -webkit-animation: spinner 400ms linear infinite;
-            animation: spinner 400ms linear infinite;
+    animation: spinner 400ms linear infinite;
 
     opacity: 1;
     border: solid 2px transparent;
@@ -169,67 +150,53 @@ a:focus
     border-radius: 100%;
 }
 
-#page-loader.hide-this .spinner-container .css-spinner
-{
+#page-loader.hide-this .spinner-container .css-spinner {
     opacity: 0;
 }
 
-@-webkit-keyframes spinner
-{
-    0%
-    {
+@-webkit-keyframes spinner {
+    0% {
         -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-    100%
-    {
+    100% {
         -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
-@keyframes spinner
-{
-    0%
-    {
+@keyframes spinner {
+    0% {
         -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-    100%
-    {
+    100% {
         -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
-
-
 
 
 /** 3. CONTENT
 *****************************************************************/
 
-.container-mid
-{
+.container-mid {
     text-align: center;
 }
 
-.hero .container-mid
-{
+.hero .container-mid {
     padding: 60px 30px;
 }
 
-.tooltip.bottom
-{
+.tooltip.bottom {
     margin-top: 6px;
 }
 
-.tooltip.bottom .tooltip-arrow
-{
-    border-bottom-color: rgba(255,255,255,.06);
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: rgba(255, 255, 255, .06);
 }
 
-.tooltip.bottom .tooltip-inner
-{
+.tooltip.bottom .tooltip-inner {
     font-family: 'Raleway', sans-serif;
     font-size: 11px;
 
@@ -239,30 +206,25 @@ a:focus
 
     color: #fff;
     border-radius: 0;
-    background: rgba(255,255,255,.06);
+    background: rgba(255, 255, 255, .06);
 }
 
-.fhp-input
-{
-	display: none !important;
-	opacity: 0 !important;
-	pointer-events: none !important;
+.fhp-input {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 .container-mid.block-overflow,
-.movement-in-progress .container-mid
-{
+.movement-in-progress .container-mid {
     overflow: hidden;
 }
-
-
 
 
 /** 4. OVERLAY
 *****************************************************************/
 
-.overlay
-{
+.overlay {
     background: rgba(0, 0, 0, .8);
 }
 
@@ -270,8 +232,7 @@ a:focus
 /** 5. OVERLAY-CONTENT-ABOUT
 *****************************************************************/
 
-#about h1
-{
+#about h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 41px;
     font-weight: 400;
@@ -285,8 +246,7 @@ a:focus
     color: #fff;
 }
 
-#about p
-{
+#about p {
     font-size: 13px;
     max-width: 610px;
     line-height: 1.5em;
@@ -296,8 +256,7 @@ a:focus
     color: #ccc;
 }
 
-.subscribe-form
-{
+.subscribe-form {
     display: block;
 
     max-width: 470px;
@@ -306,19 +265,17 @@ a:focus
     background: rgba(255, 255, 255, .0);
 }
 
-.subscribe-form.success .input-group
-{
+.subscribe-form.success .input-group {
     cursor: not-allowed;
 }
 
-.subscribe-form input
-{
+.subscribe-form input {
     font-family: 'Raleway', sans-serif;
     font-size: 11px !important;
     font-weight: 300;
 
     -webkit-transition: all .2s ease 0s;
-            transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
     letter-spacing: 1px;
 
     color: #d6d6d6;
@@ -326,43 +283,37 @@ a:focus
     border: 1px solid #d6d6d6;
     border-right: none !important;
     border-radius: 0 !important;
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
     box-shadow: none;
 }
 
-.subscribe-form.error input
-{
+.subscribe-form.error input {
     border-color: rgba(251, 9, 9, 1) !important;
 }
 
-.subscribe-form.success input
-{
-    border-color: rgba(95, 234, 110, 1)!important;
-    background: rgba(255,255,255,.00) !important;
+.subscribe-form.success input {
+    border-color: rgba(95, 234, 110, 1) !important;
+    background: rgba(255, 255, 255, .00) !important;
 }
 
-.subscribe-form input::-webkit-input-placeholder
-{
+.subscribe-form input::-webkit-input-placeholder {
     color: #d6d6d6;
 }
 
-.subscribe-form input::-moz-placeholder
-{
+.subscribe-form input::-moz-placeholder {
     color: #d6d6d6;
 }
 
 .subscribe-form input:focus,
-.subscribe-form input:active
-{
+.subscribe-form input:active {
     color: #ccc;
     border-color: #d6d6d6;
     outline: none;
-    background: rgba(255,255,255,.04);
+    background: rgba(255, 255, 255, .04);
     box-shadow: none;
 }
 
-.subscribe-form button
-{
+.subscribe-form button {
     font-family: 'Raleway', sans-serif;
     font-size: 12px !important;
     font-weight: 300;
@@ -373,7 +324,7 @@ a:focus
     padding: 0 40px !important;
 
     -webkit-transition: all .3s ease 0s;
-            transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -382,63 +333,55 @@ a:focus
     border: 0;
     border: 1px solid #d6d6d6;
     border-radius: 0 !important;
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
     box-shadow: none;
 }
 
-.subscribe-form.success button
-{
+.subscribe-form.success button {
     cursor: not-allowed;
 
     border-color: rgba(95, 234, 110, 1) !important;
     background: rgba(95, 234, 110, 1) !important;
 }
 
-.subscribe-form.error button
-{
+.subscribe-form.error button {
     border-color: rgba(251, 9, 9, 1) !important;
     background: rgba(251, 9, 9, 1) !important;
 }
 
 .subscribe-form button:hover,
 .subscribe-form button:focus,
-.subscribe-form button:active
-{
+.subscribe-form button:active {
     color: #000;
     border-color: #d6d6d6;
     outline: none !important;
-    background: rgba(255,255,255,.00);
+    background: rgba(255, 255, 255, .00);
 }
 
-.subscribe-form button:hover
-{
-    background: rgba(255,255,255,.00) !important;
+.subscribe-form button:hover {
+    background: rgba(255, 255, 255, .00) !important;
 }
 
 .subscribe-form button:focus,
-.subscribe-form button:active
-{
-    background: rgba(255,255,255,1);
+.subscribe-form button:active {
+    background: rgba(255, 255, 255, 1);
 }
 
-.subscribe-form .btn-primary[disabled]
-{
+.subscribe-form .btn-primary[disabled] {
     opacity: 1;
     color: #fff;
-    border: 1px solid #fff ;
-    outline: none ;
-    background: rgba(255,255,255,1);
+    border: 1px solid #fff;
+    outline: none;
+    background: rgba(255, 255, 255, 1);
 }
 
 .subscribe-form.error button:hover,
 .subscribe-form.error button:focus,
-.subscribe-form.error button:active
-{
+.subscribe-form.error button:active {
     border-color: rgba(251, 9, 9, 1);
 }
 
-.subscribe-form button::before
-{
+.subscribe-form button::before {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -450,44 +393,38 @@ a:focus
 
     content: '';
     -webkit-transition: all .2s ease 0s;
-            transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
 
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
 }
 
-.subscribe-form.success button::before
-{
+.subscribe-form.success button::before {
     background: rgba(95, 234, 110, 1) !important;
 }
 
-.subscribe-form.error button::before
-{
+.subscribe-form.error button::before {
     background: rgba(251, 9, 9, 1) !important;
 }
 
-.subscribe-form.succes button::before
-{
-    background: rgba(255,255,255,1);
+.subscribe-form.succes button::before {
+    background: rgba(255, 255, 255, 1);
 }
 
-.subscribe-form button:hover::before
-{
+.subscribe-form button:hover::before {
     right: 0;
     left: auto;
 
     width: 0;
 }
 
-.subscribe-form.success button:hover::before
-{
+.subscribe-form.success button:hover::before {
     right: auto !important;
     left: 0 !important;
 
     width: 100% !important;
 }
 
-.subscribe-form button i
-{
+.subscribe-form button i {
     font-weight: normal;
 
     position: absolute;
@@ -498,69 +435,58 @@ a:focus
     height: auto;
 
     -webkit-transition: none;
-            transition: none;
+    transition: none;
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     text-align: center;
 }
 
-.subscribe-form button:hover i
-{
+.subscribe-form button:hover i {
     -webkit-transition: all .2s ease 0s;
-            transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
 }
 
-.subscribe-form button i.first
-{
+.subscribe-form button i.first {
     left: -200%;
 
     color: #fff;
 }
 
-.subscribe-form button i.second
-{
+.subscribe-form button i.second {
     left: 0;
 }
 
-.subscribe-form button:hover i.first
-{
+.subscribe-form button:hover i.first {
     left: 0;
 }
 
-.subscribe-form button:hover i.second
-{
+.subscribe-form button:hover i.second {
     left: 200%;
 }
 
-.subscribe-form.error button i.second:before
-{
+.subscribe-form.error button i.second:before {
     content: "\e646";
     color: #fff;
 }
 
-.subscribe-form.error-final button i.second:before
-{
+.subscribe-form.error-final button i.second:before {
     content: "\e628";
 }
 
-.subscribe-form.success button i.second:before
-{
+.subscribe-form.success button i.second:before {
     content: "\e628";
     color: #fff;
 }
 
-.subscribe-form.success button:hover i.first
-{
+.subscribe-form.success button:hover i.first {
     left: -200%;
 }
 
-.subscribe-form.success button:hover i.second
-{
+.subscribe-form.success button:hover i.second {
     left: 0;
 }
 
-#about .social-icons
-{
+#about .social-icons {
     margin: 10px 0 0 0;
     padding: 0;
 
@@ -569,15 +495,13 @@ a:focus
     text-align: center;
 }
 
-#about .social-icons li
-{
+#about .social-icons li {
     display: inline-block;
 
     margin: 0 15px;
 }
 
-#about .social-icons li a
-{
+#about .social-icons li a {
     font-size: 12px;
     line-height: 40px;
 
@@ -590,15 +514,14 @@ a:focus
     height: 40px;
 
     -webkit-transition: all .2s ease 0s;
-            transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
 
     color: #000;
     border-radius: 0;
-    background: rgba(255,255,255,.06);
+    background: rgba(255, 255, 255, .06);
 }
 
-#about .social-icons li a .overlay
-{
+#about .social-icons li a .overlay {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -609,33 +532,28 @@ a:focus
     height: 100%;
 
     -webkit-transition: all .2s ease 0s;
-            transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
 
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
 }
 
-#about .social-icons li a:hover .overlay
-{
+#about .social-icons li a:hover .overlay {
     right: 0;
     left: auto;
 
     width: 0;
 }
 
-#about .social-icons li a:hover
-{
+#about .social-icons li a:hover {
     color: #fff;
-    background: rgba(255,255,255,.06);
+    background: rgba(255, 255, 255, .06);
 }
-
-
 
 
 /** 6. OVERLAY-CONTENT-CONTACT
 *****************************************************************/
 
-#contact h1
-{
+#contact h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 41px;
     font-weight: 400;
@@ -649,8 +567,7 @@ a:focus
     color: #fff;
 }
 
-#contact p
-{
+#contact p {
     font-size: 13px;
     max-width: 355px;
     margin: 0 auto;
@@ -662,8 +579,7 @@ a:focus
     letter-spacing: 0.01em;
 }
 
-#contact-form
-{
+#contact-form {
     font-size: 18px;
 
     margin-top: 20px;
@@ -671,8 +587,7 @@ a:focus
     text-align: center;
 }
 
-#contact-form
-{
+#contact-form {
     font-size: 18px;
 
     margin-top: 20px;
@@ -680,15 +595,13 @@ a:focus
     text-align: center;
 }
 
-#contact-form .control-group
-{
+#contact-form .control-group {
     max-width: 346px;
     margin-right: auto;
     margin-left: auto;
 }
 
-#contact-form label
-{
+#contact-form label {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -703,8 +616,7 @@ a:focus
 }
 
 #contact-form input,
-#contact-form textarea
-{
+#contact-form textarea {
     font-family: 'Raleway', sans-serif;
     font-size: 11px;
     font-weight: 300;
@@ -717,7 +629,7 @@ a:focus
     padding-left: 10px;
 
     -webkit-transition: all .2s ease;
-            transition: all .2s ease;
+    transition: all .2s ease;
     letter-spacing: 1px;
 
     color: #d6d6d6;
@@ -725,36 +637,31 @@ a:focus
     border: 1px solid #d6d6d6 !important;
     border-radius: 0;
     outline: none;
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
     box-shadow: none;
 }
 
-#contact-form  input::-webkit-input-placeholder,
-#contact-form  textarea::-webkit-input-placeholder
-{
+#contact-form input::-webkit-input-placeholder,
+#contact-form textarea::-webkit-input-placeholder {
     color: #d6d6d6;
 }
 
-#contact-form  input::-moz-placeholder,
-#contact-form  textarea::-moz-placeholder
-{
+#contact-form input::-moz-placeholder,
+#contact-form textarea::-moz-placeholder {
     color: #d6d6d6;
 }
 
 #contact-form.error input.active,
-#contact-form.error textarea.active
-{
+#contact-form.error textarea.active {
     border-color: rgba(251, 9, 9, 1) !important;
 }
 
 #contact-form.success input,
-#contact-form.success textarea
-{
-    background: rgba(255,255,255,0) !important;
+#contact-form.success textarea {
+    background: rgba(255, 255, 255, 0) !important;
 }
 
-#contact-form textarea
-{
+#contact-form textarea {
     height: 110px;
     padding-top: 10px;
 
@@ -762,23 +669,20 @@ a:focus
 }
 
 #contact-form input:focus,
-#contact-form input:active
-{
+#contact-form input:active {
     border: 1px solid #d6d6d6;
     outline: none;
-    background: rgba(255,255,255,.04);
+    background: rgba(255, 255, 255, .04);
 }
 
 #contact-form textarea:focus,
-#contact-form textarea:active
-{
+#contact-form textarea:active {
     border: 1px solid #fff;
     outline: none;
-    background: rgba(255,255,255,.04);
+    background: rgba(255, 255, 255, .04);
 }
 
-#contact-form button
-{
+#contact-form button {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -794,7 +698,7 @@ a:focus
     margin: 38px auto 0 auto;
 
     -webkit-transition: all .2s ease 0s;
-            transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -802,78 +706,68 @@ a:focus
     color: #000;
     border: 1px solid #d6d6d6;
     border-radius: 0;
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
 }
 
-#contact-form.success button
-{
+#contact-form.success button {
     border-color: rgba(95, 234, 110, 1) !important;
     background: rgba(95, 234, 110, 1) !important;
 }
 
-#contact-form.error button
-{
+#contact-form.error button {
     border-color: rgba(251, 9, 9, 1) !important;
     background: rgba(251, 9, 9, 1) !important;
 }
 
 #contact-form button:hover,
 #contact-form button:focus,
-#contact-form button:active
-{
+#contact-form button:active {
     color: #000;
     border-color: #d6d6d6;
     outline: none !important;
-    background: rgba(255,255,255,.00);
+    background: rgba(255, 255, 255, .00);
     box-shadow: none;
 }
 
-#contact-form button:hover
-{
-    background: rgba(255,255,255,.00) !important;
+#contact-form button:hover {
+    background: rgba(255, 255, 255, .00) !important;
 }
 
 #contact-form button:focus,
-#contact-form button:active
-{
-    background: rgba(255,255,255,1);
+#contact-form button:active {
+    background: rgba(255, 255, 255, 1);
 }
 
-#contact-form .btn-primary[disabled]
-{
+#contact-form .btn-primary[disabled] {
     opacity: 1;
     color: #fff;
     border: 1px solid #fff;
     outline: none;
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
 }
 
 #contact-form.error button:hover,
 #contact-form.error button:focus,
-#contact-form.error button:active
-{
+#contact-form.error button:active {
     border-color: rgba(251, 9, 9, 1);
 }
 
-#contact-form.error button:focus
-{
+#contact-form.error button:focus {
     background: rgba(251, 9, 9, 1);
 }
 
 #contact-form.success button:hover,
 #contact-form.success button:focus,
-#contact-form.success button:active
-{
+#contact-form.success button:active {
     border-color: rgba(95, 234, 110, 1);
 }
+
 #contact-form.success button:hover,
-#contact-form.success button:focus
-{
+#contact-form.success button:focus {
     background: rgba(95, 234, 110, 1) !important;
 }
 
-#contact-form button::before
-{
+#contact-form button::before {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -885,44 +779,38 @@ a:focus
 
     content: '';
     -webkit-transition: all .2s ease 0s;
-            transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
 
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
 }
 
-#contact-form.success button::before
-{
+#contact-form.success button::before {
     background: rgba(95, 234, 110, 1) !important;
 }
 
-#contact-form.error button::before
-{
+#contact-form.error button::before {
     background: rgba(251, 9, 9, 1) !important;
 }
 
-#contact-form.success button::before
-{
-    background: rgba(255,255,255,1);
+#contact-form.success button::before {
+    background: rgba(255, 255, 255, 1);
 }
 
-#contact-form button:hover::before
-{
+#contact-form button:hover::before {
     right: 0;
     left: auto;
 
     width: 0;
 }
 
-#contact-form.success button:hover::before
-{
+#contact-form.success button:hover::before {
     right: 0;
     left: 0;
 
     width: 100%;
 }
 
-#contact-form button i
-{
+#contact-form button i {
     position: absolute;
     top: 50%;
     left: 0;
@@ -931,365 +819,301 @@ a:focus
     height: auto;
 
     -webkit-transition: none;
-            transition: none;
+    transition: none;
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     text-align: center;
 }
 
-#contact-form button:hover i
-{
+#contact-form button:hover i {
     -webkit-transition: all .2s ease 0s;
-            transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
 }
 
-#contact-form button i.first
-{
+#contact-form button i.first {
     left: -200%;
 
     color: #fff;
 }
 
-#contact-form button i.second
-{
+#contact-form button i.second {
     left: 0;
 }
 
-#contact-form button:hover i.first
-{
+#contact-form button:hover i.first {
     left: 0;
 }
 
-#contact-form button:hover i.second
-{
+#contact-form button:hover i.second {
     left: 200%;
 }
 
-#contact-form.error button i.second:before
-{
+#contact-form.error button i.second:before {
     content: '\e646';
 
     color: #fff;
 }
 
-#contact-form.success button i.second:before
-{
+#contact-form.success button i.second:before {
     content: '\e64c';
 
     color: #fff;
 }
 
-#contact-form.success button:hover i.first
-{
+#contact-form.success button:hover i.first {
     left: -200%;
 }
 
-#contact-form.success button:hover i.second
-{
+#contact-form.success button:hover i.second {
     left: 0;
 }
-
-
 
 
 /** 7. OVERLAY SKINS
 *****************************************************************/
 
-.white .tooltip.bottom .tooltip-arrow
-{
-    border-bottom-color: rgba(0,0,0,.02);
+.white .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: rgba(0, 0, 0, .02);
 }
 
-.white .tooltip.bottom .tooltip-inner
-{
+.white .tooltip.bottom .tooltip-inner {
     color: #000;
-    background: rgba(0,0,0,.02);
+    background: rgba(0, 0, 0, .02);
 }
 
-.white .grcs_bullet_nav .nav_dots 
-{
+.white .grcs_bullet_nav .nav_dots {
     border-color: #ccc !important;
 }
 
-.white .grcs_bullet_nav .nav_dots.active:before 
-{
+.white .grcs_bullet_nav .nav_dots.active:before {
     background: #ccc !important;
 }
 
-.white #overlay
-{
+.white #overlay {
     background: rgba(245, 245, 245, .92);
 }
 
-.white .up-button
-{
-    background: rgba(0,0,0,1.00);
+.white .up-button {
+    background: rgba(0, 0, 0, 1.00);
 }
 
-.white .up-button i
-{
+.white .up-button i {
     color: #fff;
 }
 
-.white #about h1
-{
+.white #about h1 {
     color: #000;
 }
 
-.white #about p
-{
+.white #about p {
     color: #2c2b2b;
 }
 
-.white .subscribe-form input
-{
+.white .subscribe-form input {
     color: #2c2b2b;
     border: 1px solid #2c2b2b;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
 }
 
-.white .subscribe-form input::-webkit-input-placeholder
-{
+.white .subscribe-form input::-webkit-input-placeholder {
     color: #2c2b2b;
 }
 
-.white .subscribe-form input::-moz-placeholder
-{
+.white .subscribe-form input::-moz-placeholder {
     color: #2c2b2b;
 }
 
 .white .subscribe-form input:focus,
-.white .subscribe-form input:active
-{
+.white .subscribe-form input:active {
     color: #2c2b2b;
     border-color: #2c2b2b;
     outline: none;
-    background: rgba(0,0,0,.02);
+    background: rgba(0, 0, 0, .02);
     box-shadow: none;
 }
 
-.white .subscribe-form button
-{
+.white .subscribe-form button {
     color: #fff;
     border: 1px solid #2c2b2b;
-    background: rgba(0,0,0,1);
+    background: rgba(0, 0, 0, 1);
 }
 
 .white .subscribe-form button:hover,
 .white .subscribe-form button:focus,
-.white .subscribe-form button:active
-{
+.white .subscribe-form button:active {
     color: #fff;
     border-color: #333;
     outline: none !important;
-    background: rgba(0,0,0,.00);
+    background: rgba(0, 0, 0, .00);
 }
 
-.white .subscribe-form button:hover
-{
-    background: rgba(0,0,0,.00) !important;
+.white .subscribe-form button:hover {
+    background: rgba(0, 0, 0, .00) !important;
 }
 
 .white .subscribe-form button:focus,
-.white .subscribe-form button:active
-{
-    background: rgba(0,0,0,1);
+.white .subscribe-form button:active {
+    background: rgba(0, 0, 0, 1);
 }
 
-.white .subscribe-form .btn-primary[disabled]
-{
+.white .subscribe-form .btn-primary[disabled] {
     color: #000;
     border: 1px solid #000;
-    background: rgba(0,0,0,1);
+    background: rgba(0, 0, 0, 1);
 }
 
-.white .subscribe-form button::before
-{
-    background: rgba(0,0,0,1);
+.white .subscribe-form button::before {
+    background: rgba(0, 0, 0, 1);
 }
 
-.white .subscribe-form button i.first
-{
+.white .subscribe-form button i.first {
     color: #000;
 }
 
-.white .subscribe-form.error button i.second:before
-{
+.white .subscribe-form.error button i.second:before {
     color: #000;
 }
 
-.white .subscribe-form.success button i.second:before
-{
+.white .subscribe-form.success button i.second:before {
     color: #000;
 }
 
-.white #about .social-icons li a
-{
+.white #about .social-icons li a {
     color: #fff;
-    background: rgba(0,0,0,.02);
+    background: rgba(0, 0, 0, .02);
 }
 
-.white #about .social-icons li a .overlay
-{
-    background: rgba(0,0,0,1);
+.white #about .social-icons li a .overlay {
+    background: rgba(0, 0, 0, 1);
 }
 
-.white #about .social-icons li a:hover
-{
+.white #about .social-icons li a:hover {
     color: #000;
-    background: rgba(0,0,0,.02);
+    background: rgba(0, 0, 0, .02);
 }
 
-.white #contact h1
-{
+.white #contact h1 {
     color: #000;
 }
 
-.white #contact p
-{
+.white #contact p {
     color: #2c2b2b;
 }
 
-.white #contact-form label
-{
+.white #contact-form label {
     color: #414141;
 }
 
 .white #contact-form input,
-.white #contact-form textarea
-{
+.white #contact-form textarea {
     color: #2c2b2b;
     border: 1px solid #2c2b2b !important;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
 }
 
-.white #contact-form  input::-webkit-input-placeholder,
-.white #contact-form  textarea::-webkit-input-placeholder
-{
+.white #contact-form input::-webkit-input-placeholder,
+.white #contact-form textarea::-webkit-input-placeholder {
     color: #2c2b2b;
 }
 
-.white #contact-form  input::-moz-placeholder,
-.white #contact-form  textarea::-moz-placeholder
-{
+.white #contact-form input::-moz-placeholder,
+.white #contact-form textarea::-moz-placeholder {
     color: #2c2b2b;
 }
 
 .white #contact-form.success input,
-.white #contact-form.success  textarea
-{
-    background: rgba(0,0,0,0) !important;
+.white #contact-form.success textarea {
+    background: rgba(0, 0, 0, 0) !important;
 }
 
 .white #contact-form input:focus,
-.white #contact-form input:active
-{
+.white #contact-form input:active {
     border: 1px solid #2c2b2b;
-    background: rgba(0,0,0,.02);
+    background: rgba(0, 0, 0, .02);
 }
 
 .white #contact-form textarea:focus,
-.white #contact-form textarea:active
-{
+.white #contact-form textarea:active {
     border: 1px solid #000;
-    background: rgba(0,0,0,.02);
+    background: rgba(0, 0, 0, .02);
 }
 
-.white #contact-form button
-{
+.white #contact-form button {
     color: #fff;
     border: 1px solid #2c2b2b;
-    background: rgba(0,0,0,1);
+    background: rgba(0, 0, 0, 1);
 }
 
 .white #contact-form button:hover,
 .white #contact-form button:focus,
-.white #contact-form button:active
-{
+.white #contact-form button:active {
     color: #fff;
     border-color: #2c2b2b;
-    background: rgba(0,0,0,.00);
+    background: rgba(0, 0, 0, .00);
 }
 
-.white #contact-form button:hover
-{
-    background: rgba(0,0,0,.00) !important;
+.white #contact-form button:hover {
+    background: rgba(0, 0, 0, .00) !important;
 }
 
 .white #contact-form button:focus,
-.white #contact-form button:active
-{
-    background: rgba(0,0,0,1);
+.white #contact-form button:active {
+    background: rgba(0, 0, 0, 1);
 }
 
-.white #contact-form .btn-primary[disabled]
-{
+.white #contact-form .btn-primary[disabled] {
     color: #000;
     border: 1px solid #000;
-    background: rgba(0,0,0,1);
+    background: rgba(0, 0, 0, 1);
 }
 
-.white #contact-form button .overlay
-{
-    background: rgba(0,0,0,1);
+.white #contact-form button .overlay {
+    background: rgba(0, 0, 0, 1);
 }
 
-.white #contact-form.success button::before
-{
-    background: rgba(0,0,0,1);
+.white #contact-form.success button::before {
+    background: rgba(0, 0, 0, 1);
 }
 
-.white #contact-form button i.first
-{
+.white #contact-form button i.first {
     color: #000;
 }
 
-.white #contact-form.error button i.second:before
-{
+.white #contact-form.error button i.second:before {
     color: #000;
 }
 
-.white #contact-form.success button i.second:before
-{
+.white #contact-form.success button i.second:before {
     color: #000;
 }
-
-
 
 
 /** 8. MEDIA QUERIES
 *****************************************************************/
 
-@media screen and (max-width: 1400px), screen and (max-height: 720px)
-{
-    .tooltip.bottom .tooltip-inner
-    {
+@media screen and (max-width: 1400px), screen and (max-height: 720px) {
+    .tooltip.bottom .tooltip-inner {
         font-size: 10px;
     }
 
-    .up-button
-    {
+    .up-button {
         width: 60px;
     }
 
-    .up-button.active
-    {
+    .up-button.active {
         height: 60px;
     }
 
-    .up-button i
-    {
+    .up-button i {
         font-size: 14px;
         line-height: 60px;
     }
 
-    #overlay .container-mid .container
-    {
+    #overlay .container-mid .container {
         padding: 40px 40px;
     }
 
-    #about h1
-    {
+    #about h1 {
         font-size: 31px;
 
         margin-bottom: 20px;
@@ -1297,36 +1121,31 @@ a:focus
         letter-spacing: 1px;
     }
 
-    #about p
-    {
+    #about p {
         font-size: 10px;
 
         max-width: 460px;
         margin: 0 auto 28px auto;
     }
 
-    .subscribe-form
-    {
+    .subscribe-form {
         max-width: 390px;
         margin: 0 auto 27px auto;
     }
 
     .input-group-lg > .form-control,
     .input-group-lg > .input-group-addon,
-    .input-group-lg > .input-group-btn > .btn
-    {
+    .input-group-lg > .input-group-btn > .btn {
         height: 37px;
     }
 
-    #about .social-icons li
-    {
+    #about .social-icons li {
         display: inline-block;
 
         margin: 0 10px;
     }
 
-    #about .social-icons li a
-    {
+    #about .social-icons li a {
         font-size: 9px;
         line-height: 30px;
 
@@ -1334,27 +1153,23 @@ a:focus
         height: 31px;
     }
 
-    .subscribe-form button
-    {
+    .subscribe-form button {
         font-size: 9px !important;
 
         padding: 0 34px !important;
     }
 
-    .subscribe-form input
-    {
+    .subscribe-form input {
         font-size: 9px !important;
     }
 
-    #contact h1
-    {
+    #contact h1 {
         font-size: 31px;
 
         margin-bottom: 16px;
     }
 
-    #contact p
-    {
+    #contact p {
         font-size: 10px;
 
         max-width: 280px;
@@ -1362,39 +1177,33 @@ a:focus
         padding: 0 20px;
     }
 
-    #contact-form
-    {
+    #contact-form {
         margin-top: 14px;
     }
 
-    #contact-form .control-group
-    {
+    #contact-form .control-group {
         max-width: 280px;
     }
 
-    #contact-form label
-    {
+    #contact-form label {
         font-size: 12px;
 
         margin-bottom: 8px;
     }
 
     #contact-form input,
-    #contact-form textarea
-    {
+    #contact-form textarea {
         font-size: 9px;
 
         height: 40px;
         margin-bottom: 14px;
     }
 
-    #contact-form textarea
-    {
+    #contact-form textarea {
         height: 90px;
     }
 
-    #contact-form button
-    {
+    #contact-form button {
         font-size: 9px;
         line-height: 40px;
 
@@ -1404,63 +1213,51 @@ a:focus
     }
 }
 
-@media screen and (max-width: 420px), screen and (max-height: 720px)
-{
-    .spinner
-    {
+@media screen and (max-width: 420px), screen and (max-height: 720px) {
+    .spinner {
         width: 100px;
     }
 
-    .tooltip.bottom .tooltip-inner
-    {
+    .tooltip.bottom .tooltip-inner {
         font-size: 8px;
     }
 
-    #overlay .container-mid .container
-    {
+    #overlay .container-mid .container {
         padding: 55px 40px;
     }
 
-    .up-button
-    {
+    .up-button {
         width: 50px;
     }
 
-    .up-button.active
-    {
+    .up-button.active {
         height: 50px;
     }
 
-    .up-button i
-    {
+    .up-button i {
         font-size: 11px;
         line-height: 50px;
     }
 
-    #about h1
-    {
+    #about h1 {
         font-size: 30px;
     }
 
-    .subscribe-form input
-    {
+    .subscribe-form input {
         font-size: 7px !important;
     }
 
-    #about .social-icons li
-    {
+    #about .social-icons li {
         margin: 0 14px;
     }
 
-    #contact h1
-    {
+    #contact h1 {
         font-size: 30px;
 
         margin-bottom: 16px;
     }
 
-    #contact p
-    {
+    #contact p {
         font-size: 10px;
 
         max-width: 280px;
@@ -1468,39 +1265,33 @@ a:focus
         padding: 0 20px;
     }
 
-    #contact-form
-    {
+    #contact-form {
         margin-top: 14px;
     }
 
-    #contact-form .control-group
-    {
+    #contact-form .control-group {
         max-width: 280px;
     }
 
-    #contact-form label
-    {
+    #contact-form label {
         font-size: 12px;
 
         margin-bottom: 8px;
     }
 
     #contact-form input,
-    #contact-form textarea
-    {
+    #contact-form textarea {
         font-size: 9px;
 
         height: 40px;
         margin-bottom: 14px;
     }
 
-    #contact-form textarea
-    {
+    #contact-form textarea {
         height: 90px;
     }
 
-    #contact-form button
-    {
+    #contact-form button {
         font-size: 9px;
         line-height: 40px;
 
@@ -1510,35 +1301,28 @@ a:focus
     }
 }
 
-@media screen and (max-width: 329px)
-{
-    #about .social-icons li
-    {
+@media screen and (max-width: 329px) {
+    #about .social-icons li {
         margin: 0 10px;
     }
 
     .input-group-lg > .form-control,
     .input-group-lg > .input-group-addon,
-    .input-group-lg > .input-group-btn > .btn
-    {
+    .input-group-lg > .input-group-btn > .btn {
         padding: 10px 12px;
     }
 }
 
-@media screen and (max-width: 318px)
-{
-    #about .social-icons li
-    {
+@media screen and (max-width: 318px) {
+    #about .social-icons li {
         margin: 0 8px;
     }
 
-    .subscribe-form .input-group
-    {
+    .subscribe-form .input-group {
         display: block;
     }
 
-    .subscribe-form input
-    {
+    .subscribe-form input {
         display: block;
 
         text-align: center;
@@ -1547,11 +1331,9 @@ a:focus
     }
 }
 
-@media screen and (min-width: 3000px)
-{
+@media screen and (min-width: 3000px) {
     .stop-button,
-    .volume-button
-    {
+    .volume-button {
         font-size: 32px;
 
         position: fixed;
@@ -1563,44 +1345,36 @@ a:focus
         color: #fff;
     }
 
-    .stop-button
-    {
+    .stop-button {
         left: 110px;
     }
 
-    .volume-button
-    {
+    .volume-button {
         left: 40px;
     }
 
-    .spinner
-    {
+    .spinner {
         width: 240px;
     }
 
-    .up-button
-    {
+    .up-button {
         width: 100px;
     }
 
-    .up-button.active
-    {
+    .up-button.active {
         height: 100px;
     }
 
-    .up-button i
-    {
+    .up-button i {
         font-size: 20px;
         line-height: 100px;
     }
 
-    #overlay .container-mid .container
-    {
+    #overlay .container-mid .container {
         padding: 120px 40px;
     }
 
-    #about h1
-    {
+    #about h1 {
         font-size: 51px;
 
         margin-bottom: 40px;
@@ -1608,36 +1382,31 @@ a:focus
         letter-spacing: 3px;
     }
 
-    #about p
-    {
+    #about p {
         font-size: 17px;
 
         max-width: 790px;
         margin: 0 auto 50px auto;
     }
 
-    .subscribe-form
-    {
+    .subscribe-form {
         max-width: 630px;
         margin: 0 auto 44px auto;
     }
 
     .input-group-lg > .form-control,
     .input-group-lg > .input-group-addon,
-    .input-group-lg > .input-group-btn > .btn
-    {
+    .input-group-lg > .input-group-btn > .btn {
         height: 56px;
     }
 
-    #about .social-icons li
-    {
+    #about .social-icons li {
         display: inline-block;
 
         margin: 0 20px;
     }
 
-    #about .social-icons li a
-    {
+    #about .social-icons li a {
         font-size: 14px;
         line-height: 46px;
 
@@ -1645,27 +1414,23 @@ a:focus
         height: 46px;
     }
 
-    .subscribe-form button
-    {
+    .subscribe-form button {
         font-size: 13px !important;
 
         padding: 0 50px !important;
     }
 
-    .subscribe-form input
-    {
+    .subscribe-form input {
         font-size: 13px !important;
     }
 
-    #contact h1
-    {
+    #contact h1 {
         font-size: 51px;
 
         margin-bottom: 38px;
     }
 
-    #contact p
-    {
+    #contact p {
         font-size: 17px;
 
         max-width: 450px;
@@ -1673,26 +1438,22 @@ a:focus
         padding: 0 20px;
     }
 
-    #contact-form
-    {
+    #contact-form {
         margin-top: 40px;
     }
 
-    #contact-form .control-group
-    {
+    #contact-form .control-group {
         max-width: 470px;
     }
 
-    #contact-form label
-    {
+    #contact-form label {
         font-size: 18px;
 
         margin-bottom: 14px;
     }
 
     #contact-form input,
-    #contact-form textarea
-    {
+    #contact-form textarea {
         font-size: 13px;
 
         height: 64px;
@@ -1700,13 +1461,11 @@ a:focus
         padding: 12px 12px;
     }
 
-    #contact-form textarea
-    {
+    #contact-form textarea {
         height: 180px;
     }
 
-    #contact-form button
-    {
+    #contact-form button {
         font-size: 15px;
         line-height: 64px;
 
