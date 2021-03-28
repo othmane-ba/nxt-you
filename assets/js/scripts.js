@@ -43,10 +43,10 @@ jQuery(window).on('load', function () {
         $('#cycle').cycle("goto", "0");
 
         setTimeout(function () {
-            $(".hero .background-content.page-enter-animated").addClass("show");
+            $(".background-content.page-enter-animated").addClass("show");
 
             setTimeout(function () {
-                $(".hero .front-content.page-enter-animated").addClass("show");
+                $(".front-content.page-enter-animated").addClass("show");
 
                 setTimeout(function () {
                     blockProcess = false;

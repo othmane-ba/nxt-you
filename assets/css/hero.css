@@ -129,7 +129,7 @@
 /** 2. HERO-1
 *******************************************************************/
 
-.hero-1 .front-content img.logo {
+.front-content img.logo {
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -138,14 +138,14 @@
     overflow: hidden !important;
 }
 
-.hero-1 .front-content .slide {
+.front-content .slide {
     width: 100%;
     margin: 0 auto;
 
     text-align: center;
 }
 
-.hero-1 .front-content h1 {
+.front-content h1 {
     font-family: 'Open Sans', sans-serif;
     font-size: 80px;
     font-weight: 600;
@@ -158,11 +158,11 @@
     color: #fff;
 }
 
-.hero-1 .front-content h1 span {
+.front-content h1 span {
     color: #1fb8b2;
 }
 
-.hero-1 .front-content p {
+.front-content p {
     font-family: 'Raleway', sans-serif;
     font-size: 17px;
     font-weight: 400;
@@ -174,14 +174,14 @@
     color: #fff;
 }
 
-.hero-1 .front-content .arrow-wrap {
+.front-content .arrow-wrap {
     display: inline-block;
     overflow: hidden !important;
 
     margin: 0 auto;
 }
 
-.hero-1 .front-content .open-overlay i {
+.front-content .open-overlay i {
     font-size: 16px;
     line-height: 66px;
 
@@ -197,7 +197,7 @@
     background: rgba(255, 255, 255, .0);
 }
 
-.hero-1 .front-content div.open-overlay {
+.front-content div.open-overlay {
     position: relative;
 
     display: block;
@@ -216,7 +216,7 @@
     overflow: hidden !important;
 }
 
-.hero-1 .front-content .down-button i {
+.front-content .down-button i {
     position: absolute;
     top: 0;
     left: 0;
@@ -230,38 +230,38 @@
     color: #fff;
 }
 
-.hero-1 .front-content .down-button:hover i {
+.front-content .down-button:hover i {
     -webkit-transition: all 150ms cubic-bezier(1, 0, 0, 1);
     transition: all 150ms cubic-bezier(1, 0, 0, 1);
 }
 
-.hero-1 .front-content .down-button i:first-child {
+.front-content .down-button i:first-child {
     top: -200%;
 }
 
-.hero-1 .front-content .down-button:hover i:first-child {
+.front-content .down-button:hover i:first-child {
     top: 0;
 }
 
-.hero-1 .front-content .down-button i:last-child {
+.front-content .down-button i:last-child {
     top: 0;
 }
 
-.hero-1 .front-content .down-button:hover i:last-child {
+.front-content .down-button:hover i:last-child {
     top: 200%;
 }
 
 
 /** PAGE ENTER ANIMATIONS **/
 
-.hero-1 .front-content.page-enter-animated img.logo {
+.front-content.page-enter-animated img.logo {
     -webkit-transform: translateY(-100%) !important;
     transform: translateY(-100%) !important;
 
     opacity: 0 !important;
 }
 
-.hero-1 .front-content.page-enter-animated.show img.logo {
+.front-content.page-enter-animated.show img.logo {
     -webkit-transition: 1s;
     transition: 1s;
     -webkit-transform: translateY(0) !important;
@@ -270,14 +270,14 @@
     opacity: 1 !important;
 }
 
-.hero-1 .front-content.page-enter-animated .cycle-wrapper {
+.front-content.page-enter-animated .cycle-wrapper {
     -webkit-transform: translateY(100%) !important;
     transform: translateY(100%) !important;
 
     opacity: 0 !important;
 }
 
-.hero-1 .front-content.page-enter-animated.show .cycle-wrapper {
+.front-content.page-enter-animated.show .cycle-wrapper {
     -webkit-transition: 1s .5s;
     transition: 1s .5s;
     -webkit-transform: translateY(0) !important;
@@ -286,14 +286,14 @@
     opacity: 1 !important;
 }
 
-.hero-1 .front-content.page-enter-animated p {
+.front-content.page-enter-animated p {
     -webkit-transform: translateY(100%) !important;
     transform: translateY(100%) !important;
 
     opacity: 0 !important;
 }
 
-.hero-1 .front-content.page-enter-animated.show p {
+.front-content.page-enter-animated.show p {
     -webkit-transition: 1s 1s;
     transition: 1s 1s;
     -webkit-transform: translateY(0) !important;
@@ -302,14 +302,14 @@
     opacity: 1 !important;
 }
 
-.hero-1 .front-content.page-enter-animated .arrow-wrap {
+.front-content.page-enter-animated .arrow-wrap {
     -webkit-transform: translateY(100%) !important;
     transform: translateY(100%) !important;
 
     opacity: 0 !important;
 }
 
-.hero-1 .front-content.page-enter-animated.show .arrow-wrap {
+.front-content.page-enter-animated.show .arrow-wrap {
     -webkit-transition: 1s 1.5s;
     transition: 1s 1.5s;
     -webkit-transform: translateY(0) !important;
@@ -318,7 +318,7 @@
     opacity: 1 !important;
 }
 
-.hero-1 .background-content #canvas {
+.background-content #canvas {
     top: 100% !important;
 
     -webkit-transition: 1s 2s;
@@ -327,7 +327,7 @@
     opacity: 0;
 }
 
-.hero-1 .background-content.page-enter-animated.show #canvas {
+.background-content.page-enter-animated.show #canvas {
     top: 0 !important;
 
     opacity: 1;
@@ -337,28 +337,28 @@
 /** MEDIA QUERIES  **/
 
 @media only screen and (max-width: 768px), only screen and (max-height: 630px) {
-    .hero-1 .front-content img.logo {
+    .front-content img.logo {
         max-width: 220px;
     }
 
-    .hero-1 .front-content h1 {
+    .front-content h1 {
         font-size: 60px;
 
         margin-bottom: 40px;
     }
 
-    .hero-1 .front-content p {
+    .front-content p {
         font-size: 14px;
 
         padding-bottom: 36px;
     }
 
-    .hero-1 .front-content .open-overlay i {
+    .front-content .open-overlay i {
         font-size: 14px;
         line-height: 58px;
     }
 
-    .hero-1 .front-content div.open-overlay {
+    .front-content div.open-overlay {
         width: 64px;
         height: 64px;
 
@@ -367,29 +367,29 @@
 }
 
 @media only screen and (max-width: 600px), only screen and (max-height: 500px) {
-    .hero-1 .front-content img.logo {
+    .front-content img.logo {
         max-width: 186px;
         margin-bottom: 15px;
     }
 
-    .hero-1 .front-content h1 {
+    .front-content h1 {
         font-size: 45px;
 
         margin-bottom: 32px;
     }
 
-    .hero-1 .front-content p {
+    .front-content p {
         font-size: 12px;
 
         padding-bottom: 28px;
     }
 
-    .hero-1 .front-content .open-overlay i {
+    .front-content .open-overlay i {
         font-size: 13px;
         line-height: 46px;
     }
 
-    .hero-1 .front-content div.open-overlay {
+    .front-content div.open-overlay {
         width: 50px;
         height: 50px;
 
@@ -399,18 +399,18 @@
 
 
 @media only screen and (max-width: 480px), only screen and (max-height: 410px) {
-    .hero-1 .front-content img.logo {
+    .front-content img.logo {
         max-width: 160px;
         margin-bottom: 12px;
     }
 
-    .hero-1 .front-content h1 {
+    .front-content h1 {
         font-size: 40px;
 
         margin-bottom: 25px;
     }
 
-    .hero-1 .front-content p {
+    .front-content p {
         font-size: 11px;
         font-weight: 300;
 
@@ -419,70 +419,70 @@
         letter-spacing: 2px;
     }
 
-    .hero-1 .front-content .open-overlay i {
+    .front-content .open-overlay i {
         font-size: 11px;
         line-height: 38px;
     }
 
-    .hero-1 .front-content div.open-overlay {
+    .front-content div.open-overlay {
         width: 42px;
         height: 42px;
     }
 }
 
 @media only screen and (max-width: 400px), only screen and (max-height: 310px) {
-    .hero-1 .front-content img.logo {
+    .front-content img.logo {
         max-width: 140px;
         margin-bottom: 10px;
     }
 
-    .hero-1 .front-content h1 {
+    .front-content h1 {
         font-size: 35px;
 
         margin-bottom: 23px;
     }
 
-    .hero-1 .front-content p {
+    .front-content p {
         font-size: 10px;
 
         padding-bottom: 18px;
     }
 
-    .hero-1 .front-content .open-overlay i {
+    .front-content .open-overlay i {
         font-size: 9px;
         line-height: 32px;
     }
 
-    .hero-1 .front-content div.open-overlay {
+    .front-content div.open-overlay {
         width: 36px;
         height: 36px;
     }
 }
 
 @media only screen and (max-width: 355px) , only screen and (max-height: 280px) {
-    .hero-1 .front-content img.logo {
+    .front-content img.logo {
         max-width: 130px;
         margin-bottom: 8px;
     }
 
-    .hero-1 .front-content h1 {
+    .front-content h1 {
         font-size: 30px;
 
         margin-bottom: 20px;
     }
 
-    .hero-1 .front-content p {
+    .front-content p {
         font-size: 9px;
 
         padding-bottom: 12px;
     }
 
-    .hero-1 .front-content .open-overlay i {
+    .front-content .open-overlay i {
         font-size: 8px;
         line-height: 30px;
     }
 
-    .hero-1 .front-content div.open-overlay {
+    .front-content div.open-overlay {
         width: 34px;
         height: 34px;
     }
