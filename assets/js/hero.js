@@ -17,9 +17,8 @@
 	-- TABLE OF CONTENTS --
 	------------------------
 	
-	--  1. Backgrounds
-	--  2. Effects
-	--  3. Cycle
+	--  1. Background
+	--  2. Cycle
  
  
  ******************************************************************/
@@ -37,20 +36,23 @@ $(document).ready(function(){
 	function canvasSphereBackground() {
 	
 		// Z-INDEX CORRECTION BACKGROUND OVERLAY 
-		$(".hero .background-content .bg-overlay").css("z-index","2");
+		$(".bg-overlay").css("z-index","2");
 		
 		// THREE.JS BASED
-		var SCREEN_WIDTH = $(".hero .level-1").width(),
-			SCREEN_HEIGHT = $(".hero .level-1").height(),
-	
+		var SCREEN_WIDTH = $(".level-1").width(),
+			SCREEN_HEIGHT = $(".level-1").height(),
+
 			mouseX = 0, mouseY = 0,
 	
 			windowHalfX = window.innerWidth / 2,
 			windowHalfY = window.innerHeight / 2,
 	
 			camera, scene, renderer;
-	
-			init();
+
+		console.log("SCREEN_WIDTH", SCREEN_WIDTH);
+		console.log("SCREEN_HEIGHT", SCREEN_HEIGHT);
+
+		init();
 			animate();
 	
 			function init() {

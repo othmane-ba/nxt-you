@@ -416,7 +416,7 @@ $(document).ready(function(){
 		
 	} 
                   
-    overlaySystem("#overlay","section.overlay","#hero .front-content","#hero .front-content .container-mid");
+    // overlaySystem("#overlay","section.overlay","#hero .front-content","#hero .front-content .container-mid");
 
 
 
