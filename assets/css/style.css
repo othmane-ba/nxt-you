@@ -291,6 +291,42 @@ a:focus {
     letter-spacing: 5px;
 }
 
+/** 5. TWO-IMAGE
+*****************************************************************/
+.two-image__container {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.two-image__container__item {
+    flex-basis: 50%;
+}
+
+.two-image__container__item:nth-child(1) {
+    padding-right: 4rem;
+    padding-top: 8rem;
+}
+
+.two-image__container__item:nth-child(2) {
+    padding-left: 4rem;
+}
+
+.two-image__container__item img {
+    width: 100%;
+}
+
+.two-image__container__item__title {
+    font-weight: 600;
+    font-size: 31px;
+    margin: 0 !important;
+}
+
+.two-image__container__item__subtitle {
+    display: block;
+    margin: 1rem 0;
+}
+
+
 /** 5. OVERLAY-CONTENT-ABOUT
 *****************************************************************/
 
