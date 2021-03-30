@@ -100,6 +100,9 @@ a:focus {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
 
 /** 2. LOADING
 *****************************************************************/
@@ -323,7 +326,191 @@ a:focus {
 
 .two-image__container__item__subtitle {
     display: block;
-    margin: 1rem 0;
+    margin: 20px 0 10px 0;
+}
+
+/** 5. CLIENT
+*****************************************************************/
+
+.client__title {
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 1.13;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.client__list {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    padding-top: 60px;
+    width: 100%;
+}
+
+.client__list li {
+    flex-basis: 25%;
+    text-align: center;
+    height: 220px;
+}
+
+.client__list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #888888;
+    border-right: 1px solid #888888;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.client__list li:nth-child(4n) a {
+    border-right: none;
+}
+
+.client__list li:nth-last-child(1) a,
+.client__list li:nth-last-child(2) a,
+.client__list li:nth-last-child(3) a,
+.client__list li:nth-last-child(4) a {
+    border-bottom: none;
+}
+
+.client__list__brand {
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+
+
+.client__list__brand__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .7s cubic-bezier(.17, .85, .438, .99);
+}
+
+.client__list__brand__image--hover {
+    width: 100%;
+    height: 100%;
+    transition: .7s cubic-bezier(.17, .85, .438, .99);
+}
+
+.client__list li:hover .client__list__brand__image {
+    opacity: 1;
+}
+
+.client__list li:hover .client__list__brand__image--hover {
+    opacity: 0;
+}
+
+.client__list__box--empty a {
+    position: relative;
+    flex-flow: column;
+}
+
+.client__list__box--empty a {
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+
+.client__list__box--empty a:before,
+.client__list__box--empty a:after {
+    content: '';
+    width: 1px;
+    height: calc(100% - 40px);
+    background: #ef0d33;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    transform: scaleY(.4) scaleX(1);
+    transform-origin: bottom;
+    transition: .5s cubic-bezier(.858, .01, .068, .99);
+}
+
+.client__list__box--empty a:after {
+    width: calc(100% - 40px);
+    height: 1px;
+    transform: scaleY(1) scaleX(.4);
+    transform-origin: right;
+}
+
+.client__list__box--empty {
+    position: relative;
+}
+
+.client__list__box--empty:before,
+.client__list__box--empty:after {
+    content: '';
+    width: 1px;
+    height: calc(100% - 40px);
+    background: #ef0d33;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    transform: scaleY(.4) scaleX(1);
+    transform-origin: top;
+    transition: .5s cubic-bezier(.858, .01, .068, .99);
+}
+
+.client__list__box--empty:after {
+    width: calc(100% - 40px);
+    height: 1px;
+    transform: scaleY(1) scaleX(.4);
+    transform-origin: left;
+}
+
+.client__list__box--empty:hover:before,
+.client__list__box--empty:hover:after,
+.client__list li:hover.client__list__box--empty a:before,
+.client__list li:hover.client__list__box--empty a:after {
+    transform: scaleX(1) scaleY(1);
+}
+
+@media only screen and (max-width: 999px) {
+
+    .client__list li {
+        height: 190px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .client__list li {
+        flex-basis: 50%;
+    }
+
+    .client__list li:nth-child(2n) a {
+        border-right: none;
+    }
+
+    .client__list li:nth-last-child(3) a,
+    .client__list li:nth-last-child(4) a {
+        border-bottom: 1px solid #888888;
+    }
+
+}
+
+@media only screen and (max-width: 549px) {
+
+    .client__list__brand {
+        height: 120px;
+        width: 120px;
+    }
+
+    .client__list li {
+        height: 170px;
+    }
+
 }
 
 
