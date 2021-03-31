@@ -1,74 +1,119 @@
-//pull in our external libraries (npm-packages)
 const gulp = require('gulp');
-const concat = require('gulp-concat');
-
+const del = require('del');
 const php = require('gulp-connect-php');
 const browserSync = require('browser-sync').create();
+const sourcemaps = require('gulp-sourcemaps');
+const plumber = require('gulp-plumber');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const minifyCss = require('gulp-clean-css');
+const dependents = require('gulp-dependents');
+const babel = require('gulp-babel');
+const webpack = require('webpack-stream');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
 
-//help create appropriate paths to our bundles
-const useref = require('gulp-useref');
-const gulpIf = require('gulp-if');
-const cssnano = require('gulp-cssnano');
+const SRC = "./src"
+const DIST = "./.dist"
+
+const paths = {
+    html: `${SRC}/**/*.html`,
+    scss: `${SRC}/assets/scss/**/*.scss`,
+    js: `${SRC}/assets/js/**/*.js`,
+    php: `${SRC}/assets/php/**/*.php`,
+    images: `${SRC}/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`
+};
+
+gulp.task('clear', () => del([DIST]));
+
+gulp.task('html', () => {
+    return gulp.src([paths.html], {
+        base: path.src,
+        since: gulp.lastRun('html')
+    })
+        .pipe(gulp.dest(path.dist))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('scss', () => {
+    return gulp.src([
+        paths.scss
+    ], {since: gulp.lastRun('scss')})
+        .pipe(sourcemaps.init())
+        .pipe(plumber())
+        .pipe(dependents())
+        .pipe(sass())
+        .pipe(autoprefixer())
+        .pipe(minifyCss())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(`${DIST}/css`))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('js', () => {
+    return gulp.src([paths.js], {since: gulp.lastRun('js')})
+        .pipe(plumber())
+        .pipe(webpack({
+            mode: 'production'
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(concat('all.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(`${DIST}/js`))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('images', () => {
+    return gulp.src([path.images], {since: gulp.lastRun('images')})
+        .pipe(plumber())
+        .pipe(imagemin())
+        .pipe(gulp.dest(`${DIST}/images`))
+        .pipe(browserSync.stream());
+});
 
 
-//one task at a time
-//chained order
-//GOTCHA: tasks on top cannot reference tasks on bottom
+gulp.task('build', gulp.series('clear', 'html', 'scss', 'js', 'images'));
 
+//gulp.task('dev', gulp.series('browserSync'), function () {
+//    gulp.watch('./*.php', browserSync.reload);
+//    gulp.watch('assets/css/**/*.css', gulp.series('pack-css'));
+//});
+gulp.task('dev', gulp.series('html', 'scss', 'js'));
+
+// gulp.task('browserSync', gulp.series('php'), function () {
+//     browserSync.init({
+//         proxy: "localhost:8010",
+//         baseDir: "./",
+//         open: true,
+//         notify: true
+//     });
+// });
 gulp.task('php', function () {
     php.server({base: './', port: 8010, keepalive: true});
 });
-
-// injecting a previous task called php
-// also creating a 'homebase' or main index is in root following
-// classic XAMPP structure
-gulp.task('browserSync', gulp.series('php'), function () {
-    browserSync.init({
+gulp.task('serve', gulp.series('php'), () => {
+    return browserSync.init({
         proxy: "localhost:8010",
         baseDir: "./",
         open: true,
         notify: true
-
     });
 });
 
-gulp.task('dev', gulp.series('browserSync'), function () {
-    gulp.watch('./*.php', browserSync.reload);
-    gulp.watch('assets/css/**/*.css', gulp.series('pack-css'));
+//gulp.task('watch', function () {
+//    //gulp.watch('assets/js/**/*.js', ['pack-js']);
+//    gulp.watch('assets/css/**/*.css', gulp.series('pack-css'));
+//});
+//gulp.watch('assets/css/**/*.css', gulp.series('pack-css', 'pack-js'));
+gulp.task('watch', () => {
+    gulp.watch([paths.html, paths.scss, paths.js], gulp.series('dev')).on('change', browserSync.reload);
+    gulp.watch([paths.images], gulp.series('images')).on('change', browserSync.reload);
 });
 
-//make all stylesheets into one
-gulp.task('pack-css', function () {
-    return gulp.src(['assets/css/main.css', 'assets/css/custom.css'])
-        .pipe(concat('stylesheet.css'))
-        .pipe(gulp.dest('public/build/css'));
-});
-
-gulp.task('pack-js', function () {
-    return gulp.src(['assets/js/vendor/*.js', 'assets/js/main.js', 'assets/js/module*.js'])
-        .pipe(concat('stylesheet.css'))
-        .pipe(gulp.dest('public/build/css'));
-});
-
-
-gulp.task('useref', function () {
-    return gulp.src('/*.html')
-        .pipe(useref())
-        // Minifies only if it's a CSS file
-        .pipe(gulpIf('*.css', cssnano()))
-        .pipe(gulp.dest('/'))
-});
-
-
-gulp.task('watch', function () {
-    //gulp.watch('assets/js/**/*.js', ['pack-js']);
-    gulp.watch('assets/css/**/*.css', gulp.series('pack-css'));
-});
-
-
-//FOR migration from gulp 3 to gulp 4 this is the easiest fix!
-//gulp.task('default', ['sass', 'js', 'watch']);
-//gulp.watch('app/scss/*.scss', ['sass']);
-
-gulp.task('default', gulp.series('pack-css'));
-gulp.watch('assets/css/**/*.css', gulp.series('pack-css', 'pack-js'));
+//gulp.task('default', gulp.series('pack-css'));
+gulp.task('default', gulp.series('build', gulp.parallel('serve', 'watch')));
