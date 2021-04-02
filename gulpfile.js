@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const gulp = require('gulp');
 const del = require('del');
 const php = require('gulp-connect-php');
@@ -8,11 +10,16 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const minifyCss = require('gulp-clean-css');
 const dependents = require('gulp-dependents');
-const babel = require('gulp-babel');
-const webpack = require('webpack-stream');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
 const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
+
+const {NODE_ENV, HOST, PORT} = process.env
+
+const isDev = NODE_ENV !== 'production';
+
+const config = require(`./webpack.config${NODE_ENV === "production" ? '.prod' : ''}.js`);
 
 const SRC = "./src"
 const DIST = "./dist"
@@ -20,7 +27,7 @@ const DIST = "./dist"
 const paths = {
     html: `${SRC}/**/*.html`,
     scss: `${SRC}/assets/scss/app.scss`,
-    js: `${SRC}/assets/js/**/*.js`,
+    js: `${SRC}/assets/js/index.js`,
     php: `${SRC}/assets/php/**/*.php`,
     images: `${SRC}/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`
 };
@@ -57,7 +64,8 @@ gulp.task('scss', () => {
 
 gulp.task('js', () => {
     return gulp.src([paths.js], {since: gulp.lastRun('js')})
-        .pipe(concat('all.js'))
+        .pipe(plumber())
+        .pipe(webpackStream(config), webpack)
         .pipe(uglify())
         .pipe(gulp.dest(`${DIST}/js`))
         .pipe(browserSync.stream());
@@ -72,20 +80,19 @@ gulp.task('images', () => {
         .pipe(browserSync.stream());
 });
 
-
 gulp.task('build', gulp.series('clear', 'html', 'scss', 'js', 'images'));
 
 gulp.task('dev', gulp.series('html', 'scss', 'js'));
 
 
 gulp.task('php', function () {
-    php.server({base: DIST, port: 80, keepalive: true});
+    php.server({base: DIST, port: PORT, keepalive: true});
 });
 
 
 gulp.task('serve', gulp.series('php'), () => {
     return browserSync.init({
-        proxy: "localhost:80",
+        proxy: `${HOST}:${PORT}`,
         baseDir: "./",
         open: true,
         notify: true
@@ -94,8 +101,12 @@ gulp.task('serve', gulp.series('php'), () => {
 
 
 gulp.task('watch', () => {
-    gulp.watch([paths.html, paths.scss, paths.js], gulp.series('dev')).on('change', browserSync.reload);
-    gulp.watch([paths.images], gulp.series('images')).on('change', browserSync.reload);
+    return gulp.watch("**/*", {
+            ignored: [
+                `${DIST}/**/*`
+            ]
+        },
+    ).on('change', browserSync.reload);
 });
 
 
