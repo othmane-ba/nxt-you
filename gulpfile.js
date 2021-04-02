@@ -57,17 +57,8 @@ gulp.task('scss', () => {
 
 gulp.task('js', () => {
     return gulp.src([paths.js], {since: gulp.lastRun('js')})
-        .pipe(plumber())
-        .pipe(webpack({
-            mode: 'production'
-        }))
-        .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
         .pipe(concat('all.js'))
         .pipe(uglify())
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(`${DIST}/js`))
         .pipe(browserSync.stream());
 });

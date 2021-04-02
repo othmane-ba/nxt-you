@@ -156,7 +156,6 @@ $(document).ready(function () {
 
     // CANVAS SPHERE BACKGROUND FUNCTION
     function canvasSphereBackground() {
-
         // Z-INDEX CORRECTION BACKGROUND OVERLAY
         $(".bg-overlay").css("z-index", "2");
 
@@ -173,6 +172,7 @@ $(document).ready(function () {
 
         init();
         animate();
+        console.log("canvasSphereBackground", SCREEN_WIDTH)
 
         function init() {
 
@@ -188,6 +188,7 @@ $(document).ready(function () {
             scene = new THREE.Scene();
 
             renderer = new THREE.CanvasRenderer();
+            console.log("renderer", renderer)
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
             container.appendChild(renderer.domElement);

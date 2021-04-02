@@ -36,7 +36,6 @@ $(".hero .container-mid").addClass("block-overflow");
 jQuery(window).on('load', function () {
     "use strict";
 
-
     setTimeout(function () {
         $("#page-loader").addClass("hide-this");
 
