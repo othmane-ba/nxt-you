@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const gulp = require('gulp');
 const del = require('del');
-const php = require('gulp-connect-php');
+const connect = require('gulp-connect-php');
 const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
@@ -53,7 +53,7 @@ gulp.task('scss', () => {
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(dependents())
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(minifyCss())
         .pipe(sourcemaps.write('.'))
@@ -71,6 +71,11 @@ gulp.task('js', () => {
         .pipe(browserSync.stream());
 });
 
+gulp.task('php', () => {
+    return gulp.src([paths.php], {since: gulp.lastRun('php')})
+        .pipe(gulp.dest(`${DIST}/api`))
+        .pipe(browserSync.stream());
+});
 
 gulp.task('images', () => {
     return gulp.src([paths.images], {since: gulp.lastRun('images')})
@@ -80,17 +85,17 @@ gulp.task('images', () => {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build', gulp.series('clear', 'html', 'scss', 'js', 'images'));
+gulp.task('build', gulp.series('clear', 'html', 'scss', 'js', 'php', 'images'));
 
-gulp.task('dev', gulp.series('html', 'scss', 'js'));
+gulp.task('dev', gulp.series('html', 'scss', 'js', 'php'));
 
 
-gulp.task('php', function () {
-    php.server({base: DIST, port: PORT, keepalive: true});
+gulp.task('connect', function () {
+    connect.server({base: DIST, port: PORT, keepalive: true});
 });
 
 
-gulp.task('serve', gulp.series('php'), () => {
+gulp.task('serve', gulp.series('connect'), () => {
     return browserSync.init({
         proxy: `${HOST}:${PORT}`,
         baseDir: "./",

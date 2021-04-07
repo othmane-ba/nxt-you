@@ -1,0 +1,169 @@
+/** 5. CLIENT
+*****************************************************************/
+
+.box-list {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.box-list li {
+  flex-basis: 25%;
+  text-align: center;
+  height: 220px;
+}
+
+.box-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid $color-base-dense;
+  border-right: 1px solid $color-base-dense;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.box-list li:nth-child(4n) a {
+  border-right: none;
+}
+
+.box-list li:nth-last-child(1) a,
+.box-list li:nth-last-child(2) a,
+.box-list li:nth-last-child(3) a,
+.box-list li:nth-last-child(4) a {
+  border-bottom: none;
+}
+
+.box-list__item {
+  height: 150px;
+  width: 150px;
+  position: relative;
+}
+
+
+.box-list__item__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.7s $ease-out-quint;
+}
+
+.box-list__item__image--hover {
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s $ease-out-quint;
+}
+
+.box-list li:hover .box-list__item__image {
+  opacity: 1;
+}
+
+.box-list li:hover .box-list__item__image--hover {
+  opacity: 0;
+}
+
+.box-list li:last-child {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 1px;
+    height: calc(100% - 40px);
+    background: $color-primary;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    transform: scaleY(.4) scaleX(1);
+    transform-origin: top;
+    transition: all 0.6s $ease-in-out-quint;
+  }
+
+  &:after {
+    width: calc(100% - 40px);
+    height: 1px;
+    transform: scaleY(1) scaleX(.4);
+    transform-origin: left;
+  }
+
+  a {
+    position: relative;
+    flex-direction: column;
+    line-height: $line-height-base;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 1px;
+      height: calc(100% - 40px);
+      background: $color-primary;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      transform: scaleY(.4) scaleX(1);
+      transform-origin: bottom;
+      transition: all 0.6s $ease-in-out-quint !important;
+    }
+
+    &:after {
+      width: calc(100% - 40px);
+      height: 1px;
+      transform: scaleY(1) scaleX(.4);
+      transform-origin: right;
+    }
+  }
+
+  &:hover {
+
+    &:before,
+    &:after,
+    a:before,
+    a:after {
+      transform: scaleX(1) scaleY(1);
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+
+  .box-list li {
+    height: 190px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .box-list li {
+    flex-basis: 50%;
+  }
+
+  .box-list li:nth-child(2n) a {
+    border-right: none;
+  }
+
+  .box-list li:nth-last-child(3) a,
+  .box-list li:nth-last-child(4) a {
+    border-bottom: 1px solid $color-base-dense;
+  }
+
+}
+
+@media only screen and (max-width: 549px) {
+
+  .box-list__item {
+    height: 120px;
+    width: 120px;
+  }
+
+  .box-list li {
+    height: 170px;
+  }
+
+}

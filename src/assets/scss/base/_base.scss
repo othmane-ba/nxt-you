@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-sans-serif;
+  color: $color-base;
+  background: #111;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+section {
+  margin-top: $gap-xxl;
+  margin-bottom: $gap-xxl;
+
+  &:first-of-type {
+    margin-top: 0 !important;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0 !important;
+  }
+
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

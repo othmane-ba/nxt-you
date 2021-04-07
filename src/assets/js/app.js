@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import {Loader} from "./loader";
 import {Analytics} from "./analytics";
-import {asyncTimeout, isAnyMobile} from "./utils";
+import {asyncTimeout, isAnyMobile, wait} from "./utils";
 import {Sphere} from "./sphere";
 
 const analyticsEnabled = false;
@@ -27,12 +27,8 @@ export class App {
     }
 
     async initPage() {
-        await this.loader.hide();
-        $(".background-content.page-enter-animated").addClass("show");
-        $(".social-icons li a").tooltip({
-            container: 'body',
-            delay: {"show": 150, "hide": 0}
-        });
+        await this.loader.hide().then(() => wait(600));
+        $(".page-enter-animated").addClass("show");
     }
 
     initAnalytics() {
@@ -49,7 +45,7 @@ export class App {
             $.ajax({
 
                 type: "POST",
-                url: "assets/php/contact.php",
+                url: "api/contact.php",
                 data: postdata,
                 dataType: "json",
                 success: function (json) {
