@@ -19,7 +19,7 @@ const {NODE_ENV, HOST, PORT} = process.env
 
 const isDev = NODE_ENV !== 'production';
 
-const config = require(`./webpack.config${NODE_ENV === "production" ? '.prod' : ''}.js`);
+const config = require(`./webpack.config${isDev ? '' : '.prod'}.js`);
 
 const SRC = "./src"
 const DIST = "./dist"
@@ -27,7 +27,7 @@ const DIST = "./dist"
 const paths = {
     html: `${SRC}/**/*.html`,
     scss: `${SRC}/assets/scss/app.scss`,
-    js: `${SRC}/assets/js/index.js`,
+    js: `${SRC}/assets/js/**/index.js`,
     php: `${SRC}/assets/php/**/*.php`,
     images: `${SRC}/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`
 };
@@ -37,10 +37,7 @@ gulp.task('clear', () => del([DIST]));
 
 
 gulp.task('html', () => {
-    return gulp.src([paths.html], {
-        base: SRC,
-        since: gulp.lastRun('html')
-    })
+    return gulp.src([paths.html])
         .pipe(gulp.dest(DIST))
         .pipe(browserSync.stream());
 });
@@ -63,22 +60,19 @@ gulp.task('scss', () => {
 
 
 gulp.task('js', () => {
-    return gulp.src([paths.js], {since: gulp.lastRun('js')})
-        .pipe(plumber())
-        .pipe(webpackStream(config), webpack)
-        .pipe(uglify())
+    return gulp.src([paths.js])
+        .pipe(webpackStream(config))
         .pipe(gulp.dest(`${DIST}/js`))
-        .pipe(browserSync.stream());
 });
 
 gulp.task('php', () => {
-    return gulp.src([paths.php], {since: gulp.lastRun('php')})
+    return gulp.src([paths.php])
         .pipe(gulp.dest(`${DIST}/api`))
         .pipe(browserSync.stream());
 });
 
 gulp.task('images', () => {
-    return gulp.src([paths.images], {since: gulp.lastRun('images')})
+    return gulp.src([paths.images])
         .pipe(plumber())
         .pipe(imagemin())
         .pipe(gulp.dest(`${DIST}/images`))
@@ -97,21 +91,17 @@ gulp.task('connect', function () {
 
 gulp.task('serve', gulp.series('connect'), () => {
     return browserSync.init({
-        proxy: `${HOST}:${PORT}`,
-        baseDir: "./",
-        open: true,
-        notify: true
+        proxy: `${HOST}:${PORT}`
     });
 });
 
 
 gulp.task('watch', () => {
-    return gulp.watch("**/*", {
-            ignored: [
-                `${DIST}/**/*`
-            ]
-        },
-    ).on('change', browserSync.reload);
+    gulp.watch(`${SRC}/**/*.scss`, gulp.series('scss'));
+    gulp.watch(`${SRC}/**/*.js`, gulp.series("js"));
+    gulp.watch(`${SRC}/**/*.html`, gulp.series("html"));
+    gulp.watch(`${SRC}/**/*.php`, gulp.series("php"));
+    gulp.watch(paths.images, gulp.series("images"));
 });
 
 

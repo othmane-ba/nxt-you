@@ -17,13 +17,9 @@ export class Sphere {
     mouseY;
 
     constructor(selectorId) {
-        // Z-INDEX CORRECTION BACKGROUND OVERLAY
-        //TODO: necessary?
-        $(".bg-overlay").css("z-index", "2");
-
         // THREE.JS BASED
-        this.SCREEN_WIDTH = $(".level-1").width();
-        this.SCREEN_HEIGHT = $(".level-1").height();
+        this.SCREEN_WIDTH = $(".js-sphere-bg").width();
+        this.SCREEN_HEIGHT = $(".js-sphere-bg").height();
 
         this.mouseX = 0;
         this.mouseY = 0;
@@ -116,8 +112,8 @@ export class Sphere {
 
     onWindowResize() {
 
-        this.SCREEN_WIDTH = $(".hero .level-1").width();
-        this.SCREEN_HEIGHT = $(".hero .level-1").height();
+        this.SCREEN_WIDTH = $(".js-sphere-bg").width();
+        this.SCREEN_HEIGHT = $(".js-sphere-bg").height();
 
         this.windowHalfX = this.SCREEN_WIDTH / 2;
         this.windowHalfY = this.SCREEN_HEIGHT / 2;

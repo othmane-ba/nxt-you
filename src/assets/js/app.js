@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import {Loader} from "./loader";
 import {Analytics} from "./analytics";
-import {asyncTimeout, isAnyMobile, wait} from "./utils";
+import {isAnyMobile, wait} from "./utils";
 import {Sphere} from "./sphere";
 
 const analyticsEnabled = false;
@@ -17,9 +17,6 @@ export class App {
     }
 
     async init() {
-
-        this.isMobile && $("body").addClass("is-mobile");
-
         this.initContactForm("#contact-form")
         this.initAnalytics();
         await this.initPage();
@@ -28,7 +25,7 @@ export class App {
 
     async initPage() {
         await this.loader.hide().then(() => wait(600));
-        $(".page-enter-animated").addClass("show");
+        $(".js-page-enter-animated").addClass("show");
     }
 
     initAnalytics() {
