@@ -26,10 +26,11 @@ const DIST = "./dist"
 
 const paths = {
     html: `${SRC}/**/*.html`,
-    scss: `${SRC}/assets/scss/app.scss`,
+    scss: `${SRC}/assets/scss/**/*.scss`,
     js: `${SRC}/assets/js/**/index.js`,
     php: `${SRC}/assets/php/**/*.php`,
-    images: `${SRC}/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`
+    images: `${SRC}/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`,
+    fonts: `${SRC}/assets/fonts/**/*.+(eot|svg|ttf|woff)`,
 };
 
 
@@ -79,9 +80,17 @@ gulp.task('images', () => {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build', gulp.series('clear', 'html', 'scss', 'js', 'php', 'images'));
 
-gulp.task('dev', gulp.series('html', 'scss', 'js', 'php'));
+gulp.task('fonts', () => {
+    return gulp.src([paths.fonts])
+        .pipe(gulp.dest(`${DIST}/fonts`))
+        .pipe(browserSync.stream());
+});
+
+
+gulp.task('build', gulp.series('clear', 'html', 'scss', 'js', 'php', 'images', 'fonts'));
+
+gulp.task('dev', gulp.series('html', 'scss', 'js', 'php', 'images', 'fonts'));
 
 
 gulp.task('connect', function () {
@@ -91,17 +100,19 @@ gulp.task('connect', function () {
 
 gulp.task('serve', gulp.series('connect'), () => {
     return browserSync.init({
+        injectChanges: true,
         proxy: `${HOST}:${PORT}`
     });
 });
 
 
 gulp.task('watch', () => {
-    gulp.watch(`${SRC}/**/*.scss`, gulp.series('scss'));
+    gulp.watch(paths.scss, gulp.series('scss'));
     gulp.watch(`${SRC}/**/*.js`, gulp.series("js"));
-    gulp.watch(`${SRC}/**/*.html`, gulp.series("html"));
-    gulp.watch(`${SRC}/**/*.php`, gulp.series("php"));
+    gulp.watch(paths.html, gulp.series("html"));
+    gulp.watch(paths.php, gulp.series("php"));
     gulp.watch(paths.images, gulp.series("images"));
+    gulp.watch(paths.fonts, gulp.series("fonts"));
 });
 
 
