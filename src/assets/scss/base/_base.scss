@@ -17,13 +17,13 @@ body {
 section {
   margin-top: $gap-xxl;
   margin-bottom: $gap-xxl;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:first-of-type {
     margin-top: 0 !important;
-  }
-
-  &:last-of-type {
-    margin-bottom: 0 !important;
   }
 
 }

@@ -30,7 +30,7 @@ const paths = {
     js: `${SRC}/assets/js/**/index.js`,
     php: `${SRC}/assets/php/**/*.php`,
     images: `${SRC}/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`,
-    fonts: `${SRC}/assets/fonts/**/*.+(eot|svg|ttf|woff)`,
+    static: `${SRC}/assets/static/**/*`,
 };
 
 
@@ -81,16 +81,16 @@ gulp.task('images', () => {
 });
 
 
-gulp.task('fonts', () => {
-    return gulp.src([paths.fonts])
-        .pipe(gulp.dest(`${DIST}/fonts`))
+gulp.task('static', () => {
+    return gulp.src([paths.static])
+        .pipe(gulp.dest(`${DIST}/`))
         .pipe(browserSync.stream());
 });
 
 
-gulp.task('build', gulp.series('clear', 'html', 'scss', 'js', 'php', 'images', 'fonts'));
+gulp.task('build', gulp.series('clear', 'html', 'scss', 'js', 'php', 'images', 'static'));
 
-gulp.task('dev', gulp.series('html', 'scss', 'js', 'php', 'images', 'fonts'));
+gulp.task('dev', gulp.series('html', 'scss', 'js', 'php', 'images', 'static'));
 
 
 gulp.task('connect', function () {
@@ -112,7 +112,7 @@ gulp.task('watch', () => {
     gulp.watch(paths.html, gulp.series("html"));
     gulp.watch(paths.php, gulp.series("php"));
     gulp.watch(paths.images, gulp.series("images"));
-    gulp.watch(paths.fonts, gulp.series("fonts"));
+    gulp.watch(paths.static, gulp.series("static"));
 });
 
 
