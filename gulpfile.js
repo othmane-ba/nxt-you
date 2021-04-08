@@ -26,11 +26,11 @@ const DIST = "./dist"
 
 const paths = {
     html: `${SRC}/**/*.html`,
-    scss: `${SRC}/assets/scss/**/*.scss`,
-    js: `${SRC}/assets/js/**/index.js`,
-    php: `${SRC}/assets/php/**/*.php`,
-    images: `${SRC}/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`,
-    static: `${SRC}/assets/static/**/*`,
+    scss: `${SRC}/scss/app.scss`,
+    js: `${SRC}/js/**/index.js`,
+    php: `${SRC}/php/**/*.php`,
+    images: `${SRC}/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`,
+    static: `${SRC}/static/**/*`,
 };
 
 
@@ -107,7 +107,7 @@ gulp.task('serve', gulp.series('connect'), () => {
 
 
 gulp.task('watch', () => {
-    gulp.watch(paths.scss, gulp.series('scss'));
+    gulp.watch(`${SRC}/**/*.scss`, gulp.series('scss'));
     gulp.watch(`${SRC}/**/*.js`, gulp.series("js"));
     gulp.watch(paths.html, gulp.series("html"));
     gulp.watch(paths.php, gulp.series("php"));
