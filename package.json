@@ -1,0 +1,45 @@
+{
+  "name": "nxt-you",
+  "version": "1.0.0",
+  "description": "Portfolio Page for NXT-YOU",
+  "browser": "index.js",
+  "author": "Fabian Piper <fabianpiper@web.de>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-dependents": "^1.2.5",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "source-map-loader": "^2.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^5.30.0",
+    "webpack-stream": "^6.1.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "three": "0.74.0"
+  }
+}

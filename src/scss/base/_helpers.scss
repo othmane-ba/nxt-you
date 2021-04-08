@@ -1,0 +1,60 @@
+/* Space
+/* ---------------------------------------------------------- */
+@include make-space();
+
+@include make-space(-xs);
+
+@media (min-width: $screen-sm) {
+  @include make-space(-sm);
+}
+
+@media (min-width: $screen-md) {
+  @include make-space(-md);
+}
+
+@media (min-width: $screen-lg) {
+  @include make-space(-lg);
+}
+
+@media (min-width: $screen-xl) {
+  @include make-space(-xl);
+}
+
+@media (min-width: $screen-xxl) {
+  @include make-space(-xxl);
+}
+
+/* Typography
+/* ---------------------------------------------------------- */
+.text-center {
+  text-align: center;
+}
+
+.font-weight-light {
+  font-weight: $font-weight-light;
+}
+
+.font-weight-normal {
+  font-weight: $font-weight-normal;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold;
+}
+
+.font-weight-heavy {
+  font-weight: $font-weight-heavy;
+}
+
+
+/* Display
+/* ---------------------------------------------------------- */
+.d-block {
+  display: block;
+}
+
+/* Color
+/* ---------------------------------------------------------- */
+.color-dense {
+  color: $color-base-dense;
+}

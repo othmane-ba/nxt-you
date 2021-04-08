@@ -1,0 +1,254 @@
+/** 3. ERROR-404
+*******************************************************************/
+
+.error-404 .front-content img.logo {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.error-404 .front-content h1 {
+  font-size: 80px;
+  font-weight: 600;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.error-404 .front-content h1 span {
+  line-height: 140px;
+
+  position: relative;
+
+  padding: 0 20px;
+
+  color: #fff;
+  margin-right: 6px;
+}
+
+.error-404 .front-content h1 span:before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  content: '';
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+
+  background: #1fb8b2;
+}
+
+
+.error-404 .front-content p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 36px;
+
+  display: block;
+
+  margin: 22px 0 36px;
+  padding: 0;
+
+  letter-spacing: 2px;
+
+  color: #fff;
+}
+
+.error-404 .front-content a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+
+  display: inline-block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 9px 30px;
+
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
+  letter-spacing: 2px;
+
+  color: #fff;
+  border: 3px solid #fff;
+}
+
+
+/** PAGE ENTER ANIMATIONS **/
+
+.error-404 .front-content.page-enter-animated h1 {
+  -webkit-transform: translateY(100%) !important;
+  transform: translateY(100%) !important;
+
+  opacity: 0 !important;
+}
+
+.error-404 .front-content.page-enter-animated.show h1 {
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+
+  opacity: 1 !important;
+}
+
+.error-404 .front-content.page-enter-animated h1 span:before {
+  width: 0;
+}
+
+.error-404 .front-content.page-enter-animated.show h1 span:before {
+  -webkit-transition: .5s .4s;
+  transition: .5s .4s;
+  width: 100%;
+}
+
+.error-404 .front-content.page-enter-animated p {
+  -webkit-transform: translateY(100%) !important;
+  transform: translateY(100%) !important;
+
+  opacity: 0 !important;
+}
+
+.error-404 .front-content.page-enter-animated.show p {
+  -webkit-transition: .8s .6s;
+  transition: .8s .6s;
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+
+  opacity: 1 !important;
+}
+
+.error-404 .front-content.page-enter-animated a {
+  -webkit-transform: translateY(100%) !important;
+  transform: translateY(100%) !important;
+
+  opacity: 0 !important;
+}
+
+.error-404 .front-content.page-enter-animated.show a {
+  -webkit-transition: .8s .8s;
+  transition: .8s .8s;
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+
+  opacity: 1 !important;
+}
+
+.error-404 .background-content #canvas {
+  top: 100% !important;
+
+  opacity: 0;
+}
+
+.error-404 .background-content.page-enter-animated.show #canvas {
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
+
+  top: 0 !important;
+
+  opacity: 1;
+}
+
+
+/** MEDIA QUERIES  **/
+
+@media only screen and (max-width: 768px), only screen and (max-height: 630px) {
+  .error-404 .front-content h1 {
+    font-size: 60px;
+
+    margin-bottom: 40px;
+  }
+
+  .error-404 .front-content h1 span {
+    font-size: 70px;
+    line-height: 120px;
+
+    padding: 0 14px;
+  }
+
+  .error-404 .front-content p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px), only screen and (max-height: 500px) {
+  .error-404 .front-content h1 {
+    font-size: 45px;
+
+    margin-bottom: 32px;
+  }
+
+  .error-404 .front-content h1 span {
+    font-size: 55px;
+    line-height: 100px;
+
+    padding: 0 14px;
+  }
+
+  .error-404 .front-content p {
+    font-size: 12px;
+  }
+}
+
+
+@media only screen and (max-width: 480px), only screen and (max-height: 410px) {
+  .error-404 .front-content h1 {
+    font-size: 40px;
+
+    margin-bottom: 25px;
+  }
+
+  .error-404 .front-content h1 span {
+    font-size: 38px;
+    line-height: 70px;
+
+    padding: 0 10px;
+  }
+
+  .error-404 .front-content p {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 20px;
+
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (max-width: 400px), only screen and (max-height: 310px) {
+  .error-404 .front-content h1 {
+    font-size: 35px;
+
+    margin-bottom: 23px;
+  }
+
+  .error-404 .front-content h1 span {
+
+    font-size: 34px;
+    line-height: 60px;
+
+    padding: 0 6px;
+  }
+
+  .error-404 .front-content p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 355px), only screen and (max-height: 280px) {
+  .error-404 .front-content h1 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+  }
+
+  .error-404 .front-content p {
+    font-size: 10px;
+  }
+}
