@@ -53,8 +53,8 @@ p, .text-p {
 strong, .text-strong {
   text-transform: uppercase;
   font-size: $font-size-xs;
-  line-height: $line-height-sm;
-  font-weight: $font-weight-heavy;
+  line-height: $line-height-base;
+  font-weight: $font-weight-bold;
   letter-spacing: 5px;
 }
 

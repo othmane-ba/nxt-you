@@ -404,55 +404,55 @@
 
 
             <!-- FORM -->
-            <form id="contact-form" action="api/contact.php" method="post">
+            <form id="contact-form" class="form" action="api/contact.php" method="post">
 
 
                 <!-- CONTROL GROUP -->
-                <div class="control-group">
+                <div class="form__group">
 
-                    <label class="nameLabel">Name</label>
-                    <input id="contact-form-name" type="text" name="name" class="form-control">
+                    <label class="form__group__label" for="contact-name">Name</label>
+                    <input id="contact-name" type="text" name="name" class="form__group__control">
 
                 </div>
                 <!-- /CONTROL GROUP -->
 
 
                 <!-- CONTROL GROUP -->
-                <div class="control-group">
+                <div class="form__group">
 
-                    <label class="emailLabel">Email</label>
-                    <input id="contact-form-email" type="text" name="email" class="form-control">
+                    <label class="form__group__label" for="contact-email">Email</label>
+                    <input id="contact-email" type="text" name="email" class="form__group__control">
 
                 </div>
                 <!-- /CONTROL GROUP -->
 
 
                 <!-- PHANTOM ELEMENT ( HONEYPOT CAPTCHA FOR SECURITY ) -->
-                <div class="control-group fhp-input">
+                <div class="form__group fhp-input">
 
-                    <label class="phoneLabel">Phone</label>
-                    <input id="contact-form-phone" type="phone" name="phone" class="form-control">
+                    <label class="form__group__label" for="contact-phone">Phone</label>
+                    <input id="contact-phone" type="phone" name="phone" class="form__group__control">
 
                 </div>
                 <!-- /PHANTOM ELEMENT ( HONEYPOT CAPTCHA FOR SECURITY ) -->
 
 
                 <!-- CONTROL GROUP -->
-                <div class="control-group">
+                <div class="form__group">
 
-                    <label class="messageLabel">Message</label>
-                    <textarea id="contact-form-message" name="message" class="form-control"></textarea>
+                    <label class="form__group__label" for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" class="form__group__control"></textarea>
 
                 </div>
                 <!-- /CONTROL GROUP -->
 
 
                 <!-- CONTROL GROUP -->
-                <div class="control-group">
+                <div class="form__group">
 
 
                     <!-- BUTTON -->
-                    <button type="submit" class="form-control">
+                    <button type="submit" class="form__group__control">
 
                         <i class="ti-arrow-right first"></i>
                         <i class="ti-arrow-right second"></i>
