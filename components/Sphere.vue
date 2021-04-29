@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+  <h1>Sphere</h1>
 </template>
 
 <style></style>
