@@ -1,29 +1,20 @@
 <template>
-  <div class="container">
-    <div class="grid-row">
-      <div class="grid-col-24 grid-col-lg-12">
-        <a href="#" class="portfolio__card mb-4 m-lg-5 pointer-right">
-          <div class="portfolio__card__img ratio ratio-3x4">
-            <img alt="Portfolio Image 1" src="~/assets/images/1.jpg" />
-          </div>
-          <div class="portfolio__card__desc mt-3">
-            <span class="d-block mb-2 text-label">Web Design</span>
-            <h3>Slumber</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="grid-col-24 grid-col-lg-12">
-        <a href="#" class="portfolio__card mt-4 m-lg-5 mt-lg-0 pointer-right">
-          <div class="portfolio__card__img ratio ratio-3x4">
-            <img alt="Portfolio Image 2" src="~/assets/images/2.jpg" />
-          </div>
-          <div class="portfolio__card__desc mt-3">
-            <span class="d-block mb-2 text-label">Branding</span>
-            <h3>Apple Tonik</h3>
-          </div>
-        </a>
-      </div>
+  <div class="container mx-auto px-4 lg:px-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16">
+      <a href="#" class="block lg:mt-32 pointer-right">
+        <img alt="Portfolio Image 1" src="~/assets/images/1.jpg" />
+        <div class="mt-3">
+          <span class="block mb-0.5">Web Design</span>
+          <h3 class="text-2xl font-bold">Slumber</h3>
+        </div>
+      </a>
+      <a href="#" class="portfolio__card mt-4 m-lg-5 mt-lg-0 pointer-right">
+        <img alt="Portfolio Image 2" src="~/assets/images/2.jpg" />
+        <div class="mt-3">
+          <span class="block mb-0.5">Branding</span>
+          <h3 class="text-2xl font-bold">Apple Tonik</h3>
+        </div>
+      </a>
     </div>
   </div>
 </template>
