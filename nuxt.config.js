@@ -22,7 +22,9 @@ export default {
 
   plugins: [],
 
-  components: true,
+  components: {
+    dirs: ['~/components/home', '~/components/layout', '~/components/shared'],
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],

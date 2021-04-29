@@ -1,5 +1,5 @@
 <template>
-  <div class="pointer" id="pointer">
+  <div class="pointer">
     <i class="ti-arrow-right"></i>
     <i class="ti-search"></i>
     <i class="ti-link"></i>
