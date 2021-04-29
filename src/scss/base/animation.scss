@@ -1,0 +1,516 @@
+/* 9.1. Loading animations */
+.animated {
+  animation-fill-mode: both;
+}
+
+[data-animation]:before,
+[data-animation]:after,
+[data-animation] {
+  opacity: 0;
+}
+
+[data-animation].animated:before,
+[data-animation].animated:after,
+[data-animation].animated {
+  opacity: 1;
+}
+
+/* 9.1.1. Loading overlay animation #1 */
+.overlay-loading {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay-loading:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: 1.8s cubic-bezier(.767, .01, .18, 1.01);
+  z-index: 3;
+  transform: translateX(-202%);
+}
+
+body.anim .overlay-loading:before {
+  transform: translateX(1%);
+}
+
+.loading-opacity-anim {
+  opacity: 0;
+  transition: 0s;
+  transition-delay: .86s;
+}
+
+body.anim .loading-opacity-anim {
+  opacity: 1;
+}
+
+.tr-delay01 .loading-opacity-anim {
+  transition-delay: .96s;
+}
+
+.tr-delay02 .loading-opacity-anim {
+  transition-delay: 1.06s;
+}
+
+.tr-delay03 .loading-opacity-anim {
+  transition-delay: 1.16s;
+}
+
+.tr-delay04 .loading-opacity-anim {
+  transition-delay: 1.26s;
+}
+
+.tr-delay05 .loading-opacity-anim {
+  transition-delay: 1.36s;
+}
+
+.tr-delay06 .loading-opacity-anim {
+  transition-delay: 1.46s;
+}
+
+.tr-delay07 .loading-opacity-anim {
+  transition-delay: 1.56s;
+}
+
+.tr-delay08 .loading-opacity-anim {
+  transition-delay: 1.66s;
+}
+
+.tr-delay09 .loading-opacity-anim {
+  transition-delay: 1.76s;
+}
+
+.tr-delay10 .loading-opacity-anim {
+  transition-delay: 1.86s;
+}
+
+/* 9.1.2. Loading overlay animation #2 */
+.overlay-loading2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay-loading2:before {
+  content: '';
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 1s cubic-bezier(.858, .01, .068, .99);
+  z-index: 3;
+  transform: translateX(0);
+}
+
+body.anim .overlay-loading2:before {
+  transform: translateX(110%);
+}
+
+/* 9.1.3. Loading fade animation */
+.fade-loading {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+}
+
+body.anim .fade-loading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 9.1.4. Loading title fill animation */
+.load-title-fill {
+  white-space: nowrap;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.load-title-fill:before,
+.load-title-fill:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  color: $color-base;
+  transform: translateY(-50%);
+  left: 0;
+  transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.load-title-fill:after {
+  color: $color-base;
+  background: transparent;
+}
+
+body.anim .load-title-fill:before,
+body.anim .load-title-fill:after {
+  width: 100%;
+}
+
+.tr-delay01.load-title-fill:after {
+  transition-delay: .4s !important;
+}
+
+.tr-delay02.load-title-fill:after {
+  transition-delay: .5s !important;
+}
+
+.tr-delay03.load-title-fill:after {
+  transition-delay: .6s !important;
+}
+
+.tr-delay04.load-title-fill:after {
+  transition-delay: .7s !important;
+}
+
+.tr-delay05.load-title-fill:after {
+  transition-delay: .8s !important;
+}
+
+.tr-delay06.load-title-fill:after {
+  transition-delay: .9s !important;
+}
+
+.tr-delay07.load-title-fill:after {
+  transition-delay: 1s !important;
+}
+
+.tr-delay08.load-title-fill:after {
+  transition-delay: 1.1s !important;
+}
+
+.tr-delay09.load-title-fill:after {
+  transition-delay: 1.2s !important;
+}
+
+.tr-delay10.load-title-fill:after {
+  transition-delay: 1.3s !important;
+}
+
+/* 9.2. Scroll animations */
+
+/* 9.2.1. Scroll overlay animation #1 */
+[data-animation].overlay-anim-box:before,
+[data-animation].overlay-anim-box:after,
+[data-animation].overlay-anim-box {
+  opacity: 1;
+}
+
+.overlay-anim-box {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay-anim-box:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: 1.8s cubic-bezier(.767, .01, .18, 1.01);
+  z-index: 3;
+  transform: translateX(-202%);
+}
+
+.overlay-anim-box.overlay-anim:before {
+  transform: translateX(1%);
+}
+
+.overlay-opacity-anim {
+  opacity: 0;
+  transition: 0s;
+  transition-delay: .86s;
+}
+
+.overlay-anim .overlay-opacity-anim {
+  opacity: 1;
+}
+
+.tr-delay01 .overlay-opacity-anim {
+  transition-delay: .96s;
+}
+
+.tr-delay02 .overlay-opacity-anim {
+  transition-delay: 1.06s;
+}
+
+.tr-delay03 .overlay-opacity-anim {
+  transition-delay: 1.16s;
+}
+
+.tr-delay04 .overlay-opacity-anim {
+  transition-delay: 1.26s;
+}
+
+.tr-delay05 .overlay-opacity-anim {
+  transition-delay: 1.36s;
+}
+
+.tr-delay06 .overlay-opacity-anim {
+  transition-delay: 1.46s;
+}
+
+.tr-delay07 .overlay-opacity-anim {
+  transition-delay: 1.56s;
+}
+
+.tr-delay08 .overlay-opacity-anim {
+  transition-delay: 1.66s;
+}
+
+.tr-delay09 .overlay-opacity-anim {
+  transition-delay: 1.76s;
+}
+
+.tr-delay10 .overlay-opacity-anim {
+  transition-delay: 1.86s;
+}
+
+/* 9.2.2. Scroll overlay animation #2 */
+[data-animation].overlay-anim-box2:before,
+[data-animation].overlay-anim-box2:after,
+[data-animation].overlay-anim-box2 {
+  opacity: 1;
+}
+
+.overlay-anim-box2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay-anim-box2:before {
+  content: '';
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: 1s cubic-bezier(.858, .01, .068, .99);
+  z-index: 3;
+  transform: translateX(0);
+}
+
+.overlay-anim-box2.overlay-anim2:before {
+  transform: translateX(110%);
+}
+
+/* 9.2.3. Scroll fade animation */
+.fade-anim-box {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+}
+
+.fade-anim-box.fade-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 9.2.4. Scroll title fill animation */
+[data-animation].title-fill:before,
+[data-animation].title-fill:after,
+[data-animation].title-fill {
+  opacity: 1;
+}
+
+.title-fill {
+  white-space: nowrap;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.title-fill:before,
+.title-fill:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  color: $color-base;
+  transform: translateY(-50%);
+  left: 0;
+  transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.title-fill:after {
+  color: $color-primary;
+  background: transparent;
+  transition-delay: .3s;
+}
+
+.title-fill.title-fill-anim:before,
+.title-fill.title-fill-anim:after {
+  width: 100%;
+}
+
+.tr-delay01.title-fill:after {
+  transition-delay: .4s !important;
+}
+
+.tr-delay02.title-fill:after {
+  transition-delay: .5s !important;
+}
+
+.tr-delay03.title-fill:after {
+  transition-delay: .6s !important;
+}
+
+.tr-delay04.title-fill:after {
+  transition-delay: .7s !important;
+}
+
+.tr-delay05.title-fill:after {
+  transition-delay: .8s !important;
+}
+
+.tr-delay06.title-fill:after {
+  transition-delay: .9s !important;
+}
+
+.tr-delay07.title-fill:after {
+  transition-delay: 1s !important;
+}
+
+.tr-delay08.title-fill:after {
+  transition-delay: 1.1s !important;
+}
+
+.tr-delay09.title-fill:after {
+  transition-delay: 1.2s !important;
+}
+
+.tr-delay10.title-fill:after {
+  transition-delay: 1.3s !important;
+}
+
+/*--------------------------------------------------------------
+10. Hovers
+--------------------------------------------------------------*/
+.hover-content {
+  transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+  display: inline-block;
+}
+
+.hover-box:hover .hover-content {
+  transform: translateX(20px);
+}
+
+.hover-img {
+  transition: 1s cubic-bezier(.858, .01, .068, .99);
+}
+
+.hover-box:hover .hover-img {
+  transform: scale(1.1);
+}
+
+.hidden-box {
+  overflow: hidden;
+}
+
+.hover-fill-effect {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.hover-fill-effect:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  color: $color-primary;
+  left: 0;
+  transition: .8s cubic-bezier(.858, .01, .068, .99);
+  width: 0;
+  white-space: nowrap;
+  z-index: 2;
+  background: transparent;
+  overflow: hidden;
+}
+
+.hover-box:hover .hover-fill-effect:before {
+  width: 100%;
+}
+
+.hover-fill-effect:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  background: $color-primary;
+  transition: 1.2s cubic-bezier(.17, .85, .438, .99);
+}
+
+.hover-box:hover .hover-fill-effect:after {
+  transform: translateY(-50%) scaleX(1);
+}
+
+.hover-color {
+  transition: .7s cubic-bezier(.17, .85, .438, .99);
+}
+
+.hover-color:hover {
+  color: $color-primary;
+}
+
+.tr-delay01 .hover-img {
+  transition-delay: .1s;
+}
+
+.tr-delay02 .hover-img {
+  transition-delay: .2s;
+}
+
+.tr-delay03 .hover-img {
+  transition-delay: .3s;
+}
+
+.tr-delay04 .hover-img {
+  transition-delay: .4s;
+}
+
+.tr-delay05 .hover-img {
+  transition-delay: .5s;
+}
+
+.tr-delay06 .hover-img {
+  transition-delay: .6s;
+}
+
+.tr-delay07 .hover-img {
+  transition-delay: .7s;
+}
+
+.tr-delay08 .hover-img {
+  transition-delay: .8s;
+}
+
+.tr-delay09 .hover-img {
+  transition-delay: .9s;
+}
+
+.tr-delay10 .hover-img {
+  transition-delay: 1s;
+}

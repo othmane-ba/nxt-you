@@ -31,6 +31,17 @@ $successMessage = "* The Email was Sent Successfully!";
 /** 3. MAIN SCRIPT
  *******************************************************************/
 
+function send_error($response){
+    http_response_code(500);
+    echo json_encode($response);
+    exit;
+}
+
+function send_success($response){
+    http_response_code(200);
+    echo json_encode($response);
+    exit;
+}
 
 if ($_POST) {
 
@@ -39,35 +50,41 @@ if ($_POST) {
     $message = addslashes(trim($_POST["message"]));
     $fhp_input = addslashes(trim($_POST["phone"]));
 
-    $array = array("nameMessage" => "", "emailMessage" => "", "messageMessage" => "", "succesMessage" => "");
+    $response = array("success" => true, "errors" => array());
 
     if ($name == "") {
-        $array["nameMessage"] = $errrorEmptyField;
+        $response["success"] = false;
+        $response["errors"]["name"] = "Please provide your name";
     }
 
     if (!filter_var($clientEmail, FILTER_VALIDATE_EMAIL)) {
-        $array["emailMessage"] = $errrorEmailInvalid;
+        $response["success"] = false;
+        $response["errors"]["email"] = "Please provide a valid Email";
     }
 
     if ($message == "") {
-        $array["messageMessage"] = $errrorEmptyField;
+        $response["success"] = false;
+        $response["errors"]["message"] = "Please type a message";
     }
 
-    if ($name != "" && filter_var($clientEmail, FILTER_VALIDATE_EMAIL) && $message != "" && $fhp_input == "") {
+    if ($fhp_input != "") {
+        $response["success"] = false;
+        $response["errors"]["any"] = "Unknown error";
+    }
 
-        $array["succesMessage"] = $successMessage;
-
+    if ($response["success"]) {
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: " . $name . " <" . $clientEmail . ">\r\n";
         $headers .= "Reply-To: " . $clientEmail;
-
         mail($emailTo, $emailIdentifier, $message, $headers);
 
+        send_success($response);
+    } else {
+        send_error($response);
     }
-
-    echo json_encode($array);
-
+    $response["success"] = false;
+    send_error($response);
 }
 
 ?>

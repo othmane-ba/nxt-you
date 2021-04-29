@@ -1,20 +1,14 @@
 /** SPHERE
  *******************************************************************/
 
-import $ from 'jquery';
 import THREE from "./vendor/three-canvas-renderer.js";
 
 const sphereDistance = 300;
 const sphereRotationSpeed = 0.2;
 
-export class Sphere {
+let lem = true;
 
-    camera;
-    scene;
-    renderer;
-    material;
-    mouseX;
-    mouseY;
+export class Sphere {
 
     constructor(selectorId) {
         // THREE.JS BASED
@@ -29,13 +23,25 @@ export class Sphere {
 
         this.selectorId = selectorId;
 
-        this.lem = true;
+        lem = true;
 
-        $(document).scroll(function () {
+        $(document).scroll(() => {
 
-            this.lem = $(this).scrollTop() <= $(window).height();
-
+            lem = $(document).scrollTop() <= this.SCREEN_HEIGHT;
+            if ($(document).scrollTop() <= this.windowHalfY) {
+                $('.js-sphere-overlay').removeClass("sphere__overlay--show");
+            } else {
+                $('.js-sphere-overlay').addClass("sphere__overlay--show");
+            }
         });
+        $('.js-down-button').click((e) => {
+            e.preventDefault()
+            $('html, body').animate({
+                scrollTop: this.SCREEN_HEIGHT,
+            }, {
+                duration: 800
+            })
+        })
     }
 
 
@@ -147,12 +153,12 @@ export class Sphere {
     }
 
     animate() {
-        requestAnimationFrame(this.animate.bind(this));
+        requestAnimationFrame(() => this.animate());
         this.render();
     }
 
     render() {
-        if (this.lem) {
+        if (lem) {
             this.camera.position.x += (this.mouseX - this.camera.position.x) * 0.05;
             this.camera.position.y += (-this.mouseY + 200 - this.camera.position.y) * 0.05;
             this.camera.lookAt(this.scene.position);

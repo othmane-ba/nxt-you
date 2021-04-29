@@ -22,7 +22,7 @@
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap"
           rel="stylesheet">
 
     <!-- STYLESHEETS -->
@@ -52,12 +52,21 @@
     </div>
     <!-- /LOADING -->
 
+
+    <!-- POINTER -->
+    <div class="pointer" id="pointer">
+        <i class="ti-arrow-right"></i>
+        <i class="ti-search"></i>
+        <i class="ti-link"></i>
+    </div><!-- /POINTER -->
+
+
     <!-- SPHERE -->
     <div class="sphere js-page-enter-animated">
 
 
         <!-- SPHERE OVERLAY -->
-        <div class="sphere__overlay"></div>
+        <div class="sphere__overlay js-sphere-overlay"></div>
         <!-- /SPHERE OVERLAY -->
 
 
@@ -94,28 +103,21 @@
 
 
                 <!-- HERO TITLE  -->
-                <div class="hero__inner__title mb-4 mt-4">
-                    <h1>DESIGN<span> & </span><br>CREATIVE DIGITAL<br>SOLUTIONS.</h1>
+                <div class="hero__inner__title mb-5 mt-5">
+                    <h1 class="cd-headline clip home-headline">I’m a <span class="cd-words-wrapper single-headline"><b
+                            class="is-visible">Developer</b><b>Designer</b><b>Freelancer</b></span></h1>
                 </div>
                 <!-- /HERO TITLE -->
 
 
-                <!-- OPEN OVERLAY BUTTON -->
-                <div class="arrow-wrap go-down mb-4 mt-4">
+                <!-- HERO BUTTON -->
+                <button class="button button--outline button--rec hero__inner__button pointer-large js-down-button">
 
+                    <i class="ti-arrow-down"></i>
+                    <i class="ti-arrow-down"></i>
 
-                    <!-- OPEN OVERLAY BUTTON INNER -->
-                    <div class="open-overlay down-button">
-
-                        <i class="ti-arrow-down"></i>
-                        <i class="ti-arrow-down"></i>
-
-                    </div>
-                    <!-- /OPEN OVERLAY BUTTON INNER -->
-
-
-                </div>
-                <!-- /OPEN OVERLAY BUTTON -->
+                </button>
+                <!-- /HERO BUTTON -->
 
 
             </div>
@@ -201,23 +203,32 @@
     <!-- /INTRO TEXT -->
 
     <!-- PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" data-animation-container class="portfolio">
         <div class="container">
             <div class="grid-row">
                 <div class="grid-col-24 grid-col-lg-12">
-                    <div class="mt-lg-5 p-lg-2">
-                        <img alt="Portfolio Image 1" src="images/1.jpg"/>
-                        <span class="d-block mt-4 mb-3 font-weight-light">Web Design</span>
-                        <h3>Slumber</h3>
-                    </div>
+                    <a href="#" class="portfolio__card mb-4 m-lg-5 pointer-right">
+                        <div class="portfolio__card__img ratio ratio-3x4">
+                            <img alt="Portfolio Image 1" src="images/1.jpg"/>
+                        </div>
+                        <div class="portfolio__card__desc mt-3">
+                            <span class="d-block mb-2 text-label">Web Design</span>
+                            <h3>Slumber</h3>
+                        </div>
+
+                    </a>
                 </div>
 
                 <div class="grid-col-24 grid-col-lg-12">
-                    <div class="p-lg-2">
-                        <img alt="Portfolio Image 2" src="images/2.jpg"/>
-                        <span class="d-block mt-4 mb-3 font-weight-light">Branding</span>
-                        <h3>Apple Tonik</h3>
-                    </div>
+                    <a href="#" class="portfolio__card mt-4 m-lg-5 mt-lg-0 pointer-right">
+                        <div class="portfolio__card__img ratio ratio-3x4">
+                            <img alt="Portfolio Image 2" src="images/2.jpg"/>
+                        </div>
+                        <div class="portfolio__card__desc mt-3">
+                            <span class="d-block mb-2 text-label">Branding</span>
+                            <h3>Apple Tonik</h3>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -235,7 +246,7 @@
 
 
             <!-- CLIENT-TITLE -->
-            <h2 class="text-center mb-4" data-animation-container>
+            <h2 class="mb-4" data-animation-container>
                     <span data-animation-child class="title-fill" data-animation="title-fill-anim"
                           data-text="Fine Folks">Fine Folks</span><br>
                 <span data-animation-child class="title-fill tr-delay01" data-animation="title-fill-anim"
@@ -388,29 +399,58 @@
 
 
     <!-- CONTACT -->
-    <section id="contact" class="contact text-center">
+    <section id="contact" class="contact text-center" data-animation-container>
 
 
         <!-- CONTAINER -->
         <div class="container">
 
+            <!-- CONTACT-TITLE -->
+            <h2>
+                    <span data-animation-child class="title-fill" data-animation="title-fill-anim"
+                          data-text="Contact">Contact</span><br>
+            </h2>
+            <!-- /CONTACT-TITLE -->
 
-            <h2 class="mb-4">Contact</h2>
 
-            <p class="text-center">
+            <p class="text-center mb-4 mt-4 fade-anim-box tr-delay03" data-animation-child
+               data-animation="fade-anim">
                 Want to say hello? Want to know more about us?<br/>
                 Drop us an email and we will get back to you as soon as we can.
             </p>
 
-
             <!-- FORM -->
-            <form id="contact-form" class="form" action="api/contact.php" method="post">
+            <form id="contact-form" class="form fade-anim-box tr-delay04" data-animation-child data-animation="fade-anim">
+
+
+                <div id="form-loader" class="hide-this">
+
+                    <!-- SPINNER CONTAINER -->
+                    <div class="spinner-container">
+
+                        <div class="css-spinner"></div>
+
+                    </div>
+                    <!-- /SPINNER CONTAINER -->
+
+                </div>
+
+
+                <div class="form__group form__alert js-form-alert">
+                    <div class="form__alert__title">
+                        <i class="form__alert__title__icon js-form-alert-icon"></i>
+                        <h6 class="js-form-alert-title"></h6>
+                    </div>
+                    <div class="js-form-alert-list">
+
+                    </div>
+                </div>
 
 
                 <!-- CONTROL GROUP -->
                 <div class="form__group">
 
-                    <label class="form__group__label" for="contact-name">Name</label>
+                    <label class="form__group__label pointer-small" for="contact-name">Name</label>
                     <input id="contact-name" type="text" name="name" class="form__group__control">
 
                 </div>
@@ -420,7 +460,7 @@
                 <!-- CONTROL GROUP -->
                 <div class="form__group">
 
-                    <label class="form__group__label" for="contact-email">Email</label>
+                    <label class="form__group__label pointer-small" for="contact-email">Email</label>
                     <input id="contact-email" type="text" name="email" class="form__group__control">
 
                 </div>
@@ -430,7 +470,7 @@
                 <!-- PHANTOM ELEMENT ( HONEYPOT CAPTCHA FOR SECURITY ) -->
                 <div class="form__group fhp-input">
 
-                    <label class="form__group__label" for="contact-phone">Phone</label>
+                    <label class="form__group__label pointer-small" for="contact-phone">Phone</label>
                     <input id="contact-phone" type="phone" name="phone" class="form__group__control">
 
                 </div>
@@ -440,7 +480,7 @@
                 <!-- CONTROL GROUP -->
                 <div class="form__group">
 
-                    <label class="form__group__label" for="contact-message">Message</label>
+                    <label class="form__group__label pointer-small" for="contact-message">Message</label>
                     <textarea id="contact-message" name="message" class="form__group__control"></textarea>
 
                 </div>
@@ -452,10 +492,11 @@
 
 
                     <!-- BUTTON -->
-                    <button type="submit" class="form__group__control">
+                    <button type="submit" class="button button--solid form__group__submit pointer-large">
 
-                        <i class="ti-arrow-right first"></i>
-                        <i class="ti-arrow-right second"></i>
+                        <i class="ti-arrow-right"></i>
+                        <i class="ti-arrow-right"></i>
+                        <i class="ti-check"></i>
 
                     </button>
                     <!-- /BUTTON -->
@@ -463,7 +504,6 @@
 
                 </div>
                 <!-- /CONTROL GROUP -->
-
 
             </form>
             <!-- /FORM -->

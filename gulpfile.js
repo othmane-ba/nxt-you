@@ -47,7 +47,7 @@ gulp.task('html', () => {
 gulp.task('scss', () => {
     return gulp.src([
         paths.scss
-    ], {since: gulp.lastRun('scss')})
+    ])
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(dependents())
@@ -100,8 +100,10 @@ gulp.task('connect', function () {
 
 gulp.task('serve', gulp.series('connect'), () => {
     return browserSync.init({
+        proxy: `${HOST}:${PORT}`,
         injectChanges: true,
-        proxy: `${HOST}:${PORT}`
+        notify: false,
+        files: [`${DIST}/**/*`]
     });
 });
 

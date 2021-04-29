@@ -1,8 +1,11 @@
-import $ from 'jquery';
+import $ from './vendor/jquery-scroll-animations';
 import {Loader} from "./loader";
 import {Analytics} from "./analytics";
 import {isAnyMobile, wait} from "./utils";
 import {Sphere} from "./sphere";
+import {Cursor} from "./cursor";
+import {Headline} from "./headline";
+import {ContactForm} from "./contact-form";
 
 const analyticsEnabled = false;
 
@@ -13,81 +16,30 @@ export class App {
         this.analytics = new Analytics(analyticsEnabled);
         this.loader = new Loader("#page-loader");
         this.sphere = new Sphere("canvas");
+        this.cursor = new Cursor();
+        this.headline = new Headline();
+        this.form = new ContactForm("#contact-form", ".js-form-alert");
         this.init();
     }
 
     async init() {
-        this.initContactForm("#contact-form")
         this.initAnalytics();
         await this.initPage();
         await this.sphere.init();
     }
 
     async initPage() {
+        this.isMobile && $("body").addClass("body--mobile");
         await this.loader.hide().then(() => wait(600));
+        this.headline.init();
         $(".js-page-enter-animated").addClass("show");
+
+        // scroll animations
+        const animationContainers = $('[data-animation]:not([data-animation-child]), [data-animation-container]');
+        animationContainers.scrollAnimations();
     }
 
     initAnalytics() {
         this.analytics.enabled && this.analytics.load();
     }
-
-    initContactForm(selector) {
-
-        $(selector).submit(function (e) {
-
-            e.preventDefault();
-            const postdata = $(this).serialize();
-
-            $.ajax({
-
-                type: "POST",
-                url: "api/contact.php",
-                data: postdata,
-                dataType: "json",
-                success: function (json) {
-
-                    $("#contact-form.error input, #contact-form.error textarea").removeClass("active");
-
-                    setTimeout(function () {
-
-                        if (json.nameMessage !== "") {
-
-                            $("#contact-form-name").addClass("active").attr("placeholder", json.nameMessage);
-                            $("#contact-form").addClass("error");
-
-                        }
-
-                        if (json.emailMessage !== "") {
-
-                            $("#contact-form-email").addClass("active").val("").attr("placeholder", json.emailMessage);
-                            $("#contact-form").addClass("error");
-
-                        }
-
-                        if (json.messageMessage !== "") {
-
-                            $("#contact-form-message").addClass("active").attr("placeholder", json.messageMessage);
-                            $("#contact-form").addClass("error");
-
-                        }
-
-                    }, 50);
-
-                    if (json.nameMessage === "" && json.emailMessage === "" && json.messageMessage === "") {
-
-                        $('#contact-form').removeClass("error").addClass("success");
-                        $('#contact-form textarea, #contact-form input').attr("placeholder", "");
-                        $('#contact-form textarea').attr("placeholder", json.succesMessage);
-                        $('#contact-form input, #contact-form button, #contact-form textarea').val('').prop('disabled', true);
-
-                    }
-
-                }
-
-            });
-
-        });
-    }
-
 }

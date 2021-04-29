@@ -6,7 +6,7 @@
  @ Website        https://nxt-you.de
 
  ******************************************************************/
-import $ from 'jquery';
+import $ from './vendor/jquery-scroll-animations';
 import {App} from "./app"
 
 $(document).ready(async () => {

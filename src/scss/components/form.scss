@@ -18,9 +18,6 @@
     &__label {
       display: inline-block;
       margin-left: $gap-sm;
-      text-transform: uppercase;
-      font-size: $font-size-sm;
-      line-height: $line-height-base;
     }
 
     &__control {
@@ -31,18 +28,18 @@
       width: 100%;
       height: 42px;
       padding-left: $gap-sm;
-      transition: all 0.2s $ease-in-out;
       color: $color-base;
       border: 1px solid $color-base-dense;
       border-radius: 0;
       outline: none;
       background: rgba(255, 255, 255, 0);
       box-shadow: none;
+      transition: all 0.4s $ease-in-out;
 
       &:focus, &:active {
         border: 1px solid $color-base;
         outline: none;
-        background: rgba(255, 255, 255, .025);
+        background: rgba(#fff, 0.01);
       }
 
 
@@ -50,186 +47,155 @@
         color: $color-base-dense;
       }
 
-      &[type="submit"] {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-        width: 144px;
-        height: 42px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        color: #000;
-        border: 1px solid #d6d6d6;
-        border-radius: 0;
-        background: rgba(255, 255, 255, 1);
 
+      &--error {
+        border: 1px solid $color-error;
+      }
+
+      &[disabled] {
+        opacity: 0.5;
+      }
+
+    }
+
+    &__submit {
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: -200%;
+        color: $color-base;
+        width: 100%;
+        transition: none;
+        transform: translateY(-50%);
+        text-align: center;
+
+        &:nth-child(1) {
+          left: 0;
+          color: inherit;
+        }
+
+      }
+
+      &:focus, &:active {
+        background-color: $color-base;
+      }
+
+      &:hover:not([disabled]) {
+        background: rgba(255, 255, 255, .00);
 
         i {
-          position: absolute;
-          top: 50%;
-          left: 0;
+          transition: all .2s ease 0s;
 
-          width: 100%;
-          height: auto;
-
-          -webkit-transition: none;
-          transition: none;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-          text-align: center;
-
-          &.first {
-            left: 200%;
-            color: #fff;
+          &:nth-child(1) {
+            left: -200%;
           }
 
-          &.second {
+          &:nth-child(2) {
             left: 0;
-
-            &:before {
-              content: '\e64c';
-              color: #fff;
-            }
           }
 
         }
-
-        &::before {
-          display: block;
-          content: '';
-          position: absolute;
-          z-index: -1;
-          top: 0;
-          right: auto;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          transition: all .2s ease;
-          background: rgba(255, 255, 255, 1);
-        }
-
-        &[disabled] {
-          opacity: 1;
-          color: #fff;
-          border: 1px solid #fff;
-          outline: none;
-          background: rgba(255, 255, 255, 1);
-        }
-
-        &:hover, &:focus, &:active {
-          color: #000;
-          border-color: #d6d6d6;
-          outline: none !important;
-          background: rgba(255, 255, 255, .00);
-          box-shadow: none;
-
-        }
-
-        &:focus, &:active {
-          background: rgba(255, 255, 255, 1);
-        }
-
-        &:hover {
-          background: rgba(255, 255, 255, .00) !important;
-
-          i {
-            transition: all .2s ease 0s;
-
-            &.first {
-              left: 0;
-            }
-
-            &.second {
-              left: -200%;
-            }
-
-          }
-
-          &::before {
-            right: 0;
-            left: auto;
-
-            width: 0;
-          }
-        }
-
       }
     }
   }
 
+  &__alert {
+    border: 1px solid;
+    padding: $gap-md;
+
+    &__title {
+      display: flex;
+
+      &__icon {
+        display: block;
+        font-size: $font-size-lg;
+        padding-right: $gap-md;
+      }
+
+    }
+
+    ul {
+      list-style-type: circle;
+      padding-left: $gap-lg;
+    }
+  }
+
+
+  &--active #form-loader {
+    opacity: 1;
+    visibility: visible;
+  }
 
 }
 
 textarea.form__group__control {
-  height: $gap-xl;
+  height: $gap-xxl;
   padding-top: $gap-sm;
   resize: none !important;
 }
 
+.form--error {
+  .form__group__submit {
+    border-color: $color-error;
+    background-color: $color-error;
 
-.form.error input.active,
-.form.error textarea.active {
-  border-color: rgba(251, 9, 9, 1) !important;
+    i {
+      color: $color-base !important;
+    }
+
+    &:before {
+      background-color: $color-error !important;
+    }
+
+    &:focus, &:active {
+      background: $color-error;
+    }
+
+  }
+
+  .form__alert {
+    border-color: $color-error;
+    background-color: rgba($color-error, 0.125);
+
+    &__title__icon {
+      color: $color-error;
+    }
+  }
+
 }
 
-.form.success input,
-.form.success textarea {
-  background: rgba(255, 255, 255, 0) !important;
-}
+.form--success {
+  .form__group__submit {
+    border-color: $color-success;
+    background-color: $color-success;
 
+    &:before {
+      background: $color-success !important;
+    }
 
-.form.success button {
-  border-color: rgba(95, 234, 110, 1) !important;
-  background: rgba(95, 234, 110, 1) !important;
-}
+    &:focus, &:active {
+      background: $color-success;
+    }
 
+    i {
+      left: -200% !important;
 
-.form.error button {
-  border-color: rgba(251, 9, 9, 1) !important;
-  background: rgba(251, 9, 9, 1) !important;
-}
+      &:nth-child(3) {
+        left: 0 !important;
+        color: $color-base !important;
+      }
 
+    }
 
-.form.error button:hover,
-.form.error button:focus,
-.form.error button:active {
-  border-color: rgba(251, 9, 9, 1);
-}
+  }
 
-.form.error button:focus {
-  background: rgba(251, 9, 9, 1);
-}
+  .form__alert {
+    border-color: $color-success;
+    background-color: rgba($color-success, 0.125);
 
-.form.success button:hover,
-.form.success button:focus,
-.form.success button:active {
-  border-color: rgba(95, 234, 110, 1);
-}
-
-.form.success button:hover,
-.form.success button:focus {
-  background: rgba(95, 234, 110, 1) !important;
-}
-
-.form.success button::before {
-  background: rgba(95, 234, 110, 1) !important;
-}
-
-.form.error button::before {
-  background: rgba(251, 9, 9, 1) !important;
-}
-
-.form.success button::before {
-  background: rgba(255, 255, 255, 1);
-}
-
-.form.success button:hover::before {
-  right: 0;
-  left: 0;
-
-  width: 100%;
+    &__title__icon {
+      color: $color-success;
+    }
+  }
 }

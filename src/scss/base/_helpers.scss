@@ -24,6 +24,29 @@
   @include make-space(-xxl);
 }
 
+/* Aspect Ratio
+/* ---------------------------------------------------------- */
+.ratio {
+  position: relative;
+  width: 100%;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@each $key, $ratio in $aspect-ratios {
+  .ratio-#{$key}::before {
+    display: block;
+    padding-top: $ratio;
+    content: "";
+  }
+}
+
 /* Typography
 /* ---------------------------------------------------------- */
 .text-center {
@@ -40,10 +63,6 @@
 
 .font-weight-bold {
   font-weight: $font-weight-bold;
-}
-
-.font-weight-heavy {
-  font-weight: $font-weight-heavy;
 }
 
 

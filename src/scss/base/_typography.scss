@@ -14,24 +14,61 @@ h1, .text-h1 {
   font-size: $h1-font-size;
 }
 
+@media (min-width: $screen-xxl) {
+  h1, .text-h1 {
+    font-size: $h1-font-size-xxl;
+  }
+}
+
 h2, .text-h2 {
   font-size: $h2-font-size;
+}
+
+@media (min-width: $screen-xxl) {
+  h2, .text-h2 {
+    font-size: $h2-font-size-xxl;
+  }
 }
 
 h3, .text-h3 {
   font-size: $h3-font-size;
 }
 
+@media (min-width: $screen-xxl) {
+  h3, .text-h3 {
+    font-size: $h3-font-size-xxl;
+  }
+}
+
 h4, .text-h4 {
   font-size: $h4-font-size;
+}
+
+@media (min-width: $screen-xxl) {
+  h4, .text-h4 {
+    font-size: $h4-font-size-xxl;
+  }
 }
 
 h5, .text-h5 {
   font-size: $h5-font-size;
 }
 
+@media (min-width: $screen-xxl) {
+  h5, .text-h5 {
+    font-size: $h5-font-size-xxl;
+  }
+}
+
 h6, .text-h6 {
   font-size: $h6-font-size;
+  font-weight: $font-weight-light;
+}
+
+@media (min-width: $screen-xxl) {
+  h6, .text-h6 {
+    font-size: $h6-font-size-xxl;
+  }
 }
 
 .text-subtitle {
@@ -47,7 +84,7 @@ p, .text-p {
   text-align: justify;
   font-size: $font-size-base;
   line-height: 1.8;
-  color: $color-base-dense;
+  color: $color-base;
 }
 
 strong, .text-strong {
@@ -68,6 +105,11 @@ a, text-a {
   }
 }
 
+label, .text-label {
+  text-transform: uppercase;
+  font-size: $font-size-sm;
+  line-height: $line-height-base;
+}
 
 ul {
   list-style-type: none;

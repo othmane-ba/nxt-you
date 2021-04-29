@@ -65,7 +65,7 @@
 @mixin make-space($prefix: '') {
   $properties: (padding, margin);
   $directions: ("", "-top", "-right", "-bottom", "-left");
-  $values: [$gap-xss, $gap-xs, $gap-md, $gap-lg, $gap-xl, $gap-xxl];
+  $values: [0px, $gap-xss, $gap-xs, $gap-md, $gap-lg, $gap-xl, $gap-xxl];
 
   @each $property in $properties {
 
@@ -76,7 +76,7 @@
 
       @for $i from 1 through length($values) {
         $value: nth($values, $i);
-        .#{$property-name}#{$direction-name}#{$prefix}-#{$i} {
+        .#{$property-name}#{$direction-name}#{$prefix}-#{$i - 1} {
           #{$property}#{$direction}: $value;
         }
       }

@@ -10,20 +10,27 @@
   &__overlay {
     position: absolute !important;
     top: 0;
+    left: 0;
 
     width: 100%;
     height: 100%;
+    z-index: 3;
 
-    opacity: .52;
-    background: rgba(0, 0, 0, 1.00);
+    background-color: rgba($color-bg, 0);
+    transition: background-color 0.6s $ease-in-out;
+
+    &--show {
+      background-color: rgba($color-bg, 0.8);
+    }
+
   }
 
 
   &__inner {
     position: absolute;
 
-    width: 110%;
-    height: 110%;
+    width: 100%;
+    height: 100%;
     z-index: 2;
     top: 50%;
     left: 50%;
@@ -49,7 +56,7 @@
 
   #canvas {
     top: 100% !important;
-    transition: 1s 2s;
+    transition: 1s 1.5s;
     opacity: 0;
   }
 
