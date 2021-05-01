@@ -28,12 +28,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import IntroText from '~/components/home/IntroText.vue'
-import Contact from '~/components/home/Contact.vue'
 
-export default Vue.extend({
-  components: { Contact, IntroText },
-})
+export default Vue.extend({})
 </script>
 
 <style>

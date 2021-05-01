@@ -53,12 +53,13 @@
       </div>
 
       <div class="lg:col-span-2">
-        <strong
+        <p
           data-animation-child
-          class="text-xs text-center tracking-widest uppercase leading-4 fade-anim-box tr-delay04"
+          class="text-xs text-center tracking-widest uppercase leading-4 font-bold fade-anim-box tr-delay04"
           data-animation="fade-anim"
-          >Godard slow-carb chartreuse occupy, tumblr letterpress</strong
         >
+          Godard slow-carb chartreuse occupy, tumblr letterpress
+        </p>
       </div>
     </div>
   </div>
