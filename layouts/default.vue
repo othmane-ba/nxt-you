@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageLoader />
-    <Cursor />
+    <Pointer />
     <Nuxt />
   </div>
 </template>
