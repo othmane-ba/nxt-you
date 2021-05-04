@@ -40,8 +40,8 @@ class EventListener {
 @Component
 export default class ClassSphere extends Vue {
   static sphereDistance = 300
-  static sphereRotationSpeed = 0.4
-  static color = 0x555555
+  static sphereRotationSpeed = 0.1
+  static color = 0x666666
 
   @Ref('sphere') readonly container!: Element
 

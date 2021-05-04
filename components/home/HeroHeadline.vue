@@ -1,5 +1,7 @@
 <template>
-  <h1 class="whitespace-nowrap">
+  <h1
+    class="whitespace-nowrap text-4xl 2xl:text-6xl leading-relaxed 2xl:leading-relaxed"
+  >
     <slot></slot>
     <span
       class="inline-block relative align-top transition-all duration-700 ease-in-out overflow-hidden"
@@ -9,7 +11,7 @@
         ref="words"
         v-for="(word, index) in words"
         :key="index"
-        class="inline-block whitespace-nowrap absolute top-0 left-0 opacity-0"
+        class="inline-block h-full whitespace-nowrap absolute top-0 left-0 opacity-0 pr-4"
         :class="{ 'relative opacity-100': index === currentWordIndex }"
       >
         {{ word }}
@@ -51,7 +53,7 @@ export default Vue.extend({
       }, this.animationDelay / 3)
     },
     show(index: number) {
-      this.wrapperWidth = (this.$refs.words as Element[])[index].clientWidth + 4
+      this.wrapperWidth = (this.$refs.words as Element[])[index].scrollWidth
       this.currentWordIndex = index
       setTimeout(() => {
         this.hide()

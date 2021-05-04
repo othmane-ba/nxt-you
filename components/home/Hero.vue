@@ -1,13 +1,16 @@
 <template>
   <!-- HERO -->
-  <div class="relative h-screen w-full">
-    <!-- CONTAINER -->
-    <div class="container mx-auto px-4">
-      <img class="" src="~/assets/images/logo.png" alt="NXT YOU" />
+  <div class="relative h-screen w-full flex items-center justify-center">
+    <div class="container px-4">
+      <img
+        class="w-40 2xl: w-52 mx-auto"
+        src="~/assets/images/logo.png"
+        alt="NXT YOU"
+      />
 
-      <!-- HERO TITLE  -->
-      <div class="hero__inner__title mb-5 mt-5">
+      <div class="my-8">
         <HeroHeadline
+          class="text-center"
           :words="[
             'Designer',
             'Developer',
@@ -20,20 +23,15 @@
           I’m a
         </HeroHeadline>
       </div>
-      <!-- /HERO TITLE -->
 
-      <!-- HERO BUTTON -->
       <button
         class="button button--outline button--rec hero__inner__button pointer-large js-down-button"
       >
         <i class="ti-arrow-down"></i>
         <i class="ti-arrow-down"></i>
       </button>
-      <!-- /HERO BUTTON -->
     </div>
-    <!-- /CONTAINER -->
   </div>
-  <!-- /HERO INNER -->
 </template>
 
 <script lang="ts">
