@@ -2,9 +2,12 @@ export default {
   target: 'static',
 
   head: {
-    title: 'NXT YOU',
+    title: 'NXTYOU - Make Your Vision Come Reality.',
     htmlAttrs: {
       lang: 'de',
+    },
+    bodyAttrs: {
+      class: 'bg-black text-white',
     },
     meta: [
       { charset: 'utf-8' },

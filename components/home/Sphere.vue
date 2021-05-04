@@ -1,10 +1,12 @@
 <template>
-  <div class="sphere js-page-enter-animated">
-    <div class="sphere__overlay js-sphere-overlay"></div>
+  <div class="fixed t-0 l-0 h-screen w-full -z-10">
+    <div
+      class="absolute t-0 l-0 h-full w-full bg-black bg-opacity-100 transition-opacity opacity-0 duration-500"
+      :class="{ 'opacity-100': overlayActive }"
+    ></div>
 
     <div class="sphere__inner js-sphere-bg">
       <div id="canvas">
-        <canvas class="bg-effect layer" data-depth="0.2"></canvas>
         <div ref="sphere"></div>
       </div>
     </div>
@@ -38,7 +40,8 @@ class EventListener {
 @Component
 export default class ClassSphere extends Vue {
   static sphereDistance = 300
-  static sphereRotationSpeed = 0.2
+  static sphereRotationSpeed = 0.4
+  static color = 0x555555
 
   @Ref('sphere') readonly container!: Element
 
@@ -87,7 +90,7 @@ export default class ClassSphere extends Vue {
     this.container.appendChild(this.renderer.domElement)
     this.renderer.setClearColor('#000000')
     this.material = new THREE.SpriteMaterial({
-      color: '#ffffff',
+      color: ClassSphere.color,
       /*
       program: function (context: any) {
         context.beginPath()
@@ -123,7 +126,7 @@ export default class ClassSphere extends Vue {
         new THREE.Line(
           new THREE.BufferGeometry().setFromPoints([vertex, vertex2]),
           new THREE.LineBasicMaterial({
-            color: '#ffffff',
+            color: ClassSphere.color,
             opacity: Math.random(),
           })
         )
@@ -190,7 +193,7 @@ export default class ClassSphere extends Vue {
   }
 
   public get overlayActive(): boolean {
-    return this.scrollTop <= this.screenHeight / 2
+    return this.scrollTop > this.screenHeight / 2
   }
 
   public get sphereActive(): boolean {
