@@ -1,8 +1,8 @@
 <template>
   <div class="container max-w-6xl mx-auto px-4">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-y-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-y-8">
       <div class="lg:col-span-2">
-        <h2 class="text-center uppercase text-5xl font-bold">
+        <h2 class="text-center uppercase text-5xl font-semibold">
           <span
             data-animation-child
             class="title-fill"

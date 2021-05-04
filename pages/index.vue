@@ -17,12 +17,6 @@
     <section class="client">
       <ClientList></ClientList>
     </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact text-center" data-animation-container>
-      <Contact></Contact>
-    </section>
-    <!-- /CONTACT -->
   </div>
 </template>
 
