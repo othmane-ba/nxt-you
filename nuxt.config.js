@@ -23,17 +23,27 @@ export default {
 
   css: [],
 
-  plugins: [],
+  plugins: ['~/plugins/vue-awesome-swiper.client.ts'],
 
   components: {
     dirs: ['~/components/home', '~/components/layout', '~/components/shared'],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios'],
+
+  googleFonts: {
+    families: {
+      Montserrat: [300, 400, 600, 700, 800],
+    },
+  },
 
   axios: {},
 

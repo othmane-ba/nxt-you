@@ -8,10 +8,10 @@
 
 <style lang="postcss">
 section {
-  @apply my-40;
+  @apply py-32;
 
   &:first-of-type {
-    @apply mt-0;
+    @apply pt-0;
   }
 
   /*

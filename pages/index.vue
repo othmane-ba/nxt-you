@@ -10,6 +10,37 @@
       <IntroText></IntroText>
     </section>
 
+    <section>
+      <BrandTeaser></BrandTeaser>
+    </section>
+
+    <section>
+      <NumText title="Kreationen" :number="1" action-text="Projekte">
+        Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen,
+        etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.
+      </NumText>
+    </section>
+
+    <section>
+      <VideoGrid> </VideoGrid>
+    </section>
+
+    <section>
+      <FeatureSlider> </FeatureSlider>
+    </section>
+
+    <section>
+      <NumText
+        title="Unser Team"
+        :number="2"
+        rtl
+        action-text="Projekte ansehen"
+      >
+        Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen,
+        etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.
+      </NumText>
+    </section>
+
     <section id="portfolio" data-animation-container class="portfolio">
       <Portfolio></Portfolio>
     </section>
@@ -22,8 +53,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import FeatureSlider from '~/components/home/FeatureSlider.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: { FeatureSlider },
+})
 </script>
 
 <style>
