@@ -100,7 +100,9 @@ class Feature {
 }
 
 export default Vue.extend({
-  mounted() {},
+  mounted() {
+    this.init()
+  },
   data() {
     return {
       slideIndex: 0,
