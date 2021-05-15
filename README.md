@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f85895cb-a168-42e5-8f17-1537dbd87fc9/deploy-status)](https://app.netlify.com/sites/nxt-you/deploys)
+
 # nxt-you
 
 ## Build Setup

@@ -1,0 +1,44 @@
+{
+  "BrandTeaser": {
+    "description": "Auto imported from components/home/BrandTeaser.vue"
+  },
+  "ClientList": {
+    "description": "Auto imported from components/home/ClientList.vue"
+  },
+  "FeatureSlider": {
+    "description": "Auto imported from components/home/FeatureSlider.vue"
+  },
+  "Hero": {
+    "description": "Auto imported from components/home/Hero.vue"
+  },
+  "HeroHeadline": {
+    "description": "Auto imported from components/home/HeroHeadline.vue"
+  },
+  "IntroText": {
+    "description": "Auto imported from components/home/IntroText.vue"
+  },
+  "Portfolio": {
+    "description": "Auto imported from components/home/Portfolio.vue"
+  },
+  "Sphere": {
+    "description": "Auto imported from components/home/Sphere.vue"
+  },
+  "TestimonialSlider": {
+    "description": "Auto imported from components/home/TestimonialSlider.vue"
+  },
+  "VideoGrid": {
+    "description": "Auto imported from components/home/VideoGrid.vue"
+  },
+  "PageLoader": {
+    "description": "Auto imported from components/layout/PageLoader.vue"
+  },
+  "Pointer": {
+    "description": "Auto imported from components/layout/Pointer.vue"
+  },
+  "Contact": {
+    "description": "Auto imported from components/shared/Contact.vue"
+  },
+  "NumText": {
+    "description": "Auto imported from components/shared/NumText.vue"
+  }
+}

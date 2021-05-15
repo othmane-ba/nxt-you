@@ -48,6 +48,10 @@
     <section class="client">
       <ClientList></ClientList>
     </section>
+
+    <section class="testimonial">
+      <TestimonialSlider></TestimonialSlider>
+    </section>
   </div>
 </template>
 
