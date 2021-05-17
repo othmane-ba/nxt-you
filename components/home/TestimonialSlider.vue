@@ -60,8 +60,9 @@ export default Vue.extend({
   data() {
     return {
       options: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+        },
         pagination: {
           el: '.swiper-pagination',
         },

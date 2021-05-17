@@ -7,7 +7,7 @@ export default {
       lang: 'de',
     },
     bodyAttrs: {
-      class: 'bg-black text-white',
+      class: 'bg-black text-white fixed overflow-y-scroll',
     },
     meta: [
       { charset: 'utf-8' },
