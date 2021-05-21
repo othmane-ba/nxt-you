@@ -1,16 +1,20 @@
 <template>
-  <div class="fixed t-0 l-0 h-screen w-full -z-10">
-    <div
-      class="absolute t-0 l-0 h-full w-full bg-black bg-opacity-100 transition-opacity opacity-0 duration-500"
-      :class="{ 'opacity-100': overlayActive }"
-    ></div>
-
-    <div class="sphere__inner js-sphere-bg">
-      <div id="canvas">
+  <transition
+    enter-active-class="transition-all ease-in-out duration-1000"
+    enter-class="top-full opacity-0"
+    leave-active-class="transition-all ease-in-out duration-1000 delay-1500"
+    leave-to-class="top-full opacity-0"
+  >
+    <div v-show="showPage" class="fixed top-0 left-0 h-screen w-full -z-10">
+      <div
+        class="absolute t-0 l-0 h-full w-full bg-black bg-opacity-100 transition-opacity opacity-0 duration-500"
+        :class="{ 'opacity-100': overlayActive }"
+      ></div>
+      <div>
         <div ref="sphere"></div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts">
@@ -53,6 +57,7 @@ export default class ClassSphere extends Vue {
     new EventListener('resize', this.onWindowResize.bind(this), false),
   ]
 
+  showPage = false
   scrollTop = 0
   screenWidth = 0
   screenHeight = 0
@@ -152,6 +157,9 @@ export default class ClassSphere extends Vue {
 
   private addEventListener(): void {
     this.eventListener.forEach((listener: EventListener) => listener.add())
+    this.$nuxt.$on('page-loaded', () => {
+      this.showPage = true
+    })
   }
 
   private removeEventListener(): void {

@@ -1,6 +1,10 @@
 <template>
   <div class="container mx-auto px-4 lg:px-16 overflow-hidden">
-    <div class="overflow-hidden" v-swiper="options" :auto-destroy="false">
+    <div
+      class="overflow-hidden w-full"
+      v-swiper="options"
+      :auto-destroy="false"
+    >
       <div class="swiper-wrapper">
         <div
           v-for="(feature, index) in features"
@@ -8,14 +12,14 @@
           :key="index"
         >
           <div class="w-full space-y-8 lg:space-y-16">
-            <h4 class="text-center font-bold uppercase text-3xl lg:text-5xl">
+            <h4 class="text-center font-bold uppercase text-3xl lg:text-4xl">
               {{ feature.title }}
             </h4>
             <div
               class="mx-auto max-w-4xl grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
             >
               <div>
-                <p class="uppercase font-bold lg:text-3xl" :key="feature.title">
+                <p class="font-bold lg:text-xl" :key="feature.title">
                   {{ feature.intro }}
                 </p>
               </div>
@@ -36,6 +40,7 @@
                 >
                   <a
                     class="w-full flex flex-col justify-center items-center h-44 lg:h-72 p-4 border-4 border-transparent rounded-xl transition-all duration-700 hover:border-gray-100 overflow-hidden"
+                    data-pointer="large"
                   >
                     <div>
                       <svg
@@ -52,7 +57,7 @@
                     </div>
 
                     <div
-                      class="mt-4 text-center uppercase lg:text-xl font-semibold"
+                      class="mt-4 text-center uppercase lg:text-lg font-semibold"
                     >
                       <span class="break-words">
                         {{ service.title }}

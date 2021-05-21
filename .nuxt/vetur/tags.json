@@ -38,6 +38,9 @@
   "Contact": {
     "description": "Auto imported from components/shared/Contact.vue"
   },
+  "Icon": {
+    "description": "Auto imported from components/shared/Icon.vue"
+  },
   "NumText": {
     "description": "Auto imported from components/shared/NumText.vue"
   }

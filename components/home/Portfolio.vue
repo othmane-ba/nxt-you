@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto px-4 lg:px-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16">
-      <a href="#" class="block lg:mt-32 pointer-right">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+      <a href="#" class="block lg:mt-32" data-pointer="right">
         <div class="relative aspect-h-4 aspect-w-3 w-full">
           <img
             class="absolute top-0 left-0 h-full w-full object-cover"
@@ -14,7 +14,11 @@
           <h3 class="text-2xl font-bold">Slumber</h3>
         </div>
       </a>
-      <a href="#" class="portfolio__card mt-4 m-lg-5 mt-lg-0 pointer-right">
+      <a
+        href="#"
+        class="portfolio__card mt-4 m-lg-5 mt-lg-0"
+        data-pointer="right"
+      >
         <div class="relative aspect-h-4 aspect-w-3 w-full">
           <img
             class="absolute top-0 left-0 h-full w-full object-cover"

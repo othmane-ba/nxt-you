@@ -9,9 +9,12 @@
           {{ numberTwoDigit }}
         </div>
         <div class="relative space-y-4 p-4 pt-16 md:px-16">
-          <h3 class="text-4xl font-bold uppercase">{{ title }}</h3>
+          <h3 class="text-3xl lg:text-4xl font-bold uppercase">{{ title }}</h3>
           <p><slot></slot></p>
-          <button class="w-full py-2 px-4 rounded border max-w-xs">
+          <button
+            class="w-full py-2 px-4 rounded border max-w-xs"
+            data-pointer="large"
+          >
             {{ actionText }}
           </button>
         </div>

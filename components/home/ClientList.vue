@@ -2,7 +2,11 @@
   <div class="container mx-auto max-w-6xl px-4 client-list">
     <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <li v-for="(client, i) in clients" :key="i">
-        <a href="#" class="flex align-middle justify-center pointer-large p-4">
+        <a
+          href="#"
+          class="flex align-middle justify-center p-4"
+          data-pointer="large"
+        >
           <div class="relative w-full aspect-h-2 aspect-w-3">
             <img
               :src="require('~/assets/images/clients/' + client.src[0])"

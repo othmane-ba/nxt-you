@@ -63,9 +63,11 @@ export default Vue.extend({
         autoplay: {
           delay: 5000,
         },
+        /*
         pagination: {
           el: '.swiper-pagination',
         },
+*/
       },
       testimonials: new Array(4).fill(
         new Testimonial(

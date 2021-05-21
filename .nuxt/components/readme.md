@@ -19,4 +19,5 @@ You can directly use them in pages and other components without the need to impo
 - `<PageLoader>` | `<page-loader>` (components/layout/PageLoader.vue)
 - `<Pointer>` | `<pointer>` (components/layout/Pointer.vue)
 - `<Contact>` | `<contact>` (components/shared/Contact.vue)
+- `<Icon>` | `<icon>` (components/shared/Icon.vue)
 - `<NumText>` | `<num-text>` (components/shared/NumText.vue)

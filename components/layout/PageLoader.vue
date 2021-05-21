@@ -29,10 +29,9 @@ export default Vue.extend({
     }
   },
   mounted() {
-    setTimeout(() => {
-      document.body.classList.remove('fixed', 'overflow-y-scroll')
+    this.$nuxt.$on('page-loaded', () => {
       this.loaderVisible = false
-    }, 1000)
+    })
   },
 })
 </script>
