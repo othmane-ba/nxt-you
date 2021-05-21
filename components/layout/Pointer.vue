@@ -80,7 +80,7 @@ export default Vue.extend({
     ]
 
     this.$nuxt.$on('page-loaded', () => {
-      if (this.$device.isDesktop) {
+      if ((this as any).$device.isDesktop) {
         this.active = true
         document.addEventListener('mousemove', (event) => {
           this.mouseX = event.clientX

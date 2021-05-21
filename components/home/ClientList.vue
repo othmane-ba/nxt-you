@@ -22,30 +22,41 @@
         </a>
       </li>
       <li>
-        <a data-animation-container href="#" class="pointer-large">
-          <div
-            data-animation-child
-            class="title-fill"
-            data-animation="title-fill-anim"
-            data-text="This spot"
-          >
-            This Spot
-          </div>
-          <div
-            data-animation-child
-            class="title-fill tr-delay01"
-            data-animation="title-fill-anim"
-            data-text="Awaits"
-          >
-            Awaits
-          </div>
-          <div
-            data-animation-child
-            class="title-fill tr-delay02"
-            data-animation="title-fill-anim"
-            data-text="You"
-          >
-            You
+        <a
+          data-animation-container
+          href="#"
+          class="relative w-full h-full flex items-center justify-center overflow-hidden title-fill"
+          data-pointer="large"
+        >
+          <div class="w-full aspect-h-2 aspect-w-3">
+            <div
+              class="text-xs lg:text-base text-center uppercase font-semibold flex flex-col items-center justify-center"
+            >
+              <div
+                data-animation-child
+                class="title-fill"
+                data-animation="title-fill-anim"
+                data-text="This spot"
+              >
+                This Spot
+              </div>
+              <div
+                data-animation-child
+                class="title-fill tr-delay01"
+                data-animation="title-fill-anim"
+                data-text="Awaits"
+              >
+                Awaits
+              </div>
+              <div
+                data-animation-child
+                class="title-fill tr-delay02"
+                data-animation="title-fill-anim"
+                data-text="You"
+              >
+                You
+              </div>
+            </div>
           </div>
         </a>
       </li>
@@ -114,6 +125,68 @@ export default Vue.extend({
 
     &.client-list__item__image--hover {
       @apply opacity-100;
+    }
+  }
+
+  &:last-child {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 1px;
+      height: calc(100% - 40px);
+      background: blue;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      transform: scaleY(0.4) scaleX(1);
+      transform-origin: top;
+      transition: all 0.6s ease-in-out;
+    }
+
+    &:after {
+      width: calc(100% - 40px);
+      height: 1px;
+      transform: scaleY(1) scaleX(0.4);
+      transform-origin: left;
+    }
+
+    a {
+      /*
+      line-height: $line-height-base;
+      font-weight: $font-weight-bold;
+*/
+
+      &:before,
+      &:after {
+        content: '';
+        width: 1px;
+        height: calc(100% - 40px);
+        background: blue;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        transform: scaleY(0.4) scaleX(1);
+        transform-origin: bottom;
+        transition: all 0.6s ease-in-out !important;
+      }
+
+      &:after {
+        width: calc(100% - 40px);
+        height: 1px;
+        transform: scaleY(1) scaleX(0.4);
+        transform-origin: right;
+      }
+    }
+
+    &:hover {
+      &:before,
+      &:after,
+      a:before,
+      a:after {
+        transform: scaleX(1) scaleY(1);
+      }
     }
   }
 }
