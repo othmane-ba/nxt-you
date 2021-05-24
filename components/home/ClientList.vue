@@ -23,39 +23,18 @@
       </li>
       <li>
         <a
-          data-animation-container
+          v-view
           href="#"
-          class="relative w-full h-full flex items-center justify-center overflow-hidden title-fill"
+          class="relative w-full h-full flex items-center justify-center overflow-hidden"
           data-pointer="large"
         >
           <div class="w-full aspect-h-2 aspect-w-3">
             <div
               class="text-xs lg:text-base text-center uppercase font-semibold flex flex-col items-center justify-center"
             >
-              <div
-                data-animation-child
-                class="title-fill"
-                data-animation="title-fill-anim"
-                data-text="This spot"
-              >
-                This Spot
-              </div>
-              <div
-                data-animation-child
-                class="title-fill tr-delay01"
-                data-animation="title-fill-anim"
-                data-text="Awaits"
-              >
-                Awaits
-              </div>
-              <div
-                data-animation-child
-                class="title-fill tr-delay02"
-                data-animation="title-fill-anim"
-                data-text="You"
-              >
-                You
-              </div>
+              <div data-animation-text="This Spot">This Spot</div>
+              <div class="delay-300" data-animation-text="Awaits">Awaits</div>
+              <div class="delay-500" data-animation-text="You">You</div>
             </div>
           </div>
         </a>

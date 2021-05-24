@@ -1,31 +1,18 @@
 <template>
-  <div class="container max-w-6xl mx-auto px-4">
+  <div class="container max-w-6xl mx-auto px-4" v-view>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-y-8">
       <div class="lg:col-span-2">
         <h2 class="text-center text-3xl lg:text-4xl font-bold uppercase">
-          <span
-            data-animation-child
-            class="title-fill"
-            data-animation="title-fill-anim"
-            data-text="We are Creative"
-            >Make your Vision</span
+          <span data-animation-text="Make your Vision">Make your Vision</span
           ><br />
-          <span
-            data-animation-child
-            class="title-fill tr-delay01"
-            data-animation="title-fill-anim"
-            data-text="We are Xen"
+          <span class="delay-300" data-animation-text="Come Reality."
             >Come Reality.</span
           >
         </h2>
       </div>
 
       <div>
-        <p
-          data-animation-child
-          class="fade-anim-box tr-delay02"
-          data-animation="fade-anim"
-        >
+        <p class="delay-500" data-animation-box>
           Affogato thundercats quinoa, portland cold-pressed edison bulb artisan
           paleo banjo tousled try-hard food truck pop-up bushwick godard. Occupy
           90's try-hard tote bag chicharrones stumptown polaroid hashtag cliche
@@ -37,11 +24,7 @@
       </div>
 
       <div>
-        <p
-          data-animation-child
-          class="fade-anim-box tr-delay03"
-          data-animation="fade-anim"
-        >
+        <p class="delay-500" data-animation-box>
           Godard slow-carb chartreuse occupy, tumblr letterpress pok pok
           tattooed yr lyft yuccie kinfolk. IPhone kombucha shaman gastropub
           snackwave 90's lo-fi pug chillwave pok pok tofu. Swag deep v listicle
@@ -54,9 +37,8 @@
 
       <div class="lg:col-span-2">
         <p
-          data-animation-child
-          class="text-xs text-center tracking-widest uppercase leading-4 font-bold fade-anim-box tr-delay04"
-          data-animation="fade-anim"
+          class="text-xs text-center tracking-widest uppercase leading-4 font-bold delay-700"
+          data-animation-box
         >
           Godard slow-carb chartreuse occupy, tumblr letterpress
         </p>

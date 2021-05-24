@@ -23,7 +23,10 @@ export default {
 
   css: [],
 
-  plugins: ['~/plugins/vue-awesome-swiper.client.ts'],
+  plugins: [
+    '~/plugins/vue-awesome-swiper.client.ts',
+    '~/plugins/vue-check-view.ts',
+  ],
 
   components: {
     dirs: ['~/components/home', '~/components/layout', '~/components/shared'],

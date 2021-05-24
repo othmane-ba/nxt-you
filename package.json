@@ -22,6 +22,7 @@
     "swiper": "^6.5.9",
     "three": "^0.128.0",
     "vue-awesome-swiper": "^4.1.1",
+    "vue-check-view": "^0.3.0",
     "vue-themify-icons": "^1.0.0"
   },
   "devDependencies": {
