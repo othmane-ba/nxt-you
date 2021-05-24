@@ -16,7 +16,7 @@
             class="absolute inset-0 transform scale-105 bg-black transition-opacity ease-out-expo duration-1000 opacity-50 hover:opacity-0"
           ></div>
           <button
-            v-if="!$device.isDesktop"
+            v-if="btnActive"
             class="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full border-2"
           >
             <Icon class="block text-lg" src="control-play"></Icon>
@@ -47,6 +47,11 @@ export default Vue.extend({
         new VideoItem('Video 4', '', 'https://picsum.photos/500/300'),
       ],
     }
+  },
+  computed: {
+    btnActive(): boolean {
+      return !(this as any).$device.isDesktop
+    },
   },
 })
 </script>
