@@ -8,9 +8,14 @@
       v-if="active"
       class="pointer"
       :style="{ left: mouseX + 'px', top: mouseY + 'px' }"
-      :class="{ 'pointer--right': right, 'pointer--large': large }"
+      :class="{
+        'pointer--play': play,
+        'pointer--right': right,
+        'pointer--large': large,
+      }"
     >
       <Icon class="pointer__right" src="arrow-right"></Icon>
+      <Icon class="pointer__play" src="control-play"></Icon>
     </div>
   </transition>
 </template>
@@ -44,6 +49,7 @@ export default Vue.extend({
       mouseX: 0,
       mouseY: 0,
       large: false,
+      play: false,
       right: false,
       small: false,
     }
@@ -57,6 +63,15 @@ export default Vue.extend({
         },
         () => {
           this.large = false
+        }
+      ),
+      new PointerEvent(
+        "[data-pointer='play']",
+        () => {
+          this.play = true
+        },
+        () => {
+          this.play = false
         }
       ),
       new PointerEvent(
@@ -109,25 +124,18 @@ export default Vue.extend({
   @apply w-16 h-16 bg-blue-600 bg-opacity-25 border-2 border-blue-600 shadow-highlight;
 }
 
-.pointer--right {
+.pointer--right,
+.pointer--play {
   @apply w-16 h-16 bg-blue-600 bg-opacity-50 border-2 border-blue-600 shadow-highlight;
-  /*
-      box-shadow: 0 0 30px rgba(bg-blue-600, 0.8);
-  */
 }
 
-.pointer svg {
-  @apply fill-current;
-}
-
-.pointer .pointer__right {
+.pointer .pointer__right,
+.pointer .pointer__play {
   @apply text-white text-lg absolute top-2/4 left-2/4 transform -translate-x-full -translate-y-2/4 opacity-0 transition-all duration-500 ease-out-expo;
-  /*
-      transition: .4s cubic-bezier(.225, 1, .316, .99);
-    */
 }
 
-.pointer--right .pointer__right {
+.pointer--right .pointer__right,
+.pointer--play .pointer__play {
   @apply -translate-x-2/4 opacity-100 delay-200;
 }
 </style>

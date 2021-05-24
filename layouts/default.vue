@@ -35,7 +35,7 @@ section {
 }
 
 [data-animation-box] {
-  @apply block opacity-0 transform translate-y-4 transition-all ease-in-out duration-1000;
+  @apply block opacity-0 transform translate-y-4 transition-all ease-out-expo duration-1000;
 }
 
 [data-animation-text] {
@@ -44,7 +44,7 @@ section {
 
 [data-animation-text]:before,
 [data-animation-text]:after {
-  @apply absolute top-1/2 left-0 text-white w-0 transform -translate-y-1/2 overflow-hidden whitespace-nowrap transition-all ease-in-out duration-1000;
+  @apply absolute top-1/2 left-0 text-white w-0 transform -translate-y-1/2 overflow-hidden whitespace-nowrap transition-all ease-out-expo duration-1000;
   content: attr(data-animation-text);
 }
 

@@ -1,27 +1,30 @@
 <template>
-  <div class="container mx-auto px-4 lg:px-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+  <div class="container mx-auto px-4 lg:px-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-start">
       <a
         v-for="(item, index) of items"
         :key="index"
         :href="item.href"
-        class="block"
+        class="portfolio-item"
         :class="{ 'lg:mt-32': index % 2 === 0 }"
         data-pointer="right"
         v-view.once
       >
-        <div class="relative aspect-h-4 aspect-w-3 w-full" data-animation-box>
+        <div
+          class="relative aspect-h-4 aspect-w-3 w-full rounded-xl overflow-hidden"
+          data-animation-box
+        >
           <img
             class="absolute top-0 left-0 h-full w-full object-cover"
             alt="Portfolio Image 1"
             :src="require('~/assets/images/' + item.image)"
           />
         </div>
-        <div class="mt-3">
+        <div class="my-4">
           <span
             data-animation-text-white
             :data-animation-text="item.subHeading"
-            class="mb-0.5"
+            class="my-2"
             >{{ item.subHeading }}</span
           ><br />
           <h3
@@ -60,4 +63,12 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped></style>
+<style lang="postcss" scoped>
+.portfolio-item {
+  @apply block;
+}
+
+.portfolio-item:hover h3 {
+  @apply text-blue-600;
+}
+</style>

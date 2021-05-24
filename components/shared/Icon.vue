@@ -1,5 +1,8 @@
 <template>
-  <div v-html="require('@icon/themify-icons/icons/' + src + '.svg?raw')" />
+  <div
+    class="icon"
+    v-html="require('@icon/themify-icons/icons/' + src + '.svg?raw')"
+  />
 </template>
 
 <script lang="ts">
@@ -15,4 +18,9 @@ export default Vue.extend({
 })
 </script>
 
-<style></style>
+<style lang="postcss">
+.icon svg,
+.icon path {
+  fill: currentColor !important;
+}
+</style>

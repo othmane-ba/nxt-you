@@ -20,7 +20,10 @@
                 class="mx-auto max-w-4xl grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
               >
                 <div>
-                  <p class="font-bold lg:text-xl" :key="feature.title">
+                  <p
+                    class="font-bold uppercase lg:text-xl"
+                    :key="feature.title"
+                  >
                     {{ feature.intro }}
                   </p>
                 </div>
