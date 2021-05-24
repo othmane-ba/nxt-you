@@ -29,61 +29,41 @@ section {
 </style>
 
 <style lang="postcss">
-/* 9.1. Loading animations */
 [data-animation-box],
 [data-animation-text] {
   animation-fill-mode: both;
 }
 
 [data-animation-box] {
-  display: block;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s cubic-bezier(0.767, 0.01, 0.18, 1.01);
-}
-
-[data-animation-text]:before,
-[data-animation-text]:after,
-[data-animation-text] {
-  opacity: 1;
+  @apply block opacity-0 transform translate-y-4 transition-all ease-in-out duration-1000;
 }
 
 [data-animation-text] {
-  white-space: nowrap;
-  color: transparent;
-  position: relative;
-  display: inline-block;
+  @apply whitespace-nowrap text-transparent relative inline-block;
 }
 
 [data-animation-text]:before,
 [data-animation-text]:after {
+  @apply absolute top-1/2 left-0 text-white w-0 transform -translate-y-1/2 overflow-hidden whitespace-nowrap transition-all ease-in-out duration-1000;
   content: attr(data-animation-text);
-  position: absolute;
-  top: 50%;
-  color: white;
-  transform: translateY(-50%);
-  left: 0;
-  transition: 1s cubic-bezier(0.767, 0.01, 0.18, 1.01);
-  width: 0;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 [data-animation-text]:after {
-  color: blue;
-  background: transparent;
-  transition-delay: 0.3s;
+  @apply text-blue-600 bg-transparent delay-300;
+}
+
+[data-animation-text][data-animation-text-white]:after {
+  @apply text-white;
 }
 
 .view-in {
   [data-animation-text]:before,
   [data-animation-text]:after {
-    width: 100%;
+    @apply w-full;
   }
 
   [data-animation-box] {
-    opacity: 1;
-    transform: translateY(0);
+    @apply opacity-100 translate-y-0;
   }
 }
 </style>

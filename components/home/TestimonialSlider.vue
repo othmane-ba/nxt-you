@@ -1,6 +1,7 @@
 <template>
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4" v-view.once>
     <div
+      data-animation-box
       data-cursor=""
       data-cursor-label="DRAG"
       class="overflow-hidden"

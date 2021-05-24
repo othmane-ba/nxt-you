@@ -23,7 +23,7 @@
       </li>
       <li>
         <a
-          v-view
+          v-view.once
           href="#"
           class="relative w-full h-full flex items-center justify-center overflow-hidden"
           data-pointer="large"

@@ -1,5 +1,5 @@
 <template>
-  <div class="container max-w-6xl mx-auto px-4" v-view>
+  <div class="container max-w-6xl mx-auto px-4" v-view.once>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-y-8">
       <div class="lg:col-span-2">
         <h2 class="text-center text-3xl lg:text-4xl font-bold uppercase">

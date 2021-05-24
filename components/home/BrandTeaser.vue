@@ -1,6 +1,9 @@
 <template>
-  <div class="container mx-auto px-4 lg:px-52">
-    <div class="relative lg:aspect-h-1 lg:aspect-w-2 border-4 border-blue-800">
+  <div class="container mx-auto px-4 lg:px-52" v-view.once>
+    <div
+      class="relative lg:aspect-h-1 lg:aspect-w-2 border-4 border-blue-800"
+      data-animation-box
+    >
       <div
         class="relative bg-black p-4 max-w-64 lg:absolute lg:max-w-none lg:left-0 lg:top-2/4 lg:transform lg:-translate-y-1/4 lg:-translate-x-36 lg:bottom-auto lg:right-auto lg:h-auto lg:w-3/4"
       >
