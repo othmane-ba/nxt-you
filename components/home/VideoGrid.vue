@@ -4,7 +4,7 @@
       <div v-for="(video, index) in videos" :key="index" v-view.once>
         <div
           data-animation-box
-          class="aspect-h-1 md:aspect-h-2 xl:aspect-h-3 aspect-w-2 w-full relative overflow-hidden rounded-xl"
+          class="video-item aspect-h-1 md:aspect-h-2 xl:aspect-h-3 aspect-w-2 w-full relative overflow-hidden rounded-xl"
           data-pointer="play"
         >
           <img
@@ -16,8 +16,7 @@
             class="absolute inset-0 transform scale-105 bg-black transition-opacity ease-out-expo duration-1000 opacity-50 hover:opacity-0"
           ></div>
           <button
-            v-if="btnActive"
-            class="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full border-2"
+            class="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full border-2 transition-opacity ease-out-expo duration-1000"
           >
             <Icon class="block text-lg" src="control-play"></Icon>
           </button>
@@ -48,12 +47,12 @@ export default Vue.extend({
       ],
     }
   },
-  computed: {
-    btnActive(): boolean {
-      return !(this as any).$device.isDesktop
-    },
-  },
+  computed: {},
 })
 </script>
 
-<style scoped></style>
+<style lang="postcss" scoped>
+.video-item:hover button {
+  @apply opacity-0;
+}
+</style>

@@ -7,7 +7,7 @@
   >
     <div v-show="showPage" class="fixed top-0 left-0 h-screen w-full -z-10">
       <div
-        class="absolute t-0 l-0 h-full w-full bg-black bg-opacity-100 transition-opacity opacity-0 duration-500"
+        class="absolute t-0 l-0 h-full w-full bg-black bg-opacity-75 transition-opacity opacity-0 duration-500"
         :class="{ 'opacity-100': overlayActive }"
       ></div>
       <div>
@@ -45,7 +45,9 @@ class EventListener {
 export default class ClassSphere extends Vue {
   static sphereDistance = 300
   static sphereRotationSpeed = 0.1
-  static color = 0x666666
+  static particleCount = 1000
+  static lineCount = 300
+  static color = new THREE.Color('#555555')
 
   @Ref('sphere') readonly container!: Element
 
@@ -66,7 +68,6 @@ export default class ClassSphere extends Vue {
   camera!: THREE.PerspectiveCamera
   scene!: THREE.Scene
   renderer!: THREE.WebGLRenderer
-  material!: THREE.SpriteMaterial
 
   public mounted(): void {
     this.screenWidth = window.innerWidth
@@ -94,49 +95,9 @@ export default class ClassSphere extends Vue {
     this.renderer.setSize(this.screenWidth, this.screenHeight)
     this.container.appendChild(this.renderer.domElement)
     this.renderer.setClearColor('#000000')
-    this.material = new THREE.SpriteMaterial({
-      color: ClassSphere.color,
-      /*
-      program: function (context: any) {
-        context.beginPath()
-        context.arc(0, 0, 0.5, 0, Math.PI * 2, true)
-        context.fill()
-      },
-*/
-    })
 
-    let particle
-    for (let i = 0; i < 1000; i++) {
-      particle = new THREE.Sprite(this.material)
-      particle.position.x = Math.random() * 2 - 1
-      particle.position.y = Math.random() * 2 - 1
-      particle.position.z = Math.random() * 2 - 1
-      particle.position.normalize()
-      particle.position.multiplyScalar(Math.random() * 10 + 450)
-      particle.scale.multiplyScalar(2)
-      this.scene.add(particle)
-    }
-
-    for (let i = 0; i < 300; i++) {
-      const vertex = new THREE.Vector3(
-        Math.random() * 2 - 1,
-        Math.random() * 2 - 1,
-        Math.random() * 2 - 1
-      )
-      vertex.normalize()
-      vertex.multiplyScalar(450)
-      const vertex2 = vertex.clone()
-      vertex2.multiplyScalar(Math.random() * 0.3 + 1)
-      this.scene.add(
-        new THREE.Line(
-          new THREE.BufferGeometry().setFromPoints([vertex, vertex2]),
-          new THREE.LineBasicMaterial({
-            color: ClassSphere.color,
-            opacity: Math.random(),
-          })
-        )
-      )
-    }
+    this.initParticles()
+    this.initLines()
   }
 
   private animate(): void {
@@ -152,6 +113,67 @@ export default class ClassSphere extends Vue {
       this.camera.lookAt(this.scene.position)
       this.scene.rotation.y += ClassSphere.sphereRotationSpeed / 100
       this.renderer.render(this.scene, this.camera)
+    }
+  }
+
+  private initParticles(): void {
+    const geometry = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(0, 0, 0),
+    ])
+    const material = new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      opacity: Math.random(),
+      uniforms: {
+        size: { value: 2.5 },
+        scale: { value: 1 },
+        color: { value: ClassSphere.color },
+      },
+      vertexShader: THREE.ShaderLib.points.vertexShader,
+      fragmentShader: `
+    uniform vec3 color;
+    void main() {
+        vec2 xy = gl_PointCoord.xy - vec2(0.5);
+        float ll = length(xy);
+        gl_FragColor = vec4(color, step(ll, 0.5));
+    }
+    `,
+    })
+    let particle
+    for (let i = 0; i < ClassSphere.particleCount; i++) {
+      particle = new THREE.Points(geometry, material)
+      particle.position.x = Math.random() * 2 - 1
+      particle.position.y = Math.random() * 2 - 1
+      particle.position.z = Math.random() * 2 - 1
+      particle.position.normalize()
+      particle.position.multiplyScalar(Math.random() * 10 + 450)
+      particle.scale.multiplyScalar(2)
+      this.scene.add(particle)
+    }
+  }
+
+  private initLines(): void {
+    for (let i = 0; i < ClassSphere.lineCount; i++) {
+      const vertex = new THREE.Vector3(
+        Math.random() * 2 - 1,
+        Math.random() * 2 - 1,
+        Math.random() * 2 - 1
+      )
+      vertex.normalize()
+      vertex.multiplyScalar(450)
+      const vertex2 = vertex.clone()
+      vertex2.multiplyScalar(Math.random() * 0.3 + 1)
+      this.scene.add(
+        new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints([vertex, vertex2]),
+          new THREE.LineBasicMaterial({
+            color: ClassSphere.color,
+            transparent: true,
+            depthWrite: false,
+            opacity: Math.random(),
+          })
+        )
+      )
     }
   }
 
@@ -205,7 +227,10 @@ export default class ClassSphere extends Vue {
   }
 
   public get sphereActive(): boolean {
+    return true
+    /*
     return this.scrollTop <= this.screenHeight
+*/
   }
 }
 </script>
