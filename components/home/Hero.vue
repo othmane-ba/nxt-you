@@ -8,7 +8,7 @@
         mode="out-in"
       >
         <img
-          v-if="showPage"
+          v-show="showPage"
           class="w-40 2xl: w-52 mx-auto"
           src="~/assets/images/logo.png"
           alt="NXT YOU"
@@ -20,7 +20,7 @@
         enter-class="opacity-0 transform translate-y-4"
         mode="out-in"
       >
-        <div class="my-8" v-if="showPage">
+        <div class="my-8" v-show="showPage">
           <HeroHeadline
             class="text-center"
             :words="[

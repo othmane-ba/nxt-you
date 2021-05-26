@@ -5,7 +5,7 @@
     mode="out-in"
   >
     <div
-      v-if="active"
+      v-show="active"
       class="pointer"
       :style="{ left: mouseX + 'px', top: mouseY + 'px' }"
       :class="{
