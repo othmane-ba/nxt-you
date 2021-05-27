@@ -27,7 +27,7 @@ module.exports = {
         1500: '1500ms',
       },
       animation: {
-        slide: 'slide 2s linear infinite',
+        slide: 'slide 1s ease-in-out infinite',
       },
       keyframes: {
         slide: {

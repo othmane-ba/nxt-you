@@ -2,11 +2,11 @@
   <div>
     <Sphere></Sphere>
 
-    <section id="hero" class="hero js-page-enter-animated">
+    <section>
       <Hero></Hero>
     </section>
 
-    <section class="intro-text">
+    <section>
       <IntroText></IntroText>
     </section>
 

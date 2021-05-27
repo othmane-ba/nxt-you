@@ -3,7 +3,7 @@
   <div class="relative h-screen w-full flex items-center justify-center">
     <div class="container px-4">
       <transition
-        enter-active-class="transition-all duration-1000"
+        enter-active-class="transition-all duration-1000 delay-500"
         enter-class="opacity-0 transform translate-y-4"
         mode="out-in"
       >
@@ -16,11 +16,11 @@
       </transition>
 
       <transition
-        enter-active-class="transition-all duration-1000 delay-700"
+        enter-active-class="transition-all duration-1000 delay-1000"
         enter-class="opacity-0 transform translate-y-4"
         mode="out-in"
       >
-        <div class="my-8" v-show="showPage">
+        <div class="my-12" v-show="showPage">
           <HeroHeadline
             class="text-center"
             :words="[
@@ -36,12 +36,25 @@
           </HeroHeadline>
         </div>
       </transition>
-      <button
-        class="button button--outline button--rec hero__inner__button pointer-large js-down-button"
+      <transition
+        enter-active-class="transition-all duration-1000 delay-700"
+        enter-class="opacity-0"
+        mode="out-in"
       >
-        <i class="ti-arrow-down"></i>
-        <i class="ti-arrow-down"></i>
-      </button>
+        <div
+          v-show="showPage"
+          class="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 translate-y-full"
+        >
+          <button
+            class="hero__button"
+            data-pointer="large"
+            @click="scrollDown()"
+          >
+            <Icon class="hero__button__icon" src="arrow-down"></Icon>
+            <Icon class="hero__button__icon" src="arrow-down"></Icon>
+          </button>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -55,6 +68,13 @@ export default Vue.extend({
       showPage: false,
     }
   },
+  methods: {
+    scrollDown() {
+      const section = document.querySelector('section:nth-child(3)')
+      console.log('scrollIntoView', section)
+      section?.scrollIntoView({ behavior: 'smooth' })
+    },
+  },
   mounted() {
     this.$nuxt.$on('page-loaded', () => {
       this.showPage = true
@@ -63,4 +83,34 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped></style>
+<style lang="postcss" scoped>
+.hero__button {
+  @apply relative block w-16 h-16 border-4 overflow-hidden;
+
+  &__icon {
+    @apply absolute left-1/2 transform -translate-x-1/2 transition-all ease-out-expo duration-500;
+
+    &:first-child {
+      @apply top-1/2 -translate-y-1/2 transition-none;
+    }
+
+    &:last-child {
+      @apply -top-32 translate-y-0 transition-none;
+    }
+  }
+
+  &:hover {
+    .hero__button__icon {
+      @apply transition-all ease-out duration-150;
+
+      &:first-child {
+        @apply top-32 translate-y-0;
+      }
+
+      &:last-child {
+        @apply top-1/2 -translate-y-1/2;
+      }
+    }
+  }
+}
+</style>
