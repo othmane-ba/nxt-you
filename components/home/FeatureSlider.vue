@@ -1,10 +1,16 @@
 <template>
-  <div class="container mx-auto px-4 lg:px-16 overflow-hidden" v-view.once>
+  <div
+    class="container mx-auto px-4 lg:px-16 overflow-hidden"
+    v-view.once
+    v-view="onView"
+  >
     <div data-animation-box>
       <div
         class="overflow-hidden w-full"
         v-swiper="options"
         :auto-destroy="false"
+        @ready="featureSlider = $event"
+        @activeIndexChange="slideIndex = $event.realIndex"
       >
         <div class="swiper-wrapper">
           <div
@@ -35,7 +41,7 @@
               </div>
               <div class="relative rounded-lg w-full overflow-hidden">
                 <ul
-                  class="relative w-full grid grid-cols-2 lg:grid-cols-5 gap-4 z-10 p-4 lg:py-32"
+                  class="relative w-full grid grid-cols-2 lg:grid-cols-5 gap-4 z-10 p-4 lg:py-12"
                 >
                   <li
                     class="block w-full"
@@ -43,14 +49,14 @@
                     :key="index"
                   >
                     <a
-                      class="w-full flex flex-col justify-center items-center h-44 lg:h-72 p-4 border-4 border-transparent rounded-xl transition-all duration-700 hover:border-gray-100 overflow-hidden"
+                      class="w-full flex flex-col items-center justify-center h-44 lg:h-54 p-4 border-4 border-transparent rounded-xl transition-all duration-700 hover:border-gray-100 overflow-hidden"
                       data-pointer="large"
                     >
-                      <div>
+                      <div class="mb-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 109.679 100.002"
-                          class="block w-12 lg:w-24"
+                          class="block w-12 lg:w-16"
                           fill="white"
                         >
                           <path
@@ -60,9 +66,7 @@
                         </svg>
                       </div>
 
-                      <div
-                        class="mt-4 text-center uppercase lg:text-lg font-semibold"
-                      >
+                      <div class="text-center uppercase font-semibold">
                         <span class="break-words">
                           {{ service.title }}
                         </span>
@@ -92,7 +96,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'nuxt-property-decorator'
+
+import Swiper from 'swiper'
 
 class Service {
   constructor(public title: string, public icon: string, public href: string) {}
@@ -108,51 +114,64 @@ class Feature {
   ) {}
 }
 
-export default Vue.extend({
-  mounted() {},
-  data() {
-    return {
-      options: {
-        autoplay: {
-          delay: 10000,
-        },
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true,
-        },
-      },
-      features: [
-        new Feature(
-          'Branding',
-          'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
-          'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-          'render_of_tunnel_in_cgi_light_and_environment.mp4',
-          [
-            new Service('Brand Strategy', 'marketing-seo.svg', '/seo'),
-            new Service('Visual Brand Identity', 'marketing-seo.svg', '/seo'),
-            new Service('Content Creation', 'marketing-seo.svg', '/seo'),
-            new Service('UI/UX Design', 'marketing-seo.svg', '/seo'),
-            new Service('Mobile App Development', 'marketing-seo.svg', '/seo'),
-          ]
-        ),
-        new Feature(
-          'Performance',
-          'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
-          'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-          'render_of_light_tunnel.mp4',
-          [
-            new Service('Social Media Marketing', 'marketing-seo.svg', '/seo'),
-            new Service('Funnel Systeme', 'marketing-seo.svg', '/seo'),
-            new Service('Seo Service', 'marketing-seo.svg', '/seo'),
-            new Service('Copywriting', 'marketing-seo.svg', '/seo'),
-            new Service('Google Ads Campagnen', 'marketing-seo.svg', '/seo'),
-          ]
-        ),
-      ],
+@Component
+export default class FeatureSlider extends Vue {
+  featureSlider!: Swiper
+  slideIndex = 0
+  interval!: NodeJS.Timeout
+  autoplayDelay = 10000
+  options = {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'custom',
+    },
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+  }
+  features = [
+    new Feature(
+      'Branding',
+      'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
+      'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
+      'render_of_tunnel_in_cgi_light_and_environment.mp4',
+      [
+        new Service('Brand Strategy', 'marketing-seo.svg', '/seo'),
+        new Service('Visual Brand Identity', 'marketing-seo.svg', '/seo'),
+        new Service('Content Creation', 'marketing-seo.svg', '/seo'),
+        new Service('UI/UX Design', 'marketing-seo.svg', '/seo'),
+        new Service('Mobile App Development', 'marketing-seo.svg', '/seo'),
+      ]
+    ),
+    new Feature(
+      'Performance',
+      'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
+      'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
+      'render_of_light_tunnel.mp4',
+      [
+        new Service('Social Media Marketing', 'marketing-seo.svg', '/seo'),
+        new Service('Funnel Systeme', 'marketing-seo.svg', '/seo'),
+        new Service('Seo Service', 'marketing-seo.svg', '/seo'),
+        new Service('Copywriting', 'marketing-seo.svg', '/seo'),
+        new Service('Google Ads Campagnen', 'marketing-seo.svg', '/seo'),
+      ]
+    ),
+  ]
+
+  onView(event: any): void {
+    if (this.interval && event.type === 'exit') {
+      clearInterval(this.interval)
+    } else if (!this.interval && event.type === 'enter') {
+      this.interval = setInterval(() => {
+        this.featureSlider.slideNext()
+      }, this.autoplayDelay)
     }
-  },
-  methods: {},
-})
+  }
+
+  onSwiperProgress(swiper: Swiper): void {}
+}
 </script>
 
 <style scoped lang="postcss"></style>

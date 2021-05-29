@@ -69,6 +69,6 @@ export default Vue.extend({
 }
 
 .portfolio-item:hover h3 {
-  @apply text-blue-600;
+  @apply text-blue;
 }
 </style>

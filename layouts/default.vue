@@ -19,6 +19,14 @@ export default Vue.extend({
 })
 </script>
 <style lang="postcss">
+::selection {
+  @apply bg-transparent text-blue-light;
+}
+
+::-moz-selection {
+  @apply bg-transparent text-blue-light;
+}
+
 section {
   @apply py-32;
 
@@ -44,15 +52,16 @@ section {
 
 [data-animation-text]:before,
 [data-animation-text]:after {
-  @apply absolute top-1/2 left-0 text-white w-0 transform -translate-y-1/2 overflow-hidden whitespace-nowrap transition-all ease-out-expo duration-1000;
+  @apply absolute top-1/2 left-0 text-blue w-0 transform -translate-y-1/2 overflow-hidden whitespace-nowrap transition-all ease-out-expo duration-1000;
   content: attr(data-animation-text);
 }
 
 [data-animation-text]:after {
-  @apply text-blue-600 bg-transparent delay-300;
+  @apply text-blue bg-transparent delay-300;
 }
 
-[data-animation-text][data-animation-text-white]:after {
+[data-animation-text][data-animation-text-white]:after,
+[data-animation-text][data-animation-text-white]:before {
   @apply text-white;
 }
 

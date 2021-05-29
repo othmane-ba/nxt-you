@@ -117,16 +117,16 @@ export default Vue.extend({
 
 <style scoped lang="postcss">
 .pointer {
-  @apply box-border w-2.5 h-2.5 fixed top-2/4 -left-2/4 transform -translate-x-2/4 -translate-y-2/4 rounded-full overflow-hidden bg-blue-600 pointer-events-none z-50 transition-size duration-500 ease-out-expo;
+  @apply box-border w-2.5 h-2.5 fixed top-2/4 -left-2/4 transform -translate-x-2/4 -translate-y-2/4 rounded-full overflow-hidden bg-blue-light pointer-events-none z-50 transition-size duration-500 ease-out-expo;
 }
 
 .pointer--large {
-  @apply w-16 h-16 bg-blue-600 bg-opacity-25 border-2 border-blue-600 shadow-highlight;
+  @apply w-16 h-16 bg-blue-light bg-opacity-25 border-2 border-blue-light shadow-highlight;
 }
 
 .pointer--right,
 .pointer--play {
-  @apply w-16 h-16 bg-blue-600 bg-opacity-50 border-2 border-blue-600 shadow-highlight;
+  @apply w-16 h-16 bg-black bg-opacity-50 border-2 border-blue-light shadow-highlight;
 }
 
 .pointer .pointer__right,

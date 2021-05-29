@@ -12,35 +12,35 @@
       </div>
 
       <div>
-        <p class="delay-500" data-animation-box>
-          Affogato thundercats quinoa, portland cold-pressed edison bulb artisan
-          paleo banjo tousled try-hard food truck pop-up bushwick godard. Occupy
-          90's try-hard tote bag chicharrones stumptown polaroid hashtag cliche
-          +1, tousled fanny pack. Tote bag iPhone crucifix hella helvetica food
-          truck bicycle rights cloud bread. Yr iPhone asymmetrical, next level
-          vexillologist godard blog green juice chia. Tacos jean shorts pickled
-          PBR&B poutine.
+        <p class="delay-500 leading-relaxed" data-animation-box>
+          NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau,
+          Content-Erstellung und digitales Marketing spezialisiert hat. Unsere
+          Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten.
+          NXT YOU hat bereits zahlreichen Unternehmen bei ihren
+          Brand-Strategien, Produktentwicklungen, Social-Media-Kampagnen und
+          vielem mehr geholfen. Mit Leidenschaft für unsere Arbeit und dem
+          Willen zum Erfolg für alle unsere
         </p>
       </div>
 
       <div>
-        <p class="delay-500" data-animation-box>
-          Godard slow-carb chartreuse occupy, tumblr letterpress pok pok
-          tattooed yr lyft yuccie kinfolk. IPhone kombucha shaman gastropub
-          snackwave 90's lo-fi pug chillwave pok pok tofu. Swag deep v listicle
-          roof party seitan man braid raclette church-key trust fund locavore
-          vexillologist green juice raw denim tilde meh. Austin thundercats
-          locavore taiyaki snackwave hoodie put a bird on it tattooed selvage
-          kitsch ramps.
+        <p class="delay-500 leading-relaxed" data-animation-box>
+          Kunden hat sich NXT YOU aus bescheidenen Anfängen zu einer der
+          führenden Marketingagenturen Deutschlands mit Büros in Berlin, Hamburg
+          und München entwickelt. Dabei konzentrieren wir uns immer auf das, was
+          ein Unternehmen einzigartig macht: durch strategische Beratung,
+          bahnbrechende Content-Creation oder innovative digitale Kampagnen.
+          Unser Ziel ist es, Ihnen zu helfen, Ihre Marke aufzubauen - nicht
+          unsere!
         </p>
       </div>
 
       <div class="lg:col-span-2">
         <p
-          class="text-xs text-center tracking-widest uppercase leading-4 font-bold delay-700"
+          class="text-sm text-center tracking-widest uppercase leading-4 font-light delay-700"
           data-animation-box
         >
-          Godard slow-carb chartreuse occupy, tumblr letterpress
+          ERFOLG . LEIDENSCHAFT . EINZIGARTIGKEIT
         </p>
       </div>
     </div>

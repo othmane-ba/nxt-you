@@ -3,7 +3,9 @@
     <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <li v-for="(client, i) in clients" :key="i">
         <a
-          href="#"
+          :href="client.href"
+          target="_blank"
+          rel="noopener noreferrer"
           class="flex align-middle justify-center p-4"
           data-pointer="large"
         >
@@ -14,7 +16,7 @@
               class="client-list__item__image"
             />
             <img
-              :src="require('~/assets/images/clients/' + client.src[1])"
+              :src="require('~/assets/images/clients/' + client.src[0])"
               :alt="client.name"
               class="client-list__item__image client-list__item__image--hover"
             />
@@ -30,7 +32,7 @@
         >
           <div class="w-full aspect-h-2 aspect-w-3">
             <div
-              class="text-xs lg:text-base text-center uppercase font-semibold flex flex-col items-center justify-center"
+              class="text-xs lg:text-base text-center uppercase font-bold flex flex-col items-center justify-center"
             >
               <div data-animation-text="This Spot">This Spot</div>
               <div class="delay-300" data-animation-text="Awaits">Awaits</div>
@@ -47,7 +49,7 @@
 import Vue from 'vue'
 
 class Client {
-  constructor(private _src: string, public name: string) {}
+  constructor(private _src: string, public name: string, public href: string) {}
 
   get src() {
     return [this._src + '.png', this._src + '-active.png']
@@ -57,7 +59,23 @@ class Client {
 export default Vue.extend({
   data() {
     return {
-      clients: Array(11).fill(new Client('client-1', 'Client Name')),
+      clients: [
+        new Client('berger', 'Roland Berger', 'https://www.rolandberger.com'),
+        new Client('bridgestone', 'Bridgestone', 'https://www.bridgestone.com'),
+        new Client('jvm', 'Jung von Matt', 'https://www.jvm.com/'),
+        new Client('jeunesse', 'Jeunesse', 'https://www.jeunesseglobal.com'),
+        new Client('bridgestone', 'Christies', 'https://www.christies.com'),
+        new Client('adidas', 'Adidas', 'https://www.adidas.com'),
+        new Client('cito', 'Cito', 'https://www.sixt.com/'),
+        new Client('sixt', 'Sixt', 'https://www.sixt.com/'),
+        new Client('olympics', 'Olympic Games', 'https://olympics.com/'),
+        new Client(
+          'bridgestone',
+          'Fliesenfabrik',
+          'https://www.fliesenfabrik-hamburg.de/'
+        ),
+        new Client('chelsea', 'Chelsea', 'https://www.chelseafc.com/'),
+      ],
     }
   },
 })
@@ -65,7 +83,7 @@ export default Vue.extend({
 
 <style scoped lang="postcss">
 .client-list__item__image {
-  @apply absolute bottom-0 left-0 w-full h-full object-contain opacity-100 transition-opacity duration-500 ease-in-out;
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 object-contain opacity-40 transition-opacity duration-500 ease-in-out;
 
   &--hover {
     @apply opacity-0;
@@ -100,23 +118,23 @@ export default Vue.extend({
   }
 
   a:hover .client-list__item__image {
-    @apply opacity-0;
+    @apply opacity-100;
 
     &.client-list__item__image--hover {
+      /*
       @apply opacity-100;
+*/
     }
   }
 
   &:last-child {
-    position: relative;
+    @apply relative;
 
     &:before,
     &:after {
+      @apply absolute bg-blue w-0.5;
       content: '';
-      width: 1px;
       height: calc(100% - 40px);
-      background: blue;
-      position: absolute;
       left: 20px;
       top: 20px;
       transform: scaleY(0.4) scaleX(1);
@@ -125,8 +143,8 @@ export default Vue.extend({
     }
 
     &:after {
+      @apply h-0.5;
       width: calc(100% - 40px);
-      height: 1px;
       transform: scaleY(1) scaleX(0.4);
       transform-origin: left;
     }
@@ -139,11 +157,9 @@ export default Vue.extend({
 
       &:before,
       &:after {
+        @apply absolute bg-blue w-0.5;
         content: '';
-        width: 1px;
         height: calc(100% - 40px);
-        background: blue;
-        position: absolute;
         right: 20px;
         bottom: 20px;
         transform: scaleY(0.4) scaleX(1);
@@ -152,8 +168,8 @@ export default Vue.extend({
       }
 
       &:after {
+        @apply h-0.5;
         width: calc(100% - 40px);
-        height: 1px;
         transform: scaleY(1) scaleX(0.4);
         transform-origin: right;
       }

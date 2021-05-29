@@ -4,7 +4,7 @@
       <div class="relative max-w-2xl" :class="{ 'text-right ml-auto': rtl }">
         <div
           data-animation-box
-          class="absolute text-9xl font-extrabold opacity-50 bg-clip-text text-transparent bg-gradient-to-b from-blue-400 left-0 top-0"
+          class="absolute text-9xl font-extrabold opacity-50 bg-clip-text text-transparent bg-gradient-to-b from-blue-light left-0 top-0"
           :class="{ 'left-none right-0': rtl }"
         >
           {{ numberTwoDigit }}

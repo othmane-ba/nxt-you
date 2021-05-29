@@ -6,11 +6,14 @@ module.exports = {
       fontFamily: {
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        blue: { light: '#3966e0', DEFAULT: '#074073', dark: '#052E54' },
+      },
       zIndex: {
         '-10': '-10',
       },
       boxShadow: {
-        highlight: `0 0 30px rgba(37, 99, 235, 0.8)`,
+        highlight: `0 0 30px rgba(57, 102, 224, 0.8)`,
       },
       transitionProperty: {
         size: 'width, height',
