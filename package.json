@@ -19,6 +19,7 @@
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "nuxt-property-decorator": "^2.9.1",
+    "smooth-scrolling": "^2.3.12",
     "swiper": "^6.5.9",
     "three": "^0.128.0",
     "vue-awesome-swiper": "^4.1.1",

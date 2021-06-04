@@ -47,6 +47,7 @@ export default {
   plugins: [
     '~/plugins/vue-awesome-swiper.client.ts',
     '~/plugins/vue-check-view.ts',
+    '~/plugins/smooth-scrolling.client.ts'
   ],
 
   components: {

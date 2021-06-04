@@ -15,11 +15,24 @@
           that role for you
         </p>
       </div>
-      <img
-        alt="If you don't have a strong brand, someone else will be there to fill that role for you"
-        class="p-4 w-2/3 ml-auto transform translate-x-4 translate-y-4 lg:translate-x-32 lg:translate-y-10 bg-black lg:absolute lg:h-full lg:max-h-96 lg:w-auto lg:right-0 lg:bottom-0 lg:top-auto lg:left-auto"
-        src="~/assets/images/home-brand-teaser.png"
-      />
+      <div
+        class="relative w-72 ml-auto transform translate-x-4 translate-y-4 lg:translate-x-32 lg:translate-y-10 bg-black lg:absolute lg:h-full lg:max-h-96 lg:w-auto lg:right-0 lg:bottom-0 lg:top-auto lg:left-auto"
+      >
+        <img
+          alt="If you don't have a strong brand, someone else will be there to fill that role for you"
+          class="vs-div relative w-full h-auto lg:h-full lg:w-auto"
+          src="~/assets/images/home-brand-02.png"
+          data-speed="0.05"
+        />
+        <img
+          v-for="(id, i) in ['01', '03', '04', '05']"
+          :key="id"
+          alt="If you don't have a strong brand, someone else will be there to fill that role for you"
+          class="absolute top-0 left-0 h-full w-full object-contain z-10 vs-div"
+          :data-speed="0.1 * (i % 2 === 0 ? 1 : 2)"
+          :src="require('~/assets/images/home-brand-' + id + '.png')"
+        />
+      </div>
     </div>
   </div>
 </template>
