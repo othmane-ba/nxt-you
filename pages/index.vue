@@ -41,8 +41,14 @@
       </NumText>
     </section>
 
+    <!--
     <section id="portfolio" data-animation-container class="portfolio">
       <Portfolio></Portfolio>
+    </section>
+-->
+
+    <section id="work">
+      <Work></Work>
     </section>
 
     <section class="client">

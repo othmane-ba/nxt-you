@@ -29,6 +29,9 @@
   "VideoGrid": {
     "description": "Auto imported from components/home/VideoGrid.vue"
   },
+  "Work": {
+    "description": "Auto imported from components/home/Work.vue"
+  },
   "PageLoader": {
     "description": "Auto imported from components/layout/PageLoader.vue"
   },
