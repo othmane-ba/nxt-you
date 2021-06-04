@@ -4,14 +4,28 @@
       <div v-for="(video, index) in videos" :key="index" v-view.once>
         <div
           data-animation-box
-          class="video-item aspect-h-1 md:aspect-h-2 xl:aspect-h-3 aspect-w-2 w-full relative overflow-hidden rounded-xl"
+          class="video-item aspect-h-1 md:aspect-h-4 aspect-w-2 w-full relative overflow-hidden"
           data-pointer="play"
+          @mouseover="play(video, index)"
+          @mouseout="pause(video, index)"
         >
-          <img
+          <video
+            ref="video"
+            loop
+            muted
+            playsinline
+            preload="auto"
             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
-            :src="video.poster"
-            :alt="video.title"
-          />
+          >
+            <source
+              :src="require('~/assets/videos/' + video.src + '.webm')"
+              type="video/webm; codecs=vp9,vorbis"
+            />
+            <source
+              :src="require('~/assets/videos/' + video.src + '.mp4')"
+              type="video/mp4"
+            />
+          </video>
           <div
             class="absolute inset-0 transform scale-105 bg-black transition-opacity ease-out-expo duration-1000 opacity-50 hover:opacity-0"
           ></div>
@@ -30,24 +44,27 @@
 import Vue from 'vue'
 
 class VideoItem {
-  constructor(
-    public title: string,
-    public src: string,
-    public poster: string
-  ) {}
+  constructor(public title: string, public src: string) {}
 }
 export default Vue.extend({
   data() {
     return {
       videos: [
-        new VideoItem('Video 1', '', 'https://picsum.photos/200/300'),
-        new VideoItem('Video 2', '', 'https://picsum.photos/300/300'),
-        new VideoItem('Video 3', '', 'https://picsum.photos/400/300'),
-        new VideoItem('Video 4', '', 'https://picsum.photos/500/300'),
+        new VideoItem('Pearson Loop', 'Pearson_Loop'),
+        new VideoItem('Fortnite', 'FORTNITE'),
+        new VideoItem('Stance', 'Stance'),
+        new VideoItem('UNCSA', 'UNCSA'),
       ],
     }
   },
-  computed: {},
+  methods: {
+    play(videoItem: VideoItem, index: number) {
+      ;(this.$refs.video as HTMLVideoElement[])[index].play()
+    },
+    pause(videoItem: VideoItem, index: number) {
+      ;(this.$refs.video as HTMLVideoElement[])[index].pause()
+    },
+  },
 })
 </script>
 

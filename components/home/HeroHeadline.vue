@@ -11,7 +11,7 @@
         ref="words"
         v-for="(word, index) in words"
         :key="index"
-        class="inline-block h-full whitespace-nowrap absolute top-0 left-0 opacity-0 pr-4"
+        class="inline-block h-full text-blue whitespace-nowrap absolute top-0 left-0 opacity-0 pr-4"
         :class="{ 'relative opacity-100': index === currentWordIndex }"
       >
         {{ word }}
