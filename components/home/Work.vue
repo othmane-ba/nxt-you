@@ -13,12 +13,12 @@
           data-animation-box
         >
           <img
-            class="absolute top-0 left-0 h-full w-full object-cover transition-opacity ease-out-expo duration-1000"
+            class="absolute top-0 left-0 h-full w-full object-cover transition-opacity ease-in-out duration-1000"
             :alt="item.title + ' Inactive'"
             :src="require('~/assets/images/' + item.image[0])"
           />
           <img
-            class="absolute top-0 left-0 h-full w-full object-cover opacity-0 transition-opacity ease-out-expo duration-1000"
+            class="absolute top-0 left-0 h-full w-full object-cover opacity-0 transition-opacity ease-in-out duration-1000"
             :alt="item.title"
             :src="require('~/assets/images/' + item.image[1])"
           />
@@ -42,10 +42,10 @@ export default Vue.extend({
   data() {
     return {
       items: [
-        new WorkItem('The Juice', 'juice'),
         new WorkItem('Cesis', 'cesis'),
-        new WorkItem('Cocoa', 'cocoa'),
-        new WorkItem('Neohouse', 'neohouse'),
+        new WorkItem('Juice', 'juice'),
+        new WorkItem('Statio', 'statio'),
+        new WorkItem('Neohaus', 'neohouse'),
       ],
     }
   },
