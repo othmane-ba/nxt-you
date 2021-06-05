@@ -16,8 +16,8 @@
               class="client-list__item__image"
             />
             <img
-              :src="require('~/assets/images/clients/' + client.src[0])"
-              :alt="client.name"
+              :src="require('~/assets/images/clients/' + client.src[1])"
+              :alt="client.name + ' Blau'"
               class="client-list__item__image client-list__item__image--hover"
             />
           </div>
@@ -64,13 +64,13 @@ export default Vue.extend({
         new Client('bridgestone', 'Bridgestone', 'https://www.bridgestone.com'),
         new Client('jvm', 'Jung von Matt', 'https://www.jvm.com/'),
         new Client('jeunesse', 'Jeunesse', 'https://www.jeunesseglobal.com'),
-        new Client('bridgestone', 'Christies', 'https://www.christies.com'),
+        new Client('christies', 'Christies', 'https://www.christies.com'),
         new Client('adidas', 'Adidas', 'https://www.adidas.com'),
         new Client('cito', 'Cito', 'https://www.sixt.com/'),
         new Client('sixt', 'Sixt', 'https://www.sixt.com/'),
         new Client('olympics', 'Olympic Games', 'https://olympics.com/'),
         new Client(
-          'bridgestone',
+          'fliesenfabrik',
           'Fliesenfabrik',
           'https://www.fliesenfabrik-hamburg.de/'
         ),
@@ -83,7 +83,7 @@ export default Vue.extend({
 
 <style scoped lang="postcss">
 .client-list__item__image {
-  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 object-contain opacity-40 transition-opacity duration-500 ease-in-out;
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 object-contain opacity-100 transition-opacity duration-500 ease-in-out;
 
   &--hover {
     @apply opacity-0;
@@ -118,12 +118,10 @@ export default Vue.extend({
   }
 
   a:hover .client-list__item__image {
-    @apply opacity-100;
+    @apply opacity-0;
 
     &.client-list__item__image--hover {
-      /*
       @apply opacity-100;
-*/
     }
   }
 
