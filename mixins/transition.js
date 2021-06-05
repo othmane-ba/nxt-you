@@ -23,9 +23,12 @@ export default {
 
       setTimeout(() => {
         document.body.classList.remove('fixed', 'overflow-y-scroll')
-        this.$smooth.resize() // Fix for https://github.com/baptistebriel/this.$smooth-scrolling/issues/104
         this.$nuxt.$emit('page-loaded')
       }, 1000)
+
+      setTimeout(() => {
+        this.$smooth.resize() // Fix for https://github.com/baptistebriel/this.$smooth-scrolling/issues/104
+      }, 2000)
     },
   },
 }

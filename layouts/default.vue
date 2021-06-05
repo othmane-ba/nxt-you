@@ -62,11 +62,14 @@ section {
 
 .view-in {
   [data-animation-text]:before,
-  [data-animation-text]:after {
+  [data-animation-text]:after,
+  &[data-animation-text]:before,
+  &[data-animation-text]:after {
     @apply w-full;
   }
 
-  [data-animation-box] {
+  [data-animation-box],
+  &[data-animation-box] {
     @apply opacity-100 translate-y-0;
   }
 }
