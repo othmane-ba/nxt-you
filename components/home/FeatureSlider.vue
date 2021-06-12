@@ -8,9 +8,8 @@
       <div
         class="overflow-hidden w-full"
         v-swiper="options"
-        :auto-destroy="false"
-        @ready="featureSlider = $event"
-        @activeIndexChange="slideIndex = $event.realIndex"
+        :auto-destroy="true"
+        @ready="onReady"
       >
         <div class="swiper-wrapper">
           <div
@@ -22,12 +21,22 @@
               <h4 class="text-center font-bold uppercase text-3xl lg:text-4xl">
                 {{ feature.title }}
               </h4>
+
+              <div
+                class="relative bg-gray-400 max-w-xl mx-auto mb-4 w-full h-px"
+              >
+                <div
+                  data-gsap-target="featureSlider"
+                  class="absolute bg-white top-0 left-0 h-full w-0"
+                ></div>
+              </div>
+
               <div
                 class="mx-auto max-w-4xl grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
               >
                 <div>
                   <p
-                    class="font-bold uppercase lg:text-xl"
+                    class="font-bold uppercase lg:text-2xl"
                     :key="feature.title"
                   >
                     {{ feature.intro }}
@@ -41,37 +50,40 @@
               </div>
               <div class="relative rounded-lg w-full overflow-hidden">
                 <ul
-                  class="relative w-full grid grid-cols-2 lg:grid-cols-5 gap-4 z-10 p-4 lg:py-12"
+                  class="relative w-full bg-black bg-opacity-90 grid grid-cols-2 lg:grid-cols-5 gap-4 z-10 p-4 lg:py-24 2xl:gap-12 2xl:p-12 2xl:py-24"
                 >
                   <li
                     class="block w-full"
-                    v-for="(service, index) of feature.services"
-                    :key="index"
+                    v-for="(service, j) of feature.services"
+                    :key="index + j"
                   >
                     <a
-                      class="w-full flex flex-col items-center justify-center h-44 lg:h-54 p-4 border-4 border-transparent rounded-xl transition-all duration-700 hover:border-gray-100 overflow-hidden"
+                      class="relative block w-full border-4 border-transparent rounded-xl transition-all duration-700 hover:border-gray-100 overflow-hidden"
                       data-pointer="large"
                     >
-                      <div>
+                      <div class="aspect-h-1 aspect-w-1 w-full"></div>
+                      <div
+                        class="absolute inset-0 flex flex-col items-center justify-center p-4"
+                      >
                         <img
-                          class="block w-16 lg:w-20 h-16 lg:h-20 object-cover"
+                          class="block w-16 xl:w-28 h-16 xl:h-28 object-contain"
                           :src="
                             require('~/assets/images/features/' + service.icon)
                           "
                         />
-                      </div>
 
-                      <div class="text-center uppercase font-semibold">
-                        <span class="break-words">
-                          {{ service.title }}
-                        </span>
+                        <div class="text-center uppercase font-semibold">
+                          <span class="break-words">
+                            {{ service.title }}
+                          </span>
+                        </div>
                       </div>
                     </a>
                   </li>
                 </ul>
 
                 <video
-                  class="absolute inset-2/4 transform -translate-x-2/4 -translate-y-2/4 object-cover w-full h-full opacity-25"
+                  class="absolute inset-2/4 transform -translate-x-2/4 -translate-y-2/4 object-cover w-full h-full"
                   muted
                   loop
                   autoplay="autoplay"
@@ -109,17 +121,14 @@ class Feature {
   ) {}
 }
 
+const AUTOPLAY_SPEED = 10
+
 @Component
 export default class FeatureSlider extends Vue {
-  featureSlider!: Swiper
-  slideIndex = 0
-  interval!: NodeJS.Timeout
-  autoplayDelay = 10000
+  clock!: any
   options = {
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'custom',
-    },
+    centeredSlides: true,
+    allowTouchMove: false,
     loop: true,
     effect: 'fade',
     fadeEffect: {
@@ -155,17 +164,30 @@ export default class FeatureSlider extends Vue {
     ),
   ]
 
-  onView(event: any): void {
-    if (this.interval && event.type === 'exit') {
-      clearInterval(this.interval)
-    } else if (!this.interval && event.type === 'enter') {
-      this.interval = setInterval(() => {
-        this.featureSlider.slideNext()
-      }, this.autoplayDelay)
-    }
+  onReady(swiper: Swiper) {
+    const gsap = this.$gsap
+    this.clock = gsap
+      .timeline({ repeat: -1, paused: true })
+      .fromTo(
+        '[data-gsap-target="featureSlider"]',
+        AUTOPLAY_SPEED,
+        { width: '0%' },
+        { width: '100%' }
+      )
+      .add(() => {
+        swiper.slideNext()
+      })
   }
 
-  onSwiperProgress(swiper: Swiper): void {}
+  onView(event: any): void {
+    if (this.features.length > 0) {
+      if (event.type === 'exit') {
+        this.clock.pause()
+      } else if (event.type === 'enter') {
+        this.clock.play()
+      }
+    }
+  }
 }
 </script>
 

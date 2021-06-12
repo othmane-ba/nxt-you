@@ -47,7 +47,7 @@ export default {
   plugins: [
     '~/plugins/vue-awesome-swiper.client.ts',
     '~/plugins/vue-check-view.ts',
-    '~/plugins/smooth-scrolling.client.ts'
+    '~/plugins/smooth-scrolling.client.ts',
   ],
 
   components: {
@@ -61,6 +61,7 @@ export default {
     '@nuxtjs/google-fonts',
     '@nuxtjs/device',
     '@nuxtjs/svg',
+    'nuxt-gsap-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

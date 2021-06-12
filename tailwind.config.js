@@ -7,7 +7,7 @@ module.exports = {
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        blue: { light: '#3966e0', DEFAULT: '#0b60ac', dark: '#074073' },
+        blue: { light: '#3966e0', DEFAULT: '#0b60ac', dark: '#2D5070' },
       },
       zIndex: {
         '-10': '-10',

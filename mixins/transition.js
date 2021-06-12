@@ -14,12 +14,14 @@ export default {
       done()
     },
     afterEnter() {
+      /*
       if (firstPaint) {
         firstPaint = false
         this.$smooth.init()
       } else {
         this.$smooth.reload()
       }
+*/
 
       setTimeout(() => {
         document.body.classList.remove('fixed', 'overflow-y-scroll')
@@ -27,7 +29,9 @@ export default {
       }, 1000)
 
       setTimeout(() => {
+        /*
         this.$smooth.resize() // Fix for https://github.com/baptistebriel/this.$smooth-scrolling/issues/104
+*/
       }, 2000)
     },
   },

@@ -2,7 +2,7 @@
   <div>
     <Sphere></Sphere>
 
-    <div class="vs-section">
+    <div>
       <section>
         <Hero></Hero>
       </section>
@@ -52,10 +52,6 @@
         <Work></Work>
       </section>
 
-      <section class="client">
-        <ClientList></ClientList>
-      </section>
-
       <section class="teaser-01">
         <div class="container mx-auto px-4">
           <img
@@ -91,6 +87,10 @@
             />
           </div>
         </div>
+      </section>
+
+      <section class="client">
+        <ClientList></ClientList>
       </section>
     </div>
   </div>
