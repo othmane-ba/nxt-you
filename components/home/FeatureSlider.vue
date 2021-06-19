@@ -104,6 +104,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import { gsap } from 'gsap'
 
 import Swiper from 'swiper'
 
@@ -165,7 +166,6 @@ export default class FeatureSlider extends Vue {
   ]
 
   onReady(swiper: Swiper) {
-    const gsap = this.$gsap
     this.clock = gsap
       .timeline({ repeat: -1, paused: true })
       .fromTo(
