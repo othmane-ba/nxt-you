@@ -20,16 +20,20 @@
       >
         <img
           alt="If you don't have a strong brand, someone else will be there to fill that role for you"
-          class="vs-div relative w-full h-auto lg:h-full lg:w-auto"
+          data-parallax
+          data-overflow
+          class="relative w-full h-auto lg:h-full lg:w-auto"
           src="~/assets/images/home-brand-02.png"
-          data-speed="0.05"
+          data-scale="1.2"
         />
         <img
           v-for="(id, i) in ['01', '03', '04', '05']"
           :key="id"
+          data-parallax
+          data-overflow
           alt="If you don't have a strong brand, someone else will be there to fill that role for you"
-          class="absolute top-0 left-0 h-full w-full object-contain z-10 vs-div"
-          :data-speed="0.1 * (i % 2 === 0 ? 1 : 2)"
+          class="absolute top-0 left-0 h-full w-full object-contain z-10"
+          :data-scale="1.4 * (i % 2 === 0 ? 1 : 1.2)"
           :src="require('~/assets/images/home-brand-' + id + '.png')"
         />
       </div>

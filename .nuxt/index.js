@@ -18,7 +18,7 @@ import nuxt_plugin_gsapModule_02a5d218 from 'nuxt_plugin_gsapModule_02a5d218' //
 import nuxt_plugin_deviceplugin_a6876d38 from 'nuxt_plugin_deviceplugin_a6876d38' // Source: .\\device.plugin.js (mode: 'all')
 import nuxt_plugin_vueawesomeswiperclient_06965e93 from 'nuxt_plugin_vueawesomeswiperclient_06965e93' // Source: ..\\plugins\\vue-awesome-swiper.client.ts (mode: 'client')
 import nuxt_plugin_vuecheckview_535e19e6 from 'nuxt_plugin_vuecheckview_535e19e6' // Source: ..\\plugins\\vue-check-view.ts (mode: 'all')
-import nuxt_plugin_smoothscrollingclient_44e7e7c0 from 'nuxt_plugin_smoothscrollingclient_44e7e7c0' // Source: ..\\plugins\\smooth-scrolling.client.ts (mode: 'client')
+import nuxt_plugin_simpleparallaxclient_52ca3da0 from 'nuxt_plugin_simpleparallaxclient_52ca3da0' // Source: ..\\plugins\\simple-parallax.client.ts (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -206,8 +206,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_vuecheckview_535e19e6(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_smoothscrollingclient_44e7e7c0 === 'function') {
-    await nuxt_plugin_smoothscrollingclient_44e7e7c0(app.context, inject)
+  if (process.client && typeof nuxt_plugin_simpleparallaxclient_52ca3da0 === 'function') {
+    await nuxt_plugin_simpleparallaxclient_52ca3da0(app.context, inject)
   }
 
   // Lock enablePreview in context
