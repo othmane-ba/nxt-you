@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        sans: ['Hero', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         blue: { light: '#3966e0', DEFAULT: '#0b60ac', dark: '#2D5070' },

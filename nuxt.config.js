@@ -58,7 +58,6 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts',
     '@nuxtjs/device',
     '@nuxtjs/svg',
     'nuxt-gsap-module',
@@ -66,12 +65,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios'],
-
-  googleFonts: {
-    families: {
-      Montserrat: [300, 400, 600, 700, 800],
-    },
-  },
 
   axios: {},
 

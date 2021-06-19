@@ -143,3 +143,59 @@ section {
   width: 1px;
 }
 </style>
+
+<style>
+@font-face {
+  font-family: 'Hero';
+  src: url('~/assets/fonts/Hero-Light.woff2') format('woff2'),
+    url('~/assets/fonts/Hero-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('~/assets/fonts/Hero-Bold.woff2') format('woff2'),
+    url('~/assets/fonts/Hero-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('~/assets/fonts/Hero-Regular.woff2') format('woff2'),
+    url('~/assets/fonts/Hero-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('~/assets/fonts/Hero-Bold.woff2') format('woff2'),
+    url('~/assets/fonts/Hero-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('~/assets/fonts/Hero-Light.woff2') format('woff2'),
+    url('~/assets/fonts/Hero-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('~/assets/fonts/Hero-Regular.woff2') format('woff2'),
+    url('~/assets/fonts/Hero-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
