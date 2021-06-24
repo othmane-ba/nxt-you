@@ -161,9 +161,8 @@ export default Vue.extend({
           '/mail',
           JSON.stringify(this.qualifier)
         )
-        console.log('send mail', res)
         this.error = !res.data.success
-        this.$toast.show(res.data.message, {
+        ;(this as any).$toast.show(res.data.message, {
           type: res.data.success ? 'success' : 'error',
         })
       } catch (err) {
