@@ -46,6 +46,7 @@
               v-model.trim="qualifier.name"
               type="text"
               placeholder="Wie heißt du?"
+              required
             />
           </div>
           <div>
@@ -56,6 +57,7 @@
               v-model.trim="qualifier.email"
               type="email"
               placeholder="E-mail Adresse"
+              required
             />
           </div>
           <div>
@@ -74,7 +76,7 @@
               id="website"
               name="website"
               v-model.trim="qualifier.website"
-              type="text"
+              type="url"
               placeholder="Website"
             />
           </div>

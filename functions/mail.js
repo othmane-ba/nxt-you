@@ -2,7 +2,7 @@
 require('dotenv').config()
 
 const formatTags = (tags) => {
-  return '<ul>' + tags.map((tag) => '<li>' + tag + '</li>') + '</ul>'
+  return tags.join(', ').replace(/, ([^,]*)$/, ' $1')
 }
 
 exports.handler = function (event, context, callback) {

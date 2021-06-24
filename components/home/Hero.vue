@@ -77,8 +77,7 @@ export default Vue.extend({
   },
   methods: {
     scrollDown() {
-      const section = document.querySelector('section:nth-child(3)')
-      console.log('scrollIntoView', section)
+      const section = document.querySelector('section:nth-child(2)')
       section?.scrollIntoView({ behavior: 'smooth' })
     },
   },
