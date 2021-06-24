@@ -63,12 +63,21 @@ export default {
     '@nuxtjs/device',
     '@nuxtjs/svg',
     'nuxt-gsap-module',
+    '@nuxtjs/toast',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios'],
 
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL,
+    headers: { post: { 'Content-Type': 'application/json' } },
+  },
+
+  toast: {
+    position: 'bottom-right',
+    duration: 3000,
+  },
 
   build: {},
 }

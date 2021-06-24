@@ -1,0 +1,7 @@
+[dev]
+   command = "yarn run dev"
+
+[build]
+  command = "yarn run generate"
+  publish = "dist"
+  functions = "functions"

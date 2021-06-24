@@ -92,10 +92,42 @@
           <div class="lg:col-span-2">
             <div>
               <button
-                class="w-full py-2 px-4 rounded border max-w-xs"
+                class="
+                  w-full
+                  py-2
+                  px-4
+                  rounded
+                  border
+                  max-w-xs
+                  flex
+                  items-center
+                  justify-center
+                  gap-4
+                "
                 data-pointer="large"
                 type="submit"
               >
+                <svg
+                  v-if="loading"
+                  class="animate-spin h-5 w-5 text-blue"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
                 Abschicken
               </button>
             </div>
@@ -118,14 +150,31 @@ import {
 
 export default Vue.extend({
   methods: {
-    submit() {
-      this.$v.$touch()
-      if (this.$v.$invalid) {
-        console.log('error')
+    async submit() {
+      if (this.loading) {
         return
-      } else {
-        console.log('submit')
       }
+      try {
+        this.error = false
+        this.loading = true
+        const res = await this.$axios.post(
+          '/mail',
+          JSON.stringify(this.qualifier)
+        )
+        console.log('send mail', res)
+        this.error = !res.data.success
+        this.$toast.show(res.data.message, {
+          type: res.data.success ? 'success' : 'error',
+        })
+      } catch (err) {
+        console.error(err)
+        this.error = true
+        ;(this as any).$toast.show('Unknown Error', {
+          type: 'error',
+        })
+      }
+
+      this.loading = false
     },
     updateTag(tag: string, value: boolean) {
       if (value) {
@@ -137,6 +186,8 @@ export default Vue.extend({
   },
   data() {
     return {
+      error: false,
+      loading: false,
       tags: [
         'Brand Strategy',
         'Social Media Marketing',
