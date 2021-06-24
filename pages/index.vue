@@ -92,6 +92,10 @@
       <section class="client">
         <ClientList></ClientList>
       </section>
+
+      <section class="qualifier">
+        <Qualifier></Qualifier>
+      </section>
     </div>
   </div>
 </template>

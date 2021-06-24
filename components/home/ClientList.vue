@@ -27,12 +27,29 @@
         <a
           v-view.once
           href="#"
-          class="relative w-full h-full flex items-center justify-center overflow-hidden"
+          class="
+            relative
+            w-full
+            h-full
+            flex
+            items-center
+            justify-center
+            overflow-hidden
+          "
           data-pointer="large"
         >
           <div class="w-full aspect-h-2 aspect-w-3">
             <div
-              class="text-xs lg:text-base text-center uppercase font-bold flex flex-col items-center justify-center"
+              class="
+                text-xs
+                lg:text-base
+                text-center
+                uppercase
+                font-bold
+                flex flex-col
+                items-center
+                justify-center
+              "
             >
               <div data-animation-text="This Spot">This Spot</div>
               <div class="delay-300" data-animation-text="Awaits">Awaits</div>
@@ -84,103 +101,93 @@ export default Vue.extend({
 <style scoped lang="postcss">
 .client-list__item__image {
   @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 object-contain opacity-100 transition-opacity duration-500 ease-in-out;
-
-  &--hover {
-    @apply opacity-0;
-  }
 }
 
+.client-list__item__image--hover {
+  @apply opacity-0;
+}
 .client-list li {
   @apply border-r border-b border-gray-400;
+}
+.client-list li:nth-child(2n) {
+  @apply border-r-0 md:border-r;
+}
 
-  &:nth-child(2n) {
-    @apply border-r-0 md:border-r;
-  }
+.client-list li:nth-last-child(-n + 2) {
+  @apply border-b-0 md:border-b;
+}
 
-  &:nth-last-child(-n + 2) {
-    @apply border-b-0 md:border-b;
-  }
+.client-list li:nth-child(3n) {
+  @apply md:border-r-0 lg:border-r;
+}
 
-  &:nth-child(3n) {
-    @apply md:border-r-0 lg:border-r;
-  }
+.client-list li:nth-last-child(-n + 3) {
+  @apply md:border-b-0 lg:border-b;
+}
 
-  &:nth-last-child(-n + 3) {
-    @apply md:border-b-0 lg:border-b;
-  }
+.client-list li:nth-child(4n) {
+  @apply lg:border-r-0;
+}
 
-  &:nth-child(4n) {
-    @apply lg:border-r-0;
-  }
+.client-list li:nth-last-child(-n + 4) {
+  @apply lg:border-b-0;
+}
 
-  &:nth-last-child(-n + 4) {
-    @apply lg:border-b-0;
-  }
+.client-list li:last-child {
+  @apply relative;
+}
+.client-list li:last-child:before,
+.client-list li:last-child:after {
+  @apply absolute bg-blue w-0.5;
+  content: '';
+  height: calc(100% - 40px);
+  left: 20px;
+  top: 20px;
+  transform: scaleY(0.4) scaleX(1);
+  transform-origin: top;
+  transition: all 0.6s ease-in-out;
+}
+.client-list li:last-child:after {
+  @apply h-0.5;
+  width: calc(100% - 40px);
+  transform: scaleY(1) scaleX(0.4);
+  transform-origin: left;
+}
 
-  a:hover .client-list__item__image {
-    @apply opacity-0;
+.client-list li:last-child a:before,
+.client-list li:last-child a:after {
+  @apply absolute bg-blue w-0.5;
+  content: '';
+  height: calc(100% - 40px);
+  right: 20px;
+  bottom: 20px;
+  transform: scaleY(0.4) scaleX(1);
+  transform-origin: bottom;
+  transition: all 0.6s ease-in-out !important;
+}
 
-    &.client-list__item__image--hover {
-      @apply opacity-100;
-    }
-  }
+.client-list li:last-child a:after {
+  @apply h-0.5;
+  width: calc(100% - 40px);
+  transform: scaleY(1) scaleX(0.4);
+  transform-origin: right;
+}
 
-  &:last-child {
-    @apply relative;
+.client-list li:last-child:hover:before,
+.client-list li:last-child:hover:after,
+.client-list li:last-child:hover a:before,
+.client-list li:last-child:hover a:after {
+  transform: scaleX(1) scaleY(1);
+}
 
-    &:before,
-    &:after {
-      @apply absolute bg-blue w-0.5;
-      content: '';
-      height: calc(100% - 40px);
-      left: 20px;
-      top: 20px;
-      transform: scaleY(0.4) scaleX(1);
-      transform-origin: top;
-      transition: all 0.6s ease-in-out;
-    }
+.client-list li a:hover .client-list__item__image {
+  @apply opacity-0;
+}
 
-    &:after {
-      @apply h-0.5;
-      width: calc(100% - 40px);
-      transform: scaleY(1) scaleX(0.4);
-      transform-origin: left;
-    }
-
-    a {
-      /*
-      line-height: $line-height-base;
-      font-weight: $font-weight-bold;
-*/
-
-      &:before,
-      &:after {
-        @apply absolute bg-blue w-0.5;
-        content: '';
-        height: calc(100% - 40px);
-        right: 20px;
-        bottom: 20px;
-        transform: scaleY(0.4) scaleX(1);
-        transform-origin: bottom;
-        transition: all 0.6s ease-in-out !important;
-      }
-
-      &:after {
-        @apply h-0.5;
-        width: calc(100% - 40px);
-        transform: scaleY(1) scaleX(0.4);
-        transform-origin: right;
-      }
-    }
-
-    &:hover {
-      &:before,
-      &:after,
-      a:before,
-      a:after {
-        transform: scaleX(1) scaleY(1);
-      }
-    }
-  }
+.client-list
+  li
+  a:hover
+  .client-list__item__image.client-list__item__image--hover {
+  @apply opacity-100;
 }
 </style>

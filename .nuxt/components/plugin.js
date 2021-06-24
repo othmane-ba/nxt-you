@@ -9,6 +9,7 @@ const components = {
   HeroHeadline: () => import('../..\\components\\home\\HeroHeadline.vue' /* webpackChunkName: "components/hero-headline" */).then(c => wrapFunctional(c.default || c)),
   IntroText: () => import('../..\\components\\home\\IntroText.vue' /* webpackChunkName: "components/intro-text" */).then(c => wrapFunctional(c.default || c)),
   Portfolio: () => import('../..\\components\\home\\Portfolio.vue' /* webpackChunkName: "components/portfolio" */).then(c => wrapFunctional(c.default || c)),
+  Qualifier: () => import('../..\\components\\home\\Qualifier.vue' /* webpackChunkName: "components/qualifier" */).then(c => wrapFunctional(c.default || c)),
   Sphere: () => import('../..\\components\\home\\Sphere.vue' /* webpackChunkName: "components/sphere" */).then(c => wrapFunctional(c.default || c)),
   TestimonialSlider: () => import('../..\\components\\home\\TestimonialSlider.vue' /* webpackChunkName: "components/testimonial-slider" */).then(c => wrapFunctional(c.default || c)),
   VideoGrid: () => import('../..\\components\\home\\VideoGrid.vue' /* webpackChunkName: "components/video-grid" */).then(c => wrapFunctional(c.default || c)),
@@ -17,7 +18,9 @@ const components = {
   Pointer: () => import('../..\\components\\layout\\Pointer.vue' /* webpackChunkName: "components/pointer" */).then(c => wrapFunctional(c.default || c)),
   Contact: () => import('../..\\components\\shared\\Contact.vue' /* webpackChunkName: "components/contact" */).then(c => wrapFunctional(c.default || c)),
   Icon: () => import('../..\\components\\shared\\Icon.vue' /* webpackChunkName: "components/icon" */).then(c => wrapFunctional(c.default || c)),
-  NumText: () => import('../..\\components\\shared\\NumText.vue' /* webpackChunkName: "components/num-text" */).then(c => wrapFunctional(c.default || c))
+  NumText: () => import('../..\\components\\shared\\NumText.vue' /* webpackChunkName: "components/num-text" */).then(c => wrapFunctional(c.default || c)),
+  RangeSlider: () => import('../..\\components\\shared\\RangeSlider.vue' /* webpackChunkName: "components/range-slider" */).then(c => wrapFunctional(c.default || c)),
+  Tag: () => import('../..\\components\\shared\\Tag.vue' /* webpackChunkName: "components/tag" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {

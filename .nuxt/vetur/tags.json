@@ -20,6 +20,9 @@
   "Portfolio": {
     "description": "Auto imported from components/home/Portfolio.vue"
   },
+  "Qualifier": {
+    "description": "Auto imported from components/home/Qualifier.vue"
+  },
   "Sphere": {
     "description": "Auto imported from components/home/Sphere.vue"
   },
@@ -46,5 +49,11 @@
   },
   "NumText": {
     "description": "Auto imported from components/shared/NumText.vue"
+  },
+  "RangeSlider": {
+    "description": "Auto imported from components/shared/RangeSlider.vue"
+  },
+  "Tag": {
+    "description": "Auto imported from components/shared/Tag.vue"
   }
 }

@@ -24,7 +24,9 @@
     "three": "^0.128.0",
     "vue-awesome-swiper": "^4.1.1",
     "vue-check-view": "^0.3.0",
-    "vue-themify-icons": "^1.0.0"
+    "vue-range-component": "^1.0.3",
+    "vue-themify-icons": "^1.0.0",
+    "vuelidate": "^0.7.6"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",
@@ -35,6 +37,7 @@
     "@nuxtjs/svg": "^0.1.12",
     "@nuxtjs/tailwindcss": "^4.0.1",
     "@types/three": "^0.127.1",
+    "@types/vuelidate": "^0.7.14",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",

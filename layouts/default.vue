@@ -24,10 +24,9 @@ export default Vue.extend({
 
 section {
   @apply py-32;
-
-  &:first-of-type {
-    @apply pt-0;
-  }
+}
+section:first-of-type {
+  @apply pt-0;
 }
 </style>
 
@@ -60,18 +59,16 @@ section {
   @apply text-white;
 }
 
-.view-in {
-  [data-animation-text]:before,
-  [data-animation-text]:after,
-  &[data-animation-text]:before,
-  &[data-animation-text]:after {
-    @apply w-full;
-  }
+.view-in [data-animation-text]:before,
+.view-in [data-animation-text]:after,
+.view-in[data-animation-text]:before,
+.view-in[data-animation-text]:after {
+  @apply w-full;
+}
 
-  [data-animation-box],
-  &[data-animation-box] {
-    @apply opacity-100 translate-y-0;
-  }
+.view-in [data-animation-box],
+.view-in[data-animation-box] {
+  @apply opacity-100 translate-y-0;
 }
 </style>
 <style lang="postcss">

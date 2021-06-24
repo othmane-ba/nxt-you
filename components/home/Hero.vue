@@ -43,7 +43,14 @@
       >
         <div
           v-show="showPage"
-          class="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 translate-y-full"
+          class="
+            absolute
+            bottom-1/4
+            left-1/2
+            transform
+            -translate-x-1/2
+            translate-y-full
+          "
         >
           <button
             class="hero__button"
@@ -86,31 +93,23 @@ export default Vue.extend({
 <style lang="postcss" scoped>
 .hero__button {
   @apply relative block w-16 h-16 border-4 overflow-hidden;
-
-  &__icon {
-    @apply absolute left-1/2 transform -translate-x-1/2 transition-all ease-out-expo duration-500;
-
-    &:first-child {
-      @apply top-1/2 -translate-y-1/2 transition-none;
-    }
-
-    &:last-child {
-      @apply -top-32 translate-y-0 transition-none;
-    }
-  }
-
-  &:hover {
-    .hero__button__icon {
-      @apply transition-all ease-out duration-150;
-
-      &:first-child {
-        @apply top-32 translate-y-0;
-      }
-
-      &:last-child {
-        @apply top-1/2 -translate-y-1/2;
-      }
-    }
-  }
+}
+.hero__button__icon {
+  @apply absolute left-1/2 transform -translate-x-1/2 transition-all ease-out-expo duration-500;
+}
+.hero__button__icon:first-child {
+  @apply top-1/2 -translate-y-1/2 transition-none;
+}
+.hero__button__icon:last-child {
+  @apply -top-32 translate-y-0 transition-none;
+}
+.hero__button:hover .hero__button__icon {
+  @apply transition-all ease-out duration-150;
+}
+.hero__button:hover .hero__button__icon:first-child {
+  @apply top-32 translate-y-0;
+}
+.hero__button:hover .hero__button__icon:last-child {
+  @apply top-1/2 -translate-y-1/2;
 }
 </style>

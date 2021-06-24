@@ -124,6 +124,10 @@ export default Vue.extend({
   @apply w-16 h-16 bg-blue-light bg-opacity-25 border-2 border-blue-light shadow-highlight;
 }
 
+.pointer--small {
+  @apply w-1 h-1 bg-blue-light bg-opacity-100 border-2 border-blue-light shadow-highlight;
+}
+
 .pointer--right,
 .pointer--play {
   @apply w-16 h-16 bg-black bg-opacity-50 border-2 border-blue-light shadow-highlight;

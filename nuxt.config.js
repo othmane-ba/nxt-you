@@ -48,6 +48,8 @@ export default {
     '~/plugins/vue-awesome-swiper.client.ts',
     '~/plugins/vue-check-view.ts',
     '~/plugins/simple-parallax.client.ts',
+    '~/plugins/vue-range-component.client.ts',
+    '~/plugins/vuelidate.ts',
   ],
 
   components: {

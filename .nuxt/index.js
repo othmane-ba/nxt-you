@@ -19,6 +19,8 @@ import nuxt_plugin_deviceplugin_a6876d38 from 'nuxt_plugin_deviceplugin_a6876d38
 import nuxt_plugin_vueawesomeswiperclient_06965e93 from 'nuxt_plugin_vueawesomeswiperclient_06965e93' // Source: ..\\plugins\\vue-awesome-swiper.client.ts (mode: 'client')
 import nuxt_plugin_vuecheckview_535e19e6 from 'nuxt_plugin_vuecheckview_535e19e6' // Source: ..\\plugins\\vue-check-view.ts (mode: 'all')
 import nuxt_plugin_simpleparallaxclient_52ca3da0 from 'nuxt_plugin_simpleparallaxclient_52ca3da0' // Source: ..\\plugins\\simple-parallax.client.ts (mode: 'client')
+import nuxt_plugin_vuerangecomponentclient_12480bf8 from 'nuxt_plugin_vuerangecomponentclient_12480bf8' // Source: ..\\plugins\\vue-range-component.client.ts (mode: 'client')
+import nuxt_plugin_vuelidate_4be42f5c from 'nuxt_plugin_vuelidate_4be42f5c' // Source: ..\\plugins\\vuelidate.ts (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -210,6 +212,14 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_simpleparallaxclient_52ca3da0(app.context, inject)
   }
 
+  if (process.client && typeof nuxt_plugin_vuerangecomponentclient_12480bf8 === 'function') {
+    await nuxt_plugin_vuerangecomponentclient_12480bf8(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_vuelidate_4be42f5c === 'function') {
+    await nuxt_plugin_vuelidate_4be42f5c(app.context, inject)
+  }
+
   // Lock enablePreview in context
   if (process.static && process.client) {
     app.context.enablePreview = function () {
@@ -219,7 +229,12 @@ async function createApp(ssrContext, config = {}) {
 
   // Wait for async component to be resolved first
   await new Promise((resolve, reject) => {
-    router.push(app.context.route.fullPath, resolve, (err) => {
+    const { route } = router.resolve(app.context.route.fullPath)
+    // Ignore 404s rather than blindly replacing URL
+    if (!route.matched.length && process.client) {
+      return resolve()
+    }
+    router.replace(route, resolve, (err) => {
       // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
       if (!err._isRouter) return reject(err)
       if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()

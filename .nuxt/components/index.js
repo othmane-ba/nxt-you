@@ -7,6 +7,7 @@ export { default as Hero } from '../..\\components\\home\\Hero.vue'
 export { default as HeroHeadline } from '../..\\components\\home\\HeroHeadline.vue'
 export { default as IntroText } from '../..\\components\\home\\IntroText.vue'
 export { default as Portfolio } from '../..\\components\\home\\Portfolio.vue'
+export { default as Qualifier } from '../..\\components\\home\\Qualifier.vue'
 export { default as Sphere } from '../..\\components\\home\\Sphere.vue'
 export { default as TestimonialSlider } from '../..\\components\\home\\TestimonialSlider.vue'
 export { default as VideoGrid } from '../..\\components\\home\\VideoGrid.vue'
@@ -16,6 +17,8 @@ export { default as Pointer } from '../..\\components\\layout\\Pointer.vue'
 export { default as Contact } from '../..\\components\\shared\\Contact.vue'
 export { default as Icon } from '../..\\components\\shared\\Icon.vue'
 export { default as NumText } from '../..\\components\\shared\\NumText.vue'
+export { default as RangeSlider } from '../..\\components\\shared\\RangeSlider.vue'
+export { default as Tag } from '../..\\components\\shared\\Tag.vue'
 
 export const LazyBrandTeaser = import('../..\\components\\home\\BrandTeaser.vue' /* webpackChunkName: "components/brand-teaser" */).then(c => wrapFunctional(c.default || c))
 export const LazyClientList = import('../..\\components\\home\\ClientList.vue' /* webpackChunkName: "components/client-list" */).then(c => wrapFunctional(c.default || c))
@@ -24,6 +27,7 @@ export const LazyHero = import('../..\\components\\home\\Hero.vue' /* webpackChu
 export const LazyHeroHeadline = import('../..\\components\\home\\HeroHeadline.vue' /* webpackChunkName: "components/hero-headline" */).then(c => wrapFunctional(c.default || c))
 export const LazyIntroText = import('../..\\components\\home\\IntroText.vue' /* webpackChunkName: "components/intro-text" */).then(c => wrapFunctional(c.default || c))
 export const LazyPortfolio = import('../..\\components\\home\\Portfolio.vue' /* webpackChunkName: "components/portfolio" */).then(c => wrapFunctional(c.default || c))
+export const LazyQualifier = import('../..\\components\\home\\Qualifier.vue' /* webpackChunkName: "components/qualifier" */).then(c => wrapFunctional(c.default || c))
 export const LazySphere = import('../..\\components\\home\\Sphere.vue' /* webpackChunkName: "components/sphere" */).then(c => wrapFunctional(c.default || c))
 export const LazyTestimonialSlider = import('../..\\components\\home\\TestimonialSlider.vue' /* webpackChunkName: "components/testimonial-slider" */).then(c => wrapFunctional(c.default || c))
 export const LazyVideoGrid = import('../..\\components\\home\\VideoGrid.vue' /* webpackChunkName: "components/video-grid" */).then(c => wrapFunctional(c.default || c))
@@ -33,3 +37,5 @@ export const LazyPointer = import('../..\\components\\layout\\Pointer.vue' /* we
 export const LazyContact = import('../..\\components\\shared\\Contact.vue' /* webpackChunkName: "components/contact" */).then(c => wrapFunctional(c.default || c))
 export const LazyIcon = import('../..\\components\\shared\\Icon.vue' /* webpackChunkName: "components/icon" */).then(c => wrapFunctional(c.default || c))
 export const LazyNumText = import('../..\\components\\shared\\NumText.vue' /* webpackChunkName: "components/num-text" */).then(c => wrapFunctional(c.default || c))
+export const LazyRangeSlider = import('../..\\components\\shared\\RangeSlider.vue' /* webpackChunkName: "components/range-slider" */).then(c => wrapFunctional(c.default || c))
+export const LazyTag = import('../..\\components\\shared\\Tag.vue' /* webpackChunkName: "components/tag" */).then(c => wrapFunctional(c.default || c))

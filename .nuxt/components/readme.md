@@ -13,6 +13,7 @@ You can directly use them in pages and other components without the need to impo
 - `<HeroHeadline>` | `<hero-headline>` (components/home/HeroHeadline.vue)
 - `<IntroText>` | `<intro-text>` (components/home/IntroText.vue)
 - `<Portfolio>` | `<portfolio>` (components/home/Portfolio.vue)
+- `<Qualifier>` | `<qualifier>` (components/home/Qualifier.vue)
 - `<Sphere>` | `<sphere>` (components/home/Sphere.vue)
 - `<TestimonialSlider>` | `<testimonial-slider>` (components/home/TestimonialSlider.vue)
 - `<VideoGrid>` | `<video-grid>` (components/home/VideoGrid.vue)
@@ -22,3 +23,5 @@ You can directly use them in pages and other components without the need to impo
 - `<Contact>` | `<contact>` (components/shared/Contact.vue)
 - `<Icon>` | `<icon>` (components/shared/Icon.vue)
 - `<NumText>` | `<num-text>` (components/shared/NumText.vue)
+- `<RangeSlider>` | `<range-slider>` (components/shared/RangeSlider.vue)
+- `<Tag>` | `<tag>` (components/shared/Tag.vue)
