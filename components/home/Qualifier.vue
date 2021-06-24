@@ -76,7 +76,7 @@
               id="website"
               name="website"
               v-model.trim="qualifier.website"
-              type="url"
+              type="text"
               placeholder="Website"
             />
           </div>
