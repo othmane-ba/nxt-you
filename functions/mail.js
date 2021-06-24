@@ -2,7 +2,7 @@
 require('dotenv').config()
 
 const formatTags = (tags) => {
-  return tags.join(', ').replace(/, ([^,]*)$/, ' $1')
+  return tags.join(', ').replace(/, ([^,]*)$/, ', $1')
 }
 
 exports.handler = function (event, context, callback) {
@@ -30,7 +30,7 @@ exports.handler = function (event, context, callback) {
 
   const mailOptions = {
     from: form.email,
-    to: 'fabianpiper@web.de', //'info@nxtyou.de',
+    to: 'info@nxtyou.de',
     subject: `[nxtyou.de] Neues Formular von ${form.name}`,
     html: `
     <h1>Neues Formular von ${form.name}</h1>
