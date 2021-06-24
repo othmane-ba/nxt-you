@@ -64,9 +64,11 @@
         </div>
       </section>
 
+      <!--
       <section class="testimonial">
         <TestimonialSlider></TestimonialSlider>
       </section>
+-->
 
       <section class="teaser-02">
         <div class="container px-4 mx-auto">
