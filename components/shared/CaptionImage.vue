@@ -9,7 +9,7 @@
     data-animation-box
   >
     <img
-      :alt="caption"
+      :alt="alt"
       data-parallax
       :data-scale="parallaxScale"
       :data-delay="parallaxDelay"
@@ -26,7 +26,7 @@
         data-overflow
         data-orientation="down"
       >
-        {{ caption }}
+        <slot></slot>
       </span>
     </div>
   </article>
@@ -41,7 +41,7 @@ export default Vue.extend({
       type: String,
       default: '',
     },
-    caption: {
+    alt: {
       type: String,
       default: '',
     },

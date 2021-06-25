@@ -1,13 +1,16 @@
 <template>
-  <div class="container mx-auto md:px-36 text-center" v-view.once>
+  <div class="container mx-auto px-4 md:px-36 text-center" v-view.once>
     <form class="pb-16" @submit.prevent="submit">
       <article>
         <h3 class="text-3xl lg:text-4xl font-bold uppercase">
           <span
-            data-animation-text="Wie können wir dir helfen?"
+            data-animation-text="Wie können wir"
             data-animation-text-white=""
           >
-            Wie können wir dir helfen?</span
+            Wie können wir</span
+          >
+          <span data-animation-text="dir helfen?" data-animation-text-white="">
+            dir helfen?</span
           >
         </h3>
         <div class="pt-4 pb-16">
@@ -17,9 +20,10 @@
           </p>
         </div>
 
-        <div class="flex flex-wrap gap-4 justify-center">
+        <div class="flex flex-wrap justify-center">
           <Tag
             v-for="(tag, index) of tags"
+            class="m-2"
             :key="index"
             :label="tag"
             :value="qualifier.tags.indexOf(tag) > -1"

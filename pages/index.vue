@@ -18,7 +18,7 @@
           class="w-full h-auto"
         >
           <source
-            :src="require('~/assets/videos/nxtyou-trailer.mp4')"
+            :src="require('~/assets/videos/nxtyou-trailer-desktop.mp4')"
             type="video/mp4"
           />
         </video>
@@ -65,15 +65,17 @@
           >
             <CaptionImage
               src="andreas-kueffner.png"
-              caption="Andreas Küffner"
+              alt="Andreas Küffner"
               rtl
               :parallaxDelay="1"
-            ></CaptionImage>
+              >Andreas<br />Küffner</CaptionImage
+            >
             <CaptionImage
               src="clemens-kauschke.png"
-              caption="Clemens Kauschke"
-              :parallaxDelay="1.2"
-            ></CaptionImage>
+              alt="Clemens Kauschke"
+              :parallaxDelay="1.4"
+              >Clemens<br />Kauschke</CaptionImage
+            >
           </div>
         </div>
       </section>
