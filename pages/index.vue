@@ -8,6 +8,22 @@
       </section>
 
       <section>
+        <video
+          data-parallax
+          loop
+          muted
+          autoplay
+          playsinline
+          preload="auto"
+          class="w-full h-auto"
+        >
+          <source
+            :src="require('~/assets/videos/nxtyou-trailer.mp4')"
+            type="video/mp4"
+          />
+        </video>
+      </section>
+      <section>
         <IntroText></IntroText>
       </section>
 
@@ -40,6 +56,26 @@
           Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen,
           etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.
         </NumText>
+      </section>
+
+      <section class="a-c-preview">
+        <div class="container mx-auto px-4 lg:px-16">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-start"
+          >
+            <CaptionImage
+              src="andreas-kueffner.png"
+              caption="Andreas Küffner"
+              rtl
+              :parallaxDelay="1"
+            ></CaptionImage>
+            <CaptionImage
+              src="clemens-kauschke.png"
+              caption="Clemens Kauschke"
+              :parallaxDelay="1.2"
+            ></CaptionImage>
+          </div>
+        </div>
       </section>
 
       <!--

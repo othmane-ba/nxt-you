@@ -8,5 +8,7 @@ elems.forEach(function (elem) {
     delay: elem.getAttribute('data-delay') || 0,
     // @ts-ignore
     scale: elem.getAttribute('data-scale') || 1.4,
+    // @ts-ignore
+    orientation: elem.getAttribute('data-orientation') || 'up',
   })
 })

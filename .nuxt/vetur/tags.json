@@ -41,6 +41,9 @@
   "Pointer": {
     "description": "Auto imported from components/layout/Pointer.vue"
   },
+  "CaptionImage": {
+    "description": "Auto imported from components/shared/CaptionImage.vue"
+  },
   "Contact": {
     "description": "Auto imported from components/shared/Contact.vue"
   },

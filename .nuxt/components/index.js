@@ -14,6 +14,7 @@ export { default as VideoGrid } from '../..\\components\\home\\VideoGrid.vue'
 export { default as Work } from '../..\\components\\home\\Work.vue'
 export { default as PageLoader } from '../..\\components\\layout\\PageLoader.vue'
 export { default as Pointer } from '../..\\components\\layout\\Pointer.vue'
+export { default as CaptionImage } from '../..\\components\\shared\\CaptionImage.vue'
 export { default as Contact } from '../..\\components\\shared\\Contact.vue'
 export { default as Icon } from '../..\\components\\shared\\Icon.vue'
 export { default as NumText } from '../..\\components\\shared\\NumText.vue'
@@ -34,6 +35,7 @@ export const LazyVideoGrid = import('../..\\components\\home\\VideoGrid.vue' /* 
 export const LazyWork = import('../..\\components\\home\\Work.vue' /* webpackChunkName: "components/work" */).then(c => wrapFunctional(c.default || c))
 export const LazyPageLoader = import('../..\\components\\layout\\PageLoader.vue' /* webpackChunkName: "components/page-loader" */).then(c => wrapFunctional(c.default || c))
 export const LazyPointer = import('../..\\components\\layout\\Pointer.vue' /* webpackChunkName: "components/pointer" */).then(c => wrapFunctional(c.default || c))
+export const LazyCaptionImage = import('../..\\components\\shared\\CaptionImage.vue' /* webpackChunkName: "components/caption-image" */).then(c => wrapFunctional(c.default || c))
 export const LazyContact = import('../..\\components\\shared\\Contact.vue' /* webpackChunkName: "components/contact" */).then(c => wrapFunctional(c.default || c))
 export const LazyIcon = import('../..\\components\\shared\\Icon.vue' /* webpackChunkName: "components/icon" */).then(c => wrapFunctional(c.default || c))
 export const LazyNumText = import('../..\\components\\shared\\NumText.vue' /* webpackChunkName: "components/num-text" */).then(c => wrapFunctional(c.default || c))

@@ -20,6 +20,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Work>` | `<work>` (components/home/Work.vue)
 - `<PageLoader>` | `<page-loader>` (components/layout/PageLoader.vue)
 - `<Pointer>` | `<pointer>` (components/layout/Pointer.vue)
+- `<CaptionImage>` | `<caption-image>` (components/shared/CaptionImage.vue)
 - `<Contact>` | `<contact>` (components/shared/Contact.vue)
 - `<Icon>` | `<icon>` (components/shared/Icon.vue)
 - `<NumText>` | `<num-text>` (components/shared/NumText.vue)
