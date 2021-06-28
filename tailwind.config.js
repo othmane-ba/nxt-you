@@ -12,6 +12,12 @@ module.exports = {
       zIndex: {
         '-10': '-10',
       },
+      height: {
+        '1-2-screen': '150vh',
+        '2-screen': '200vh',
+        '3-screen': '300vh',
+        '4-screen': '400vh',
+      },
       boxShadow: {
         highlight: `0 0 30px rgba(57, 102, 224, 0.8)`,
       },

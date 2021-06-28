@@ -11,6 +11,7 @@ const components = {
   Portfolio: () => import('../..\\components\\home\\Portfolio.vue' /* webpackChunkName: "components/portfolio" */).then(c => wrapFunctional(c.default || c)),
   Qualifier: () => import('../..\\components\\home\\Qualifier.vue' /* webpackChunkName: "components/qualifier" */).then(c => wrapFunctional(c.default || c)),
   Sphere: () => import('../..\\components\\home\\Sphere.vue' /* webpackChunkName: "components/sphere" */).then(c => wrapFunctional(c.default || c)),
+  StickyVideoDisplay: () => import('../..\\components\\home\\StickyVideoDisplay.vue' /* webpackChunkName: "components/sticky-video-display" */).then(c => wrapFunctional(c.default || c)),
   TestimonialSlider: () => import('../..\\components\\home\\TestimonialSlider.vue' /* webpackChunkName: "components/testimonial-slider" */).then(c => wrapFunctional(c.default || c)),
   VideoGrid: () => import('../..\\components\\home\\VideoGrid.vue' /* webpackChunkName: "components/video-grid" */).then(c => wrapFunctional(c.default || c)),
   Work: () => import('../..\\components\\home\\Work.vue' /* webpackChunkName: "components/work" */).then(c => wrapFunctional(c.default || c)),

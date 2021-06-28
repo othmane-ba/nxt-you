@@ -9,6 +9,7 @@ export { default as IntroText } from '../..\\components\\home\\IntroText.vue'
 export { default as Portfolio } from '../..\\components\\home\\Portfolio.vue'
 export { default as Qualifier } from '../..\\components\\home\\Qualifier.vue'
 export { default as Sphere } from '../..\\components\\home\\Sphere.vue'
+export { default as StickyVideoDisplay } from '../..\\components\\home\\StickyVideoDisplay.vue'
 export { default as TestimonialSlider } from '../..\\components\\home\\TestimonialSlider.vue'
 export { default as VideoGrid } from '../..\\components\\home\\VideoGrid.vue'
 export { default as Work } from '../..\\components\\home\\Work.vue'
@@ -30,6 +31,7 @@ export const LazyIntroText = import('../..\\components\\home\\IntroText.vue' /* 
 export const LazyPortfolio = import('../..\\components\\home\\Portfolio.vue' /* webpackChunkName: "components/portfolio" */).then(c => wrapFunctional(c.default || c))
 export const LazyQualifier = import('../..\\components\\home\\Qualifier.vue' /* webpackChunkName: "components/qualifier" */).then(c => wrapFunctional(c.default || c))
 export const LazySphere = import('../..\\components\\home\\Sphere.vue' /* webpackChunkName: "components/sphere" */).then(c => wrapFunctional(c.default || c))
+export const LazyStickyVideoDisplay = import('../..\\components\\home\\StickyVideoDisplay.vue' /* webpackChunkName: "components/sticky-video-display" */).then(c => wrapFunctional(c.default || c))
 export const LazyTestimonialSlider = import('../..\\components\\home\\TestimonialSlider.vue' /* webpackChunkName: "components/testimonial-slider" */).then(c => wrapFunctional(c.default || c))
 export const LazyVideoGrid = import('../..\\components\\home\\VideoGrid.vue' /* webpackChunkName: "components/video-grid" */).then(c => wrapFunctional(c.default || c))
 export const LazyWork = import('../..\\components\\home\\Work.vue' /* webpackChunkName: "components/work" */).then(c => wrapFunctional(c.default || c))

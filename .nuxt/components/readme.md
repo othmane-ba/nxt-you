@@ -15,6 +15,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Portfolio>` | `<portfolio>` (components/home/Portfolio.vue)
 - `<Qualifier>` | `<qualifier>` (components/home/Qualifier.vue)
 - `<Sphere>` | `<sphere>` (components/home/Sphere.vue)
+- `<StickyVideoDisplay>` | `<sticky-video-display>` (components/home/StickyVideoDisplay.vue)
 - `<TestimonialSlider>` | `<testimonial-slider>` (components/home/TestimonialSlider.vue)
 - `<VideoGrid>` | `<video-grid>` (components/home/VideoGrid.vue)
 - `<Work>` | `<work>` (components/home/Work.vue)

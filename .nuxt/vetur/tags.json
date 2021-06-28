@@ -26,6 +26,9 @@
   "Sphere": {
     "description": "Auto imported from components/home/Sphere.vue"
   },
+  "StickyVideoDisplay": {
+    "description": "Auto imported from components/home/StickyVideoDisplay.vue"
+  },
   "TestimonialSlider": {
     "description": "Auto imported from components/home/TestimonialSlider.vue"
   },

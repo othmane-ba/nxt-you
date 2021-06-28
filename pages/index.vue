@@ -7,22 +7,10 @@
         <Hero></Hero>
       </section>
 
-      <section>
-        <video
-          data-parallax
-          loop
-          muted
-          autoplay
-          playsinline
-          preload="auto"
-          class="w-full h-auto"
-        >
-          <source
-            :src="require('~/assets/videos/nxtyou-trailer-desktop.mp4')"
-            type="video/mp4"
-          />
-        </video>
+      <section class="lg:pb-0">
+        <StickyVideoDisplay></StickyVideoDisplay>
       </section>
+
       <section>
         <IntroText></IntroText>
       </section>
