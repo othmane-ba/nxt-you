@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="container mx-auto px-4 lg:px-16 overflow-hidden"
-    v-view.once
-    v-view="onView"
-  >
+  <div class="container mx-auto px-4 lg:px-16 overflow-hidden" v-view.once>
     <div data-animation-box>
       <div
         class="overflow-hidden w-full"
@@ -32,7 +28,13 @@
               </div>
 
               <div
-                class="mx-auto max-w-4xl grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
+                class="
+                  mx-auto
+                  max-w-4xl
+                  grid grid-cols-1
+                  gap-4
+                  lg:grid-cols-2 lg:gap-8
+                "
               >
                 <div>
                   <p
@@ -50,7 +52,18 @@
               </div>
               <div class="relative rounded-lg w-full overflow-hidden">
                 <ul
-                  class="relative w-full bg-black bg-opacity-90 grid grid-cols-2 lg:grid-cols-5 gap-4 z-10 p-4 lg:py-24 2xl:gap-12 2xl:p-12 2xl:py-24"
+                  class="
+                    relative
+                    w-full
+                    bg-black bg-opacity-90
+                    grid grid-cols-2
+                    lg:grid-cols-5
+                    gap-4
+                    z-10
+                    p-4
+                    lg:py-24
+                    2xl:gap-12 2xl:p-12 2xl:py-24
+                  "
                 >
                   <li
                     class="block w-full"
@@ -58,12 +71,29 @@
                     :key="index + j"
                   >
                     <a
-                      class="relative block w-full border-4 border-transparent rounded-xl transition-all duration-700 hover:border-gray-100 overflow-hidden"
+                      class="
+                        relative
+                        block
+                        w-full
+                        border-4 border-transparent
+                        rounded-xl
+                        transition-all
+                        duration-700
+                        hover:border-gray-100
+                        overflow-hidden
+                      "
                       data-pointer="large"
                     >
                       <div class="aspect-h-1 aspect-w-1 w-full"></div>
                       <div
-                        class="absolute inset-0 flex flex-col items-center justify-center p-4"
+                        class="
+                          absolute
+                          inset-0
+                          flex flex-col
+                          items-center
+                          justify-center
+                          p-4
+                        "
                       >
                         <img
                           class="block w-16 xl:w-28 h-16 xl:h-28 object-contain"
@@ -83,7 +113,15 @@
                 </ul>
 
                 <video
-                  class="absolute inset-2/4 transform -translate-x-2/4 -translate-y-2/4 object-cover w-full h-full"
+                  class="
+                    absolute
+                    inset-2/4
+                    transform
+                    -translate-x-2/4 -translate-y-2/4
+                    object-cover
+                    w-full
+                    h-full
+                  "
                   muted
                   loop
                   autoplay="autoplay"
@@ -167,7 +205,7 @@ export default class FeatureSlider extends Vue {
 
   onReady(swiper: Swiper) {
     this.clock = gsap
-      .timeline({ repeat: -1, paused: true })
+      .timeline({ repeat: -1, paused: false })
       .fromTo(
         '[data-gsap-target="featureSlider"]',
         AUTOPLAY_SPEED,
@@ -177,16 +215,6 @@ export default class FeatureSlider extends Vue {
       .add(() => {
         swiper.slideNext()
       })
-  }
-
-  onView(event: any): void {
-    if (this.features.length > 0) {
-      if (event.type === 'exit') {
-        this.clock.pause()
-      } else if (event.type === 'enter') {
-        this.clock.play()
-      }
-    }
   }
 }
 </script>
