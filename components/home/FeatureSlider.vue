@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto px-4 lg:px-16 overflow-hidden" v-view.once>
-    <div data-animation-box>
+  <div class="container mx-auto px-4 lg:px-16 overflow-hidden">
+    <div>
       <div
         class="overflow-hidden w-full"
         v-swiper="options"
@@ -166,7 +166,6 @@ const AUTOPLAY_SPEED = 10
 export default class FeatureSlider extends Vue {
   clock!: any
   options = {
-    centeredSlides: true,
     allowTouchMove: false,
     loop: true,
     effect: 'fade',
