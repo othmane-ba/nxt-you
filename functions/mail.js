@@ -30,7 +30,7 @@ exports.handler = function (event, context, callback) {
 
   const mailOptions = {
     from: form.email,
-    to: 'info@nxtyou.de',
+    to: 'fabianpiper@web.de',
     subject: `[nxtyou.de] Neues Formular von ${form.name}`,
     html: `
     <h1>Neues Formular von ${form.name}</h1>
@@ -53,6 +53,12 @@ exports.handler = function (event, context, callback) {
       <td style="vertical-align: top; padding: 6px 14px 6px 0; font-weight: bolder;">Website:</td>
       <td style="vertical-align: top; padding: 6px 0;">${
         form.website === '' ? '[keine Angabe]' : form.website
+      }</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; padding: 6px 14px 6px 0; font-weight: bolder;">Budgetvorstellung:</td>
+      <td style="vertical-align: top; padding: 6px 0;">${
+        form.budget[0] + ' - ' + form.budget[1]
       }</td>
     </tr>
     <tr>
