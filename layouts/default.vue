@@ -22,14 +22,11 @@ export default Vue.extend({
   @apply bg-transparent text-blue-light;
 }
 
-.section {
-  @apply py-32;
+section {
+  @apply py-16 lg:py-32;
 }
-.section-top {
-  @apply pt-0;
-}
-.section-bottom {
-  @apply pb-0;
+section:first-child {
+  @apply pt-0 !important;
 }
 </style>
 
