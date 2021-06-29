@@ -7,7 +7,7 @@ export default {
       lang: 'de',
     },
     bodyAttrs: {
-      class: 'bg-black text-white fixed overflow-y-scroll',
+      class: 'bg-black text-white',
     },
     meta: [
       { charset: 'utf-8' },
@@ -18,7 +18,7 @@ export default {
         content:
           'NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.',
       },
-      { name: 'theme-color', content: '#0b60ac' },
+      { name: 'theme-color', content: '#000000' },
     ],
     link: [
       {
