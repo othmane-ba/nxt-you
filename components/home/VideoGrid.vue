@@ -4,7 +4,15 @@
       <div v-for="(video, index) in videos" :key="index" v-view.once>
         <div
           data-animation-box
-          class="video-item aspect-h-1 md:aspect-h-4 aspect-w-2 w-full relative overflow-hidden"
+          class="
+            video-item
+            aspect-h-1
+            md:aspect-h-4
+            aspect-w-2
+            w-full
+            relative
+            overflow-hidden
+          "
           data-pointer="play"
           @mouseover="play(video, index)"
           @mouseout="pause(video, index)"
@@ -15,7 +23,15 @@
             muted
             playsinline
             preload="auto"
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            :poster="require('~/assets/images/' + video.src + '.jpg')"
+            class="
+              absolute
+              top-1/2
+              left-1/2
+              transform
+              -translate-x-1/2 -translate-y-1/2
+              object-cover
+            "
           >
             <source
               :src="require('~/assets/videos/' + video.src + '.webm')"
@@ -27,10 +43,37 @@
             />
           </video>
           <div
-            class="absolute inset-0 transform scale-105 bg-black transition-opacity ease-out-expo duration-1000 opacity-50 hover:opacity-0"
+            class="
+              absolute
+              inset-0
+              transform
+              scale-105
+              bg-black
+              transition-opacity
+              ease-out-expo
+              duration-1000
+              opacity-50
+              hover:opacity-0
+            "
           ></div>
           <button
-            class="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full border-2 transition-opacity ease-out-expo duration-1000"
+            class="
+              flex
+              justify-center
+              items-center
+              absolute
+              top-1/2
+              left-1/2
+              transform
+              -translate-x-1/2 -translate-y-1/2
+              w-16
+              h-16
+              rounded-full
+              border-2
+              transition-opacity
+              ease-out-expo
+              duration-1000
+            "
           >
             <Icon class="block text-lg" src="control-play"></Icon>
           </button>
