@@ -1,9 +1,31 @@
 <template>
   <div class="sticky-video-display" ref="wrapper">
     <div class="sticky top-0 left-0 w-full overflow-hidden">
+      <div class="absolute h-full max-h-screen w-full">
+        <button
+          @click="toggleMuted"
+          data-pointer="large"
+          class="
+            absolute
+            bottom-4
+            right-4
+            flex
+            justify-center
+            items-center
+            w-9
+            h-9
+            rounded-full
+            border
+            z-10
+          "
+          :class="{ 'border-blue': !muted }"
+        >
+          <Icon class="block text-lg" src="volume"></Icon>
+        </button>
+      </div>
       <div ref="container" class="w-full mx-auto">
         <img
-          class="relative z-10 w-full h-auto origin-top"
+          class="relative z-10 w-full h-auto origin-top hidden lg:block"
           :src="require('~/assets/images/mac.png')"
         />
         <video
@@ -12,7 +34,8 @@
           autoplay
           playsinline
           preload="auto"
-          class="absolute object-cover"
+          ref="video"
+          class="lg:absolute object-cover"
         >
           <source
             :src="require('~/assets/videos/nxtyou-trailer-desktop.mp4')"
@@ -30,7 +53,7 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      view: false,
+      muted: true,
       rect: {},
     }
   },
@@ -53,6 +76,10 @@ export default Vue.extend({
         2
       )
     },
+    toggleMuted() {
+      this.muted = !this.muted
+      ;(this.$refs.video as HTMLVideoElement).muted = this.muted
+    },
   },
   mounted() {
     this.rect = (this.$refs.wrapper as Element).getBoundingClientRect()
@@ -63,13 +90,15 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 .sticky-video-display {
-  @apply px-4 lg:px-0 relative w-full lg:h-4-screen;
+  @apply relative w-full lg:h-4-screen -mb-32 lg:-mt-32;
 }
 
 .sticky-video-display video {
-  top: 4%;
-  left: 4%;
-  height: calc(100% - 20%);
-  width: calc(100% - 8%);
+  @media screen(lg) {
+    top: 4%;
+    left: 4%;
+    height: calc(100% - 20%);
+    width: calc(100% - 8%);
+  }
 }
 </style>

@@ -15,8 +15,10 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Make Your Vision Come Reality.',
+        content:
+          'NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.',
       },
+      { name: 'theme-color', content: '#0b60ac' },
     ],
     link: [
       {

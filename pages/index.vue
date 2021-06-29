@@ -3,38 +3,38 @@
     <Sphere></Sphere>
 
     <div>
-      <section>
+      <section class="section-top">
         <Hero></Hero>
       </section>
 
-      <section class="lg:pb-0">
+      <section class="section">
         <StickyVideoDisplay></StickyVideoDisplay>
       </section>
 
-      <section>
+      <section class="section">
         <IntroText></IntroText>
       </section>
 
-      <section>
+      <section class="section">
         <BrandTeaser></BrandTeaser>
       </section>
 
-      <section>
+      <section class="section">
         <NumText title="Kreationen" :number="1" action-text="Projekte">
           Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen,
           etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.
         </NumText>
       </section>
 
-      <section>
+      <section class="section">
         <VideoGrid> </VideoGrid>
       </section>
 
-      <section>
+      <section class="section">
         <FeatureSlider> </FeatureSlider>
       </section>
 
-      <section>
+      <section class="section">
         <NumText
           title="Unser Team"
           :number="2"
@@ -46,7 +46,7 @@
         </NumText>
       </section>
 
-      <section class="a-c-preview">
+      <section class="a-c-preview section">
         <div class="container mx-auto px-4 lg:px-16">
           <div
             class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-start"
@@ -74,11 +74,11 @@
     </section>
 -->
 
-      <section id="work">
+      <section class="section">
         <Work></Work>
       </section>
 
-      <section class="teaser-01">
+      <section class="section">
         <div class="container mx-auto px-4">
           <img
             v-view.once
@@ -96,7 +96,7 @@
       </section>
 -->
 
-      <section class="teaser-02">
+      <section class="section">
         <div class="container px-4 mx-auto">
           <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
             <img
@@ -117,11 +117,11 @@
         </div>
       </section>
 
-      <section class="client">
+      <section class="section">
         <ClientList></ClientList>
       </section>
 
-      <section class="qualifier">
+      <section class="section">
         <Qualifier></Qualifier>
       </section>
     </div>

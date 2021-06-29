@@ -1,5 +1,9 @@
 <template>
-  <div class="container mx-auto px-4 lg:px-16 overflow-hidden">
+  <div
+    class="container mx-auto px-4 lg:px-16 overflow-hidden"
+    v-view.once
+    data-animation-box=""
+  >
     <div>
       <div
         class="overflow-hidden w-full"
