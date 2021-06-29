@@ -84,17 +84,12 @@
               placeholder="Website"
             />
           </div>
-          <!--        <div class="lg:col-span-2">
-          <div class="text-left">Budgetvorstellung</div>
-          <client-only>
-            <vue-range-slider
-              v-model.trim="qualifier.budget"
-              :enable-cross="false"
-            >
-              <div slot="tooltip" slot-scope="{ value }">{{ value }}k</div>
-            </vue-range-slider>
-          </client-only>
-        </div>-->
+          <div class="lg:col-span-2">
+            <div class="text-left pl-2 pb-4">Budgetvorstellung</div>
+            <div class="pb-8">
+              <RangeSlider v-model="qualifier.budget"></RangeSlider>
+            </div>
+          </div>
           <div class="lg:col-span-2">
             <div>
               <button
@@ -211,7 +206,7 @@ export default Vue.extend({
         email: '',
         company: '',
         website: '',
-        budget: [0, 100],
+        budget: [14000, 68000],
       },
     }
   },
