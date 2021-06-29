@@ -131,7 +131,11 @@
                   autoplay="autoplay"
                 >
                   <source
-                    :src="require('~/assets/videos/' + feature.video)"
+                    :src="require('~/assets/videos/' + feature.video + '.webm')"
+                    type="video/webm"
+                  />
+                  <source
+                    :src="require('~/assets/videos/' + feature.video + '.mp4')"
                     type="video/mp4"
                   />
                 </video>
@@ -182,7 +186,7 @@ export default class FeatureSlider extends Vue {
       'Branding',
       'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
       'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-      'render_of_tunnel_in_cgi_light_and_environment.mp4',
+      'branding',
       [
         new Service('Brand Strategy', 'lightbulb.png', '/seo'),
         new Service('Visual Brand Identity', 'pencil-settings.png', '/seo'),
@@ -195,7 +199,7 @@ export default class FeatureSlider extends Vue {
       'Performance',
       'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
       'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-      'render_of_light_tunnel.mp4',
+      'performance',
       [
         new Service('Social Media Marketing', 'bar-up.png', '/seo'),
         new Service('Funnel Systeme', 'dollar-bar.png', '/seo'),

@@ -23,7 +23,7 @@ export default Vue.extend({
 }
 
 section {
-  @apply py-16 lg:py-32;
+  @apply py-16 lg:py-24;
 }
 section:first-child {
   @apply pt-0 !important;
