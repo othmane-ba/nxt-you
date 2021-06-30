@@ -14,8 +14,8 @@ export default Vue.extend({
     },
   },
   mounted() {
-    const slider = noUiSlider.create(this.$refs.slider, {
-      start: this.value,
+    const slider = noUiSlider.create(this.$refs.slider as any, {
+      start: this.value as Array<number>,
       step: 1,
       connect: true,
       tooltips: true,
@@ -29,7 +29,7 @@ export default Vue.extend({
           return value >= 100000 ? '> ' + printNum : printNum
         },
         from: function (value) {
-          return value
+          return Number(value.replace(/(>|k|€)/, ''))
         },
       },
     })

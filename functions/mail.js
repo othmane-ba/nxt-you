@@ -56,6 +56,12 @@ exports.handler = function (event, context, callback) {
       }</td>
     </tr>
     <tr>
+      <td style="vertical-align: top; padding: 6px 14px 6px 0; font-weight: bolder;">Budgetvorstellung:</td>
+      <td style="vertical-align: top; padding: 6px 0;">${
+        form.budget[0] + ' - ' + form.budget[1]
+      }</td>
+    </tr>
+    <tr>
       <td style="vertical-align: top; padding: 6px 14px 6px 0; font-weight: bolder;">Tags:</td>
       <td style="vertical-align: top; padding: 6px 0;">${
         form.tags.length <= 0 ? '[keine Angabe]' : formatTags(form.tags)
