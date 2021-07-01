@@ -7,7 +7,17 @@
   >
     <div v-show="showPage" class="fixed top-0 left-0 h-screen w-full -z-10">
       <div
-        class="absolute t-0 l-0 h-full w-full bg-black transition-opacity opacity-0 duration-500"
+        class="
+          absolute
+          t-0
+          l-0
+          h-full
+          w-full
+          bg-black
+          transition-opacity
+          opacity-0
+          duration-500
+        "
         :class="{ 'opacity-75': overlayActive }"
       ></div>
       <div>
@@ -47,7 +57,7 @@ export default class ClassSphere extends Vue {
   static sphereRotationSpeed = 0.1
   static particleCount = 1000
   static lineCount = 300
-  static color = new THREE.Color('#a0a0a0')
+  static color = new THREE.Color('#757575')
 
   @Ref('sphere') readonly container!: Element
 
