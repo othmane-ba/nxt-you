@@ -26,6 +26,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Contact>` | `<contact>` (components/shared/Contact.vue)
 - `<HoverImage>` | `<hover-image>` (components/shared/HoverImage.vue)
 - `<Icon>` | `<icon>` (components/shared/Icon.vue)
+- `<Intersection>` | `<intersection>` (components/shared/Intersection.vue)
 - `<NumText>` | `<num-text>` (components/shared/NumText.vue)
 - `<RangeSlider>` | `<range-slider>` (components/shared/RangeSlider.vue)
 - `<Tag>` | `<tag>` (components/shared/Tag.vue)

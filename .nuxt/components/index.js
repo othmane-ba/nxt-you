@@ -20,6 +20,7 @@ export { default as CaptionImage } from '../..\\components\\shared\\CaptionImage
 export { default as Contact } from '../..\\components\\shared\\Contact.vue'
 export { default as HoverImage } from '../..\\components\\shared\\HoverImage.vue'
 export { default as Icon } from '../..\\components\\shared\\Icon.vue'
+export { default as Intersection } from '../..\\components\\shared\\Intersection.vue'
 export { default as NumText } from '../..\\components\\shared\\NumText.vue'
 export { default as RangeSlider } from '../..\\components\\shared\\RangeSlider.vue'
 export { default as Tag } from '../..\\components\\shared\\Tag.vue'
@@ -44,6 +45,7 @@ export const LazyCaptionImage = import('../..\\components\\shared\\CaptionImage.
 export const LazyContact = import('../..\\components\\shared\\Contact.vue' /* webpackChunkName: "components/contact" */).then(c => wrapFunctional(c.default || c))
 export const LazyHoverImage = import('../..\\components\\shared\\HoverImage.vue' /* webpackChunkName: "components/hover-image" */).then(c => wrapFunctional(c.default || c))
 export const LazyIcon = import('../..\\components\\shared\\Icon.vue' /* webpackChunkName: "components/icon" */).then(c => wrapFunctional(c.default || c))
+export const LazyIntersection = import('../..\\components\\shared\\Intersection.vue' /* webpackChunkName: "components/intersection" */).then(c => wrapFunctional(c.default || c))
 export const LazyNumText = import('../..\\components\\shared\\NumText.vue' /* webpackChunkName: "components/num-text" */).then(c => wrapFunctional(c.default || c))
 export const LazyRangeSlider = import('../..\\components\\shared\\RangeSlider.vue' /* webpackChunkName: "components/range-slider" */).then(c => wrapFunctional(c.default || c))
 export const LazyTag = import('../..\\components\\shared\\Tag.vue' /* webpackChunkName: "components/tag" */).then(c => wrapFunctional(c.default || c))

@@ -22,6 +22,7 @@ const components = {
   Contact: () => import('../..\\components\\shared\\Contact.vue' /* webpackChunkName: "components/contact" */).then(c => wrapFunctional(c.default || c)),
   HoverImage: () => import('../..\\components\\shared\\HoverImage.vue' /* webpackChunkName: "components/hover-image" */).then(c => wrapFunctional(c.default || c)),
   Icon: () => import('../..\\components\\shared\\Icon.vue' /* webpackChunkName: "components/icon" */).then(c => wrapFunctional(c.default || c)),
+  Intersection: () => import('../..\\components\\shared\\Intersection.vue' /* webpackChunkName: "components/intersection" */).then(c => wrapFunctional(c.default || c)),
   NumText: () => import('../..\\components\\shared\\NumText.vue' /* webpackChunkName: "components/num-text" */).then(c => wrapFunctional(c.default || c)),
   RangeSlider: () => import('../..\\components\\shared\\RangeSlider.vue' /* webpackChunkName: "components/range-slider" */).then(c => wrapFunctional(c.default || c)),
   Tag: () => import('../..\\components\\shared\\Tag.vue' /* webpackChunkName: "components/tag" */).then(c => wrapFunctional(c.default || c))

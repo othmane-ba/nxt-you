@@ -111,6 +111,10 @@
       </section>
 
       <section class="section">
+        <Intersection></Intersection>
+      </section>
+
+      <section class="section">
         <ClientList></ClientList>
       </section>
 

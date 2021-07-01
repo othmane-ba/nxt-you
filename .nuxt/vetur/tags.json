@@ -59,6 +59,9 @@
   "Icon": {
     "description": "Auto imported from components/shared/Icon.vue"
   },
+  "Intersection": {
+    "description": "Auto imported from components/shared/Intersection.vue"
+  },
   "NumText": {
     "description": "Auto imported from components/shared/NumText.vue"
   },
