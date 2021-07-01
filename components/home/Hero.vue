@@ -20,20 +20,37 @@
         enter-class="opacity-0 transform translate-y-4"
         mode="out-in"
       >
-        <div class="my-12" v-show="showPage">
+        <div class="mt-4 mb-4" v-show="showPage">
           <HeroHeadline
             class="text-center"
             :words="[
-              'Designer',
-              'Developer',
-              'Videographer',
-              'Analyst',
-              'Manager',
-              'Creative',
+              'Designer.',
+              'Developer.',
+              'Videographers.',
+              'Analysts.',
+              'Managers.',
+              'Doers.',
+              'Creatives.',
+              'Thinkers.',
             ]"
           >
-            I’m a
+            We are
           </HeroHeadline>
+        </div>
+      </transition>
+      <transition
+        enter-active-class="transition-all duration-1000 delay-700"
+        enter-class="opacity-0"
+        mode="out-in"
+      >
+        <div
+          class="mt-4 mb-12 text-center max-w-xl mx-auto px-4"
+          v-show="showPage"
+        >
+          <p>
+            Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen,
+            etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.
+          </p>
         </div>
       </transition>
       <transition
