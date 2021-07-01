@@ -2,7 +2,7 @@
   <div
     class="container mx-auto px-4 lg:px-16 overflow-hidden"
     v-view.once
-    data-animation-box=""
+    data-animation-box
   >
     <div>
       <div

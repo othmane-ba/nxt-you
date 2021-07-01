@@ -12,6 +12,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Hero>` | `<hero>` (components/home/Hero.vue)
 - `<HeroHeadline>` | `<hero-headline>` (components/home/HeroHeadline.vue)
 - `<IntroText>` | `<intro-text>` (components/home/IntroText.vue)
+- `<MarketingSlider>` | `<marketing-slider>` (components/home/MarketingSlider.vue)
 - `<Portfolio>` | `<portfolio>` (components/home/Portfolio.vue)
 - `<Qualifier>` | `<qualifier>` (components/home/Qualifier.vue)
 - `<Sphere>` | `<sphere>` (components/home/Sphere.vue)

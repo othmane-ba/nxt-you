@@ -35,9 +35,24 @@
       </section>
 
       <section class="section">
+        <NumText title="Unsere Arbeit" :number="2" action-text="Projekte">
+          Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen,
+          etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.
+        </NumText>
+      </section>
+
+      <section class="section">
+        <Work></Work>
+      </section>
+
+      <section class="section">
+        <MarketingSlider> </MarketingSlider>
+      </section>
+
+      <section class="section">
         <NumText
           title="Unser Team"
-          :number="2"
+          :number="3"
           rtl
           action-text="Projekte ansehen"
         >
@@ -65,28 +80,6 @@
               >Clemens<br />Kauschke</CaptionImage
             >
           </div>
-        </div>
-      </section>
-
-      <!--
-    <section id="portfolio" data-animation-container class="portfolio">
-      <Portfolio></Portfolio>
-    </section>
--->
-
-      <section class="section">
-        <Work></Work>
-      </section>
-
-      <section class="section">
-        <div class="container mx-auto px-4">
-          <img
-            v-view.once
-            data-animation-box
-            class="w-full max-w-4xl mx-auto"
-            src="~/assets/images/kueffner.png"
-            alt="Andreas Küffner Teaser"
-          />
         </div>
       </section>
 
