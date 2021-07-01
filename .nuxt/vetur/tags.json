@@ -50,6 +50,9 @@
   "Contact": {
     "description": "Auto imported from components/shared/Contact.vue"
   },
+  "HoverImage": {
+    "description": "Auto imported from components/shared/HoverImage.vue"
+  },
   "Icon": {
     "description": "Auto imported from components/shared/Icon.vue"
   },

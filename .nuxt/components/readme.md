@@ -23,6 +23,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Pointer>` | `<pointer>` (components/layout/Pointer.vue)
 - `<CaptionImage>` | `<caption-image>` (components/shared/CaptionImage.vue)
 - `<Contact>` | `<contact>` (components/shared/Contact.vue)
+- `<HoverImage>` | `<hover-image>` (components/shared/HoverImage.vue)
 - `<Icon>` | `<icon>` (components/shared/Icon.vue)
 - `<NumText>` | `<num-text>` (components/shared/NumText.vue)
 - `<RangeSlider>` | `<range-slider>` (components/shared/RangeSlider.vue)

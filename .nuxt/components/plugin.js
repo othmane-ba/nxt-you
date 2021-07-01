@@ -19,6 +19,7 @@ const components = {
   Pointer: () => import('../..\\components\\layout\\Pointer.vue' /* webpackChunkName: "components/pointer" */).then(c => wrapFunctional(c.default || c)),
   CaptionImage: () => import('../..\\components\\shared\\CaptionImage.vue' /* webpackChunkName: "components/caption-image" */).then(c => wrapFunctional(c.default || c)),
   Contact: () => import('../..\\components\\shared\\Contact.vue' /* webpackChunkName: "components/contact" */).then(c => wrapFunctional(c.default || c)),
+  HoverImage: () => import('../..\\components\\shared\\HoverImage.vue' /* webpackChunkName: "components/hover-image" */).then(c => wrapFunctional(c.default || c)),
   Icon: () => import('../..\\components\\shared\\Icon.vue' /* webpackChunkName: "components/icon" */).then(c => wrapFunctional(c.default || c)),
   NumText: () => import('../..\\components\\shared\\NumText.vue' /* webpackChunkName: "components/num-text" */).then(c => wrapFunctional(c.default || c)),
   RangeSlider: () => import('../..\\components\\shared\\RangeSlider.vue' /* webpackChunkName: "components/range-slider" */).then(c => wrapFunctional(c.default || c)),
