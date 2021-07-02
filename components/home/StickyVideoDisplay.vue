@@ -37,10 +37,10 @@
           ref="video"
           class="lg:absolute object-cover"
         >
-          <source
+          <!--          <source
             :src="require('~/assets/videos/nxtyou-trailer-desktop.webm')"
             type="video/webm"
-          />
+          />-->
           <source
             :src="require('~/assets/videos/nxtyou-trailer-desktop.mp4')"
             type="video/mp4"
