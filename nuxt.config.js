@@ -1,8 +1,11 @@
+import pwa from './pwa.config'
+
 export default {
   target: 'static',
 
   head: {
-    title: 'NXTYOU - Make Your Vision Come Reality.',
+    title: 'NXT YOU',
+    titleTemplate: '%s - Make Your Vision Come Reality.',
     htmlAttrs: {
       lang: 'de',
     },
@@ -12,13 +15,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.',
-      },
-      { name: 'theme-color', content: '#000000' },
     ],
     link: [
       {
@@ -52,6 +48,7 @@ export default {
     '~/plugins/simple-parallax.client.ts',
     '~/plugins/vue-range-component.client.ts',
     '~/plugins/vuelidate.ts',
+    '~/plugins/jsonld.ts',
   ],
 
   components: {
@@ -66,6 +63,7 @@ export default {
     '@nuxtjs/svg',
     'nuxt-gsap-module',
     '@nuxtjs/toast',
+    '@nuxtjs/pwa',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -80,6 +78,8 @@ export default {
     position: 'bottom-right',
     duration: 3000,
   },
+
+  pwa,
 
   build: {},
 }

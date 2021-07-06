@@ -17,6 +17,9 @@
   "IntroText": {
     "description": "Auto imported from components/home/IntroText.vue"
   },
+  "MarketingSlider": {
+    "description": "Auto imported from components/home/MarketingSlider.vue"
+  },
   "Portfolio": {
     "description": "Auto imported from components/home/Portfolio.vue"
   },
@@ -50,8 +53,14 @@
   "Contact": {
     "description": "Auto imported from components/shared/Contact.vue"
   },
+  "HoverImage": {
+    "description": "Auto imported from components/shared/HoverImage.vue"
+  },
   "Icon": {
     "description": "Auto imported from components/shared/Icon.vue"
+  },
+  "Intersection": {
+    "description": "Auto imported from components/shared/Intersection.vue"
   },
   "NumText": {
     "description": "Auto imported from components/shared/NumText.vue"

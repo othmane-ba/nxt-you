@@ -2,7 +2,7 @@
   <div
     class="container mx-auto px-4 lg:px-16 overflow-hidden"
     v-view.once
-    data-animation-box=""
+    data-animation-box
   >
     <div>
       <div
@@ -206,6 +206,19 @@ export default class FeatureSlider extends Vue {
         new Service('Seo Service', 'seo.png', '/seo'),
         new Service('Copywriting', 'pencil-post.png', '/seo'),
         new Service('Google Ads Campagnen', 'goal.png', '/seo'),
+      ]
+    ),
+    new Feature(
+      'Sales',
+      'Der Vertrieb ist das Herz und die Seele eines jeden Unternehmens',
+      'Wir arbeiten hart daran die Bedürfnisse Ihres Unternehmens zu verstehen - das ist es was wir am besten können. Wir arbeiten mit Ihnen zusammen um hochwertige, maßgeschneiderte Lösungen zu entwickeln, die sie von Punkt A zu Punkt B bringen und Ihren ROI maximieren.',
+      'branding',
+      [
+        new Service('Aufbau Vertriebsstruktur', 'structure.png', '/seo'),
+        new Service('Organisches Funneling', 'funnel.png', '/seo'),
+        new Service('Leadership Ausbildung', 'filter.png', '/seo'),
+        new Service('Medien-Platzierung', 'media.png', '/seo'),
+        new Service('Produkt & Geschäftsentwicklung', 'products.png', '/seo'),
       ]
     ),
   ]

@@ -57,7 +57,7 @@ export default Vue.extend({
   mounted() {
     const events = [
       new PointerEvent(
-        "[data-pointer='large']",
+        "[data-pointer='large'], .noUi-handle",
         () => {
           this.large = true
         },

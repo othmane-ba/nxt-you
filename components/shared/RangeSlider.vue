@@ -130,7 +130,7 @@ export default Vue.extend({
 }
 
 .noUi-horizontal .noUi-handle {
-  @apply w-1 h-3.5 -top-1.5 -right-0.5 cursor-default;
+  @apply w-4 h-4 -top-2 -right-2 cursor-default rounded-lg;
 }
 
 .noUi-target {

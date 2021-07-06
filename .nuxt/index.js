@@ -14,6 +14,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 import nuxt_plugin_plugin_43c2c5b6 from 'nuxt_plugin_plugin_43c2c5b6' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_metaplugin_429ba596 from 'nuxt_plugin_metaplugin_429ba596' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
+import nuxt_plugin_iconplugin_394c5aae from 'nuxt_plugin_iconplugin_394c5aae' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
 import nuxt_plugin_toast_b0e630f0 from 'nuxt_plugin_toast_b0e630f0' // Source: .\\toast.js (mode: 'client')
 import nuxt_plugin_gsapModule_02a5d218 from 'nuxt_plugin_gsapModule_02a5d218' // Source: .\\gsapModule.js (mode: 'all')
 import nuxt_plugin_deviceplugin_a6876d38 from 'nuxt_plugin_deviceplugin_a6876d38' // Source: .\\device.plugin.js (mode: 'all')
@@ -22,6 +24,7 @@ import nuxt_plugin_vuecheckview_535e19e6 from 'nuxt_plugin_vuecheckview_535e19e6
 import nuxt_plugin_simpleparallaxclient_52ca3da0 from 'nuxt_plugin_simpleparallaxclient_52ca3da0' // Source: ..\\plugins\\simple-parallax.client.ts (mode: 'client')
 import nuxt_plugin_vuerangecomponentclient_12480bf8 from 'nuxt_plugin_vuerangecomponentclient_12480bf8' // Source: ..\\plugins\\vue-range-component.client.ts (mode: 'client')
 import nuxt_plugin_vuelidate_4be42f5c from 'nuxt_plugin_vuelidate_4be42f5c' // Source: ..\\plugins\\vuelidate.ts (mode: 'all')
+import nuxt_plugin_jsonld_2ff76817 from 'nuxt_plugin_jsonld_2ff76817' // Source: ..\\plugins\\jsonld.ts (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -71,7 +74,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"NXTYOU - Make Your Vision Come Reality.","htmlAttrs":{"lang":"de"},"bodyAttrs":{"class":"bg-black text-white"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen."},{"name":"theme-color","content":"#000000"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":"\u002Ffavicon-16x16.png"}],"style":[],"script":[]},
+    head: {"title":"NXT YOU","titleTemplate":"%s - Make Your Vision Come Reality.","htmlAttrs":{"lang":"de"},"bodyAttrs":{"class":"bg-black text-white"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":"\u002Ffavicon-16x16.png"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -193,6 +196,14 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_axios_4946ca4e(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_metaplugin_429ba596 === 'function') {
+    await nuxt_plugin_metaplugin_429ba596(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_iconplugin_394c5aae === 'function') {
+    await nuxt_plugin_iconplugin_394c5aae(app.context, inject)
+  }
+
   if (process.client && typeof nuxt_plugin_toast_b0e630f0 === 'function') {
     await nuxt_plugin_toast_b0e630f0(app.context, inject)
   }
@@ -223,6 +234,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vuelidate_4be42f5c === 'function') {
     await nuxt_plugin_vuelidate_4be42f5c(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_jsonld_2ff76817 === 'function') {
+    await nuxt_plugin_jsonld_2ff76817(app.context, inject)
   }
 
   // Lock enablePreview in context

@@ -9,8 +9,47 @@
 <script lang="ts">
 import Vue from 'vue'
 
+const jsonld = {
+  logo: {
+    url: 'https://nxtyou.de/',
+    logo: 'https://nxtyou.de/logo.png',
+  },
+  breadcrumbs: [
+    {
+      url: 'https://nxtyou.de',
+      text: 'Home',
+    },
+  ],
+}
+
 export default Vue.extend({
-  mounted() {},
+  /*
+  jsonld() {
+    const logo = jsonld.logo.logo
+    const url = jsonld.logo.url
+    const breadcrumbs = jsonld.breadcrumbs
+
+    const items = breadcrumbs.map((item: any, index: number) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.text,
+      item: item.url,
+    }))
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        url,
+        logo,
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+    ]
+  },
+*/
 })
 </script>
 <style lang="postcss">

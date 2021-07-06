@@ -34,6 +34,7 @@ module.exports = {
       },
       animation: {
         slide: 'slide 1s ease-in-out infinite',
+        'ping-slow': 'ping 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite',
       },
       keyframes: {
         slide: {
