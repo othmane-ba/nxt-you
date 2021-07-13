@@ -40,6 +40,12 @@ export default {
     ],
   },
 
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
+    dev: process.env.NODE_ENV !== 'production',
+  },
+
   css: [],
 
   plugins: [
@@ -49,6 +55,7 @@ export default {
     '~/plugins/vue-range-component.client.ts',
     '~/plugins/vuelidate.ts',
     '~/plugins/jsonld.ts',
+    '~/plugins/vue-gtag.client.ts',
   ],
 
   components: {
