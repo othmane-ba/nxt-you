@@ -25,6 +25,7 @@ import nuxt_plugin_simpleparallaxclient_52ca3da0 from 'nuxt_plugin_simpleparalla
 import nuxt_plugin_vuerangecomponentclient_12480bf8 from 'nuxt_plugin_vuerangecomponentclient_12480bf8' // Source: ..\\plugins\\vue-range-component.client.ts (mode: 'client')
 import nuxt_plugin_vuelidate_4be42f5c from 'nuxt_plugin_vuelidate_4be42f5c' // Source: ..\\plugins\\vuelidate.ts (mode: 'all')
 import nuxt_plugin_jsonld_2ff76817 from 'nuxt_plugin_jsonld_2ff76817' // Source: ..\\plugins\\jsonld.ts (mode: 'all')
+import nuxt_plugin_vuegtagclient_04907a44 from 'nuxt_plugin_vuegtagclient_04907a44' // Source: ..\\plugins\\vue-gtag.client.ts (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -238,6 +239,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_jsonld_2ff76817 === 'function') {
     await nuxt_plugin_jsonld_2ff76817(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vuegtagclient_04907a44 === 'function') {
+    await nuxt_plugin_vuegtagclient_04907a44(app.context, inject)
   }
 
   // Lock enablePreview in context
