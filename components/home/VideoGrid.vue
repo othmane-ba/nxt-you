@@ -83,13 +83,14 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
+<script>
 class VideoItem {
-  constructor(public title: string, public src: string) {}
+  constructor(title, src) {
+    this.title = title
+    this.src = src
+  }
 }
-export default Vue.extend({
+export default {
   data() {
     return {
       videos: [
@@ -101,14 +102,14 @@ export default Vue.extend({
     }
   },
   methods: {
-    play(videoItem: VideoItem, index: number) {
-      ;(this.$refs.video as HTMLVideoElement[])[index].play()
+    play(videoItem, index) {
+      this.$refs.video[index].play()
     },
-    pause(videoItem: VideoItem, index: number) {
-      ;(this.$refs.video as HTMLVideoElement[])[index].pause()
+    pause(videoItem, index) {
+      this.$refs.video[index].pause()
     },
   },
-})
+}
 </script>
 
 <style lang="postcss" scoped>

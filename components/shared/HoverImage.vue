@@ -45,10 +45,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   props: {
     title: {
       type: String,
@@ -60,11 +58,11 @@ export default Vue.extend({
     },
   },
   computed: {
-    image(): string[] {
+    image() {
       return [this.src + '.png', this.src + '-active.png']
     },
   },
-})
+}
 </script>
 
 <style lang="postcss" scoped>

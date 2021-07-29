@@ -10,7 +10,15 @@
           <div
             data-parallax
             data-overflow
-            class="text-9xl font-extrabold opacity-50 bg-clip-text text-transparent bg-gradient-to-b from-blue-light"
+            class="
+              text-9xl
+              font-extrabold
+              opacity-50
+              bg-clip-text
+              text-transparent
+              bg-gradient-to-b
+              from-blue-light
+            "
           >
             {{ numberTwoDigit }}
           </div>
@@ -38,10 +46,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   props: {
     title: {
       type: String,
@@ -61,12 +67,12 @@ export default Vue.extend({
     },
   },
   computed: {
-    numberTwoDigit(): string {
+    numberTwoDigit() {
       const numberString = this.number.toString()
       return this.number < 10 ? '0' + numberString : numberString
     },
   },
-})
+}
 </script>
 
 <style scoped></style>

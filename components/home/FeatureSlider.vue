@@ -148,94 +148,98 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import { gsap } from 'gsap'
-
-import Swiper from 'swiper'
-
+<script>
 class Service {
-  constructor(public title: string, public icon: string, public href: string) {}
+  constructor(title, icon, href) {
+    this.title = title
+    this.icon = icon
+    this.href = href
+  }
 }
 
 class Feature {
-  constructor(
-    public title: string,
-    public intro: string,
-    public description: string,
-    public video: string,
-    public services: Service[]
-  ) {}
+  constructor(title, intro, description, video, services) {
+    this.title = title
+    this.intro = intro
+    this.description = description
+    this.video = video
+    this.services = services
+  }
 }
 
+const FEATURES = [
+  new Feature(
+    'Branding',
+    'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
+    'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
+    'branding',
+    [
+      new Service('Brand Strategy', 'lightbulb.png', '/seo'),
+      new Service('Visual Brand Identity', 'pencil-settings.png', '/seo'),
+      new Service('Content Creation', 'play.png', '/seo'),
+      new Service('UI/UX Design', 'ux-ui.png', '/seo'),
+      new Service('Mobile App Development', 'geometry.png', '/seo'),
+    ]
+  ),
+  new Feature(
+    'Performance',
+    'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
+    'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
+    'performance',
+    [
+      new Service('Social Media Marketing', 'bar-up.png', '/seo'),
+      new Service('Funnel Systeme', 'dollar-bar.png', '/seo'),
+      new Service('Seo Service', 'seo.png', '/seo'),
+      new Service('Copywriting', 'pencil-post.png', '/seo'),
+      new Service('Google Ads Campagnen', 'goal.png', '/seo'),
+    ]
+  ),
+  new Feature(
+    'Sales',
+    'Der Vertrieb ist das Herz und die Seele eines jeden Unternehmens',
+    'Wir arbeiten hart daran die Bedürfnisse Ihres Unternehmens zu verstehen - das ist es was wir am besten können. Wir arbeiten mit Ihnen zusammen um hochwertige, maßgeschneiderte Lösungen zu entwickeln, die sie von Punkt A zu Punkt B bringen und Ihren ROI maximieren.',
+    'branding',
+    [
+      new Service('Aufbau Vertriebsstruktur', 'structure.png', '/seo'),
+      new Service('Organisches Funneling', 'funnel.png', '/seo'),
+      new Service('Leadership Ausbildung', 'filter.png', '/seo'),
+      new Service('Medien-Platzierung', 'media.png', '/seo'),
+      new Service('Produkt & Geschäftsentwicklung', 'products.png', '/seo'),
+    ]
+  ),
+]
 const AUTOPLAY_SPEED = 10
 
-@Component
-export default class FeatureSlider extends Vue {
-  clock!: any
-  options = {
-    allowTouchMove: false,
-    loop: true,
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
+export default {
+  data() {
+    return {
+      clock: null,
+      options: {
+        allowTouchMove: false,
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+      },
+      features: FEATURES,
+    }
+  },
+  methods: {
+    onReady(swiper) {
+      this.clock = this.$gsap
+        .timeline({ repeat: -1, paused: false })
+        .fromTo(
+          '[data-gsap-target="featureSlider"]',
+          AUTOPLAY_SPEED,
+          { width: '0%' },
+          { width: '100%' }
+        )
+        .add(() => {
+          swiper.slideNext()
+        })
     },
-  }
-  features = [
-    new Feature(
-      'Branding',
-      'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
-      'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-      'branding',
-      [
-        new Service('Brand Strategy', 'lightbulb.png', '/seo'),
-        new Service('Visual Brand Identity', 'pencil-settings.png', '/seo'),
-        new Service('Content Creation', 'play.png', '/seo'),
-        new Service('UI/UX Design', 'ux-ui.png', '/seo'),
-        new Service('Mobile App Development', 'geometry.png', '/seo'),
-      ]
-    ),
-    new Feature(
-      'Performance',
-      'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
-      'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-      'performance',
-      [
-        new Service('Social Media Marketing', 'bar-up.png', '/seo'),
-        new Service('Funnel Systeme', 'dollar-bar.png', '/seo'),
-        new Service('Seo Service', 'seo.png', '/seo'),
-        new Service('Copywriting', 'pencil-post.png', '/seo'),
-        new Service('Google Ads Campagnen', 'goal.png', '/seo'),
-      ]
-    ),
-    new Feature(
-      'Sales',
-      'Der Vertrieb ist das Herz und die Seele eines jeden Unternehmens',
-      'Wir arbeiten hart daran die Bedürfnisse Ihres Unternehmens zu verstehen - das ist es was wir am besten können. Wir arbeiten mit Ihnen zusammen um hochwertige, maßgeschneiderte Lösungen zu entwickeln, die sie von Punkt A zu Punkt B bringen und Ihren ROI maximieren.',
-      'branding',
-      [
-        new Service('Aufbau Vertriebsstruktur', 'structure.png', '/seo'),
-        new Service('Organisches Funneling', 'funnel.png', '/seo'),
-        new Service('Leadership Ausbildung', 'filter.png', '/seo'),
-        new Service('Medien-Platzierung', 'media.png', '/seo'),
-        new Service('Produkt & Geschäftsentwicklung', 'products.png', '/seo'),
-      ]
-    ),
-  ]
-
-  onReady(swiper: Swiper) {
-    this.clock = gsap
-      .timeline({ repeat: -1, paused: false })
-      .fromTo(
-        '[data-gsap-target="featureSlider"]',
-        AUTOPLAY_SPEED,
-        { width: '0%' },
-        { width: '100%' }
-      )
-      .add(() => {
-        swiper.slideNext()
-      })
-  }
+  },
 }
 </script>
 

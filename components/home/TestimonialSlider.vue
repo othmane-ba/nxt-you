@@ -11,9 +11,19 @@
       <div class="swiper-pagination pt-4 mb-48"></div>
 
       <div class="swiper-wrapper">
-        <div v-for="(testimonial, index) in testimonials" class="swiper-slide">
+        <div
+          v-for="(testimonial, index) in testimonials"
+          :key="index"
+          class="swiper-slide"
+        >
           <div
-            class="mx-auto max-w-4xl flex flex-col justify-content-center text-center"
+            class="
+              mx-auto
+              max-w-4xl
+              flex flex-col
+              justify-content-center
+              text-center
+            "
           >
             <p class="text-4xl md:text-2xl sm:text-xl font-bold leading-xl">
               {{ testimonial.quote }}
@@ -41,22 +51,23 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
+<script>
 class Author {
-  constructor(
-    public name: string,
-    public picture: string,
-    public role: string
-  ) {}
+  constructor(name, picture, role) {
+    this.name = name
+    this.picture = picture
+    this.role = role
+  }
 }
 
 class Testimonial {
-  constructor(public author: Author, public quote: string) {}
+  constructor(author, quote) {
+    this.author = author
+    this.quote = quote
+  }
 }
 
-export default Vue.extend({
+export default {
   mounted() {},
   data() {
     return {
@@ -79,9 +90,9 @@ export default Vue.extend({
     }
   },
   methods: {
-    init(): void {},
+    init() {},
   },
-})
+}
 </script>
 
 <style scoped lang="postcss"></style>

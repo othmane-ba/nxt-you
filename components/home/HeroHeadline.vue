@@ -21,10 +21,10 @@
   </h1>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script >
 
-export default Vue.extend({
+
+export default{
   props: {
     words: {
       type: Array,
@@ -60,7 +60,7 @@ export default Vue.extend({
       }, this.animationDelay * (2 / 3))
     },
   },
-})
+}
 </script>
 
 <style scoped></style>

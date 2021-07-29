@@ -139,17 +139,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import {
-  required,
-  maxLength,
-  minLength,
-  url,
-  email,
-} from 'vuelidate/lib/validators'
-
-export default Vue.extend({
+<script>
+export default {
   methods: {
     async submit() {
       if (this.loading) {
@@ -158,25 +149,24 @@ export default Vue.extend({
       try {
         this.error = false
         this.loading = true
-        const res = await this.$axios.post(
+        const { data } = await this.$axios.post(
           '/mail',
           JSON.stringify(this.qualifier)
         )
-        this.error = !res.data.success
-        ;(this as any).$toast.show(res.data.message, {
-          type: res.data.success ? 'success' : 'error',
+        this.error = data.success
+        this.$toast.show(data.message, {
+          type: data.success ? 'success' : 'error',
         })
       } catch (err) {
         console.error(err)
         this.error = true
-        ;(this as any).$toast.show('Unknown Error', {
+        this.$toast.show('Unknown Error', {
           type: 'error',
         })
       }
-
       this.loading = false
     },
-    updateTag(tag: string, value: boolean) {
+    updateTag(tag, value) {
       if (value) {
         this.qualifier.tags.push(tag)
       } else {
@@ -201,7 +191,7 @@ export default Vue.extend({
         'Google Ads Kampagnen',
       ],
       qualifier: {
-        tags: [] as string[],
+        tags: [],
         name: '',
         email: '',
         company: '',
@@ -210,7 +200,7 @@ export default Vue.extend({
       },
     }
   },
-})
+}
 </script>
 
 <style scoped lang="postcss">

@@ -62,40 +62,44 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
+<script>
 class Client {
-  constructor(private _src: string, public name: string, public href: string) {}
+  constructor(_src, name, href) {
+    this._src = _src
+    this.name = name
+    this.href = href
+  }
 
   get src() {
     return [this._src + '.png', this._src + '-active.png']
   }
 }
 
-export default Vue.extend({
+const CLIENTS = [
+  new Client('berger', 'Roland Berger', 'https://www.rolandberger.com'),
+  new Client('bridgestone', 'Bridgestone', 'https://www.bridgestone.com'),
+  new Client('jvm', 'Jung von Matt', 'https://www.jvm.com/'),
+  new Client('jeunesse', 'Jeunesse', 'https://www.jeunesseglobal.com'),
+  new Client('christies', 'Christies', 'https://www.christies.com'),
+  new Client('adidas', 'Adidas', 'https://www.adidas.com'),
+  new Client('cito', 'Cito', 'https://www.sixt.com/'),
+  new Client('sixt', 'Sixt', 'https://www.sixt.com/'),
+  new Client('olympics', 'Olympic Games', 'https://olympics.com/'),
+  new Client(
+    'fliesenfabrik',
+    'Fliesenfabrik',
+    'https://www.fliesenfabrik-hamburg.de/'
+  ),
+  new Client('chelsea', 'Chelsea', 'https://www.chelseafc.com/'),
+]
+
+export default {
   data() {
     return {
-      clients: [
-        new Client('berger', 'Roland Berger', 'https://www.rolandberger.com'),
-        new Client('bridgestone', 'Bridgestone', 'https://www.bridgestone.com'),
-        new Client('jvm', 'Jung von Matt', 'https://www.jvm.com/'),
-        new Client('jeunesse', 'Jeunesse', 'https://www.jeunesseglobal.com'),
-        new Client('christies', 'Christies', 'https://www.christies.com'),
-        new Client('adidas', 'Adidas', 'https://www.adidas.com'),
-        new Client('cito', 'Cito', 'https://www.sixt.com/'),
-        new Client('sixt', 'Sixt', 'https://www.sixt.com/'),
-        new Client('olympics', 'Olympic Games', 'https://olympics.com/'),
-        new Client(
-          'fliesenfabrik',
-          'Fliesenfabrik',
-          'https://www.fliesenfabrik-hamburg.de/'
-        ),
-        new Client('chelsea', 'Chelsea', 'https://www.chelseafc.com/'),
-      ],
+      clients: CLIENTS,
     }
   },
-})
+}
 </script>
 
 <style scoped lang="postcss">

@@ -11,7 +11,13 @@
         v-view.once
       >
         <div
-          class="relative aspect-h-4 aspect-w-3 w-full rounded-xl overflow-hidden"
+          class="
+            relative
+            aspect-h-4 aspect-w-3
+            w-full
+            rounded-xl
+            overflow-hidden
+          "
           data-animation-box
         >
           <img
@@ -40,27 +46,23 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
+<script>
 class PortfolioItem {
-  constructor(
-    public heading: string,
-    public subHeading: string,
-    public image: string,
-    public href: string
-  ) {}
+  constructor(heading, subHeading, image, href) {}
 }
-export default Vue.extend({
+
+const PORTFOLIO_ITEMS = [
+  new PortfolioItem('Slumber', 'Web Design', '1.jpg', '#'),
+  new PortfolioItem('Apple Tonik', 'Branding', '2.jpg', '#'),
+]
+
+export default {
   data() {
     return {
-      items: [
-        new PortfolioItem('Slumber', 'Web Design', '1.jpg', '#'),
-        new PortfolioItem('Apple Tonik', 'Branding', '2.jpg', '#'),
-      ],
+      items: PORTFOLIO_ITEMS,
     }
   },
-})
+}
 </script>
 
 <style lang="postcss" scoped>

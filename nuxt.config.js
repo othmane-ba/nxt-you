@@ -49,13 +49,13 @@ export default {
   css: [],
 
   plugins: [
-    '~/plugins/vue-awesome-swiper.client.ts',
-    '~/plugins/vue-check-view.ts',
-    '~/plugins/simple-parallax.client.ts',
-    '~/plugins/vue-range-component.client.ts',
-    '~/plugins/vuelidate.ts',
-    '~/plugins/jsonld.ts',
-    '~/plugins/vue-gtag.client.ts',
+    '~/plugins/vue-awesome-swiper.client.js',
+    '~/plugins/vue-check-view.js',
+    '~/plugins/simple-parallax.client.js',
+    '~/plugins/vue-range-component.client.js',
+    '~/plugins/vuelidate.js',
+    '~/plugins/jsonld.js',
+    '~/plugins/vue-gtag.client.js',
   ],
 
   components: {

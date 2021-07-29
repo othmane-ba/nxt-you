@@ -83,10 +83,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   data() {
     return {
       showPage: false,
@@ -94,8 +92,9 @@ export default Vue.extend({
   },
   methods: {
     scrollDown() {
-      const section = document.querySelector('section:nth-child(2)')
-      section?.scrollIntoView({ behavior: 'smooth' })
+      document
+        .querySelector('section:nth-child(2)')
+        .scrollIntoView({ behavior: 'smooth' })
     },
   },
   mounted() {
@@ -103,7 +102,7 @@ export default Vue.extend({
       this.showPage = true
     })
   },
-})
+}
 </script>
 
 <style lang="postcss" scoped>

@@ -6,8 +6,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script >
+
 
 const jsonld = {
   logo: {
@@ -22,7 +22,7 @@ const jsonld = {
   ],
 }
 
-export default Vue.extend({
+export default{
   /*
   jsonld() {
     const logo = jsonld.logo.logo
@@ -50,7 +50,7 @@ export default Vue.extend({
     ]
   },
 */
-})
+}
 </script>
 <style lang="postcss">
 ::selection {

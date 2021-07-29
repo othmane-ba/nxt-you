@@ -58,10 +58,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script >
 
-export default Vue.extend({})
+
+export default{}
 </script>
 
 <style lang="postcss" scoped></style>

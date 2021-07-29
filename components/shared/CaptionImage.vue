@@ -32,10 +32,8 @@
   </article>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   props: {
     src: {
       type: String,
@@ -58,7 +56,7 @@ export default Vue.extend({
       default: 1,
     },
   },
-})
+}
 </script>
 
 <style scoped></style>

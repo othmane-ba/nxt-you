@@ -49,16 +49,16 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script >
 
-export default Vue.extend({
+
+export default{
   props: {
     value: { type: Boolean, default: null },
     label: { type: String, default: null },
   },
   methods: {},
-})
+}
 </script>
 
 <style scoped></style>

@@ -20,17 +20,15 @@
   </transition>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
+<script>
 class PointerEvent {
-  constructor(
-    public selector: string,
-    public onMouseEnter: any,
-    public onMouseLeave: any
-  ) {}
+  constructor(selector, onMouseEnter, onMouseLeave) {
+    this.selector = selector
+    this.onMouseEnter = onMouseEnter
+    this.onMouseLeave = onMouseLeave
+  }
 
-  init(): void {
+  init() {
     document.querySelectorAll(this.selector).forEach((elem) => {
       elem.addEventListener('mouseenter', () => {
         this.onMouseEnter()
@@ -42,7 +40,7 @@ class PointerEvent {
   }
 }
 
-export default Vue.extend({
+export default {
   data: () => {
     return {
       active: false,
@@ -95,7 +93,7 @@ export default Vue.extend({
     ]
 
     this.$nuxt.$on('page-loaded', () => {
-      if ((this as any).$device.isDesktop) {
+      if (this.$device.isDesktop) {
         this.active = true
         document.addEventListener('mousemove', (event) => {
           this.mouseX = event.clientX
@@ -106,7 +104,7 @@ export default Vue.extend({
       }
     })
   },
-})
+}
 </script>
 
 <style lang="postcss">

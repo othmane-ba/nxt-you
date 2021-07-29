@@ -51,10 +51,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   data() {
     return {
       muted: true,
@@ -70,26 +68,21 @@ export default Vue.extend({
       }
     },
     onScroll() {
-      const height = (this.rect as DOMRect).bottom - (this.rect as DOMRect).top
-      const _progress =
-        (window.pageYOffset - (this.rect as DOMRect).top) / height
+      const height = this.rect.bottom - this.rect.top
+      const _progress = (window.pageYOffset - this.rect.top) / height
       const progress = _progress > 0.7 ? 0.7 : _progress < 0 ? 0 : _progress
-      ;(this as any).$gsap.to(
-        this.$refs.container,
-        { scale: 1.25 - progress },
-        2
-      )
+      this.$gsap.to(this.$refs.container, { scale: 1.25 - progress }, 2)
     },
     toggleMuted() {
       this.muted = !this.muted
-      ;(this.$refs.video as HTMLVideoElement).muted = this.muted
+      this.$refs.video.muted = this.muted
     },
   },
   mounted() {
-    this.rect = (this.$refs.wrapper as Element).getBoundingClientRect()
+    this.rect = this.$refs.wrapper.getBoundingClientRect()
     this.addListener()
   },
-})
+}
 </script>
 
 <style lang="postcss" scoped>

@@ -2,11 +2,10 @@
   <div ref="slider"></div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 import noUiSlider from 'nouislider'
 
-export default Vue.extend({
+export default {
   props: {
     value: {
       type: Array,
@@ -14,8 +13,8 @@ export default Vue.extend({
     },
   },
   mounted() {
-    const slider = noUiSlider.create(this.$refs.slider as any, {
-      start: this.value as Array<number>,
+    const slider = noUiSlider.create(this.$refs.slider, {
+      start: this.value,
       step: 1,
       connect: true,
       tooltips: true,
@@ -24,7 +23,7 @@ export default Vue.extend({
         max: 100000,
       },
       format: {
-        to: function (value: number) {
+        to: function (value) {
           const printNum = Math.round(value / 1000) + 'k' + ' €'
           return value >= 100000 ? '> ' + printNum : printNum
         },
@@ -37,7 +36,7 @@ export default Vue.extend({
       this.$emit('input', val)
     })
   },
-})
+}
 </script>
 
 <style lang="postcss">

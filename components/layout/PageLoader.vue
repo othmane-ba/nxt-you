@@ -19,10 +19,10 @@
   </transition>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script >
 
-export default Vue.extend({
+
+export default{
   data() {
     return {
       loaderVisible: true,
@@ -33,7 +33,7 @@ export default Vue.extend({
       this.loaderVisible = false
     })
   },
-})
+}
 </script>
 
 <style scoped></style>

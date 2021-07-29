@@ -125,15 +125,15 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script >
+
 import FeatureSlider from '~/components/home/FeatureSlider.vue'
 import Transition from '~/mixins/transition.js'
 
-export default Vue.extend({
+export default{
   components: { FeatureSlider },
   mixins: [Transition],
-})
+}
 </script>
 
 <style>
