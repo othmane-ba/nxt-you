@@ -88,16 +88,13 @@ export default {
   beforeDestroy() {
     this.removeEventListener()
   },
-  computed() {
-    return {
-      overlayActive() {
-        return this.scrollTop > this.screenHeight / 2
-      },
-      sphereActive() {
-        return true
-        // return this.scrollTop <= this.screenHeight
-      },
-    }
+  computed: {
+    overlayActive() {
+      return this.scrollTop > this.screenHeight / 2
+    },
+    sphereActive() {
+      return this.scrollTop <= this.screenHeight
+    },
   },
   methods: {
     init() {
