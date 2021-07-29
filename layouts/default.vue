@@ -25,13 +25,8 @@ const jsonld = {
 export default {
   components: { CookieHint },
 
-  /*
   jsonld() {
-    const logo = jsonld.logo.logo
-    const url = jsonld.logo.url
-    const breadcrumbs = jsonld.breadcrumbs
-
-    const items = breadcrumbs.map((item: any, index: number) => ({
+    const items = jsonld.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: item.text,
@@ -41,8 +36,8 @@ export default {
       {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        url,
-        logo,
+        url: jsonld.logo.url,
+        logo: jsonld.logo.logo,
       },
       {
         '@context': 'https://schema.org',
@@ -51,7 +46,6 @@ export default {
       },
     ]
   },
-*/
 }
 </script>
 <style lang="postcss">
