@@ -41,6 +41,9 @@
   "Work": {
     "description": "Auto imported from components/home/Work.vue"
   },
+  "CookieHint": {
+    "description": "Auto imported from components/layout/CookieHint.vue"
+  },
   "PageLoader": {
     "description": "Auto imported from components/layout/PageLoader.vue"
   },

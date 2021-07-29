@@ -16,6 +16,7 @@ const components = {
   TestimonialSlider: () => import('../..\\components\\home\\TestimonialSlider.vue' /* webpackChunkName: "components/testimonial-slider" */).then(c => wrapFunctional(c.default || c)),
   VideoGrid: () => import('../..\\components\\home\\VideoGrid.vue' /* webpackChunkName: "components/video-grid" */).then(c => wrapFunctional(c.default || c)),
   Work: () => import('../..\\components\\home\\Work.vue' /* webpackChunkName: "components/work" */).then(c => wrapFunctional(c.default || c)),
+  CookieHint: () => import('../..\\components\\layout\\CookieHint.vue' /* webpackChunkName: "components/cookie-hint" */).then(c => wrapFunctional(c.default || c)),
   PageLoader: () => import('../..\\components\\layout\\PageLoader.vue' /* webpackChunkName: "components/page-loader" */).then(c => wrapFunctional(c.default || c)),
   Pointer: () => import('../..\\components\\layout\\Pointer.vue' /* webpackChunkName: "components/pointer" */).then(c => wrapFunctional(c.default || c)),
   CaptionImage: () => import('../..\\components\\shared\\CaptionImage.vue' /* webpackChunkName: "components/caption-image" */).then(c => wrapFunctional(c.default || c)),

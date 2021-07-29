@@ -14,6 +14,7 @@ export { default as StickyVideoDisplay } from '../..\\components\\home\\StickyVi
 export { default as TestimonialSlider } from '../..\\components\\home\\TestimonialSlider.vue'
 export { default as VideoGrid } from '../..\\components\\home\\VideoGrid.vue'
 export { default as Work } from '../..\\components\\home\\Work.vue'
+export { default as CookieHint } from '../..\\components\\layout\\CookieHint.vue'
 export { default as PageLoader } from '../..\\components\\layout\\PageLoader.vue'
 export { default as Pointer } from '../..\\components\\layout\\Pointer.vue'
 export { default as CaptionImage } from '../..\\components\\shared\\CaptionImage.vue'
@@ -39,6 +40,7 @@ export const LazyStickyVideoDisplay = import('../..\\components\\home\\StickyVid
 export const LazyTestimonialSlider = import('../..\\components\\home\\TestimonialSlider.vue' /* webpackChunkName: "components/testimonial-slider" */).then(c => wrapFunctional(c.default || c))
 export const LazyVideoGrid = import('../..\\components\\home\\VideoGrid.vue' /* webpackChunkName: "components/video-grid" */).then(c => wrapFunctional(c.default || c))
 export const LazyWork = import('../..\\components\\home\\Work.vue' /* webpackChunkName: "components/work" */).then(c => wrapFunctional(c.default || c))
+export const LazyCookieHint = import('../..\\components\\layout\\CookieHint.vue' /* webpackChunkName: "components/cookie-hint" */).then(c => wrapFunctional(c.default || c))
 export const LazyPageLoader = import('../..\\components\\layout\\PageLoader.vue' /* webpackChunkName: "components/page-loader" */).then(c => wrapFunctional(c.default || c))
 export const LazyPointer = import('../..\\components\\layout\\Pointer.vue' /* webpackChunkName: "components/pointer" */).then(c => wrapFunctional(c.default || c))
 export const LazyCaptionImage = import('../..\\components\\shared\\CaptionImage.vue' /* webpackChunkName: "components/caption-image" */).then(c => wrapFunctional(c.default || c))

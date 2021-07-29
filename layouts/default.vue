@@ -2,13 +2,13 @@
   <div>
     <PageLoader />
     <Pointer />
+    <CookieHint />
     <Nuxt />
   </div>
 </template>
 
-<script >
-
-
+<script>
+import CookieHint from '~/components/layout/CookieHint'
 const jsonld = {
   logo: {
     url: 'https://nxtyou.de/',
@@ -22,7 +22,9 @@ const jsonld = {
   ],
 }
 
-export default{
+export default {
+  components: { CookieHint },
+
   /*
   jsonld() {
     const logo = jsonld.logo.logo
