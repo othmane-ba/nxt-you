@@ -19,13 +19,13 @@ import nuxt_plugin_iconplugin_394c5aae from 'nuxt_plugin_iconplugin_394c5aae' //
 import nuxt_plugin_toast_b0e630f0 from 'nuxt_plugin_toast_b0e630f0' // Source: .\\toast.js (mode: 'client')
 import nuxt_plugin_gsapModule_02a5d218 from 'nuxt_plugin_gsapModule_02a5d218' // Source: .\\gsapModule.js (mode: 'all')
 import nuxt_plugin_deviceplugin_a6876d38 from 'nuxt_plugin_deviceplugin_a6876d38' // Source: .\\device.plugin.js (mode: 'all')
-import nuxt_plugin_vueawesomeswiperclient_06965e93 from 'nuxt_plugin_vueawesomeswiperclient_06965e93' // Source: ..\\plugins\\vue-awesome-swiper.client.ts (mode: 'client')
-import nuxt_plugin_vuecheckview_535e19e6 from 'nuxt_plugin_vuecheckview_535e19e6' // Source: ..\\plugins\\vue-check-view.ts (mode: 'all')
-import nuxt_plugin_simpleparallaxclient_52ca3da0 from 'nuxt_plugin_simpleparallaxclient_52ca3da0' // Source: ..\\plugins\\simple-parallax.client.ts (mode: 'client')
-import nuxt_plugin_vuerangecomponentclient_12480bf8 from 'nuxt_plugin_vuerangecomponentclient_12480bf8' // Source: ..\\plugins\\vue-range-component.client.ts (mode: 'client')
-import nuxt_plugin_vuelidate_4be42f5c from 'nuxt_plugin_vuelidate_4be42f5c' // Source: ..\\plugins\\vuelidate.ts (mode: 'all')
-import nuxt_plugin_jsonld_2ff76817 from 'nuxt_plugin_jsonld_2ff76817' // Source: ..\\plugins\\jsonld.ts (mode: 'all')
-import nuxt_plugin_vuegtagclient_04907a44 from 'nuxt_plugin_vuegtagclient_04907a44' // Source: ..\\plugins\\vue-gtag.client.ts (mode: 'client')
+import nuxt_plugin_vueawesomeswiperclient_06965d5d from 'nuxt_plugin_vueawesomeswiperclient_06965d5d' // Source: ..\\plugins\\vue-awesome-swiper.client.js (mode: 'client')
+import nuxt_plugin_vuecheckview_535e18b0 from 'nuxt_plugin_vuecheckview_535e18b0' // Source: ..\\plugins\\vue-check-view.js (mode: 'all')
+import nuxt_plugin_simpleparallaxclient_52ca400c from 'nuxt_plugin_simpleparallaxclient_52ca400c' // Source: ..\\plugins\\simple-parallax.client.js (mode: 'client')
+import nuxt_plugin_vuerangecomponentclient_12480e64 from 'nuxt_plugin_vuerangecomponentclient_12480e64' // Source: ..\\plugins\\vue-range-component.client.js (mode: 'client')
+import nuxt_plugin_vuelidate_4be431c8 from 'nuxt_plugin_vuelidate_4be431c8' // Source: ..\\plugins\\vuelidate.js (mode: 'all')
+import nuxt_plugin_jsonld_2ff766e1 from 'nuxt_plugin_jsonld_2ff766e1' // Source: ..\\plugins\\jsonld.js (mode: 'all')
+import nuxt_plugin_vuegtagclient_0490790e from 'nuxt_plugin_vuegtagclient_0490790e' // Source: ..\\plugins\\vue-gtag.client.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -217,32 +217,32 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_deviceplugin_a6876d38(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_vueawesomeswiperclient_06965e93 === 'function') {
-    await nuxt_plugin_vueawesomeswiperclient_06965e93(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vueawesomeswiperclient_06965d5d === 'function') {
+    await nuxt_plugin_vueawesomeswiperclient_06965d5d(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_vuecheckview_535e19e6 === 'function') {
-    await nuxt_plugin_vuecheckview_535e19e6(app.context, inject)
+  if (typeof nuxt_plugin_vuecheckview_535e18b0 === 'function') {
+    await nuxt_plugin_vuecheckview_535e18b0(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_simpleparallaxclient_52ca3da0 === 'function') {
-    await nuxt_plugin_simpleparallaxclient_52ca3da0(app.context, inject)
+  if (process.client && typeof nuxt_plugin_simpleparallaxclient_52ca400c === 'function') {
+    await nuxt_plugin_simpleparallaxclient_52ca400c(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_vuerangecomponentclient_12480bf8 === 'function') {
-    await nuxt_plugin_vuerangecomponentclient_12480bf8(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vuerangecomponentclient_12480e64 === 'function') {
+    await nuxt_plugin_vuerangecomponentclient_12480e64(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_vuelidate_4be42f5c === 'function') {
-    await nuxt_plugin_vuelidate_4be42f5c(app.context, inject)
+  if (typeof nuxt_plugin_vuelidate_4be431c8 === 'function') {
+    await nuxt_plugin_vuelidate_4be431c8(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_jsonld_2ff76817 === 'function') {
-    await nuxt_plugin_jsonld_2ff76817(app.context, inject)
+  if (typeof nuxt_plugin_jsonld_2ff766e1 === 'function') {
+    await nuxt_plugin_jsonld_2ff766e1(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_vuegtagclient_04907a44 === 'function') {
-    await nuxt_plugin_vuegtagclient_04907a44(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vuegtagclient_0490790e === 'function') {
+    await nuxt_plugin_vuegtagclient_0490790e(app.context, inject)
   }
 
   // Lock enablePreview in context

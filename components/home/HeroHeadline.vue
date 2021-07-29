@@ -1,17 +1,41 @@
 <template>
   <h1
-    class="whitespace-nowrap text-4xl 2xl:text-6xl leading-relaxed 2xl:leading-relaxed"
+    class="
+      whitespace-nowrap
+      text-4xl
+      2xl:text-6xl
+      leading-relaxed
+      2xl:leading-relaxed
+    "
   >
     <slot></slot>
     <span
-      class="inline-block relative align-top transition-all duration-700 ease-in-out overflow-hidden"
+      class="
+        inline-block
+        relative
+        align-top
+        transition-all
+        duration-700
+        ease-in-out
+        overflow-hidden
+      "
       :style="{ width: wrapperWidth + 'px' }"
     >
       <span
         ref="words"
         v-for="(word, index) in words"
         :key="index"
-        class="inline-block h-full text-blue whitespace-nowrap absolute top-0 left-0 opacity-0 pr-4"
+        class="
+          inline-block
+          h-full
+          text-blue
+          whitespace-nowrap
+          absolute
+          top-0
+          left-0
+          opacity-0
+          pr-4
+        "
         :class="{ 'relative opacity-100': index === currentWordIndex }"
       >
         {{ word }}
@@ -21,10 +45,8 @@
   </h1>
 </template>
 
-<script >
-
-
-export default{
+<script>
+export default {
   props: {
     words: {
       type: Array,
@@ -52,8 +74,8 @@ export default{
         this.show(nextWordIndex)
       }, this.animationDelay / 3)
     },
-    show(index: number) {
-      this.wrapperWidth = (this.$refs.words as Element[])[index].scrollWidth
+    show(index) {
+      this.wrapperWidth = this.$refs.words[index].scrollWidth
       this.currentWordIndex = index
       setTimeout(() => {
         this.hide()

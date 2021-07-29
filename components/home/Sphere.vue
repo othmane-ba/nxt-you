@@ -50,14 +50,6 @@ class EventListener {
   }
 }
 
-const EVENT_LISTENER = [
-  new EventListener('scroll', this.onScroll.bind(this)),
-  new EventListener('mousemove', this.onDocumentMouseMove.bind(this)),
-  new EventListener('touchstart', this.onDocumentTouchStart.bind(this)),
-  new EventListener('touchmove', this.onDocumentTouchMove.bind(this)),
-  new EventListener('resize', this.onWindowResize.bind(this), false),
-]
-
 export default {
   data() {
     return {
@@ -66,7 +58,13 @@ export default {
       particleCount: 1000,
       lineCount: 300,
       color: new THREE.Color('#757575'),
-      eventListener: EVENT_LISTENER,
+      eventListener: [
+        new EventListener('scroll', this.onScroll.bind(this)),
+        new EventListener('mousemove', this.onDocumentMouseMove.bind(this)),
+        new EventListener('touchstart', this.onDocumentTouchStart.bind(this)),
+        new EventListener('touchmove', this.onDocumentTouchMove.bind(this)),
+        new EventListener('resize', this.onWindowResize.bind(this), false),
+      ],
       container: null,
       showPage: false,
       scrollTop: 0,
