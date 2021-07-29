@@ -14,6 +14,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 import nuxt_plugin_plugin_43c2c5b6 from 'nuxt_plugin_plugin_43c2c5b6' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_cookieuniversalnuxt_b0412efe from 'nuxt_plugin_cookieuniversalnuxt_b0412efe' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_metaplugin_429ba596 from 'nuxt_plugin_metaplugin_429ba596' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_394c5aae from 'nuxt_plugin_iconplugin_394c5aae' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
 import nuxt_plugin_toast_b0e630f0 from 'nuxt_plugin_toast_b0e630f0' // Source: .\\toast.js (mode: 'client')
@@ -195,6 +196,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_4946ca4e === 'function') {
     await nuxt_plugin_axios_4946ca4e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_cookieuniversalnuxt_b0412efe === 'function') {
+    await nuxt_plugin_cookieuniversalnuxt_b0412efe(app.context, inject)
   }
 
   if (typeof nuxt_plugin_metaplugin_429ba596 === 'function') {

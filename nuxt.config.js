@@ -70,6 +70,7 @@ export default {
     'nuxt-gsap-module',
     '@nuxtjs/toast',
     '@nuxtjs/pwa',
+    'cookie-universal-nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -1,24 +1,26 @@
 <template>
-  <div class="fixed bottom-0 left-0 w-full z-40">
+  <div class="fixed bottom-0 left-0 w-full z-40 px-4">
     <div
       v-if="active"
       class="
         container
         bg-white
         text-black
-        p-4
-        my-4
+        py-2
+        px-4
         mx-auto
         flex
         items-center
         justify-between
       "
     >
-      <p>
-        Diese Seite verwendet Cookies von Google um Dienste bereitzustellen und
-        Traffic zu analysieren.
-      </p>
-      <div class="flex ml-auto space-x-4">
+      <div>
+        <p>
+          Diese Seite verwendet Cookies um Dienste bereitzustellen und Traffic
+          zu analysieren.
+        </p>
+      </div>
+      <div class="flex space-x-4">
         <button
           class="
             px-4
@@ -35,33 +37,20 @@
         </button>
 
         <button
-          @click="active = false"
+          @click="grant()"
           class="
-            w-10
+            px-4
             h-10
             inline-flex
             items-center
             justify-center
-            rounded-full
-            border-blue
+            rounded
+            border border-blue
             text-blue
           "
           data-pointer="large"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
+          Verstanden
         </button>
       </div>
     </div>
@@ -69,16 +58,29 @@
 </template>
 
 <script>
+import { bootstrap } from 'vue-gtag'
+
 export default {
   data() {
     return {
-      active: false,
+      active: true,
     }
   },
   mounted() {
-    this.$nuxt.$on('page-loaded', () => {
-      this.active = true
-    })
+    const hasConsent = this.$cookies.get('ny_consent')
+    this.active = !hasConsent
+  },
+  methods: {
+    async grant() {
+      await bootstrap()
+      this.$gtag.pageview({
+        page_path: this.$route.path,
+      })
+      this.$cookies.set('ny_consent', true, {
+        maxAge: 2147483647,
+      })
+      this.active = false
+    },
   },
 }
 </script>
