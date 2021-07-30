@@ -5,7 +5,10 @@
     leave-active-class="transition-all ease-in-out duration-1000 delay-1500"
     leave-to-class="top-full opacity-0"
   >
-    <div v-show="showPage" class="fixed top-0 left-0 h-screen w-full -z-10">
+    <div
+      v-show="showPage"
+      class="sticky top-0 left-0 h-screen w-full -z-10 overflow-hidden"
+    >
       <div
         class="
           absolute

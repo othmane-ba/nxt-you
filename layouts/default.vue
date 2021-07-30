@@ -3,7 +3,10 @@
     <PageLoader />
     <Pointer />
     <CookieHint />
-    <Nuxt />
+    <div class="relative z-10 bg-black">
+      <Nuxt />
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -60,6 +63,7 @@ export default {
 section {
   @apply py-16 lg:py-24;
 }
+
 section:first-child {
   @apply pt-0 !important;
 }

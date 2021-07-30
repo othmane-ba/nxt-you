@@ -44,6 +44,9 @@
   "CookieHint": {
     "description": "Auto imported from components/layout/CookieHint.vue"
   },
+  "Footer": {
+    "description": "Auto imported from components/layout/Footer.vue"
+  },
   "PageLoader": {
     "description": "Auto imported from components/layout/PageLoader.vue"
   },
