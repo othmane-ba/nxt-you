@@ -1,16 +1,16 @@
 <template>
-  <div class="fixed bottom-0 left-0 w-full z-40 px-4">
+  <div class="fixed bottom-0 left-0 w-full z-40 lg:px-4">
     <div
       v-if="active"
       class="
         container
         bg-white
         text-black
-        py-2
-        px-4
+        lg:py-2
+        p-4
         mx-auto
-        flex
-        items-center
+        flex flex-col
+        lg:flex-row lg:items-center
         justify-between
       "
     >
@@ -20,34 +20,18 @@
           zu analysieren.
         </p>
       </div>
-      <div class="flex space-x-4">
-        <button
-          class="
-            px-4
-            h-10
-            inline-flex
-            items-center
-            justify-center
-            rounded
-            border
-          "
+      <div class="flex space-x-4 pt-4 lg:pt-0">
+        <NuxtLink
+          to="/privacy"
+          class="py-2 px-4 rounded border"
           data-pointer="large"
         >
           Mehr erfahren
-        </button>
+        </NuxtLink>
 
         <button
           @click="grant()"
-          class="
-            px-4
-            h-10
-            inline-flex
-            items-center
-            justify-center
-            rounded
-            border border-blue
-            text-blue
-          "
+          class="py-2 px-4 rounded border border-blue text-blue"
           data-pointer="large"
         >
           Verstanden
