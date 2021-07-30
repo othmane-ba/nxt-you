@@ -68,6 +68,9 @@
   "NumText": {
     "description": "Auto imported from components/shared/NumText.vue"
   },
+  "PageHeader": {
+    "description": "Auto imported from components/shared/PageHeader.vue"
+  },
   "RangeSlider": {
     "description": "Auto imported from components/shared/RangeSlider.vue"
   },

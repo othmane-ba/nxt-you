@@ -29,5 +29,6 @@ You can directly use them in pages and other components without the need to impo
 - `<Icon>` | `<icon>` (components/shared/Icon.vue)
 - `<Intersection>` | `<intersection>` (components/shared/Intersection.vue)
 - `<NumText>` | `<num-text>` (components/shared/NumText.vue)
+- `<PageHeader>` | `<page-header>` (components/shared/PageHeader.vue)
 - `<RangeSlider>` | `<range-slider>` (components/shared/RangeSlider.vue)
 - `<Tag>` | `<tag>` (components/shared/Tag.vue)
