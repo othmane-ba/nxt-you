@@ -3,9 +3,7 @@
     <PageLoader />
     <Pointer />
     <CookieHint />
-    <div class="relative z-10 bg-black">
-      <Nuxt />
-    </div>
+    <Nuxt />
     <Footer></Footer>
   </div>
 </template>
