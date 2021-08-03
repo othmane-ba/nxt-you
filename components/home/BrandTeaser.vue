@@ -36,7 +36,7 @@
             pointer-events-none
           "
         ></div>
-        <p class="text-4xl font-bold leading-snug">
+        <p class="text-4xl font-bold leading-tight uppercase">
           If you don't have a strong brand, someone else will be there to fill
           that role for you
         </p>
@@ -75,7 +75,7 @@
           data-overflow
           alt="If you don't have a strong brand, someone else will be there to fill that role for you"
           class="absolute top-0 left-0 h-full w-full object-contain z-10"
-          :data-scale="1.4 * (i % 2 === 0 ? 1 : 1.2)"
+          :data-scale="1.6 * (i % 2 === 0 ? 1 : 1.2)"
           :src="require('~/assets/images/home-brand-' + id + '.png')"
         />
       </div>
