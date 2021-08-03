@@ -116,7 +116,13 @@
                   </li>
                 </ul>
 
-                <video
+                <cld-video
+                  :public-id="feature.video"
+                  width="600"
+                  crop="fill"
+                  quality="auto"
+                  loading="lazy"
+                  fallback_content="Your browser does not support HTML5 video tags"
                   class="
                     absolute
                     inset-2/4
@@ -129,16 +135,7 @@
                   muted
                   loop
                   autoplay="autoplay"
-                >
-                  <source
-                    :src="require('~/assets/videos/' + feature.video + '.webm')"
-                    type="video/webm"
-                  />
-                  <source
-                    :src="require('~/assets/videos/' + feature.video + '.mp4')"
-                    type="video/mp4"
-                  />
-                </video>
+                />
               </div>
             </div>
           </div>
@@ -172,7 +169,7 @@ const FEATURES = [
     'Branding',
     'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
     'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-    'branding',
+    'nxt-you/branding_y9wqvw',
     [
       new Service('Brand Strategy', 'lightbulb.png', '/seo'),
       new Service('Visual Brand Identity', 'pencil-settings.png', '/seo'),
@@ -185,7 +182,7 @@ const FEATURES = [
     'Performance',
     'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
     'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-    'performance',
+    'nxt-you/performance_geewbk',
     [
       new Service('Social Media Marketing', 'bar-up.png', '/seo'),
       new Service('Funnel Systeme', 'dollar-bar.png', '/seo'),

@@ -71,6 +71,7 @@ export default {
     '@nuxtjs/toast',
     '@nuxtjs/pwa',
     'cookie-universal-nuxt',
+    '@nuxtjs/cloudinary',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -90,6 +91,11 @@ export default {
 
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
+  },
+
+  cloudinary: {
+    cloudName: process.env.CLOUDINARY_CLOUDNAME,
+    useComponent: true,
   },
 
   build: {},
