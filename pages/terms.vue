@@ -6,21 +6,21 @@
 
     <section>
       <div class="container mx-auto px-4 lg:px-32">
-        <h2>Angaben gemäß § 5 TMG</h2>
+        <h2 class="title">Angaben gemäß § 5 TMG</h2>
         <p>
           NXT YOU GmbH<br />
           Tölzer Straße 1<br />
           82031 Grünwald
         </p>
 
-        <h2>Kontakt</h2>
+        <h2 class="title">Kontakt</h2>
         <p>
           Telefon: +4917656842497<br />
           E-Mail:
           <a href="mailto: info@nxtyou.de">info@nxtyou.de</a>
         </p>
 
-        <h2>Streitschlichtung</h2>
+        <h2 class="title">Streitschlichtung</h2>
         <p>
           Die Europäische Kommission stellt eine Plattform zur
           Online-Streitbeilegung (OS) bereit:
@@ -38,7 +38,7 @@
           vor einer Verbraucherschlichtungsstelle teilzunehmen.
         </p>
 
-        <h3>Haftung für Inhalte</h3>
+        <h3 class="title-sm">Haftung für Inhalte</h3>
         <p>
           Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte
           auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach
@@ -55,7 +55,7 @@
           von entsprechenden Rechtsverletzungen werden wir diese Inhalte
           umgehend entfernen.
         </p>
-        <h3>Haftung für Links</h3>
+        <h3 class="title-sm">Haftung für Links</h3>
         <p>
           Unser Angebot enthält Links zu externen Websites Dritter, auf deren
           Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
@@ -71,7 +71,7 @@
           Bekanntwerden von Rechtsverletzungen werden wir derartige Links
           umgehend entfernen.
         </p>
-        <h3>Urheberrecht</h3>
+        <h3 class="title-sm">Urheberrecht</h3>
         <p>
           Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
           Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
@@ -110,10 +110,10 @@ export default {
 
 <style lang="postcss" scoped>
 h2 {
-  @apply text-2xl lg:text-3xl font-bold my-4;
+  @apply my-4;
 }
 
 h3 {
-  @apply text-xl lg:text-2xl font-semibold my-2;
+  @apply my-2;
 }
 </style>

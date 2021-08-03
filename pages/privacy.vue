@@ -6,8 +6,8 @@
 
     <section>
       <div class="container mx-auto px-4 lg:px-32">
-        <h2>1. Datenschutz auf einen Blick</h2>
-        <h3>Allgemeine Hinweise</h3>
+        <h2 class="title">1. Datenschutz auf einen Blick</h2>
+        <h3 class="title-sm">Allgemeine Hinweise</h3>
         <p>
           Die folgenden Hinweise geben einen einfachen Überblick darüber, was
           mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website
@@ -16,7 +16,7 @@
           Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
           Datenschutzerklärung.
         </p>
-        <h3>Datenerfassung auf unserer Website</h3>
+        <h3 class="title-sm">Datenerfassung auf unserer Website</h3>
         <p>
           <strong
             >Wer ist verantwortlich für die Datenerfassung auf dieser
@@ -63,7 +63,7 @@
           verlangen. Details hierzu entnehmen Sie der Datenschutzerklärung unter
           „Recht auf Einschränkung der Verarbeitung“.
         </p>
-        <h3>Analyse-Tools und Tools von Drittanbietern</h3>
+        <h3 class="title-sm">Analyse-Tools und Tools von Drittanbietern</h3>
         <p>
           Beim Besuch unserer Website kann Ihr Surf-Verhalten statistisch
           ausgewertet werden. Das geschieht vor allem mit Cookies und mit
@@ -77,8 +77,8 @@
           zu diesen Tools und über Ihre Widerspruchsmöglichkeiten finden Sie in
           der folgenden Datenschutzerklärung.
         </p>
-        <h2>2. Allgemeine Hinweise und Pflichtinformationen</h2>
-        <h3>Datenschutz</h3>
+        <h2 class="title">2. Allgemeine Hinweise und Pflichtinformationen</h2>
+        <h3 class="title-sm">Datenschutz</h3>
         <p>
           Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten
           sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und
@@ -99,7 +99,7 @@
           aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch
           Dritte ist nicht möglich.
         </p>
-        <h3>Hinweis zur verantwortlichen Stelle</h3>
+        <h3 class="title-sm">Hinweis zur verantwortlichen Stelle</h3>
         <p>
           Die verantwortliche Stelle für die Datenverarbeitung auf dieser
           Website ist:
@@ -120,7 +120,9 @@
           Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen,
           E-Mail-Adressen o. Ä.) entscheidet.
         </p>
-        <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+        <h3 class="title-sm">
+          Widerruf Ihrer Einwilligung zur Datenverarbeitung
+        </h3>
         <p>
           Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
           Einwilligung möglich. Sie können eine bereits erteilte Einwilligung
@@ -128,7 +130,7 @@
           an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
           Datenverarbeitung bleibt vom Widerruf unberührt.
         </p>
-        <h3>
+        <h3 class="title-sm">
           Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie
           gegen Direktwerbung (Art. 21 DSGVO)
         </h3>
@@ -161,7 +163,9 @@
             Art. 21 Abs. 2 DSGVO).</strong
           >
         </p>
-        <h3>Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+        <h3 class="title-sm">
+          Beschwerderecht bei der zuständigen Aufsichtsbehörde
+        </h3>
         <p>
           Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein
           Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem
@@ -170,7 +174,7 @@
           besteht unbeschadet anderweitiger verwaltungsrechtlicher oder
           gerichtlicher Rechtsbehelfe.
         </p>
-        <h3>Recht auf Datenübertragbarkeit</h3>
+        <h3 class="title-sm">Recht auf Datenübertragbarkeit</h3>
         <p>
           Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung
           oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich
@@ -179,7 +183,7 @@
           einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es
           technisch machbar ist.
         </p>
-        <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+        <h3 class="title-sm">SSL- bzw. TLS-Verschlüsselung</h3>
         <p>
           Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der
           Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder
@@ -193,7 +197,7 @@
           Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen
           werden.
         </p>
-        <h3>Auskunft, Sperrung, Löschung und Berichtigung</h3>
+        <h3 class="title-sm">Auskunft, Sperrung, Löschung und Berichtigung</h3>
         <p>
           Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit
           das Recht auf unentgeltliche Auskunft über Ihre gespeicherten
@@ -203,7 +207,7 @@
           personenbezogene Daten können Sie sich jederzeit unter der im
           Impressum angegebenen Adresse an uns wenden.
         </p>
-        <h3>Recht auf Einschränkung der Verarbeitung</h3>
+        <h3 class="title-sm">Recht auf Einschränkung der Verarbeitung</h3>
         <p>
           Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer
           personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit
@@ -247,8 +251,8 @@
           öffentlichen Interesses der Europäischen Union oder eines
           Mitgliedstaats verarbeitet werden.
         </p>
-        <h2>3. Datenerfassung auf unserer Website</h2>
-        <h3>Cookies</h3>
+        <h2 class="title">3. Datenerfassung auf unserer Website</h2>
+        <h3 class="title-sm">Cookies</h3>
         <p>
           Die Internetseiten verwenden teilweise so genannte Cookies. Cookies
           richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren.
@@ -282,7 +286,7 @@
           Ihres Surfverhaltens) gespeichert werden, werden diese in dieser
           Datenschutzerklärung gesondert behandelt.
         </p>
-        <h3>Kontaktformular</h3>
+        <h3 class="title-sm">Kontaktformular</h3>
         <p>
           Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre
           Angaben aus dem Anfrageformular inklusive der von Ihnen dort
@@ -306,7 +310,7 @@
           Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen
           – bleiben unberührt.
         </p>
-        <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
+        <h3 class="title-sm">Anfrage per E-Mail, Telefon oder Telefax</h3>
         <p>
           Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre
           Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten
@@ -332,8 +336,8 @@
           Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere
           gesetzliche Aufbewahrungsfristen – bleiben unberührt.
         </p>
-        <h2>4. Analyse-Tools und Werbung</h2>
-        <h3>Google Analytics</h3>
+        <h2 class="title">4. Analyse-Tools und Werbung</h2>
+        <h3 class="title-sm">Google Analytics</h3>
         <p>
           Diese Website nutzt Funktionen des Webanalysedienstes Google
           Analytics. Anbieter ist die Google Ireland Limited („Google“), Gordon
@@ -440,8 +444,8 @@
           >
         </p>
 
-        <h2>5. Plugins und Tools</h2>
-        <h3>YouTube mit erweitertem Datenschutz</h3>
+        <h2 class="title">5. Plugins und Tools</h2>
+        <h3 class="title-sm">YouTube mit erweitertem Datenschutz</h3>
         <p>
           Unsere Website nutzt Plugins der Website YouTube. Betreiber der Seiten
           ist die Google Ireland Limited („Google“), Gordon House, Barrow
@@ -494,7 +498,7 @@
             >https://policies.google.com/privacy?hl=de</a
           >.
         </p>
-        <h3>Google Web Fonts</h3>
+        <h3 class="title-sm">Google Web Fonts</h3>
         <p>
           Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so
           genannte Web Fonts, die von Google bereitgestellt werden. Beim Aufruf
@@ -552,10 +556,10 @@ export default {
 
 <style lang="postcss" scoped>
 h2 {
-  @apply text-2xl lg:text-3xl font-bold my-4;
+  @apply my-4;
 }
 
 h3 {
-  @apply text-xl lg:text-2xl font-semibold my-2;
+  @apply my-2;
 }
 </style>

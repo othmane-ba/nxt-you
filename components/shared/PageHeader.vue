@@ -2,7 +2,7 @@
   <div class="relative h-96 w-full overflow-hidden" v-view.once>
     <header class="container mx-auto px-4 lg:px-32 h-full">
       <div class="relative flex items-center w-full h-full z-20">
-        <h1 class="text-3xl lg:text-5xl font-bold">
+        <h1 class="title-lg">
           <span :data-animation-text="title" data-animation-text-white>
             {{ title }}</span
           >

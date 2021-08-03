@@ -2,7 +2,7 @@
   <div class="container max-w-6xl mx-auto px-4" v-view.once>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-y-8">
       <div class="lg:col-span-2">
-        <h2 class="text-center text-3xl lg:text-4xl font-bold uppercase">
+        <h2 class="title-lg text-center">
           <span data-animation-text="Make your Vision">Make your Vision</span
           ><br />
           <span class="delay-300" data-animation-text="Come Reality."
@@ -37,7 +37,14 @@
 
       <div class="lg:col-span-2">
         <p
-          class="text-sm text-center tracking-widest uppercase leading-4 font-light delay-700"
+          class="
+            text-sm text-center
+            tracking-widest
+            uppercase
+            leading-4
+            font-light
+            delay-700
+          "
           data-animation-box
         >
           ERFOLG . LEIDENSCHAFT . EINZIGARTIGKEIT
@@ -47,10 +54,8 @@
   </div>
 </template>
 
-<script >
-
-
-export default{}
+<script>
+export default {}
 </script>
 
 <style scoped></style>

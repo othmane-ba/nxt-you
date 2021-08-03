@@ -18,7 +18,7 @@
             :key="index"
           >
             <div class="w-full space-y-8 lg:space-y-16">
-              <h4 class="text-center font-bold uppercase text-3xl lg:text-4xl">
+              <h4 class="title text-center">
                 {{ feature.title }}
               </h4>
 

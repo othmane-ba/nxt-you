@@ -65,9 +65,7 @@
                 ></div>
               </div>
 
-              <h4 class="font-bold uppercase text-4xl mb-4">
-                Marketingplan, Slogan, identität
-              </h4>
+              <h4 class="title mb-4">Marketingplan, Slogan, identität</h4>
 
               <p>
                 Marken sind das wertvollste immatrielle Gut, das ein Unternehmen

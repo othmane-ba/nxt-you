@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4 md:px-36 text-center" v-view.once>
     <form class="pb-16" @submit.prevent="submit">
       <article>
-        <h3 class="text-3xl lg:text-4xl font-bold uppercase">
+        <h3 class="title text-center">
           <span
             data-animation-text="Wie können wir"
             data-animation-text-white=""
@@ -32,7 +32,7 @@
         </div>
       </article>
       <article class="pt-16">
-        <h3 class="text-3xl lg:text-4xl font-bold uppercase">
+        <h3 class="title text-center">
           <span
             data-animation-text="Kontakt aufnehmen"
             data-animation-text-white

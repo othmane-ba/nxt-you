@@ -88,5 +88,9 @@ export default {
 
   pwa,
 
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+  },
+
   build: {},
 }

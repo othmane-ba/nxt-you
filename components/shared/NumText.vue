@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="relative space-y-4 p-4 pt-16 md:px-16">
-          <h3 class="text-3xl lg:text-4xl font-bold uppercase">
+          <h3 class="title">
             <span :data-animation-text="title" data-animation-text-white="">
               {{ title }}</span
             >
