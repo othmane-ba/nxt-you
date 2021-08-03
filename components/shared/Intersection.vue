@@ -1,12 +1,23 @@
 <template>
-  <div class="relative h-96 w-full overflow-hidden" v-view.once>
-    <img
-      data-parallax
-      data-scale="1.6"
-      class="absolute h-full w-full inset-0"
-      alt="Intersection"
-      src="~/assets/images/intersection.jpg"
-    />
+  <div class="relative h-64 w-full overflow-hidden" v-view.once>
+    <div
+      class="
+        absolute
+        w-full
+        top-1/2
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+      "
+    >
+      <img
+        data-parallax
+        alt="Intersection"
+        class="w-full"
+        src="~/assets/images/intersection.jpg"
+      />
+    </div>
+
     <div
       class="
         absolute

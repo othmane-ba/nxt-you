@@ -1,6 +1,6 @@
 <template>
   <div class="container max-w-6xl mx-auto px-4" v-view.once>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-y-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div class="lg:col-span-2">
         <h2 class="title-lg text-center">
           <span data-animation-text="Make your Vision">Make your Vision</span
@@ -42,7 +42,7 @@
             tracking-widest
             uppercase
             leading-4
-            font-light
+            font-bold
             delay-700
           "
           data-animation-box

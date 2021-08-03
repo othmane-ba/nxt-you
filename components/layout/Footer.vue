@@ -1,5 +1,6 @@
 <template>
   <footer class="w-full">
+    <!--
     <div class="container mx-auto p-4 lg:py-8 lg:px-32 text-white bg-black">
       <div
         class="
@@ -50,6 +51,7 @@
         </div>
       </div>
     </div>
+-->
 
     <div
       class="container mx-auto bg-white text-black px-4 lg:px-32 py-2 text-sm"

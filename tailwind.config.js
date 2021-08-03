@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         sans: ['Hero', ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        '10xl': '14rem',
+      },
       colors: {
         blue: { light: '#3966e0', DEFAULT: '#0b60ac', dark: '#2D5070' },
       },

@@ -11,13 +11,17 @@
             data-parallax
             data-overflow
             class="
-              text-9xl
+              text-10xl
+              leading-none
               font-extrabold
               opacity-50
               bg-clip-text
               text-transparent
               bg-gradient-to-b
-              from-blue-light
+              from-white
+              to-blue-dark
+              via-blue
+              tracking-tighter
             "
           >
             {{ numberTwoDigit }}
