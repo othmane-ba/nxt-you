@@ -9,7 +9,6 @@ const components = {
   HeroHeadline: () => import('../..\\components\\home\\HeroHeadline.vue' /* webpackChunkName: "components/hero-headline" */).then(c => wrapFunctional(c.default || c)),
   IntroText: () => import('../..\\components\\home\\IntroText.vue' /* webpackChunkName: "components/intro-text" */).then(c => wrapFunctional(c.default || c)),
   MarketingSlider: () => import('../..\\components\\home\\MarketingSlider.vue' /* webpackChunkName: "components/marketing-slider" */).then(c => wrapFunctional(c.default || c)),
-  Portfolio: () => import('../..\\components\\home\\Portfolio.vue' /* webpackChunkName: "components/portfolio" */).then(c => wrapFunctional(c.default || c)),
   Qualifier: () => import('../..\\components\\home\\Qualifier.vue' /* webpackChunkName: "components/qualifier" */).then(c => wrapFunctional(c.default || c)),
   Sphere: () => import('../..\\components\\home\\Sphere.vue' /* webpackChunkName: "components/sphere" */).then(c => wrapFunctional(c.default || c)),
   StickyVideoDisplay: () => import('../..\\components\\home\\StickyVideoDisplay.vue' /* webpackChunkName: "components/sticky-video-display" */).then(c => wrapFunctional(c.default || c)),

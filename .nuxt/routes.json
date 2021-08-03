@@ -3,21 +3,18 @@
     "name": "privacy",
     "path": "/privacy",
     "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\privacy.vue",
-    "chunkName": "pages/privacy",
-    "_name": "_3bba6025"
+    "chunkName": "pages/privacy"
   },
   {
     "name": "terms",
     "path": "/terms",
     "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\terms.vue",
-    "chunkName": "pages/terms",
-    "_name": "_c7bfa838"
+    "chunkName": "pages/terms"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_1bbb24a2"
+    "chunkName": "pages/index"
   }
 ]

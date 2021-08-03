@@ -7,7 +7,6 @@ export { default as Hero } from '../..\\components\\home\\Hero.vue'
 export { default as HeroHeadline } from '../..\\components\\home\\HeroHeadline.vue'
 export { default as IntroText } from '../..\\components\\home\\IntroText.vue'
 export { default as MarketingSlider } from '../..\\components\\home\\MarketingSlider.vue'
-export { default as Portfolio } from '../..\\components\\home\\Portfolio.vue'
 export { default as Qualifier } from '../..\\components\\home\\Qualifier.vue'
 export { default as Sphere } from '../..\\components\\home\\Sphere.vue'
 export { default as StickyVideoDisplay } from '../..\\components\\home\\StickyVideoDisplay.vue'
@@ -35,7 +34,6 @@ export const LazyHero = import('../..\\components\\home\\Hero.vue' /* webpackChu
 export const LazyHeroHeadline = import('../..\\components\\home\\HeroHeadline.vue' /* webpackChunkName: "components/hero-headline" */).then(c => wrapFunctional(c.default || c))
 export const LazyIntroText = import('../..\\components\\home\\IntroText.vue' /* webpackChunkName: "components/intro-text" */).then(c => wrapFunctional(c.default || c))
 export const LazyMarketingSlider = import('../..\\components\\home\\MarketingSlider.vue' /* webpackChunkName: "components/marketing-slider" */).then(c => wrapFunctional(c.default || c))
-export const LazyPortfolio = import('../..\\components\\home\\Portfolio.vue' /* webpackChunkName: "components/portfolio" */).then(c => wrapFunctional(c.default || c))
 export const LazyQualifier = import('../..\\components\\home\\Qualifier.vue' /* webpackChunkName: "components/qualifier" */).then(c => wrapFunctional(c.default || c))
 export const LazySphere = import('../..\\components\\home\\Sphere.vue' /* webpackChunkName: "components/sphere" */).then(c => wrapFunctional(c.default || c))
 export const LazyStickyVideoDisplay = import('../..\\components\\home\\StickyVideoDisplay.vue' /* webpackChunkName: "components/sticky-video-display" */).then(c => wrapFunctional(c.default || c))

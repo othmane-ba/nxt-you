@@ -20,9 +20,6 @@
   "MarketingSlider": {
     "description": "Auto imported from components/home/MarketingSlider.vue"
   },
-  "Portfolio": {
-    "description": "Auto imported from components/home/Portfolio.vue"
-  },
   "Qualifier": {
     "description": "Auto imported from components/home/Qualifier.vue"
   },
