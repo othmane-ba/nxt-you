@@ -26,7 +26,6 @@ You can directly use them in pages and other components without the need to impo
 - `<CaptionImage>` | `<caption-image>` (components/shared/CaptionImage.vue)
 - `<Contact>` | `<contact>` (components/shared/Contact.vue)
 - `<HoverImage>` | `<hover-image>` (components/shared/HoverImage.vue)
-- `<Icon>` | `<icon>` (components/shared/Icon.vue)
 - `<Intersection>` | `<intersection>` (components/shared/Intersection.vue)
 - `<NumText>` | `<num-text>` (components/shared/NumText.vue)
 - `<PageHeader>` | `<page-header>` (components/shared/PageHeader.vue)

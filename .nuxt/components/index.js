@@ -20,7 +20,6 @@ export { default as Pointer } from '../..\\components\\layout\\Pointer.vue'
 export { default as CaptionImage } from '../..\\components\\shared\\CaptionImage.vue'
 export { default as Contact } from '../..\\components\\shared\\Contact.vue'
 export { default as HoverImage } from '../..\\components\\shared\\HoverImage.vue'
-export { default as Icon } from '../..\\components\\shared\\Icon.vue'
 export { default as Intersection } from '../..\\components\\shared\\Intersection.vue'
 export { default as NumText } from '../..\\components\\shared\\NumText.vue'
 export { default as PageHeader } from '../..\\components\\shared\\PageHeader.vue'
@@ -47,7 +46,6 @@ export const LazyPointer = import('../..\\components\\layout\\Pointer.vue' /* we
 export const LazyCaptionImage = import('../..\\components\\shared\\CaptionImage.vue' /* webpackChunkName: "components/caption-image" */).then(c => wrapFunctional(c.default || c))
 export const LazyContact = import('../..\\components\\shared\\Contact.vue' /* webpackChunkName: "components/contact" */).then(c => wrapFunctional(c.default || c))
 export const LazyHoverImage = import('../..\\components\\shared\\HoverImage.vue' /* webpackChunkName: "components/hover-image" */).then(c => wrapFunctional(c.default || c))
-export const LazyIcon = import('../..\\components\\shared\\Icon.vue' /* webpackChunkName: "components/icon" */).then(c => wrapFunctional(c.default || c))
 export const LazyIntersection = import('../..\\components\\shared\\Intersection.vue' /* webpackChunkName: "components/intersection" */).then(c => wrapFunctional(c.default || c))
 export const LazyNumText = import('../..\\components\\shared\\NumText.vue' /* webpackChunkName: "components/num-text" */).then(c => wrapFunctional(c.default || c))
 export const LazyPageHeader = import('../..\\components\\shared\\PageHeader.vue' /* webpackChunkName: "components/page-header" */).then(c => wrapFunctional(c.default || c))

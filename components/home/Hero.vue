@@ -74,8 +74,21 @@
             data-pointer="large"
             @click="scrollDown()"
           >
-            <Icon class="hero__button__icon" src="arrow-down"></Icon>
-            <Icon class="hero__button__icon" src="arrow-down"></Icon>
+            <svg
+              v-for="icon in 2"
+              class="hero__button__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
           </button>
         </div>
       </transition>

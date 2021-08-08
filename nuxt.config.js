@@ -71,11 +71,10 @@ export default {
     '@nuxtjs/toast',
     '@nuxtjs/pwa',
     'cookie-universal-nuxt',
-    '@nuxtjs/cloudinary',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/cloudinary'],
 
   axios: {
     baseURL: process.env.BASE_URL,

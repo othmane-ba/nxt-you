@@ -32,7 +32,6 @@
     "vue-check-view": "^0.3.0",
     "vue-gtag": "^1.16.1",
     "vue-range-component": "^1.0.3",
-    "vue-themify-icons": "^1.0.0",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {

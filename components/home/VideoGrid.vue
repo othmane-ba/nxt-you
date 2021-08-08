@@ -75,7 +75,18 @@
               duration-1000
             "
           >
-            <Icon class="block text-lg" src="control-play"></Icon>
+            <svg
+              class="block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 17 17"
+            >
+              <path
+                d="M3 2.692v11.618l11.618-5.837-11.618-5.781zM4 4.308l8.382 4.17-8.382 4.211v-8.381z"
+                fill="currentColor"
+              />
+            </svg>
           </button>
         </div>
       </div>

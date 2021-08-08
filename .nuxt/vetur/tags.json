@@ -59,9 +59,6 @@
   "HoverImage": {
     "description": "Auto imported from components/shared/HoverImage.vue"
   },
-  "Icon": {
-    "description": "Auto imported from components/shared/Icon.vue"
-  },
   "Intersection": {
     "description": "Auto imported from components/shared/Intersection.vue"
   },

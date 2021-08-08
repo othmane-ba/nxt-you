@@ -14,8 +14,32 @@
         'pointer--large': large,
       }"
     >
-      <Icon class="pointer__right" src="arrow-right"></Icon>
-      <Icon class="pointer__play" src="control-play"></Icon>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="pointer__right h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M14 5l7 7m0 0l-7 7m7-7H3"
+        />
+      </svg>
+      <svg
+        class="pointer__play"
+        xmlns="http://www.w3.org/2000/svg"
+        width="17"
+        height="17"
+        viewBox="0 0 17 17"
+      >
+        <path
+          d="M3 2.692v11.618l11.618-5.837-11.618-5.781zM4 4.308l8.382 4.17-8.382 4.211v-8.381z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
   </transition>
 </template>
