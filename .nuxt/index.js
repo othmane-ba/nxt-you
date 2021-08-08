@@ -13,8 +13,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_43c2c5b6 from 'nuxt_plugin_plugin_43c2c5b6' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_pluginclient_6805ed72 from 'nuxt_plugin_pluginclient_6805ed72' // Source: .\\cloudinary\\plugin.client.js (mode: 'client')
-import nuxt_plugin_pluginserver_31b67acf from 'nuxt_plugin_pluginserver_31b67acf' // Source: .\\cloudinary\\plugin.server.js (mode: 'server')
 import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_prismic_e1396b9e from 'nuxt_plugin_prismic_e1396b9e' // Source: .\\prismic\\plugins\\prismic.js (mode: 'all')
 import nuxt_plugin_prismiccomponents_2462af9a from 'nuxt_plugin_prismiccomponents_2462af9a' // Source: .\\prismic\\plugins\\prismic-components.js (mode: 'all')
@@ -196,14 +194,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_43c2c5b6 === 'function') {
     await nuxt_plugin_plugin_43c2c5b6(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_pluginclient_6805ed72 === 'function') {
-    await nuxt_plugin_pluginclient_6805ed72(app.context, inject)
-  }
-
-  if (process.server && typeof nuxt_plugin_pluginserver_31b67acf === 'function') {
-    await nuxt_plugin_pluginserver_31b67acf(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_4946ca4e === 'function') {

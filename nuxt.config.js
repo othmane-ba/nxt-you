@@ -83,7 +83,7 @@ export default {
     '@nuxtjs/prismic',
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/cloudinary', '@nuxtjs/prismic'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/prismic'],
   axios: {
     baseURL: process.env.BASE_URL,
     headers: {
@@ -100,10 +100,7 @@ export default {
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
   },
-  cloudinary: {
-    cloudName: process.env.CLOUDINARY_CLOUDNAME,
-    useComponent: true,
-  },
+
   prismic: {
     endpoint: 'https://nxtyou.cdn.prismic.io/api/v2',
     modern: true,

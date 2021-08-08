@@ -115,27 +115,29 @@
                     </a>
                   </li>
                 </ul>
-                <client-only>
-                  <cld-video
-                    :public-id="feature.video"
-                    width="400"
-                    crop="fill"
-                    quality="auto"
-                    fallback_content="Your browser does not support HTML5 video tags"
-                    class="
-                      absolute
-                      inset-2/4
-                      transform
-                      -translate-x-2/4 -translate-y-2/4
-                      object-cover
-                      w-full
-                      h-full
-                    "
-                    muted
-                    loop
-                    autoplay
+                <video
+                  class="
+                    absolute
+                    inset-2/4
+                    transform
+                    -translate-x-2/4 -translate-y-2/4
+                    object-cover
+                    w-full
+                    h-full
+                  "
+                  muted
+                  loop
+                  autoplay="autoplay"
+                >
+                  <source
+                    :src="require('~/assets/videos/' + feature.video + '.webm')"
+                    type="video/webm"
                   />
-                </client-only>
+                  <source
+                    :src="require('~/assets/videos/' + feature.video + '.mp4')"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
             </div>
           </div>
@@ -169,7 +171,7 @@ const FEATURES = [
     'Branding',
     'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
     'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-    'nxt-you/performance_geewbk',
+    'branding',
     [
       new Service('Brand Strategy', 'lightbulb.png', '/seo'),
       new Service('Visual Brand Identity', 'pencil-settings.png', '/seo'),
@@ -182,7 +184,7 @@ const FEATURES = [
     'Performance',
     'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
     'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-    'nxt-you/branding_y9wqvw',
+    'performance',
     [
       new Service('Social Media Marketing', 'bar-up.png', '/seo'),
       new Service('Funnel Systeme', 'dollar-bar.png', '/seo'),
@@ -195,7 +197,7 @@ const FEATURES = [
     'Sales',
     'Der Vertrieb ist das Herz und die Seele eines jeden Unternehmens',
     'Wir arbeiten hart daran die Bedürfnisse Ihres Unternehmens zu verstehen - das ist es was wir am besten können. Wir arbeiten mit Ihnen zusammen um hochwertige, maßgeschneiderte Lösungen zu entwickeln, die sie von Punkt A zu Punkt B bringen und Ihren ROI maximieren.',
-    'nxt-you/branding_y9wqvw',
+    'branding',
     [
       new Service('Aufbau Vertriebsstruktur', 'structure.png', '/seo'),
       new Service('Organisches Funneling', 'funnel.png', '/seo'),

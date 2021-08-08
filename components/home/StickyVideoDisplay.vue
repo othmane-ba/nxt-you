@@ -41,20 +41,24 @@
           class="relative z-10 w-full h-auto origin-top hidden lg:block"
           :src="require('~/assets/images/mac.png')"
         />
-        <client-only>
-          <cld-video
-            public-id="nxt-you/nxtyou-trailer-desktop_tkqd75"
-            width="600"
-            crop="fill"
-            quality="auto"
-            fallback_content="Your browser does not support HTML5 video tags"
-            class="lg:absolute object-cover"
-            loop
-            muted
-            autoplay
-            ref="video"
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          preload="auto"
+          ref="video"
+          class="lg:absolute object-cover"
+        >
+          <!--          <source
+            :src="require('~/assets/videos/nxtyou-trailer-desktop.webm')"
+            type="video/webm"
+          />-->
+          <source
+            :src="require('~/assets/videos/nxtyou-trailer-desktop.mp4')"
+            type="video/mp4"
           />
-        </client-only>
+        </video>
       </div>
     </div>
   </div>
