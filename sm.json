@@ -1,0 +1,6 @@
+{
+  "apiEndpoint": "https://nxtyou.cdn.prismic.io/api/v2",
+  "libraries": [
+    "vue-essential-slices"
+  ]
+}
