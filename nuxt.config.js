@@ -1,4 +1,7 @@
 import pwa from './pwa.config'
+
+const { getStoriesPaths } = require('slice-machine-ui/helpers/storybook')
+
 export default {
   target: 'static',
   head: {
@@ -117,7 +120,7 @@ export default {
     transpile: ['vue-slicezone', 'nuxt-sm'],
   },
   storybook: {
-    stories: [],
+    stories: [...getStoriesPaths()],
   },
   ignore: ['**/*.stories.js'],
 }
