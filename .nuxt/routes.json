@@ -1,5 +1,11 @@
 [
   {
+    "name": "prismic-preview",
+    "path": "/preview",
+    "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\.nuxt\\\\prismic\\\\pages\\\\preview.vue",
+    "_name": "_cb861f22"
+  },
+  {
     "name": "privacy",
     "path": "/privacy",
     "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\privacy.vue",

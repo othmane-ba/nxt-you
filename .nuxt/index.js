@@ -16,6 +16,8 @@ import nuxt_plugin_plugin_43c2c5b6 from 'nuxt_plugin_plugin_43c2c5b6' // Source:
 import nuxt_plugin_pluginclient_6805ed72 from 'nuxt_plugin_pluginclient_6805ed72' // Source: .\\cloudinary\\plugin.client.js (mode: 'client')
 import nuxt_plugin_pluginserver_31b67acf from 'nuxt_plugin_pluginserver_31b67acf' // Source: .\\cloudinary\\plugin.server.js (mode: 'server')
 import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_prismic_e1396b9e from 'nuxt_plugin_prismic_e1396b9e' // Source: .\\prismic\\plugins\\prismic.js (mode: 'all')
+import nuxt_plugin_prismiccomponents_2462af9a from 'nuxt_plugin_prismiccomponents_2462af9a' // Source: .\\prismic\\plugins\\prismic-components.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_b0412efe from 'nuxt_plugin_cookieuniversalnuxt_b0412efe' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_metaplugin_429ba596 from 'nuxt_plugin_metaplugin_429ba596' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_394c5aae from 'nuxt_plugin_iconplugin_394c5aae' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
@@ -78,7 +80,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"NXT YOU","titleTemplate":"%s - Make Your Vision Come Reality.","htmlAttrs":{"lang":"de"},"bodyAttrs":{"class":"bg-black text-white"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":"\u002Ffavicon-16x16.png"}],"style":[],"script":[]},
+    head: {"title":"NXT YOU","titleTemplate":"%s - Make Your Vision Come Reality.","htmlAttrs":{"lang":"de"},"bodyAttrs":{"class":"bg-black text-white"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":"\u002Ffavicon-16x16.png"}],"script":[{"src":"https:\u002F\u002Fcdn.polyfill.io\u002Fv2\u002Fpolyfill.min.js?features=Element.prototype.classList"},{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Ffocus-visible@5.0.2\u002Fdist\u002Ffocus-visible.min.js"}],"style":[]},
 
     router,
     nuxt: {
@@ -206,6 +208,14 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_4946ca4e === 'function') {
     await nuxt_plugin_axios_4946ca4e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_prismic_e1396b9e === 'function') {
+    await nuxt_plugin_prismic_e1396b9e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_prismiccomponents_2462af9a === 'function') {
+    await nuxt_plugin_prismiccomponents_2462af9a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_cookieuniversalnuxt_b0412efe === 'function') {

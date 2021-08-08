@@ -116,4 +116,8 @@ export default {
   build: {
     transpile: ['vue-slicezone', 'nuxt-sm'],
   },
+  storybook: {
+    stories: [],
+  },
+  ignore: ['**/*.stories.js'],
 }
