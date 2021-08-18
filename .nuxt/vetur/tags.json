@@ -1,42 +1,9 @@
 {
-  "BrandTeaser": {
-    "description": "Auto imported from components/home/BrandTeaser.vue"
-  },
-  "ClientList": {
-    "description": "Auto imported from components/home/ClientList.vue"
-  },
-  "FeatureSlider": {
-    "description": "Auto imported from components/home/FeatureSlider.vue"
-  },
-  "Hero": {
-    "description": "Auto imported from components/home/Hero.vue"
-  },
   "HeroHeadline": {
     "description": "Auto imported from components/home/HeroHeadline.vue"
   },
-  "IntroText": {
-    "description": "Auto imported from components/home/IntroText.vue"
-  },
-  "MarketingSlider": {
-    "description": "Auto imported from components/home/MarketingSlider.vue"
-  },
-  "Qualifier": {
-    "description": "Auto imported from components/home/Qualifier.vue"
-  },
   "Sphere": {
     "description": "Auto imported from components/home/Sphere.vue"
-  },
-  "StickyVideoDisplay": {
-    "description": "Auto imported from components/home/StickyVideoDisplay.vue"
-  },
-  "TestimonialSlider": {
-    "description": "Auto imported from components/home/TestimonialSlider.vue"
-  },
-  "VideoGrid": {
-    "description": "Auto imported from components/home/VideoGrid.vue"
-  },
-  "Work": {
-    "description": "Auto imported from components/home/Work.vue"
   },
   "CookieHint": {
     "description": "Auto imported from components/layout/CookieHint.vue"
@@ -49,21 +16,6 @@
   },
   "Pointer": {
     "description": "Auto imported from components/layout/Pointer.vue"
-  },
-  "CaptionImage": {
-    "description": "Auto imported from components/shared/CaptionImage.vue"
-  },
-  "Contact": {
-    "description": "Auto imported from components/shared/Contact.vue"
-  },
-  "HoverImage": {
-    "description": "Auto imported from components/shared/HoverImage.vue"
-  },
-  "Intersection": {
-    "description": "Auto imported from components/shared/Intersection.vue"
-  },
-  "NumText": {
-    "description": "Auto imported from components/shared/NumText.vue"
   },
   "PageHeader": {
     "description": "Auto imported from components/shared/PageHeader.vue"
