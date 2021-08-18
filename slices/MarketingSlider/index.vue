@@ -32,9 +32,7 @@
                   {{ item.title }}
                 </h4>
 
-                <p>
-                  <prismic-rich-text :field="item.description" />
-                </p>
+                <prismic-rich-text :field="item.description" />
               </div>
               <div>
                 <prismic-image

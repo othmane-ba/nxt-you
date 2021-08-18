@@ -13,11 +13,7 @@
           v-view.once
           data-animation-box
         >
-          <prismic-image
-            data-parallax
-            class="w-full h-auto"
-            :field="item.image"
-          />
+          <prismic-image class="w-full h-auto" :field="item.image" />
           <div
             class="absolute inline-block bottom-0 pb-8 max-w-56 overflow-hidden"
             :class="{

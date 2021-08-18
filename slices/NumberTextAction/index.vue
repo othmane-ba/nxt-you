@@ -41,7 +41,7 @@
               >
             </h3>
             <div data-animation-box class="delay-300">
-              <p><prismic-rich-text :field="slice.primary.description" /></p>
+              <prismic-rich-text :field="slice.primary.description" />
             </div>
             <div data-animation-box class="delay-500">
               <button

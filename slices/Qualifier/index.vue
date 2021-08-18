@@ -12,9 +12,7 @@
             >
           </h3>
           <div class="pt-4 pb-16">
-            <p>
-              <prismic-rich-text :field="slice.primary.tagDescription" />
-            </p>
+            <prismic-rich-text :field="slice.primary.tagDescription" />
           </div>
 
           <div class="flex flex-wrap justify-center">

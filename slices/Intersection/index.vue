@@ -11,11 +11,7 @@
           -translate-x-1/2 -translate-y-1/2
         "
       >
-        <prismic-image
-          data-parallax
-          class="w-full"
-          :field="slice.primary.image"
-        />
+        <prismic-image class="w-full" :field="slice.primary.image" />
       </div>
 
       <div
