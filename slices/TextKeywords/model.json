@@ -1,0 +1,50 @@
+{
+  "id": "text_keywords",
+  "type": "SharedSlice",
+  "name": "TextKeywords",
+  "description": "TextKeywords",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextKeywords",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "text-left": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Left Text",
+            "placeholder": "Text to show as left grid item.",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,strong,em,hyperlink,list-item,o-list-item"
+          }
+        },
+        "text-right": {
+          "config": {
+            "label": "Right Text",
+            "placeholder": "text to show as right grid item.",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,strong,em,hyperlink,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "keywords": {
+          "config": {
+            "label": "Keywords",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

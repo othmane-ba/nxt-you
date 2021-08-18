@@ -1,4 +1,5 @@
 import pwa from './pwa.config'
+import smConfig from './sm.json'
 
 const { getStoriesPaths } = require('slice-machine-ui/helpers/storybook')
 
@@ -58,7 +59,6 @@ export default {
     googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
     dev: process.env.NODE_ENV !== 'production',
   },
-  css: ['vue-essential-slices/src/styles/styles.scss'],
   plugins: [
     '~/plugins/vue-awesome-swiper.client.js',
     '~/plugins/vue-check-view.js',
@@ -71,7 +71,7 @@ export default {
   components: {
     dirs: ['~/components/home', '~/components/layout', '~/components/shared'],
   },
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/device',
@@ -80,10 +80,9 @@ export default {
     '@nuxtjs/toast',
     '@nuxtjs/pwa',
     'cookie-universal-nuxt',
-    '@nuxtjs/prismic',
   ],
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/prismic'],
+
+  modules: ['@nuxtjs/axios', '@nuxtjs/prismic', 'nuxt-sm'],
   axios: {
     baseURL: process.env.BASE_URL,
     headers: {
@@ -102,9 +101,10 @@ export default {
   },
 
   prismic: {
-    endpoint: 'https://nxtyou.cdn.prismic.io/api/v2',
+    endpoint: smConfig.apiEndpoint,
     modern: true,
     apiOptions: {
+      accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       routes: [
         {
           type: 'page',

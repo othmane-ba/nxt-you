@@ -1,0 +1,33 @@
+{
+  "id": "image_caption_grid",
+  "type": "SharedSlice",
+  "name": "ImageCaptionGrid",
+  "description": "ImageCaptionGrid",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ImageCaptionGrid",
+      "primary": {},
+      "items": {
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "caption": {
+          "config": {
+            "label": "Caption",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

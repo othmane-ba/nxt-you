@@ -1,0 +1,11 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "feature_slider",
+    "items": [],
+    "primary": {
+      "autoplaySpeed": 848
+    }
+  }
+]

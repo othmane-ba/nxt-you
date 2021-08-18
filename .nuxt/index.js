@@ -13,9 +13,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_43c2c5b6 from 'nuxt_plugin_plugin_43c2c5b6' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_smresolver_514cc237 from 'nuxt_plugin_smresolver_514cc237' // Source: .\\prismic\\sm-resolver.js (mode: 'all')
 import nuxt_plugin_prismic_e1396b9e from 'nuxt_plugin_prismic_e1396b9e' // Source: .\\prismic\\plugins\\prismic.js (mode: 'all')
 import nuxt_plugin_prismiccomponents_2462af9a from 'nuxt_plugin_prismiccomponents_2462af9a' // Source: .\\prismic\\plugins\\prismic-components.js (mode: 'all')
+import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_b0412efe from 'nuxt_plugin_cookieuniversalnuxt_b0412efe' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_metaplugin_429ba596 from 'nuxt_plugin_metaplugin_429ba596' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_394c5aae from 'nuxt_plugin_iconplugin_394c5aae' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
@@ -196,8 +197,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_43c2c5b6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_4946ca4e === 'function') {
-    await nuxt_plugin_axios_4946ca4e(app.context, inject)
+  if (typeof nuxt_plugin_smresolver_514cc237 === 'function') {
+    await nuxt_plugin_smresolver_514cc237(app.context, inject)
   }
 
   if (typeof nuxt_plugin_prismic_e1396b9e === 'function') {
@@ -206,6 +207,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_prismiccomponents_2462af9a === 'function') {
     await nuxt_plugin_prismiccomponents_2462af9a(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_4946ca4e === 'function') {
+    await nuxt_plugin_axios_4946ca4e(app.context, inject)
   }
 
   if (typeof nuxt_plugin_cookieuniversalnuxt_b0412efe === 'function') {

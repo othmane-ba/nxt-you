@@ -8,6 +8,7 @@ const _cb861f22 = () => interopDefault(import('.\\prismic\\pages\\preview.vue' /
 const _3bba6025 = () => interopDefault(import('..\\pages\\privacy.vue' /* webpackChunkName: "pages/privacy" */))
 const _c7bfa838 = () => interopDefault(import('..\\pages\\terms.vue' /* webpackChunkName: "pages/terms" */))
 const _1bbb24a2 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _e721a478 = () => interopDefault(import('..\\pages\\_uid.vue' /* webpackChunkName: "pages/_uid" */))
 
 const emptyFn = () => {}
 
@@ -36,6 +37,10 @@ export const routerOptions = {
     path: "/",
     component: _1bbb24a2,
     name: "index"
+  }, {
+    path: "/:uid",
+    component: _e721a478,
+    name: "uid"
   }],
 
   fallback: false

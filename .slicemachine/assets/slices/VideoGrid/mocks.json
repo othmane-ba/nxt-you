@@ -1,0 +1,16 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "video_grid",
+    "items": [
+      {
+        "video": "benchmark cutting-edge deliverables"
+      },
+      {
+        "video": "extend seamless interfaces"
+      }
+    ],
+    "primary": {}
+  }
+]

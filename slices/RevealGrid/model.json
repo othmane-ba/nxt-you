@@ -1,0 +1,75 @@
+{
+  "id": "reveal_grid",
+  "type": "SharedSlice",
+  "name": "RevealGrid",
+  "description": "RevealGrid",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "RevealGrid",
+      "primary": {},
+      "items": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item"
+          },
+          "type": "StructuredText"
+        },
+        "imageFirst": {
+          "config": {
+            "label": "First image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "imageFirstReveal": {
+          "config": {
+            "label": "First Image Reveal",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "imageSecond": {
+          "config": {
+            "label": "Second Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "imageSecondReveal": {
+          "config": {
+            "label": "Second Image Reveal",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "rtl": {
+          "config": {
+            "label": "Right to Left",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

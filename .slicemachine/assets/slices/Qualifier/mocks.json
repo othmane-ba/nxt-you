@@ -1,0 +1,33 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "qualifier",
+    "items": [
+      {
+        "tag": "aggregate enterprise web services"
+      },
+      {
+        "tag": "seize leading-edge e-markets"
+      },
+      {
+        "tag": "utilize compelling e-commerce"
+      },
+      {
+        "tag": "implement cross-media interfaces"
+      }
+    ],
+    "primary": {
+      "tagTitle": "embrace magnetic ROI",
+      "tagDescription": [
+        {
+          "type": "paragraph",
+          "text": "Deserunt ut minim cillum veniam.",
+          "spans": []
+        }
+      ],
+      "contactTitle": "brand bleeding-edge experiences",
+      "submitLabel": "enhance scalable blockchains"
+    }
+  }
+]
