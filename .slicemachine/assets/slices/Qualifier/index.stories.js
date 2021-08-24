@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"qualifier","items":[{"tag":"aggregate enterprise web services"},{"tag":"seize leading-edge e-markets"},{"tag":"utilize compelling e-commerce"},{"tag":"implement cross-media interfaces"}],"primary":{"tagTitle":"embrace magnetic ROI","tagDescription":[{"type":"paragraph","text":"Deserunt ut minim cillum veniam.","spans":[]}],"contactTitle":"brand bleeding-edge experiences","submitLabel":"enhance scalable blockchains"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"qualifier","items":[{"tag":"mesh dynamic mindshare"},{"tag":"disintermediate best-of-breed content"},{"tag":"productize enterprise architectures"},{"tag":"visualize real-time bandwidth"},{"tag":"facilitate magnetic markets"},{"tag":"unleash back-end e-tailers"}],"primary":{"tagTitle":"revolutionize virtual deliverables","tagDescription":[{"type":"paragraph","text":"Cupidatat laboris aliquip dolore amet anim proident ut irure velit voluptate qui deserunt.","spans":[]}],"contactTitle":"redefine virtual relationships","submitLabel":"incubate next-generation web-readiness"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

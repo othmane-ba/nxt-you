@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_keywords","items":[],"primary":{"title":"orchestrate cutting-edge markets","text-left":[{"type":"paragraph","text":"Nisi proident duis occaecat. Laboris et nisi cillum enim cupidatat magna duis aliquip laborum. Magna velit deserunt dolor eu.","spans":[]}],"text-right":[{"type":"paragraph","text":"Commodo velit labore reprehenderit cillum est pariatur excepteur laborum. Id in exercitation proident consequat cillum dolore ex ullamco fugiat minim adipisicing nostrud. Est aliqua reprehenderit enim.","spans":[]}],"keywords":"implement B2B action-items"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_keywords","items":[],"primary":{"title":"generate visionary schemas","text-left":[{"type":"paragraph","text":"Irure aliquip proident tempor ea ad adipisicing commodo adipisicing ullamco do enim sint duis ea. Duis tempor id elit reprehenderit qui eiusmod in.","spans":[]}],"text-right":[{"type":"paragraph","text":"Esse deserunt excepteur pariatur aute eiusmod est amet culpa aute deserunt consequat qui mollit.","spans":[]}],"keywords":"iterate visionary models"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

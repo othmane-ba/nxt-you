@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "homepage": {}
+    "homepage": {},
+    "page": {}
   },
   "slices": {
     "TextKeywords": {},
@@ -15,12 +16,9 @@
     "ImageCaptionGrid": {},
     "ImageGrid": {},
     "Intersection": {},
-    "BorderIconList": {
-      "default-slice": {
-        "primary": {},
-        "items": {}
-      }
-    },
-    "Qualifier": {}
+    "BorderIconList": {},
+    "Qualifier": {},
+    "PageHeader": {},
+    "TextContainer": {}
   }
 }

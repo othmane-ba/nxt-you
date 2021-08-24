@@ -1,8 +1,8 @@
-import MyComponent from '../../../../slices/StickyVideo';
+import MyComponent from '../../../../slices/TextContainer';
 import SliceZone from 'vue-slicezone'
 
 export default {
-  title: 'slices/StickyVideo'
+  title: 'slices/TextContainer'
 }
 
 
@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"sticky_video","items":[],"primary":{"video":"deploy transparent applications"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_container","items":[],"primary":{"text":[{"type":"paragraph","text":"Duis et incididunt dolor laboris.","spans":[]}]},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

@@ -7,10 +7,12 @@
 }
 
 .title,
-.title-md {
+.title-md,
+.text-container h2 {
   @apply text-3xl lg:text-4xl font-bold uppercase;
 }
 
-.title-sm {
+.title-sm,
+.text-container h3 {
   @apply text-xl lg:text-2xl font-semibold;
 }

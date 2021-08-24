@@ -14,12 +14,4 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-h2 {
-  @apply my-4;
-}
-
-h3 {
-  @apply my-2;
-}
-</style>
+<style lang="postcss" scoped></style>

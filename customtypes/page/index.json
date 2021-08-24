@@ -13,9 +13,58 @@
       },
       "slices": {
         "type": "Slices",
-        "fieldset": "Slice zone",
+        "fieldset": "Slice Zone",
         "config": {
-          "choices": {}
+          "choices": {
+            "border_icon_list": {
+              "type": "SharedSlice"
+            },
+            "border_slogan": {
+              "type": "SharedSlice"
+            },
+            "feature_slider": {
+              "type": "SharedSlice"
+            },
+            "image_grid": {
+              "type": "SharedSlice"
+            },
+            "image_caption_grid": {
+              "type": "SharedSlice"
+            },
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "intersection": {
+              "type": "SharedSlice"
+            },
+            "marketing_slider": {
+              "type": "SharedSlice"
+            },
+            "number_text_action": {
+              "type": "SharedSlice"
+            },
+            "reveal_grid": {
+              "type": "SharedSlice"
+            },
+            "qualifier": {
+              "type": "SharedSlice"
+            },
+            "page_header": {
+              "type": "SharedSlice"
+            },
+            "sticky_video": {
+              "type": "SharedSlice"
+            },
+            "text_container": {
+              "type": "SharedSlice"
+            },
+            "text_keywords": {
+              "type": "SharedSlice"
+            },
+            "video_grid": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },

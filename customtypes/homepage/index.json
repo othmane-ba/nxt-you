@@ -57,7 +57,7 @@
       }
     },
     "SEO Metadata": {
-      "meta_title": {
+      "metaTitle": {
         "type": "Text",
         "config": {
           "label": "Meta Title",
