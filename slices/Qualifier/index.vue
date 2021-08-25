@@ -2,11 +2,11 @@
   <section class="qualifier">
     <div
       class="container mx-auto px-4 md:px-36 text-center"
-      v-view.once="$animate.box"
+      v-animate
     >
       <form class="pb-16" @submit.prevent="submit">
         <article>
-          <h3 class="title text-center" v-view.once="$animate.text">
+          <h3 class="title text-center"  v-animate:text>
             {{ slice.primary.tagTitle }}
           </h3>
           <div class="pt-4 pb-16">
@@ -25,7 +25,7 @@
           </div>
         </article>
         <article class="pt-16">
-          <h3 class="title text-center" v-view.once="$animate.text">
+          <h3 class="title text-center"  v-animate:text>
             {{ slice.primary.contactTitle }}
           </h3>
 

@@ -31,9 +31,9 @@
           </div>
           <div
             class="relative space-y-4 p-4 pt-16 md:px-16"
-            v-view.once="$animate.children"
+             v-animate:children
           >
-            <h3 class="title" v-view.once="$animate.text">
+            <h3 class="title"  v-animate:text>
               {{ slice.primary.title }}
             </h3>
             <div>

@@ -12,6 +12,5 @@ You can directly use them in pages and other components without the need to impo
 - `<Footer>` | `<footer>` (components/layout/Footer.vue)
 - `<PageLoader>` | `<page-loader>` (components/layout/PageLoader.vue)
 - `<Pointer>` | `<pointer>` (components/layout/Pointer.vue)
-- `<PageHeader>` | `<page-header>` (components/shared/PageHeader.vue)
 - `<RangeSlider>` | `<range-slider>` (components/shared/RangeSlider.vue)
 - `<Tag>` | `<tag>` (components/shared/Tag.vue)

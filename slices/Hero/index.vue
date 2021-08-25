@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="relative h-screen w-full flex items-center justify-center">
-      <div class="container px-4" v-view.once="$animate.children">
+      <div class="container px-4"  v-animate:children>
         <prismic-image
           class="w-40 2xl: w-52 mx-auto"
           :field="slice.primary.logo"

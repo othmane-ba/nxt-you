@@ -3,12 +3,12 @@
     <div class="container max-w-6xl mx-auto px-4">
       <div
         class="grid grid-cols-1 lg:grid-cols-2 gap-8"
-        v-view.once="$animate.children"
+         v-animate:children
       >
         <div class="lg:col-span-2">
           <h2
             class="title-lg text-center text-blue block w-full max-w-md mx-auto"
-            v-view.once="$animate.text"
+             v-animate:text
           >
             {{ slice.primary.title }}
           </h2>

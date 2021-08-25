@@ -7124,6 +7124,11 @@ enquirer@^2.3.5:
   dependencies:
     ansi-colors "^4.1.1"
 
+enter-view@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/enter-view/-/enter-view-2.0.1.tgz#d7ae6e93cccfd72548c7b2fb41c93224c5b57d80"
+  integrity sha512-/+oieMLxMI793kCTFG2vEgtGcjUqNyneBerhF+40ZVG8RtwGgWTDoC3RGfW5dKO6aacIKIgV4xqAp6bpjoRvjA==
+
 entities@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
@@ -16661,11 +16666,6 @@ vue-awesome-swiper@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/vue-awesome-swiper/-/vue-awesome-swiper-4.1.1.tgz#8f7ab221ad003021d756b86aa618f429924900fe"
   integrity sha512-50um10t6N+lJaORkpwSi1wWuMmBI1sgFc9Znsi5oUykw2cO5DzLaBHcO2JNX21R+Ue4TGoIJDhhxjBHtkFrTEQ==
-
-vue-check-view@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/vue-check-view/-/vue-check-view-0.3.0.tgz#813509a73916dd99483eaa4b1b24ca189c50ca7b"
-  integrity sha512-2IR2m4MCgOG/9UQaIn7cvvqbDcvUmPavun8nBMieRxGbhqvlUorjLIwJqvuFXruBO73HXXbCcrVKxnGr4ub5ag==
 
 vue-client-only@^2.0.0:
   version "2.1.0"

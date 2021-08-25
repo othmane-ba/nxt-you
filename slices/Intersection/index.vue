@@ -1,6 +1,6 @@
 <template>
   <section class="intersection m-0">
-    <div class="relative h-64 w-full overflow-hidden" v-view.once>
+    <div class="relative h-64 w-full overflow-hidden"  >
       <div
         class="
           absolute

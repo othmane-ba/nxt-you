@@ -60,15 +60,20 @@ export default {
     googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
     dev: process.env.NODE_ENV !== 'production',
   },
+
+  css: [
+    // Load a Node.js module directly (here it's a Sass file)
+    'splitting/dist/splitting.css',
+  ],
+
   plugins: [
     '~/plugins/vue-awesome-swiper.client.js',
-    '~/plugins/vue-check-view.js',
     '~/plugins/simple-parallax.client.js',
     '~/plugins/vue-range-component.client.js',
     '~/plugins/vuelidate.js',
     '~/plugins/jsonld.js',
     '~/plugins/vue-gtag.client.js',
-    '~/plugins/animate.js',
+    '~/plugins/animate.client.js',
   ],
   components: {
     dirs: ['~/components/home', '~/components/layout', '~/components/shared'],

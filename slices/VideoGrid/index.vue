@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 lg:px-16">
       <div
         class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2"
-        v-view.once="$animate.children"
+         v-animate:children
       >
         <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
           <div

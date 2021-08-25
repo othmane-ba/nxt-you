@@ -24,7 +24,6 @@
         </li>
         <li>
           <a
-            v-view.once
             href="#"
             class="
               relative
@@ -48,7 +47,7 @@
                   justify-center
                   text-blue
                 "
-                v-view.once="$animate.text"
+                 v-animate:text
               >
                 <span>This Spot</span>
                 <span>Awaits</span>

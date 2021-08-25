@@ -1,6 +1,6 @@
 <template>
   <section class="border-slogan">
-    <div class="container mx-auto px-4 lg:px-52" v-view.once="$animate.box">
+    <div class="container mx-auto px-4 lg:px-52" v-animate>
       <div
         class="relative lg:aspect-h-1 lg:aspect-w-2 border-4 border-blue-dark"
       >
@@ -38,7 +38,7 @@
           ></div>
           <p
             class="text-4xl font-bold leading-tight uppercase"
-            v-view.once="$animate.text"
+             v-animate:text
           >
             {{ slice.primary.slogan }}
           </p>

@@ -17,9 +17,6 @@
   "Pointer": {
     "description": "Auto imported from components/layout/Pointer.vue"
   },
-  "PageHeader": {
-    "description": "Auto imported from components/shared/PageHeader.vue"
-  },
   "RangeSlider": {
     "description": "Auto imported from components/shared/RangeSlider.vue"
   },

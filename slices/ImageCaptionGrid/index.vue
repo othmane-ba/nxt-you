@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 lg:px-16">
       <div
         class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-start"
-        v-view.once="$animate.children"
+        v-animate
       >
         <article
           v-for="(item, i) in slice.items"
@@ -31,7 +31,7 @@
           >
             <span
               class="text-white font-bold text-4xl uppercase"
-              v-view.once="$animate.text"
+               v-animate:text
             >
               {{ item.caption }}
             </span>

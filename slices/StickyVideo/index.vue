@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section v-animate>
     <div class="sticky-video-display" ref="wrapper">
       <div class="sticky top-0 left-0 w-full overflow-hidden">
         <div class="absolute h-full max-h-screen w-full">

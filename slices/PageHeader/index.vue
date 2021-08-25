@@ -1,9 +1,9 @@
 <template>
   <header>
-    <div class="relative h-96 w-full overflow-hidden" v-view.once>
+    <div class="relative h-96 w-full overflow-hidden">
       <div class="container mx-auto px-4 lg:px-32 h-full">
         <div class="relative flex items-center w-full h-full z-20">
-          <h1 class="title-lg" v-view.once="$animate.text">
+          <h1 class="title-lg"  v-animate:text>
             {{ slice.primary.title }}
           </h1>
         </div>
