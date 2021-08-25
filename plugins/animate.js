@@ -8,7 +8,9 @@ const AnimateText = function (el) {
     autoAlpha: 0,
     y: 20,
     skewY: 4,
-    stagger: 0.04,
+    stagger: {
+      amount: 0.6,
+    },
     ease: 'Power3.easeOut',
   })
 }
