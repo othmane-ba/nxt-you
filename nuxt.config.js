@@ -52,6 +52,7 @@ export default {
       {
         src: 'https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js',
       },
+      { src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=nxtyou' },
     ],
   },
   env: {
