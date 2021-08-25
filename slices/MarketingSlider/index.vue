@@ -2,8 +2,7 @@
   <section class="marketing-slider">
     <div
       class="container mx-auto px-4 lg:px-32 overflow-hidden"
-      v-view.once
-      data-animation-box
+      v-view.once="$animate.box"
     >
       <div
         class="overflow-hidden w-full"

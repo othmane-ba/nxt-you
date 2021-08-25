@@ -13,10 +13,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_43c2c5b6 from 'nuxt_plugin_plugin_43c2c5b6' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_smresolver_514cc237 from 'nuxt_plugin_smresolver_514cc237' // Source: .\\prismic\\sm-resolver.js (mode: 'all')
 import nuxt_plugin_prismic_e1396b9e from 'nuxt_plugin_prismic_e1396b9e' // Source: .\\prismic\\plugins\\prismic.js (mode: 'all')
 import nuxt_plugin_prismiccomponents_2462af9a from 'nuxt_plugin_prismiccomponents_2462af9a' // Source: .\\prismic\\plugins\\prismic-components.js (mode: 'all')
-import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_b0412efe from 'nuxt_plugin_cookieuniversalnuxt_b0412efe' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_metaplugin_429ba596 from 'nuxt_plugin_metaplugin_429ba596' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_394c5aae from 'nuxt_plugin_iconplugin_394c5aae' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
@@ -30,6 +30,7 @@ import nuxt_plugin_vuerangecomponentclient_12480e64 from 'nuxt_plugin_vuerangeco
 import nuxt_plugin_vuelidate_4be431c8 from 'nuxt_plugin_vuelidate_4be431c8' // Source: ..\\plugins\\vuelidate.js (mode: 'all')
 import nuxt_plugin_jsonld_2ff766e1 from 'nuxt_plugin_jsonld_2ff766e1' // Source: ..\\plugins\\jsonld.js (mode: 'all')
 import nuxt_plugin_vuegtagclient_0490790e from 'nuxt_plugin_vuegtagclient_0490790e' // Source: ..\\plugins\\vue-gtag.client.js (mode: 'client')
+import nuxt_plugin_animate_c5dd6128 from 'nuxt_plugin_animate_c5dd6128' // Source: ..\\plugins\\animate.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -197,6 +198,10 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_43c2c5b6(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_axios_4946ca4e === 'function') {
+    await nuxt_plugin_axios_4946ca4e(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_smresolver_514cc237 === 'function') {
     await nuxt_plugin_smresolver_514cc237(app.context, inject)
   }
@@ -207,10 +212,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_prismiccomponents_2462af9a === 'function') {
     await nuxt_plugin_prismiccomponents_2462af9a(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_axios_4946ca4e === 'function') {
-    await nuxt_plugin_axios_4946ca4e(app.context, inject)
   }
 
   if (typeof nuxt_plugin_cookieuniversalnuxt_b0412efe === 'function') {
@@ -265,6 +266,10 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_vuegtagclient_0490790e(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_animate_c5dd6128 === 'function') {
+    await nuxt_plugin_animate_c5dd6128(app.context, inject)
+  }
+
   // Lock enablePreview in context
   if (process.static && process.client) {
     app.context.enablePreview = function () {
@@ -274,12 +279,14 @@ async function createApp(ssrContext, config = {}) {
 
   // Wait for async component to be resolved first
   await new Promise((resolve, reject) => {
-    const { route } = router.resolve(app.context.route.fullPath)
-    // Ignore 404s rather than blindly replacing URL
-    if (!route.matched.length && process.client) {
-      return resolve()
+    // Ignore 404s rather than blindly replacing URL in browser
+    if (process.client) {
+      const { route } = router.resolve(app.context.route.fullPath)
+      if (!route.matched.length) {
+        return resolve()
+      }
     }
-    router.replace(route, resolve, (err) => {
+    router.replace(app.context.route.fullPath, resolve, (err) => {
       // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
       if (!err._isRouter) return reject(err)
       if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()

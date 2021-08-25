@@ -1,15 +1,13 @@
 <template>
   <section class="qualifier">
-    <div class="container mx-auto px-4 md:px-36 text-center" v-view.once>
+    <div
+      class="container mx-auto px-4 md:px-36 text-center"
+      v-view.once="$animate.box"
+    >
       <form class="pb-16" @submit.prevent="submit">
         <article>
-          <h3 class="title text-center">
-            <span
-              :data-animation-text="slice.primary.tagTitle"
-              data-animation-text-white=""
-            >
-              {{ slice.primary.tagTitle }}</span
-            >
+          <h3 class="title text-center" v-view.once="$animate.text">
+            {{ slice.primary.tagTitle }}
           </h3>
           <div class="pt-4 pb-16">
             <prismic-rich-text :field="slice.primary.tagDescription" />
@@ -27,13 +25,8 @@
           </div>
         </article>
         <article class="pt-16">
-          <h3 class="title text-center">
-            <span
-              data-animation-text="Kontakt aufnehmen"
-              data-animation-text-white
-            >
-              {{ slice.primary.contactTitle }}</span
-            >
+          <h3 class="title text-center" v-view.once="$animate.text">
+            {{ slice.primary.contactTitle }}
           </h3>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 pt-16 gap-8">

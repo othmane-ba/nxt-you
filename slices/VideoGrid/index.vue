@@ -1,14 +1,12 @@
 <template>
   <section class="video-grid">
     <div class="container mx-auto px-4 lg:px-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2">
-        <div
-          v-for="(item, i) in slice.items"
-          :key="`slice-item-${i}`"
-          v-view.once
-        >
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2"
+        v-view.once="$animate.children"
+      >
+        <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
           <div
-            data-animation-box
             class="
               video-item
               aspect-h-1

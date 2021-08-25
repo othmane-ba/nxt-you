@@ -1,9 +1,8 @@
 <template>
   <section class="border-slogan">
-    <div class="container mx-auto px-4 lg:px-52" v-view.once>
+    <div class="container mx-auto px-4 lg:px-52" v-view.once="$animate.box">
       <div
         class="relative lg:aspect-h-1 lg:aspect-w-2 border-4 border-blue-dark"
-        data-animation-box
       >
         <div
           class="
@@ -37,7 +36,10 @@
               pointer-events-none
             "
           ></div>
-          <p class="text-4xl font-bold leading-tight uppercase">
+          <p
+            class="text-4xl font-bold leading-tight uppercase"
+            v-view.once="$animate.text"
+          >
             {{ slice.primary.slogan }}
           </p>
         </div>
@@ -62,11 +64,12 @@
         >
           <prismic-image
             :field="item.image"
-            data-parallax
             v-for="(item, i) in slice.items"
             :key="`slice-item-${i}`"
-            :data-scale="1.6 * (i % 2 === 0 ? 1 : 1.2)"
-            data-overflow
+            v-simple-parallax="{
+              overflow: true,
+              scale: 1.6 * (i % 2 === 0 ? 1 : 1.2),
+            }"
             :class="{
               'relative w-full h-auto lg:h-full lg:w-auto': i <= 0,
               'absolute top-0 left-0 h-full w-full object-contain z-10': i > 0,

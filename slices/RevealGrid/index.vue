@@ -1,13 +1,15 @@
 <template>
   <section class="reveal-grid">
-    <div class="container mx-auto px-4 lg:px-32 grid gap-4">
+    <div
+      class="container mx-auto px-4 lg:px-32 grid gap-4"
+      v-view.once="$animate.children"
+    >
       <div
         class="grid grid-cols-2 lg:grid-cols-3 gap-4"
         v-for="(item, i) in slice.items"
         :key="`slice-item-${i}`"
       >
         <div
-          v-view.once
           class="
             flex flex-col
             justify-center
@@ -17,16 +19,16 @@
             lg:col-span-1
           "
           :class="{ 'lg:order-last lg:text-right': item.rtl }"
-          data-animation-box
         >
           <div>
-            <h3 class="font-bold text-2xl uppercase my-2">{{ item.title }}</h3>
+            <h3 class="font-bold text-2xl text-blue uppercase my-2">
+              {{ item.title }}
+            </h3>
             <prismic-rich-text :field="item.description" />
           </div>
         </div>
         <div
           data-pointer="right"
-          v-view.once
           class="
             hover-image-box
             relative
@@ -34,8 +36,9 @@
             w-full
             overflow-hidden
           "
-          v-for="image in ['imageFirst', 'imageSecond']"
-          data-animation-box
+          v-for="(image, j) in ['imageFirst', 'imageSecond']"
+          :key="j"
+          v-simple-parallax="{ overflow: true }"
         >
           <prismic-image
             class="

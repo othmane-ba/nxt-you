@@ -1,7 +1,10 @@
 <template>
   <section class="image-caption-grid">
     <div class="container mx-auto px-4 lg:px-16">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-start">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-start"
+        v-view.once="$animate.children"
+      >
         <article
           v-for="(item, i) in slice.items"
           :key="`slice-item-${i}`"
@@ -10,12 +13,17 @@
             'lg:text-right pl-4 lg:pl-32': i % 2 === 0,
             'lg:text-left pl-4 lg:pl-0 lg:pr-32': i % 2 !== 0,
           }"
-          v-view.once
-          data-animation-box
         >
-          <prismic-image class="w-full h-auto" :field="item.image" />
+          <prismic-image
+            class="w-full h-auto"
+            :field="item.image"
+            v-simple-parallax="{
+              overflow: true,
+              scale: i % 2 <= 0 ? 1.25 : 1.15,
+            }"
+          />
           <div
-            class="absolute inline-block bottom-0 pb-8 max-w-56 overflow-hidden"
+            class="absolute inline-block bottom-0 pb-8 overflow-hidden"
             :class="{
               'left-0': i % 2 === 0,
               'left-0 lg:left-auto lg:right-0': i % 2 !== 0,
@@ -23,9 +31,7 @@
           >
             <span
               class="text-white font-bold text-4xl uppercase"
-              data-parallax
-              data-overflow
-              data-orientation="down"
+              v-view.once="$animate.text"
             >
               {{ item.caption }}
             </span>
@@ -51,4 +57,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="postcss">
+.image-caption-grid .whitespace::after {
+  content: '\a';
+  white-space: pre;
+}
+</style>

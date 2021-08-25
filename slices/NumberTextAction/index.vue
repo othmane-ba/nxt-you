@@ -1,19 +1,17 @@
 <template>
   <section class="number-text-action">
-    <div class="container mx-auto md:px-36" v-view.once>
+    <div class="container mx-auto md:px-36">
       <article>
         <div
           class="relative max-w-2xl"
           :class="{ 'text-right ml-auto': slice.primary.rtl }"
         >
           <div
-            data-animation-box
             class="absolute left-0 top-0"
             :class="{ 'left-none right-0': slice.primary.rtl }"
           >
             <div
-              data-parallax
-              data-overflow
+              v-simple-parallax="{ overflow: true }"
               class="
                 text-10xl
                 leading-none
@@ -31,19 +29,17 @@
               {{ numberTwoDigit }}
             </div>
           </div>
-          <div class="relative space-y-4 p-4 pt-16 md:px-16">
-            <h3 class="title">
-              <span
-                :data-animation-text="slice.primary.title"
-                data-animation-text-white=""
-              >
-                {{ slice.primary.title }}</span
-              >
+          <div
+            class="relative space-y-4 p-4 pt-16 md:px-16"
+            v-view.once="$animate.children"
+          >
+            <h3 class="title" v-view.once="$animate.text">
+              {{ slice.primary.title }}
             </h3>
-            <div data-animation-box class="delay-300">
+            <div>
               <prismic-rich-text :field="slice.primary.description" />
             </div>
-            <div data-animation-box class="delay-500">
+            <div>
               <button
                 class="w-full py-2 px-4 rounded border max-w-xs"
                 data-pointer="large"

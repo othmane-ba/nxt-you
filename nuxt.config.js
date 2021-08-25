@@ -67,6 +67,7 @@ export default {
     '~/plugins/vuelidate.js',
     '~/plugins/jsonld.js',
     '~/plugins/vue-gtag.client.js',
+    '~/plugins/animate.js',
   ],
   components: {
     dirs: ['~/components/home', '~/components/layout', '~/components/shared'],
@@ -80,9 +81,11 @@ export default {
     '@nuxtjs/toast',
     '@nuxtjs/pwa',
     'cookie-universal-nuxt',
+    '@nuxtjs/prismic',
+    'nuxt-sm',
   ],
 
-  modules: ['@nuxtjs/axios', '@nuxtjs/prismic', 'nuxt-sm'],
+  modules: ['@nuxtjs/axios'],
   axios: {
     baseURL: process.env.BASE_URL,
     headers: {
@@ -114,7 +117,7 @@ export default {
     },
   },
   build: {
-    transpile: ['vue-slicezone', 'nuxt-sm'],
+    transpile: ['vue-slicezone', 'nuxt-sm', 'splitting'],
   },
   storybook: {
     stories: [...getStoriesPaths()],

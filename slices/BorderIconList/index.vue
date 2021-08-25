@@ -10,7 +10,7 @@
             class="flex align-middle justify-center p-4"
             data-pointer="large"
           >
-            <div class="relative w-full aspect-h-2 aspect-w-3">
+            <div class="relative w-full aspect-h-3 md:aspect-h-2 aspect-w-3">
               <prismic-image
                 :field="item.image"
                 class="client-list__item__image"
@@ -37,22 +37,22 @@
             "
             data-pointer="large"
           >
-            <div class="w-full aspect-h-2 aspect-w-3">
+            <div class="w-full aspect-h-3 md:aspect-h-2 aspect-w-3">
               <div
                 class="
-                  text-xs
-                  lg:text-base
                   text-center
                   uppercase
                   font-bold
                   flex flex-col
                   items-center
                   justify-center
+                  text-blue
                 "
+                v-view.once="$animate.text"
               >
-                <div data-animation-text="This Spot">This Spot</div>
-                <div class="delay-300" data-animation-text="Awaits">Awaits</div>
-                <div class="delay-500" data-animation-text="You">You</div>
+                <span>This Spot</span>
+                <span>Awaits</span>
+                <span>You</span>
               </div>
             </div>
           </a>
