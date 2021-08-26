@@ -1,14 +1,11 @@
 <template>
-  <section class="section">
+  <section class="text-keywords-section">
     <div class="container max-w-6xl mx-auto px-4">
-      <div
-        class="grid grid-cols-1 lg:grid-cols-2 gap-8"
-         v-animate:children
-      >
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" v-animate:children>
         <div class="lg:col-span-2">
           <h2
             class="title-lg text-center text-blue block w-full max-w-md mx-auto"
-             v-animate:text
+            v-animate:text
           >
             {{ slice.primary.title }}
           </h2>
@@ -59,4 +56,30 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="postcss">
+.text-keywords-section h2 .word:last-of-type {
+  counter-reset: text-bg;
+}
+
+.text-keywords-section h2 .word:last-of-type .char:nth-child(1) {
+  @apply text-yellow-800;
+}
+.text-keywords-section h2 .word:last-of-type .char:nth-child(2) {
+  @apply text-yellow-700;
+}
+.text-keywords-section h2 .word:last-of-type .char:nth-child(3) {
+  @apply text-yellow-600;
+}
+.text-keywords-section h2 .word:last-of-type .char:nth-child(4) {
+  @apply text-yellow-500;
+}
+.text-keywords-section h2 .word:last-of-type .char:nth-child(5) {
+  @apply text-red-600;
+}
+.text-keywords-section h2 .word:last-of-type .char:nth-child(6) {
+  @apply text-red-700;
+}
+.text-keywords-section h2 .word:last-of-type .char:nth-child(7) {
+  @apply text-red-800;
+}
+</style>

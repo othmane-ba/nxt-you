@@ -124,14 +124,6 @@ export default {
   },
   build: {
     transpile: ['vue-slicezone', 'nuxt-sm', 'splitting'],
-    terser: {
-      // https://github.com/terser/terser#compress-options
-      terserOptions: {
-        compress: {
-          drop_console: true,
-        },
-      },
-    },
   },
   storybook: {
     stories: [...getStoriesPaths()],

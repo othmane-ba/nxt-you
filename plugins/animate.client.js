@@ -4,12 +4,11 @@ import Animation from '~/assets/scripts/animation'
 
 Vue.directive('animate', {
   inserted(el, binding) {
-    console.log('binding.arg', binding.arg)
     const a = new Animation(el, binding.arg || 'box')
     enterView({
       selector: [el],
       enter: () => a.start(),
-      offset: 0.125,
+      offset: 0.25,
       once: true,
     })
   },
