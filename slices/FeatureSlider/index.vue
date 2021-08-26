@@ -1,160 +1,171 @@
 <template>
   <section class="feature-slider">
     <div
-      class="container mx-auto px-4 lg:px-16 overflow-hidden"
+      class="container mx-auto p-4 lg:p-16 overflow-hidden relative"
       v-animate
     >
       <div>
-        <div
-          class="overflow-hidden w-full"
-          v-swiper="options"
-          :auto-destroy="true"
-          @ready="onReady"
-        >
-          <div class="swiper-wrapper">
-            <div
-              v-for="(feature, index) in features"
-              class="swiper-slide"
-              :key="index"
-            >
-              <div class="w-full space-y-8 lg:space-y-16">
-                <h4 class="title text-center">
-                  {{ feature.title }}
-                </h4>
+        <div class="relative overflow-hidden w-full z-20">
+          <div v-swiper="options" :auto-destroy="true" @ready="onReady">
+            <div class="swiper-wrapper">
+              <div
+                v-for="(feature, index) in features"
+                class="swiper-slide"
+                :key="index"
+              >
+                <div class="w-full space-y-8 lg:space-y-16">
+                  <h4 class="title text-center">
+                    {{ feature.title }}
+                  </h4>
 
-                <div
-                  class="relative bg-gray-400 max-w-xl mx-auto mb-4 w-full h-px"
-                >
                   <div
-                    data-gsap-target="featureSlider"
-                    class="absolute bg-white top-0 left-0 h-full w-0"
-                  ></div>
-                </div>
-
-                <div
-                  class="
-                    mx-auto
-                    max-w-4xl
-                    grid grid-cols-1
-                    gap-4
-                    lg:grid-cols-2 lg:gap-8
-                  "
-                >
-                  <div>
-                    <p
-                      class="font-bold uppercase lg:text-2xl"
-                      :key="feature.title"
-                    >
-                      {{ feature.intro }}
-                    </p>
-                  </div>
-                  <div>
-                    <p>
-                      {{ feature.description }}
-                    </p>
-                  </div>
-                </div>
-                <div class="relative rounded-lg w-full overflow-hidden">
-                  <ul
                     class="
                       relative
+                      bg-gray-400
+                      max-w-xl
+                      mx-auto
+                      mb-4
                       w-full
-                      bg-black bg-opacity-90
-                      grid grid-cols-2
-                      lg:grid-cols-5
-                      gap-4
-                      z-10
-                      p-4
-                      lg:py-24
-                      2xl:gap-12 2xl:p-12 2xl:py-24
+                      h-px
                     "
                   >
-                    <li
-                      class="block w-full"
-                      v-for="(service, j) of feature.services"
-                      :key="index + j"
-                    >
-                      <a
-                        class="
-                          relative
-                          block
-                          w-full
-                          border-4 border-transparent
-                          rounded-xl
-                          transition-all
-                          duration-700
-                          hover:border-gray-100
-                          overflow-hidden
-                        "
-                        data-pointer="large"
-                      >
-                        <div class="aspect-h-1 aspect-w-1 w-full"></div>
-                        <div
-                          class="
-                            absolute
-                            inset-0
-                            flex flex-col
-                            items-center
-                            justify-center
-                            p-4
-                          "
-                        >
-                          <img
-                            class="
-                              block
-                              w-16
-                              xl:w-28
-                              h-16
-                              xl:h-28
-                              object-contain
-                            "
-                            :src="
-                              require('~/assets/images/features/' +
-                                service.icon)
-                            "
-                          />
+                    <div
+                      data-gsap-target="featureSlider"
+                      class="absolute bg-white top-0 left-0 h-full w-0"
+                    ></div>
+                  </div>
 
-                          <div class="text-center uppercase font-semibold">
-                            <span class="break-words">
-                              {{ service.title }}
-                            </span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                  <video
+                  <div
                     class="
-                      absolute
-                      inset-2/4
-                      transform
-                      -translate-x-2/4 -translate-y-2/4
-                      object-cover
-                      w-full
-                      h-full
+                      mx-auto
+                      max-w-4xl
+                      grid grid-cols-1
+                      gap-4
+                      lg:grid-cols-2 lg:gap-8
                     "
-                    muted
-                    loop
-                    autoplay="autoplay"
                   >
-                    <source
-                      :src="
-                        require('~/assets/videos/' + feature.video + '.webm')
+                    <div>
+                      <p
+                        class="font-bold uppercase lg:text-2xl"
+                        :key="feature.title"
+                      >
+                        {{ feature.intro }}
+                      </p>
+                    </div>
+                    <div>
+                      <p>
+                        {{ feature.description }}
+                      </p>
+                    </div>
+                  </div>
+                  <div class="relative w-full overflow-hidden">
+                    <ul
+                      class="
+                        relative
+                        w-full
+                        grid grid-cols-2
+                        lg:grid-cols-5
+                        gap-4
+                        z-10
+                        p-4
+                        lg:py-24
+                        2xl:gap-12 2xl:p-12 2xl:py-24
                       "
-                      type="video/webm"
-                    />
-                    <source
-                      :src="
-                        require('~/assets/videos/' + feature.video + '.mp4')
-                      "
-                      type="video/mp4"
-                    />
-                  </video>
+                    >
+                      <li
+                        class="block w-full"
+                        v-for="(service, j) of feature.services"
+                        :key="index + j"
+                      >
+                        <a
+                          class="
+                            relative
+                            block
+                            w-full
+                            border-4 border-transparent
+                            rounded-xl
+                            transition-all
+                            duration-700
+                            hover:border-gray-100
+                            overflow-hidden
+                          "
+                          data-pointer="large"
+                        >
+                          <div class="aspect-h-1 aspect-w-1 w-full"></div>
+                          <div
+                            class="
+                              absolute
+                              inset-0
+                              flex flex-col
+                              items-center
+                              justify-center
+                              p-4
+                            "
+                          >
+                            <img
+                              class="
+                                block
+                                w-16
+                                xl:w-28
+                                h-16
+                                xl:h-28
+                                object-contain
+                              "
+                              :src="
+                                require('~/assets/images/features/' +
+                                  service.icon)
+                              "
+                            />
+
+                            <div class="text-center uppercase font-semibold">
+                              <span class="break-words">
+                                {{ service.title }}
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div
+          class="
+            absolute
+            top-0
+            left-0
+            w-full
+            h-full
+            bg-gradient-to-b
+            via-black
+            from-black
+            z-10
+          "
+        >
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80"
+          ></div>
+        </div>
+
+        <CnyVideo
+          class="
+            absolute
+            top-1/2
+            left-1/2
+            w-full
+            h-full
+            transform
+            -translate-x-1/2 -translate-y-1/2
+            object-cover
+          "
+          publicId="nxt-you/performance_geewbk"
+          muted
+          loop
+          autoplay
+        ></CnyVideo>
       </div>
     </div>
   </section>
@@ -170,11 +181,10 @@ class Service {
 }
 
 class Feature {
-  constructor(title, intro, description, video, services) {
+  constructor(title, intro, description, services) {
     this.title = title
     this.intro = intro
     this.description = description
-    this.video = video
     this.services = services
   }
 }
@@ -184,7 +194,6 @@ const FEATURES = [
     'Branding',
     'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
     'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-    'branding',
     [
       new Service('Brand Strategy', 'lightbulb.png', '/seo'),
       new Service('Visual Brand Identity', 'pencil-settings.png', '/seo'),
@@ -197,7 +206,6 @@ const FEATURES = [
     'Performance',
     'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
     'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-    'performance',
     [
       new Service('Social Media Marketing', 'bar-up.png', '/seo'),
       new Service('Funnel Systeme', 'dollar-bar.png', '/seo'),
@@ -210,7 +218,6 @@ const FEATURES = [
     'Sales',
     'Der Vertrieb ist das Herz und die Seele eines jeden Unternehmens',
     'Wir arbeiten hart daran die Bedürfnisse Ihres Unternehmens zu verstehen - das ist es was wir am besten können. Wir arbeiten mit Ihnen zusammen um hochwertige, maßgeschneiderte Lösungen zu entwickeln, die sie von Punkt A zu Punkt B bringen und Ihren ROI maximieren.',
-    'branding',
     [
       new Service('Aufbau Vertriebsstruktur', 'structure.png', '/seo'),
       new Service('Organisches Funneling', 'funnel.png', '/seo'),

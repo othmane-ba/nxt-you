@@ -17,6 +17,9 @@
   "Pointer": {
     "description": "Auto imported from components/layout/Pointer.vue"
   },
+  "CnyVideo": {
+    "description": "Auto imported from components/shared/CnyVideo.vue"
+  },
   "RangeSlider": {
     "description": "Auto imported from components/shared/RangeSlider.vue"
   },

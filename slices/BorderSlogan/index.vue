@@ -34,12 +34,10 @@
               from-black
               via-transparent
               pointer-events-none
+              z-10
             "
           ></div>
-          <p
-            class="text-4xl font-bold leading-tight uppercase"
-             v-animate:text
-          >
+          <p class="text-4xl font-bold leading-tight uppercase" v-animate:text>
             {{ slice.primary.slogan }}
           </p>
         </div>

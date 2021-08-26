@@ -91,7 +91,7 @@ export default {
     'nuxt-sm',
   ],
 
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/cloudinary'],
   axios: {
     baseURL: process.env.BASE_URL,
     headers: {
@@ -99,6 +99,9 @@ export default {
         'Content-Type': 'application/json',
       },
     },
+  },
+  cloudinary: {
+    cloudName: process.env.CLOUDINARY_CLOUDNAME,
   },
   toast: {
     position: 'bottom-right',
