@@ -58,75 +58,49 @@
                       </p>
                     </div>
                   </div>
-                  <div class="relative w-full overflow-hidden">
-                    <ul
+                  <ul
+                    class="
+                      relative
+                      w-full
+                      flex flex-wrap
+                      items-center
+                      justify-around
+                      z-10
+                    "
+                  >
+                    <li
                       class="
                         relative
-                        w-full
-                        grid grid-cols-2
-                        lg:grid-cols-5
-                        gap-4
-                        z-10
+                        flex-1 flex flex-col
+                        justify-center
+                        items-center
+                        justify-center
+                        border-4 border-transparent
+                        rounded-xl
+                        transition-all
+                        hover:border-gray-100
+                        overflow-hidden
                         p-4
-                        lg:py-24
-                        2xl:gap-12 2xl:p-12 2xl:py-24
+                        space-y-4
                       "
+                      data-pointer="large"
+                      v-for="(service, j) of feature.services"
+                      :key="index + j"
                     >
-                      <li
-                        class="block w-full"
-                        v-for="(service, j) of feature.services"
-                        :key="index + j"
-                      >
-                        <a
-                          class="
-                            relative
-                            block
-                            w-full
-                            border-4 border-transparent
-                            rounded-xl
-                            transition-all
-                            duration-700
-                            hover:border-gray-100
-                            overflow-hidden
-                          "
-                          data-pointer="large"
-                        >
-                          <div class="aspect-h-1 aspect-w-1 w-full"></div>
-                          <div
-                            class="
-                              absolute
-                              inset-0
-                              flex flex-col
-                              items-center
-                              justify-center
-                              p-4
-                            "
-                          >
-                            <img
-                              class="
-                                block
-                                w-16
-                                xl:w-28
-                                h-16
-                                xl:h-28
-                                object-contain
-                              "
-                              :src="
-                                require('~/assets/images/features/' +
-                                  service.icon)
-                              "
-                            />
+                      <img
+                        class="w-16 xl:w-20"
+                        :src="
+                          require('~/assets/images/features/' + service.icon)
+                        "
+                      />
 
-                            <div class="text-center uppercase font-semibold">
-                              <span class="break-words">
-                                {{ service.title }}
-                              </span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                      <div class="text-center uppercase font-semibold">
+                        <span class="break-words">
+                          {{ service.title }}
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
