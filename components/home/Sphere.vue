@@ -5,7 +5,7 @@
     leave-active-class="transition-all ease-in-out duration-1000 delay-1500"
     leave-to-class="top-full opacity-0"
   >
-    <div v-show="showPage" class="fixed top-0 left-0 h-screen w-full -z-10">
+    <div class="fixed top-0 left-0 h-screen w-full -z-10">
       <div
         class="
           absolute
@@ -66,7 +66,7 @@ export default {
         new EventListener('resize', this.onWindowResize.bind(this), false),
       ],
       container: null,
-      showPage: false,
+      showPage: true,
       scrollTop: 0,
       screenWidth: 0,
       screenHeight: 0,

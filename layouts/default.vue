@@ -2,8 +2,11 @@
   <div>
     <PageLoader />
     <Pointer />
-    <Nuxt />
-    <Footer></Footer>
+    <div data-transition-layout>
+      <Nuxt />
+      <Footer></Footer>
+    </div>
+    <CookieHint></CookieHint>
   </div>
 </template>
 

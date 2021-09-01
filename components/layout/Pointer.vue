@@ -116,17 +116,15 @@ export default {
       ),
     ]
 
-    this.$nuxt.$on('page-loaded', () => {
-      if (this.$device.isDesktop) {
-        this.active = true
-        document.addEventListener('mousemove', (event) => {
-          this.mouseX = event.clientX
-          this.mouseY = event.clientY
+    if (this.$device.isDesktop) {
+      this.active = true
+      document.addEventListener('mousemove', (event) => {
+        this.mouseX = event.clientX
+        this.mouseY = event.clientY
 
-          events.forEach((e) => e.init())
-        })
-      }
-    })
+        events.forEach((e) => e.init())
+      })
+    }
   },
 }
 </script>
