@@ -91,7 +91,7 @@ export default {
     'nuxt-sm',
   ],
 
-  modules: ['@nuxtjs/axios', '@nuxtjs/cloudinary'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/cloudinary', 'nuxt-lazy-load'],
   axios: {
     baseURL: process.env.BASE_URL,
     headers: {

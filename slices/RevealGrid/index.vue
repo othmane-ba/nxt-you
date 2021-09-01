@@ -1,9 +1,6 @@
 <template>
   <section class="reveal-grid">
-    <div
-      class="container mx-auto px-4 lg:px-32 grid gap-4"
-       v-animate:children
-    >
+    <div class="container mx-auto px-4 lg:px-32 grid gap-4" v-animate:children>
       <div
         class="grid grid-cols-2 lg:grid-cols-3 gap-4"
         v-for="(item, i) in slice.items"
@@ -53,6 +50,7 @@
               duration-1000
             "
             :field="item[image]"
+            :alt="item[image].alt"
           />
           <prismic-image
             class="
@@ -68,6 +66,7 @@
               duration-1000
             "
             :field="item[image + 'Reveal']"
+            :alt="item[image + 'Reveal'].alt"
           />
         </div>
       </div>

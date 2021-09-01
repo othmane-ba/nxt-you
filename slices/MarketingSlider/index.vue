@@ -1,9 +1,6 @@
 <template>
   <section class="marketing-slider">
-    <div
-      class="container mx-auto px-4 lg:px-32 overflow-hidden"
-      v-animate
-    >
+    <div class="container mx-auto px-4 lg:px-32 overflow-hidden" v-animate>
       <div
         class="overflow-hidden w-full"
         v-swiper="options"
@@ -84,6 +81,7 @@ export default {
         allowTouchMove: false,
         loop: true,
         effect: 'fade',
+        lazy: true,
         fadeEffect: {
           crossFade: true,
         },

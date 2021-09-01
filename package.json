@@ -32,6 +32,7 @@
     "nodemailer-smtp-transport": "^2.7.4",
     "nouislider": "^15.2.0",
     "nuxt": "^2.15.3",
+    "nuxt-lazy-load": "^1.2.7",
     "nuxt-sm": "^0.0.6",
     "simple-parallax-js": "^5.6.2",
     "splitting": "^1.0.6",

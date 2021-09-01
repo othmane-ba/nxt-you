@@ -62,10 +62,11 @@
                     class="
                       relative
                       w-full
-                      flex flex-wrap
-                      items-center
-                      justify-around
+                      grid grid-cols-2
+                      md:grid-cols-3
+                      lg:grid-cols-5
                       z-10
+                      gap-4
                     "
                   >
                     <li
@@ -74,13 +75,12 @@
                         flex-1 flex flex-col
                         justify-center
                         items-center
-                        justify-center
                         border-4 border-transparent
                         rounded-xl
                         transition-all
                         hover:border-gray-100
                         overflow-hidden
-                        p-4
+                        p-8
                         space-y-4
                       "
                       data-pointer="large"
@@ -88,13 +88,13 @@
                       :key="index + j"
                     >
                       <img
-                        class="w-16 xl:w-20"
+                        class="w-14"
                         :src="
                           require('~/assets/images/features/' + service.icon)
                         "
                       />
 
-                      <div class="text-center uppercase font-semibold">
+                      <div class="text-center uppercase font-bold">
                         <span class="break-words">
                           {{ service.title }}
                         </span>
@@ -219,6 +219,7 @@ export default {
       options: {
         allowTouchMove: false,
         loop: true,
+        lazy: true,
         effect: 'fade',
         fadeEffect: {
           crossFade: true,
