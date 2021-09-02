@@ -37,22 +37,14 @@
                   :field="item.image"
                 />
 
-                <video
+                <CnyVideo
                   v-if="item.video"
+                  :publicId="item.video"
                   class="relative object-cover"
                   muted
                   loop
-                  autoplay="autoplay"
-                >
-                  <source
-                    :src="require('~/assets/videos/' + item.video + '.webm')"
-                    type="video/webm"
-                  />
-                  <source
-                    :src="require('~/assets/videos/' + item.video + '.mp4')"
-                    type="video/mp4"
-                  />
-                </video>
+                  autoplay
+                ></CnyVideo>
               </div>
             </div>
           </div>
