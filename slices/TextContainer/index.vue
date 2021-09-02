@@ -22,6 +22,10 @@ export default {
 </script>
 
 <style lang="postcss">
+.text-container {
+  @apply w-full overflow-hidden;
+}
+
 .text-container h2 {
   @apply my-4;
 }
