@@ -20,13 +20,7 @@
             @mouseover="play(i)"
             @mouseout="pause(i)"
           >
-            <video
-              ref="video"
-              loop
-              muted
-              playsinline
-              preload="auto"
-              :poster="require('~/assets/images/' + item.video + '.jpg')"
+            <CnyVideo
               class="
                 absolute
                 top-1/2
@@ -34,17 +28,13 @@
                 transform
                 -translate-x-1/2 -translate-y-1/2
                 object-cover
-              "
-            >
-              <source
-                :src="require('~/assets/videos/' + item.video + '.webm')"
-                type="video/webm; codecs=vp9,vorbis"
-              />
-              <source
-                :src="require('~/assets/videos/' + item.video + '.mp4')"
-                type="video/mp4"
-              />
-            </video>
+          "
+              ref="video"
+              :publicId="item.video"
+              muted
+              loop
+              autoplay
+            ></CnyVideo>
             <div
               class="
                 absolute

@@ -9,7 +9,11 @@
     "StickyVideo": {},
     "BorderSlogan": {},
     "NumberTextAction": {},
-    "VideoGrid": {},
+    "VideoGrid": {
+      "default-slice": {
+        "items": {}
+      }
+    },
     "FeatureSlider": {
       "default-slice": {
         "primary": {},

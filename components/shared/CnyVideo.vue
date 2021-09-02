@@ -44,6 +44,12 @@ export default {
         format,
       })
     },
+    play() {
+      this.$refs.tag.play()
+    },
+    pause() {
+      this.$refs.tag.pause()
+    },
   },
 }
 </script>
