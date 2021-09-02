@@ -14,12 +14,120 @@
         "autoplaySpeed": {
           "config": {
             "label": "Autoplay speed",
-            "placeholder": "In ms"
+            "placeholder": "In s"
           },
           "type": "Number"
+        },
+        "video": {
+          "config": {
+            "label": "Video",
+            "placeholder": "Cloudinary Public ID"
+          },
+          "type": "Text"
         }
       },
-      "items": {}
+      "items": {
+        "title": {
+          "config": {
+            "label": "Slide title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "subtitle": {
+          "config": {
+            "label": "Slide subtitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "description": {
+          "config": {
+            "label": "Slide descrption",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "iconFirst": {
+          "config": {
+            "label": "First icon ",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "textFirst": {
+          "config": {
+            "label": "First text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "iconSecond": {
+          "config": {
+            "label": "Second icon",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "textSecond": {
+          "config": {
+            "label": "Second text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "iconThird": {
+          "config": {
+            "label": "Third icon",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "textThird": {
+          "config": {
+            "label": "Third text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "iconFourth": {
+          "config": {
+            "label": "",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "textFourth": {
+          "config": {
+            "label": "Fourth text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "iconFifth": {
+          "config": {
+            "label": "Fifth icon",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "textFifth": {
+          "config": {
+            "label": "Fifth text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
     }
   ]
 }
