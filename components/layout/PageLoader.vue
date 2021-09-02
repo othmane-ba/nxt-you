@@ -1,9 +1,12 @@
 <template>
   <div>
-    <div data-transition-light class="fixed inset-0 bg-gray-900 z-40"></div>
+    <div
+      data-transition-light
+      class="fixed top-0 left-0 h-screen w-full bg-gray-900 z-40"
+    ></div>
     <div
       data-transition-dark
-      class="fixed inset-0 bg-black z-50 overflow-hidden"
+      class="fixed top-0 left-0 h-screen w-full bg-black z-50 overflow-hidden"
     >
       <div
         ref="loaderContent"
@@ -19,7 +22,7 @@
           "
         >
           <img
-            class="w-40 mb-8"
+            class="w-40"
             data-not-lazy
             alt="NXTYOU Logo"
             src="~/assets/images/logo.png"
@@ -28,7 +31,7 @@
         <div
           class="
             absolute
-            bottom-1/3
+            bottom-1/4
             left-1/2
             transform
             -translate-x-1/2
@@ -60,8 +63,8 @@ export default {
   },
   mounted() {
     this.initTl()
-    this.$nuxt.$on('layout-loaded', ({ tlLoaderOverlay }) => {
-      this.tlLoaderInit.play().then(() => tlLoaderOverlay.play())
+    this.$nuxt.$on('layout-loaded', (onPageEnter) => {
+      this.tlLoaderInit.add(onPageEnter()).play()
     })
   },
   methods: {
