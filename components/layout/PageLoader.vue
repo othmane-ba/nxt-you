@@ -37,6 +37,7 @@
             -translate-x-1/2
             translate-y-1/2
           "
+          v-show="firstPaint"
         >
           <div class="relative w-36 h-0.5 overflow-hidden mx-auto">
             <div
@@ -57,6 +58,7 @@
 export default {
   data() {
     return {
+      firstPaint: true,
       tlLoaderInit: null,
       progress: { var: 0 },
     }
@@ -64,7 +66,12 @@ export default {
   mounted() {
     this.initTl()
     this.$nuxt.$on('layout-loaded', (onPageEnter) => {
-      this.tlLoaderInit.add(onPageEnter()).play()
+      this.tlLoaderInit
+        .add(onPageEnter())
+        .play()
+        .then(() => {
+          this.firstPaint = false
+        })
     })
   },
   methods: {
