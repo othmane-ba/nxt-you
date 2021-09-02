@@ -1,0 +1,56 @@
+{
+  "id": "qualifier",
+  "type": "SharedSlice",
+  "name": "Qualifier",
+  "description": "Qualifier",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Qualifier",
+      "primary": {
+        "tagTitle": {
+          "config": {
+            "label": "Tag Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "tagDescription": {
+          "config": {
+            "label": "Tag Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "contactTitle": {
+          "config": {
+            "label": "Contact Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "submitLabel": {
+          "config": {
+            "label": "Submit Label",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {
+        "tag": {
+          "config": {
+            "label": "",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

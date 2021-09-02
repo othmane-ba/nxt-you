@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         sans: ['Hero', ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        '10xl': '14rem',
+      },
       colors: {
         blue: { light: '#3966e0', DEFAULT: '#0b60ac', dark: '#2D5070' },
       },
@@ -42,6 +45,26 @@ module.exports = {
           '100%': { left: 'calc(100% + 1px)', transform: 'translateX(0)' },
         },
       },
+    },
+  },
+  purge: {
+    // enabled: true,
+    // mode: postcss,
+    content: [
+      './slices/**/*.vue',
+      './node_modules/swiper/**/*.js',
+      './node_modules/vue-awesome-swiper/**/*.js',
+      './node_modules/vue-awesome-swiper/**/*.ts',
+      './components/**/**.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js',
+      './node_modules/swiper/js/swiper.esm.js',
+    ],
+    options: {
+      whitelistPatterns: [/^swiper/],
+      whitelistPatternsChildren: [/^swiper/],
     },
   },
   plugins: [

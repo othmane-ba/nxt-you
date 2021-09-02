@@ -1,0 +1,33 @@
+{
+  "id": "page_header",
+  "type": "SharedSlice",
+  "name": "PageHeader",
+  "description": "PageHeader",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PageHeader",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

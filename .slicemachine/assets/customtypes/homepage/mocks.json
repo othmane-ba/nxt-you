@@ -1,0 +1,76 @@
+{
+  "id": "0643394d-0bdd-402e-a3a7-05aa00952930",
+  "uid": "amet-at-placeat",
+  "type": "homepage",
+  "data": {
+    "metaTitle": "engineer user-centric deliverables",
+    "meta_description": "recontextualize customized schemas",
+    "social_cards": [
+      {
+        "social_card_image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+        },
+        "social_card_title": "exploit global niches",
+        "social_card_description": "innovate distributed systems"
+      },
+      {
+        "social_card_image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+        },
+        "social_card_title": "innovate extensible technologies",
+        "social_card_description": "exploit robust supply-chains"
+      },
+      {
+        "social_card_image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+        },
+        "social_card_title": "facilitate leading-edge infomediaries",
+        "social_card_description": "e-enable B2C schemas"
+      },
+      {
+        "social_card_image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+        },
+        "social_card_title": "optimize clicks-and-mortar eyeballs",
+        "social_card_description": "streamline distributed web services"
+      },
+      {
+        "social_card_image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+        },
+        "social_card_title": "aggregate B2C methodologies",
+        "social_card_description": "benchmark integrated e-markets"
+      }
+    ]
+  }
+}

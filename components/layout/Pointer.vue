@@ -14,23 +14,45 @@
         'pointer--large': large,
       }"
     >
-      <Icon class="pointer__right" src="arrow-right"></Icon>
-      <Icon class="pointer__play" src="control-play"></Icon>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="pointer__right h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M14 5l7 7m0 0l-7 7m7-7H3"
+        />
+      </svg>
+      <svg
+        class="pointer__play"
+        xmlns="http://www.w3.org/2000/svg"
+        width="17"
+        height="17"
+        viewBox="0 0 17 17"
+      >
+        <path
+          d="M3 2.692v11.618l11.618-5.837-11.618-5.781zM4 4.308l8.382 4.17-8.382 4.211v-8.381z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
   </transition>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
+<script>
 class PointerEvent {
-  constructor(
-    public selector: string,
-    public onMouseEnter: any,
-    public onMouseLeave: any
-  ) {}
+  constructor(selector, onMouseEnter, onMouseLeave) {
+    this.selector = selector
+    this.onMouseEnter = onMouseEnter
+    this.onMouseLeave = onMouseLeave
+  }
 
-  init(): void {
+  init() {
     document.querySelectorAll(this.selector).forEach((elem) => {
       elem.addEventListener('mouseenter', () => {
         this.onMouseEnter()
@@ -42,7 +64,7 @@ class PointerEvent {
   }
 }
 
-export default Vue.extend({
+export default {
   data: () => {
     return {
       active: false,
@@ -94,19 +116,17 @@ export default Vue.extend({
       ),
     ]
 
-    this.$nuxt.$on('page-loaded', () => {
-      if ((this as any).$device.isDesktop) {
-        this.active = true
-        document.addEventListener('mousemove', (event) => {
-          this.mouseX = event.clientX
-          this.mouseY = event.clientY
+    if (this.$device.isDesktop) {
+      this.active = true
+      document.addEventListener('mousemove', (event) => {
+        this.mouseX = event.clientX
+        this.mouseY = event.clientY
 
-          events.forEach((e) => e.init())
-        })
-      }
-    })
+        events.forEach((e) => e.init())
+      })
+    }
   },
-})
+}
 </script>
 
 <style lang="postcss">

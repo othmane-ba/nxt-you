@@ -1,0 +1,104 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "text_keywords": {
+              "type": "SharedSlice"
+            },
+            "sticky_video": {
+              "type": "SharedSlice"
+            },
+            "border_slogan": {
+              "type": "SharedSlice"
+            },
+            "number_text_action": {
+              "type": "SharedSlice"
+            },
+            "video_grid": {
+              "type": "SharedSlice"
+            },
+            "reveal_grid": {
+              "type": "SharedSlice"
+            },
+            "marketing_slider": {
+              "type": "SharedSlice"
+            },
+            "image_caption_grid": {
+              "type": "SharedSlice"
+            },
+            "image_grid": {
+              "type": "SharedSlice"
+            },
+            "intersection": {
+              "type": "SharedSlice"
+            },
+            "border_icon_list": {
+              "type": "SharedSlice"
+            },
+            "feature_slider": {
+              "type": "SharedSlice"
+            },
+            "qualifier": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO Metadata": {
+      "metaTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "My title for Search Engine"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "The description that will appear in search engine"
+        }
+      },
+      "social_cards": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "social_card_image": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Social Card Image"
+              }
+            },
+            "social_card_title": {
+              "type": "Text",
+              "config": {
+                "label": "Social Card TItle"
+              }
+            },
+            "social_card_description": {
+              "type": "Text",
+              "config": {
+                "label": "Social card description"
+              }
+            }
+          },
+          "label": "Social Cards - Facebook & Twitter"
+        }
+      }
+    }
+  }
+}

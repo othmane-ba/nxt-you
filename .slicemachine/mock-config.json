@@ -1,0 +1,24 @@
+{
+  "_cts": {
+    "homepage": {},
+    "page": {}
+  },
+  "slices": {
+    "TextKeywords": {},
+    "Hero": {},
+    "StickyVideo": {},
+    "BorderSlogan": {},
+    "NumberTextAction": {},
+    "VideoGrid": {},
+    "FeatureSlider": {},
+    "RevealGrid": {},
+    "MarketingSlider": {},
+    "ImageCaptionGrid": {},
+    "ImageGrid": {},
+    "Intersection": {},
+    "BorderIconList": {},
+    "Qualifier": {},
+    "PageHeader": {},
+    "TextContainer": {}
+  }
+}

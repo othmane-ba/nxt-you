@@ -1,0 +1,25 @@
+{
+  "id": "video_grid",
+  "type": "SharedSlice",
+  "name": "VideoGrid",
+  "description": "VideoGrid",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "VideoGrid",
+      "primary": {},
+      "items": {
+        "video": {
+          "config": {
+            "label": "Video",
+            "placeholder": "Relative Video Uri"
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

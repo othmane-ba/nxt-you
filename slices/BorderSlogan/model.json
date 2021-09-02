@@ -1,0 +1,34 @@
+{
+  "id": "border_slogan",
+  "type": "SharedSlice",
+  "name": "BorderSlogan",
+  "description": "BorderSlogan",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BorderSlogan",
+      "primary": {
+        "slogan": {
+          "config": {
+            "label": "Slogan",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      }
+    }
+  ]
+}

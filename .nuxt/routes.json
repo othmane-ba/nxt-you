@@ -1,9 +1,19 @@
 [
   {
+    "name": "prismic-preview",
+    "path": "/preview",
+    "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\.nuxt\\\\prismic\\\\pages\\\\preview.vue"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_1bbb24a2"
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "uid",
+    "path": "/:uid",
+    "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\_uid.vue",
+    "chunkName": "pages/_uid"
   }
 ]

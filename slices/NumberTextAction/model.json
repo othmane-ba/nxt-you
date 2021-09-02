@@ -1,0 +1,57 @@
+{
+  "id": "number_text_action",
+  "type": "SharedSlice",
+  "name": "NumberTextAction",
+  "description": "NumberTextAction",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "NumberTextAction",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,hyperlink"
+          }
+        },
+        "number": {
+          "config": {
+            "label": "Number",
+            "placeholder": ""
+          },
+          "type": "Number"
+        },
+        "buttonText": {
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "rtl": {
+          "config": {
+            "label": "Right to Left",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

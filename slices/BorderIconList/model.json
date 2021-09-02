@@ -1,0 +1,41 @@
+{
+  "id": "border_icon_list",
+  "type": "SharedSlice",
+  "name": "BorderIconList",
+  "description": "BorderIconList",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BorderIconList",
+      "primary": {},
+      "items": {
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "imageActive": {
+          "config": {
+            "label": "Image Active",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "link": {
+          "config": {
+            "label": "Link",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

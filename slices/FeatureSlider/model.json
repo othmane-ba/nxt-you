@@ -1,0 +1,25 @@
+{
+  "id": "feature_slider",
+  "type": "SharedSlice",
+  "name": "FeatureSlider",
+  "description": "FeatureSlider",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FeatureSlider",
+      "primary": {
+        "autoplaySpeed": {
+          "config": {
+            "label": "Autoplay speed",
+            "placeholder": "In ms"
+          },
+          "type": "Number"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

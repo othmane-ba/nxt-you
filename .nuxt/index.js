@@ -13,19 +13,26 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_43c2c5b6 from 'nuxt_plugin_plugin_43c2c5b6' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_vlazyload_f6d51df2 from 'nuxt_plugin_vlazyload_f6d51df2' // Source: .\\v-lazy-load.js (mode: 'all')
+import nuxt_plugin_pluginclient_6805ed72 from 'nuxt_plugin_pluginclient_6805ed72' // Source: .\\cloudinary\\plugin.client.js (mode: 'client')
+import nuxt_plugin_pluginserver_31b67acf from 'nuxt_plugin_pluginserver_31b67acf' // Source: .\\cloudinary\\plugin.server.js (mode: 'server')
 import nuxt_plugin_axios_4946ca4e from 'nuxt_plugin_axios_4946ca4e' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_smresolver_514cc237 from 'nuxt_plugin_smresolver_514cc237' // Source: .\\prismic\\sm-resolver.js (mode: 'all')
+import nuxt_plugin_prismic_e1396b9e from 'nuxt_plugin_prismic_e1396b9e' // Source: .\\prismic\\plugins\\prismic.js (mode: 'all')
+import nuxt_plugin_prismiccomponents_2462af9a from 'nuxt_plugin_prismiccomponents_2462af9a' // Source: .\\prismic\\plugins\\prismic-components.js (mode: 'all')
+import nuxt_plugin_cookieuniversalnuxt_b0412efe from 'nuxt_plugin_cookieuniversalnuxt_b0412efe' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_metaplugin_429ba596 from 'nuxt_plugin_metaplugin_429ba596' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_394c5aae from 'nuxt_plugin_iconplugin_394c5aae' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
 import nuxt_plugin_toast_b0e630f0 from 'nuxt_plugin_toast_b0e630f0' // Source: .\\toast.js (mode: 'client')
 import nuxt_plugin_gsapModule_02a5d218 from 'nuxt_plugin_gsapModule_02a5d218' // Source: .\\gsapModule.js (mode: 'all')
 import nuxt_plugin_deviceplugin_a6876d38 from 'nuxt_plugin_deviceplugin_a6876d38' // Source: .\\device.plugin.js (mode: 'all')
-import nuxt_plugin_vueawesomeswiperclient_06965e93 from 'nuxt_plugin_vueawesomeswiperclient_06965e93' // Source: ..\\plugins\\vue-awesome-swiper.client.ts (mode: 'client')
-import nuxt_plugin_vuecheckview_535e19e6 from 'nuxt_plugin_vuecheckview_535e19e6' // Source: ..\\plugins\\vue-check-view.ts (mode: 'all')
-import nuxt_plugin_simpleparallaxclient_52ca3da0 from 'nuxt_plugin_simpleparallaxclient_52ca3da0' // Source: ..\\plugins\\simple-parallax.client.ts (mode: 'client')
-import nuxt_plugin_vuerangecomponentclient_12480bf8 from 'nuxt_plugin_vuerangecomponentclient_12480bf8' // Source: ..\\plugins\\vue-range-component.client.ts (mode: 'client')
-import nuxt_plugin_vuelidate_4be42f5c from 'nuxt_plugin_vuelidate_4be42f5c' // Source: ..\\plugins\\vuelidate.ts (mode: 'all')
-import nuxt_plugin_jsonld_2ff76817 from 'nuxt_plugin_jsonld_2ff76817' // Source: ..\\plugins\\jsonld.ts (mode: 'all')
-import nuxt_plugin_vuegtagclient_04907a44 from 'nuxt_plugin_vuegtagclient_04907a44' // Source: ..\\plugins\\vue-gtag.client.ts (mode: 'client')
+import nuxt_plugin_vueawesomeswiperclient_06965d5d from 'nuxt_plugin_vueawesomeswiperclient_06965d5d' // Source: ..\\plugins\\vue-awesome-swiper.client.js (mode: 'client')
+import nuxt_plugin_simpleparallaxclient_52ca400c from 'nuxt_plugin_simpleparallaxclient_52ca400c' // Source: ..\\plugins\\simple-parallax.client.js (mode: 'client')
+import nuxt_plugin_vuerangecomponentclient_12480e64 from 'nuxt_plugin_vuerangecomponentclient_12480e64' // Source: ..\\plugins\\vue-range-component.client.js (mode: 'client')
+import nuxt_plugin_vuelidate_4be431c8 from 'nuxt_plugin_vuelidate_4be431c8' // Source: ..\\plugins\\vuelidate.js (mode: 'all')
+import nuxt_plugin_jsonld_2ff766e1 from 'nuxt_plugin_jsonld_2ff766e1' // Source: ..\\plugins\\jsonld.js (mode: 'all')
+import nuxt_plugin_vuegtagclient_0490790e from 'nuxt_plugin_vuegtagclient_0490790e' // Source: ..\\plugins\\vue-gtag.client.js (mode: 'client')
+import nuxt_plugin_animateclient_e4aa626e from 'nuxt_plugin_animateclient_e4aa626e' // Source: ..\\plugins\\animate.client.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -75,7 +82,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"NXT YOU","titleTemplate":"%s - Make Your Vision Come Reality.","htmlAttrs":{"lang":"de"},"bodyAttrs":{"class":"bg-black text-white"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":"\u002Ffavicon-16x16.png"}],"style":[],"script":[]},
+    head: {"title":"NXT YOU","titleTemplate":"%s - Make Your Vision Come Reality.","htmlAttrs":{"lang":"de"},"bodyAttrs":{"class":"bg-black text-white"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":"\u002Ffavicon-16x16.png"}],"script":[{"src":"https:\u002F\u002Fcdn.polyfill.io\u002Fv2\u002Fpolyfill.min.js?features=Element.prototype.classList"},{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Ffocus-visible@5.0.2\u002Fdist\u002Ffocus-visible.min.js"},{"src":"https:\u002F\u002Fstatic.cdn.prismic.io\u002Fprismic.js?new=true&repo=nxtyou"}],"style":[]},
 
     router,
     nuxt: {
@@ -193,8 +200,36 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_43c2c5b6(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_vlazyload_f6d51df2 === 'function') {
+    await nuxt_plugin_vlazyload_f6d51df2(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_pluginclient_6805ed72 === 'function') {
+    await nuxt_plugin_pluginclient_6805ed72(app.context, inject)
+  }
+
+  if (process.server && typeof nuxt_plugin_pluginserver_31b67acf === 'function') {
+    await nuxt_plugin_pluginserver_31b67acf(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_axios_4946ca4e === 'function') {
     await nuxt_plugin_axios_4946ca4e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_smresolver_514cc237 === 'function') {
+    await nuxt_plugin_smresolver_514cc237(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_prismic_e1396b9e === 'function') {
+    await nuxt_plugin_prismic_e1396b9e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_prismiccomponents_2462af9a === 'function') {
+    await nuxt_plugin_prismiccomponents_2462af9a(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_cookieuniversalnuxt_b0412efe === 'function') {
+    await nuxt_plugin_cookieuniversalnuxt_b0412efe(app.context, inject)
   }
 
   if (typeof nuxt_plugin_metaplugin_429ba596 === 'function') {
@@ -217,32 +252,32 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_deviceplugin_a6876d38(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_vueawesomeswiperclient_06965e93 === 'function') {
-    await nuxt_plugin_vueawesomeswiperclient_06965e93(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vueawesomeswiperclient_06965d5d === 'function') {
+    await nuxt_plugin_vueawesomeswiperclient_06965d5d(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_vuecheckview_535e19e6 === 'function') {
-    await nuxt_plugin_vuecheckview_535e19e6(app.context, inject)
+  if (process.client && typeof nuxt_plugin_simpleparallaxclient_52ca400c === 'function') {
+    await nuxt_plugin_simpleparallaxclient_52ca400c(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_simpleparallaxclient_52ca3da0 === 'function') {
-    await nuxt_plugin_simpleparallaxclient_52ca3da0(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vuerangecomponentclient_12480e64 === 'function') {
+    await nuxt_plugin_vuerangecomponentclient_12480e64(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_vuerangecomponentclient_12480bf8 === 'function') {
-    await nuxt_plugin_vuerangecomponentclient_12480bf8(app.context, inject)
+  if (typeof nuxt_plugin_vuelidate_4be431c8 === 'function') {
+    await nuxt_plugin_vuelidate_4be431c8(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_vuelidate_4be42f5c === 'function') {
-    await nuxt_plugin_vuelidate_4be42f5c(app.context, inject)
+  if (typeof nuxt_plugin_jsonld_2ff766e1 === 'function') {
+    await nuxt_plugin_jsonld_2ff766e1(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_jsonld_2ff76817 === 'function') {
-    await nuxt_plugin_jsonld_2ff76817(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vuegtagclient_0490790e === 'function') {
+    await nuxt_plugin_vuegtagclient_0490790e(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_vuegtagclient_04907a44 === 'function') {
-    await nuxt_plugin_vuegtagclient_04907a44(app.context, inject)
+  if (process.client && typeof nuxt_plugin_animateclient_e4aa626e === 'function') {
+    await nuxt_plugin_animateclient_e4aa626e(app.context, inject)
   }
 
   // Lock enablePreview in context
@@ -254,12 +289,14 @@ async function createApp(ssrContext, config = {}) {
 
   // Wait for async component to be resolved first
   await new Promise((resolve, reject) => {
-    const { route } = router.resolve(app.context.route.fullPath)
-    // Ignore 404s rather than blindly replacing URL
-    if (!route.matched.length && process.client) {
-      return resolve()
+    // Ignore 404s rather than blindly replacing URL in browser
+    if (process.client) {
+      const { route } = router.resolve(app.context.route.fullPath)
+      if (!route.matched.length) {
+        return resolve()
+      }
     }
-    router.replace(route, resolve, (err) => {
+    router.replace(app.context.route.fullPath, resolve, (err) => {
       // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
       if (!err._isRouter) return reject(err)
       if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()

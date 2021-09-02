@@ -4,7 +4,9 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _cb861f22 = () => interopDefault(import('.\\prismic\\pages\\preview.vue' /* webpackChunkName: "" */))
 const _1bbb24a2 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _e721a478 = () => interopDefault(import('..\\pages\\_uid.vue' /* webpackChunkName: "pages/_uid" */))
 
 const emptyFn = () => {}
 
@@ -18,9 +20,17 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/preview",
+    component: _cb861f22,
+    name: "prismic-preview"
+  }, {
     path: "/",
     component: _1bbb24a2,
     name: "index"
+  }, {
+    path: "/:uid",
+    component: _e721a478,
+    name: "uid"
   }],
 
   fallback: false

@@ -1,38 +1,69 @@
 let firstPaint = true
+let onPageEnter = null
+let onPageLeave = null
 
 export default {
+  mounted() {
+    const tl = () =>
+      this.$gsap.timeline({
+        paused: true,
+        defaults: { duration: 1.4, ease: 'Power3.easeInOut' },
+      })
+    onPageEnter = tl()
+      .set('[data-transition-layout]', {
+        autoAlpha: 0,
+        marginTop: '20px',
+      })
+      .to('[data-transition-dark]', { height: 0 }, 0.1)
+      .to('[data-transition-light]', { height: 0 }, 0.5)
+      .to(
+        '[data-transition-layout]',
+        {
+          autoAlpha: 1,
+          marginTop: 0,
+          ease: 'Power3.easeIn',
+        },
+        0.5
+      )
+
+    onPageLeave = tl()
+      .to(
+        '[data-transition-layout]',
+        {
+          autoAlpha: 0,
+          marginTop: '20px',
+          ease: 'Power3.easeOut',
+        },
+        0.4
+      )
+      .to(
+        '[data-transition-dark]',
+        { transformOrigin: 'bottom', height: '100vh' },
+        0.8
+      )
+      .to(
+        '[data-transition-light]',
+        { transformOrigin: 'bottom', height: '100vh' },
+        0.4
+      )
+  },
   transition: {
     css: false,
     mode: 'out-in',
     appear: true,
     leave(el, done) {
-      this.$smooth.destroy()
-      document.body.classList.add('fixed', 'overflow-y-scroll')
-      done()
+      onPageLeave.play().then(done)
     },
     enter(el, done) {
       done()
     },
     afterEnter() {
-      /*
       if (firstPaint) {
         firstPaint = false
-        this.$smooth.init()
+        this.$nuxt.$emit('layout-loaded', () => onPageEnter.play())
       } else {
-        this.$smooth.reload()
+        onPageEnter.play()
       }
-*/
-
-      setTimeout(() => {
-        document.body.classList.remove('fixed', 'overflow-y-scroll')
-        this.$nuxt.$emit('page-loaded')
-      }, 1000)
-
-      setTimeout(() => {
-        /*
-        this.$smooth.resize() // Fix for https://github.com/baptistebriel/this.$smooth-scrolling/issues/104
-*/
-      }, 2000)
     },
   },
 }

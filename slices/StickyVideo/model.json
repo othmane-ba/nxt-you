@@ -1,0 +1,25 @@
+{
+  "id": "sticky_video",
+  "type": "SharedSlice",
+  "name": "StickyVideo",
+  "description": "StickyVideo",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "StickyVideo",
+      "primary": {
+        "video": {
+          "config": {
+            "label": "Video",
+            "placeholder": "Paste a video uri"
+          },
+          "type": "Text"
+        }
+      },
+      "items": {}
+    }
+  ]
+}
