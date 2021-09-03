@@ -79,7 +79,7 @@ export default {
   mounted() {
     const events = [
       new PointerEvent(
-        "[data-pointer='large'], .noUi-handle",
+        "[data-pointer='large'], .noUi-handle, .link",
         () => {
           this.large = true
         },

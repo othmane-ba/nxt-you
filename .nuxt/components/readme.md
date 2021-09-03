@@ -10,6 +10,8 @@ You can directly use them in pages and other components without the need to impo
 - `<Sphere>` | `<sphere>` (components/home/Sphere.vue)
 - `<CookieHint>` | `<cookie-hint>` (components/layout/CookieHint.vue)
 - `<Footer>` | `<footer>` (components/layout/Footer.vue)
+- `<Header>` | `<header>` (components/layout/Header.vue)
+- `<HeaderMenu>` | `<header-menu>` (components/layout/HeaderMenu.vue)
 - `<PageLoader>` | `<page-loader>` (components/layout/PageLoader.vue)
 - `<Pointer>` | `<pointer>` (components/layout/Pointer.vue)
 - `<CnyVideo>` | `<cny-video>` (components/shared/CnyVideo.vue)
