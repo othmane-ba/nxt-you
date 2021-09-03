@@ -24,6 +24,10 @@ export const routerOptions = {
     component: _cb861f22,
     name: "prismic-preview"
   }, {
+    path: "/preview",
+    component: _cb861f22,
+    name: "prismic-preview"
+  }, {
     path: "/",
     component: _1bbb24a2,
     name: "index"
