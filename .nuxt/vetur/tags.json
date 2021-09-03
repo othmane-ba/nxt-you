@@ -11,6 +11,12 @@
   "Footer": {
     "description": "Auto imported from components/layout/Footer.vue"
   },
+  "Header": {
+    "description": "Auto imported from components/layout/Header.vue"
+  },
+  "HeaderMenu": {
+    "description": "Auto imported from components/layout/HeaderMenu.vue"
+  },
   "PageLoader": {
     "description": "Auto imported from components/layout/PageLoader.vue"
   },

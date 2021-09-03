@@ -9,8 +9,30 @@
     "StickyVideo": {},
     "BorderSlogan": {},
     "NumberTextAction": {},
-    "VideoGrid": {},
-    "FeatureSlider": {},
+    "VideoGrid": {
+      "default-slice": {
+        "items": {}
+      }
+    },
+    "FeatureSlider": {
+      "default-slice": {
+        "primary": {},
+        "items": {
+          "subtitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
     "RevealGrid": {},
     "MarketingSlider": {},
     "ImageCaptionGrid": {},

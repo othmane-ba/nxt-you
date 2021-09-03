@@ -9,7 +9,7 @@
           <div v-swiper="options" :auto-destroy="true" @ready="onReady">
             <div class="swiper-wrapper">
               <div
-                v-for="(feature, index) in features"
+                v-for="(feature, index) in slice.items"
                 class="swiper-slide"
                 :key="index"
               >
@@ -45,17 +45,13 @@
                     "
                   >
                     <div>
-                      <p
+                      <prismic-rich-text
                         class="font-bold uppercase lg:text-2xl"
-                        :key="feature.title"
-                      >
-                        {{ feature.intro }}
-                      </p>
+                        :field="feature.subtitle"
+                      />
                     </div>
                     <div>
-                      <p>
-                        {{ feature.description }}
-                      </p>
+                      <prismic-rich-text :field="feature.description" />
                     </div>
                   </div>
                   <ul
@@ -73,8 +69,8 @@
                       class="
                         relative
                         flex-1 flex flex-col
-                        justify-center
                         items-center
+                        justify-center
                         border-4 border-transparent
                         rounded-xl
                         transition-all
@@ -84,19 +80,23 @@
                         space-y-4
                       "
                       data-pointer="large"
-                      v-for="(service, j) of feature.services"
+                      v-for="(indicator, j) of [
+                        'First',
+                        'Second',
+                        'Third',
+                        'Fourth',
+                        'Fifth',
+                      ]"
                       :key="index + j"
                     >
-                      <img
-                        class="w-14"
-                        :src="
-                          require('~/assets/images/features/' + service.icon)
-                        "
+                      <prismic-image
+                        class="h-14 w-14 mx-auto object-contain"
+                        :field="feature['icon' + indicator]"
                       />
 
                       <div class="text-center uppercase font-bold">
                         <span class="break-words">
-                          {{ service.title }}
+                          {{ feature['text' + indicator] }}
                         </span>
                       </div>
                     </li>
@@ -135,7 +135,7 @@
             -translate-x-1/2 -translate-y-1/2
             object-cover
           "
-          publicId="nxt-you/performance_geewbk"
+          :publicId="slice.primary.video"
           muted
           loop
           autoplay
@@ -146,62 +146,6 @@
 </template>
 
 <script>
-class Service {
-  constructor(title, icon, href) {
-    this.title = title
-    this.icon = icon
-    this.href = href
-  }
-}
-
-class Feature {
-  constructor(title, intro, description, services) {
-    this.title = title
-    this.intro = intro
-    this.description = description
-    this.services = services
-  }
-}
-
-const FEATURES = [
-  new Feature(
-    'Branding',
-    'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
-    'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-    [
-      new Service('Brand Strategy', 'lightbulb.png', '/seo'),
-      new Service('Visual Brand Identity', 'pencil-settings.png', '/seo'),
-      new Service('Content Creation', 'play.png', '/seo'),
-      new Service('UI/UX Design', 'ux-ui.png', '/seo'),
-      new Service('Mobile App Development', 'geometry.png', '/seo'),
-    ]
-  ),
-  new Feature(
-    'Performance',
-    'Produkte entstehen in einer Fabrik, aber Marken eintstehen im Kopf',
-    'Eine Marke besteht aus Erwartungen, Erinnerungen, Geschichten und Beziehungen, die zusammen genommen dafür sorgen, dass ein Kunde bestimmte Dienstleistungen anderen gegnüber bevorzugt.',
-    [
-      new Service('Social Media Marketing', 'bar-up.png', '/seo'),
-      new Service('Funnel Systeme', 'dollar-bar.png', '/seo'),
-      new Service('Seo Service', 'seo.png', '/seo'),
-      new Service('Copywriting', 'pencil-post.png', '/seo'),
-      new Service('Google Ads Campagnen', 'goal.png', '/seo'),
-    ]
-  ),
-  new Feature(
-    'Sales',
-    'Der Vertrieb ist das Herz und die Seele eines jeden Unternehmens',
-    'Wir arbeiten hart daran die Bedürfnisse Ihres Unternehmens zu verstehen - das ist es was wir am besten können. Wir arbeiten mit Ihnen zusammen um hochwertige, maßgeschneiderte Lösungen zu entwickeln, die sie von Punkt A zu Punkt B bringen und Ihren ROI maximieren.',
-    [
-      new Service('Aufbau Vertriebsstruktur', 'structure.png', '/seo'),
-      new Service('Organisches Funneling', 'funnel.png', '/seo'),
-      new Service('Leadership Ausbildung', 'filter.png', '/seo'),
-      new Service('Medien-Platzierung', 'media.png', '/seo'),
-      new Service('Produkt & Geschäftsentwicklung', 'products.png', '/seo'),
-    ]
-  ),
-]
-
 export default {
   name: 'FeatureSlider',
   props: {
@@ -225,7 +169,6 @@ export default {
           crossFade: true,
         },
       },
-      features: FEATURES,
     }
   },
   methods: {

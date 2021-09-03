@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 lg:px-16">
       <div
         class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2"
-         v-animate:children
+        v-animate:children
       >
         <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
           <div
@@ -20,13 +20,7 @@
             @mouseover="play(i)"
             @mouseout="pause(i)"
           >
-            <video
-              ref="video"
-              loop
-              muted
-              playsinline
-              preload="auto"
-              :poster="require('~/assets/images/' + item.video + '.jpg')"
+            <CnyVideo
               class="
                 absolute
                 top-1/2
@@ -35,16 +29,12 @@
                 -translate-x-1/2 -translate-y-1/2
                 object-cover
               "
-            >
-              <source
-                :src="require('~/assets/videos/' + item.video + '.webm')"
-                type="video/webm; codecs=vp9,vorbis"
-              />
-              <source
-                :src="require('~/assets/videos/' + item.video + '.mp4')"
-                type="video/mp4"
-              />
-            </video>
+              ref="video"
+              :publicId="item.video"
+              muted
+              loop
+              :autoplay="false"
+            ></CnyVideo>
             <div
               class="
                 absolute
