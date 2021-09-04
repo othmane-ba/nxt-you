@@ -12,7 +12,7 @@ export default {
     onPageEnter = tl()
       .set('[data-transition-layout]', {
         autoAlpha: 0,
-        marginTop: '20px',
+        marginTop: '-20px',
       })
       .to('[data-transition-dark]', { height: 0 }, 0.1)
       .to('[data-transition-light]', { height: 0 }, 0.5)
@@ -31,7 +31,7 @@ export default {
         '[data-transition-layout]',
         {
           autoAlpha: 0,
-          marginTop: '20px',
+          marginTop: '-20px',
           ease: 'Power3.easeOut',
         },
         0.4

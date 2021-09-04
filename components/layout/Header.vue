@@ -1,5 +1,5 @@
 <template>
-  <header class="bottom-full transform translate-y-full w-full fixed z-50">
+  <header class="top-0 w-full fixed z-50">
     <div class="container mx-auto px-4 lg:px-16">
       <ul class="relative h-32">
         <li class="absolute left-0 bottom-1/2 translate-y-1/2">
