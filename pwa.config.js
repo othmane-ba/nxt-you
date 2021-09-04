@@ -22,9 +22,9 @@ export default {
       'NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.',
     theme_color: '#2D5070',
     lang: 'de',
-    ogHost: 'https://nxytyou.de/',
+    ogHost: 'https://nxtyou.de/',
     ogImage: {
-      path: 'https://nxytyou.de/NXTYOU.png',
+      path: 'https://nxtyou.de/NXTYOU.png',
       width: '1200',
       height: '627',
     },
