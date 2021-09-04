@@ -141,7 +141,7 @@
 export default {
   data() {
     return {
-      active: true,
+      active: false,
       images: [
         'nxt-you/home-brand-02_gbvxfq',
         'nxt-you/home-brand-01_xrdamj',
