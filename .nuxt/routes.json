@@ -2,18 +2,23 @@
   {
     "name": "prismic-preview",
     "path": "/preview",
-    "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\.nuxt\\\\prismic\\\\pages\\\\preview.vue"
+    "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\.nuxt\\\\prismic\\\\pages\\\\preview.vue",
+    "url": "/preview",
+    "_name": "_cb861f22"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "url": "/",
+    "_name": "_1bbb24a2"
   },
   {
     "name": "uid",
     "path": "/:uid",
     "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\_uid.vue",
-    "chunkName": "pages/_uid"
+    "chunkName": "pages/_uid",
+    "_name": "_e721a478"
   }
 ]

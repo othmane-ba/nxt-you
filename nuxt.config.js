@@ -1,6 +1,8 @@
 import pwa from './pwa.config'
 import smConfig from './sm.json'
 
+import Prismic from '@prismicio/client'
+
 const { getStoriesPaths } = require('slice-machine-ui/helpers/storybook')
 
 export default {
@@ -91,7 +93,14 @@ export default {
     'nuxt-sm',
   ],
 
-  modules: ['@nuxtjs/axios', '@nuxtjs/cloudinary', 'nuxt-lazy-load'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/cloudinary',
+    'nuxt-lazy-load',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap', // If you use other modules, always declare the sitemap module at end of array
+  ],
+
   axios: {
     baseURL: process.env.BASE_URL,
     headers: {
@@ -132,4 +141,22 @@ export default {
     stories: [...getStoriesPaths()],
   },
   ignore: ['**/*.stories.js'],
+
+  robots: {
+    UserAgent: '*',
+    Disallow: ['/terms', '/privacy', '/preview'],
+    Sitemap: 'http://nxtyou.de/sitemap.xml',
+  },
+
+  sitemap: {
+    hostname: 'https://nxtyou.de',
+    exclude: ['/terms', '/privacy', '/preview'],
+    routes: async () => {
+      const api = await Prismic.getApi(process.env.PRISMIC_API_URL)
+      const pages = await api
+        .query(Prismic.Predicates.at('document.type', 'page'))
+        .then((p) => p.results)
+      return ['/', ...pages.map((p) => `/${p.uid}`)]
+    },
+  },
 }
