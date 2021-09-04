@@ -29,23 +29,17 @@
               {{ numberTwoDigit }}
             </div>
           </div>
-          <div
-            class="relative space-y-4 p-4 pt-16 md:px-16"
-             v-animate:children
-          >
-            <h3 class="title"  v-animate:text>
+          <div class="relative space-y-6 p-4 pt-16 md:px-16" v-animate:children>
+            <h3 class="title" v-animate:text>
               {{ slice.primary.title }}
             </h3>
             <div>
               <prismic-rich-text :field="slice.primary.description" />
             </div>
             <div>
-              <button
-                class="w-full py-2 px-4 rounded border max-w-xs"
-                data-pointer="large"
-              >
+              <TheButton>
                 {{ slice.primary.buttonText }}
-              </button>
+              </TheButton>
             </div>
           </div>
         </div>

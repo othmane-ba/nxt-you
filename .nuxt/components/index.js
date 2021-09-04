@@ -9,6 +9,7 @@ export { default as Pointer } from '../..\\components\\layout\\Pointer.vue'
 export { default as CnyVideo } from '../..\\components\\shared\\CnyVideo.vue'
 export { default as RangeSlider } from '../..\\components\\shared\\RangeSlider.vue'
 export { default as Tag } from '../..\\components\\shared\\Tag.vue'
+export { default as TheButton } from '../..\\components\\shared\\TheButton.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

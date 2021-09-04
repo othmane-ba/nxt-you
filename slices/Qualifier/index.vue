@@ -1,12 +1,9 @@
 <template>
   <section class="qualifier">
-    <div
-      class="container mx-auto px-4 md:px-36 text-center"
-      v-animate
-    >
+    <div class="container mx-auto px-4 md:px-36 text-center" v-animate>
       <form class="pb-16" @submit.prevent="submit">
         <article>
-          <h3 class="title text-center"  v-animate:text>
+          <h3 class="title text-center" v-animate:text>
             {{ slice.primary.tagTitle }}
           </h3>
           <div class="pt-4 pb-16">
@@ -25,7 +22,7 @@
           </div>
         </article>
         <article class="pt-16">
-          <h3 class="title text-center"  v-animate:text>
+          <h3 class="title text-center" v-animate:text>
             {{ slice.primary.contactTitle }}
           </h3>
 
@@ -80,22 +77,7 @@
             </div>
             <div class="lg:col-span-2">
               <div>
-                <button
-                  class="
-                    w-full
-                    py-2
-                    px-4
-                    rounded
-                    border
-                    max-w-xs
-                    flex
-                    items-center
-                    justify-center
-                    gap-4
-                  "
-                  data-pointer="large"
-                  type="submit"
-                >
+                <TheButton class="" data-pointer="large" type="submit">
                   <svg
                     v-if="loading"
                     class="animate-spin h-5 w-5 text-blue"
@@ -117,8 +99,10 @@
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     ></path>
                   </svg>
-                  {{ slice.primary.submitLabel }}
-                </button>
+                  <span class="block">
+                    {{ slice.primary.submitLabel }}
+                  </span>
+                </TheButton>
               </div>
             </div>
           </div>

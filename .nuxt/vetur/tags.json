@@ -31,5 +31,8 @@
   },
   "Tag": {
     "description": "Auto imported from components/shared/Tag.vue"
+  },
+  "TheButton": {
+    "description": "Auto imported from components/shared/TheButton.vue"
   }
 }

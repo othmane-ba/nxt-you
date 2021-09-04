@@ -17,3 +17,4 @@ You can directly use them in pages and other components without the need to impo
 - `<CnyVideo>` | `<cny-video>` (components/shared/CnyVideo.vue)
 - `<RangeSlider>` | `<range-slider>` (components/shared/RangeSlider.vue)
 - `<Tag>` | `<tag>` (components/shared/Tag.vue)
+- `<TheButton>` | `<the-button>` (components/shared/TheButton.vue)

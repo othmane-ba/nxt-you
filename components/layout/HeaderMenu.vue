@@ -66,7 +66,7 @@
                 </ul>
               </div>
 
-              <div class="grid lg:grid-cols-2 gap-8">
+              <div class="grid lg:grid-cols-2 gap-4">
                 <div class="">
                   <ul class="">
                     <li>
@@ -83,28 +83,17 @@
                 </div>
 
                 <div>
-                  <a
-                    class="
-                      px-4
-                      py-2
-                      border
-                      uppercase
-                      text-sm
-                      font-bold
-                      tracking-widest
-                      button
-                    "
-                    href="mailto:info@nxtyou.de"
-                    data-pointer="right"
-                  >
-                    Kontakt aufnehmen
-                  </a>
+                  <div class="button">
+                    <TheButton href="mailto:info@nxtyou.de">
+                      Kontakt aufnehmen
+                    </TheButton>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <ul class="flex space-x-6 p-4 border-t w-full items-center">
+            <ul class="flex space-x-4 p-4 border-t w-full items-center">
               <li>
                 <a
                   class="
@@ -158,8 +147,8 @@
                   </svg>
                 </a>
               </li>
-              <li>
-                <a href="mailto:info@nxtyou.de" class="link">
+              <li class="">
+                <a href="mailto:info@nxtyou.de" class="link text-xs">
                   info@nxtyou.de
                 </a>
               </li>
