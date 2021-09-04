@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <div class="header-menu">
     <div
       data-menu-light
-      class="fixed top-0 left-0 h-screen w-full bg-gray-900 z-30"
+      class="fixed top-0 left-0 w-full h-screen bg-gray-900 z-30"
     ></div>
     <div
       data-menu-dark
-      class="fixed top-0 left-0 h-screen w-full bg-black z-40 overflow-hidden"
+      class="fixed top-0 left-0 w-full h-screen bg-black z-40 overflow-hidden"
     >
-      <div class="relative container mx-auto px-4 lg:px-16">
-        <nav class="relative pt-32 h-screen flex flex-col space-y-4">
+      <div class="relative w-screen h-full pt-32 mx-auto px-4 lg:px-16">
+        <nav class="relative h-full flex flex-col space-y-4">
           <div class="flex lg:grid lg:grid-cols-3 lg:gap-8 flex-1">
             <div class="flex-shrink lg:col-span-1 lg:flex-1 lg:p-4">
               <div
@@ -35,6 +35,7 @@
                   "
                 ></div>
                 <img
+                  ref="phoneImg"
                   v-for="(publicId, i) in images"
                   :src="
                     $cloudinary.image.url(publicId, {
@@ -152,29 +153,49 @@ export default {
   },
   mounted() {
     this.$nuxt.$on('toggle-menu', ({ active, ease = true }) => {
-      active ? this.hide(ease) : this.show(ease)
+      active ? this.show(ease) : this.hide(ease)
       this.active = active
     })
   },
   methods: {
-    show(ease = true) {
-      this.$gsap
-        .timeline({
-          defaults: { duration: ease ? 1.4 : 0, ease: 'Power3.easeInOut' },
-        })
-        .to('[data-menu-dark]', { height: 0 })
-        .to('[data-menu-dark]', { height: 0 })
-        .to('[data-menu-light]', { height: 0 }, 0.4)
-    },
     hide(ease = true) {
       this.$gsap
         .timeline({
           defaults: { duration: ease ? 1.4 : 0, ease: 'Power3.easeInOut' },
         })
-        .to('[data-menu-light]', { transformOrigin: 'bottom', height: '100vh' })
+        .to('.header-menu ul li, .header-menu button, .header-menu img', {
+          y: 40,
+          autoAlpha: 0,
+          stagger: { amount: 0.4 },
+        })
+        .to('[data-menu-dark]', { width: 0 }, 0)
+        .to('[data-menu-light]', { width: 0 }, 0.4)
+    },
+    show(ease = true) {
+      this.$gsap
+        .timeline({
+          defaults: { duration: ease ? 1.4 : 0, ease: 'Power3.easeInOut' },
+        })
+        .set('.header-menu ul li, .header-menu button, .header-menu img', {
+          y: 40,
+          autoAlpha: 0,
+        })
+        .to('[data-menu-light]', {
+          transformOrigin: 'center left',
+          width: '100vw',
+        })
         .to(
           '[data-menu-dark]',
-          { transformOrigin: 'bottom', height: '100vh' },
+          { transformOrigin: 'center left', width: '100vw' },
+          0.4
+        )
+        .to(
+          '.header-menu ul li, .header-menu button, .header-menu img',
+          {
+            y: 0,
+            autoAlpha: 1,
+            stagger: { amount: 0.4 },
+          },
           0.4
         )
     },
