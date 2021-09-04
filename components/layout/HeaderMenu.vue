@@ -12,7 +12,28 @@
         <nav class="relative pt-32 h-screen flex flex-col space-y-4">
           <div class="flex lg:grid lg:grid-cols-3 lg:gap-8 flex-1">
             <div class="flex-shrink lg:col-span-1 lg:flex-1 lg:p-4">
-              <div class="lg:relative block w-full lg:h-full">
+              <div
+                class="
+                  absolute
+                  top-0
+                  left-0
+                  w-full
+                  h-full
+                  lg:relative
+                  block
+                  -z-10
+                "
+              >
+                <div
+                  class="
+                    absolute
+                    lg:hidden
+                    inset-0
+                    bg-gradient-to-t
+                    from-black
+                    z-10
+                  "
+                ></div>
                 <img
                   v-for="(publicId, i) in images"
                   :src="
