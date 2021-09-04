@@ -2,11 +2,11 @@
   <div class="header-menu">
     <div
       data-menu-light
-      class="fixed top-0 left-0 w-full h-screen bg-gray-900 z-30"
+      class="fixed top-0 left-0 w-0 h-screen bg-gray-900 z-30"
     ></div>
     <div
       data-menu-dark
-      class="fixed top-0 left-0 w-full h-screen bg-black z-40 overflow-hidden"
+      class="fixed top-0 left-0 w-0 h-screen bg-black z-40 overflow-hidden"
     >
       <div class="relative w-screen h-full pt-32 mx-auto px-4 lg:px-16">
         <nav class="relative h-full flex flex-col space-y-4">
