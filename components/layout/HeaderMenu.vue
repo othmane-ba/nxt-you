@@ -148,7 +148,7 @@
                 </a>
               </li>
               <li class="">
-                <a href="mailto:info@nxtyou.de" class="link text-xs">
+                <a href="mailto:info@nxtyou.de" class="link text-sm">
                   info@nxtyou.de
                 </a>
               </li>
