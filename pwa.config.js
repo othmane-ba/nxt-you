@@ -11,7 +11,7 @@ export default {
     description:
       'NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.',
     start_url: '',
-    background_color: '#2D5070',
+    background_color: '#000000',
   },
   workbox: false,
   meta: {
@@ -20,13 +20,13 @@ export default {
     name: 'NXT YOU',
     description:
       'NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.',
-    theme_color: '#000000',
+    theme_color: '#2D5070',
     lang: 'de',
     ogHost: 'https://nxytyou.de/',
     ogImage: {
-      path: 'https://nxytyou.de/NXTYOU.jpg',
-      width: '268',
-      height: '305',
+      path: 'https://nxytyou.de/NXTYOU.png',
+      width: '1200',
+      height: '627',
     },
     twitterCard: 'summary_large_image',
     twitterCreator: 'NXT YOU',
