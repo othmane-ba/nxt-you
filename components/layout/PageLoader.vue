@@ -2,11 +2,11 @@
   <div>
     <div
       data-transition-light
-      class="fixed top-0 left-0 h-screen w-full bg-gray-900 z-40"
+      class="fixed top-0 left-0 h-screen w-full bg-gray-900 z-60"
     ></div>
     <div
       data-transition-dark
-      class="fixed top-0 left-0 h-screen w-full bg-black z-50 overflow-hidden"
+      class="fixed top-0 left-0 h-screen w-full bg-black z-70 overflow-hidden"
     >
       <div
         ref="loaderContent"

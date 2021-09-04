@@ -2,11 +2,11 @@
   <div>
     <div
       data-menu-light
-      class="fixed top-0 left-0 h-screen w-full bg-gray-900 z-20"
+      class="fixed top-0 left-0 h-screen w-full bg-gray-900 z-30"
     ></div>
     <div
       data-menu-dark
-      class="fixed top-0 left-0 h-screen w-full bg-black z-30 overflow-hidden"
+      class="fixed top-0 left-0 h-screen w-full bg-black z-40 overflow-hidden"
     >
       <div class="relative container mx-auto px-4 lg:px-16">
         <nav class="relative pt-32 h-screen flex flex-col space-y-4">
@@ -141,6 +141,7 @@ export default {
         .timeline({
           defaults: { duration: ease ? 1.4 : 0, ease: 'Power3.easeInOut' },
         })
+        .to('[data-menu-dark]', { height: 0 })
         .to('[data-menu-dark]', { height: 0 })
         .to('[data-menu-light]', { height: 0 }, 0.4)
     },
