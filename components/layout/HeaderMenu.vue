@@ -9,10 +9,10 @@
       class="fixed top-0 left-0 h-screen w-full bg-black z-30 overflow-hidden"
     >
       <div class="relative container mx-auto px-4 lg:px-16">
-        <nav class="relative pt-40 h-screen flex flex-col space-y-4">
-          <div class="grid lg:grid-cols-3 gap-8 flex-1">
-            <div class="lg:col-span-1 flex-1 p-4">
-              <div class="relative block w-full h-full">
+        <nav class="relative pt-32 h-screen flex flex-col space-y-4">
+          <div class="flex lg:grid lg:grid-cols-3 lg:gap-8 flex-1">
+            <div class="flex-shrink lg:col-span-1 lg:flex-1 lg:p-4">
+              <div class="lg:relative block w-full lg:h-full">
                 <img
                   v-for="(publicId, i) in images"
                   :src="
@@ -27,7 +27,15 @@
                 />
               </div>
             </div>
-            <div class="lg:col-span-2 flex-1 flex flex-col">
+            <div
+              class="
+                col-span-full
+                lg:col-span-2
+                flex-1 flex flex-col
+                order-first
+                lg:order-last
+              "
+            >
               <div class="flex-1 overflow-y-auto">
                 <ul class="text-4xl tracking-wider uppercase nav-list">
                   <li>
@@ -35,6 +43,7 @@
                   </li>
                 </ul>
               </div>
+
               <div class="grid lg:grid-cols-2 gap-8">
                 <div class="">
                   <ul class="">
@@ -121,28 +130,28 @@ export default {
     }
   },
   mounted() {
-    this.$nuxt.$on('toggle-menu', (menuActive) => {
-      menuActive ? this.hide() : this.show()
-      this.active = menuActive
+    this.$nuxt.$on('toggle-menu', ({ active, ease = true }) => {
+      active ? this.hide(ease) : this.show(ease)
+      this.active = active
     })
   },
   methods: {
-    show() {
+    show(ease = true) {
       this.$gsap
-        .timeline({ defaults: { duration: 1.4, ease: 'Power3.easeInOut' } })
-        .to('[data-menu-dark]', { height: 0 }, 0.1)
-        .to('[data-menu-light]', { height: 0 }, 0.5)
+        .timeline({
+          defaults: { duration: ease ? 1.4 : 0, ease: 'Power3.easeInOut' },
+        })
+        .to('[data-menu-dark]', { height: 0 })
+        .to('[data-menu-light]', { height: 0 }, 0.4)
     },
-    hide() {
+    hide(ease = true) {
       this.$gsap
-        .timeline({ defaults: { duration: 1.4, ease: 'Power3.easeInOut' } })
+        .timeline({
+          defaults: { duration: ease ? 1.4 : 0, ease: 'Power3.easeInOut' },
+        })
+        .to('[data-menu-light]', { transformOrigin: 'bottom', height: '100vh' })
         .to(
           '[data-menu-dark]',
-          { transformOrigin: 'bottom', height: '100vh' },
-          0.8
-        )
-        .to(
-          '[data-menu-light]',
           { transformOrigin: 'bottom', height: '100vh' },
           0.4
         )
@@ -159,7 +168,7 @@ export default {
 }
 
 .nav-list a {
-  @apply inline-block text-white relative pl-4;
+  @apply inline-block relative pl-4;
 }
 
 .nav-list a:after {
@@ -172,16 +181,12 @@ export default {
   content: '';
 }
 
-.nav-list a.nuxt-link-active,
+.nav-list a.nuxt-link-exact-active,
 .nav-list a:hover {
   @apply pl-10;
 }
 
-.nav-list a:hover {
-  @apply text-opacity-50;
-}
-
-.nav-list a.nuxt-link-active:before,
+.nav-list a.nuxt-link-exact-active:before,
 .nav-list a:hover:before {
   @apply w-8;
 }

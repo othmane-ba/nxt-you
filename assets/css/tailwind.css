@@ -42,11 +42,13 @@ section:first-child {
   content: '';
 }
 
-.link:hover {
+.link:hover,
+.link.nuxt-link-exact-active {
   @apply text-opacity-100;
 }
 
-.link:hover:after {
+.link:hover:after,
+.link.nuxt-link-exact-active:after {
   @apply w-full;
 }
 

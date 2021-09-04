@@ -52,8 +52,10 @@ export default {
     mode: 'out-in',
     appear: true,
     leave(el, done) {
-      this.$nuxt.$emit('toggle-menu', false)
-      onPageLeave.play().then(done)
+      onPageLeave.play().then(() => {
+        this.$nuxt.$emit('toggle-menu', { active: false, ease: false })
+        done()
+      })
     },
     enter(el, done) {
       done()
