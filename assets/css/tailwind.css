@@ -34,19 +34,21 @@ section:first-child {
 }
 
 .link {
-  @apply relative ease-in-out duration-500 text-white text-opacity-50 pb-1;
+  @apply relative ease-in-out duration-500 text-white text-opacity-50 pb-px;
 }
 
 .link:after {
-  @apply block bg-white w-0 h-px absolute left-0 bottom-px ease-in-out duration-500;
+  @apply block bg-white w-0 h-px absolute left-0 bottom-0 ease-in-out duration-500;
   content: '';
 }
 
-.link:hover {
+.link:hover,
+.link.nuxt-link-exact-active {
   @apply text-opacity-100;
 }
 
-.link:hover:after {
+.link:hover:after,
+.link.nuxt-link-exact-active:after {
   @apply w-full;
 }
 

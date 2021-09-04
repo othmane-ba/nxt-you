@@ -1,8 +1,8 @@
 <template>
   <section v-animate>
-    <div class="sticky-video-display" ref="wrapper">
-      <div class="sticky top-0 left-0 w-full overflow-hidden">
-        <div class="absolute h-full max-h-screen w-full">
+    <div class="sticky-video" ref="wrapper">
+      <div class="relative lg:sticky top-0 left-0 w-full overflow-hidden">
+        <div class="lg:absolute h-full max-h-screen w-full">
           <button
             @click="muted = !muted"
             data-pointer="large"
@@ -80,6 +80,7 @@ export default {
       window.addEventListener('resize', this.addListener.bind(this))
 
       if (window.innerWidth > 768) {
+        this.onScroll()
         window.addEventListener('scroll', this.onScroll.bind(this), {
           passive: true,
         })
@@ -94,18 +95,17 @@ export default {
   },
   mounted() {
     this.rect = this.$refs.wrapper.getBoundingClientRect()
-    this.onScroll()
     this.addListener()
   },
 }
 </script>
 
 <style lang="postcss">
-.sticky-video-display {
-  @apply relative w-full lg:h-4-screen -mb-32 lg:-mt-32;
+.sticky-video {
+  @apply relative w-full lg:h-4-screen lg:-mb-32 lg:-mt-32;
 }
 
-.sticky-video-display video {
+.sticky-video video {
   @media screen(lg) {
     top: 4%;
     left: 4%;

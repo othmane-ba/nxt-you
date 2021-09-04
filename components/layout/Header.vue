@@ -1,23 +1,23 @@
 <template>
-  <header class="w-full fixed z-40">
+  <header class="top-0 w-full fixed z-50">
     <div class="container mx-auto px-4 lg:px-16">
-      <ul class="relative h-40">
-        <li class="absolute left-0 top-1/2 transform -translate-y-1/2">
+      <ul class="relative h-32">
+        <li class="absolute left-0 bottom-1/2 translate-y-1/2">
           <NuxtLink data-pointer="large" to="/">
             <img
-              class="w-20"
+              class="w-16"
               data-not-lazy
               alt="NXTYOU Brand"
               src="~/assets/images/logo.png"
             />
           </NuxtLink>
         </li>
-        <li class="absolute right-0 top-1/2 transform -translate-y-1/2">
+        <li class="absolute right-0 bottom-1/2 translate-y-1/2">
           <button
-            class="relative w-14 h-7"
+            class="relative w-12 h-6"
             :class="{ 'menu-active': menuActive }"
             data-pointer="large"
-            @click="$nuxt.$emit('toggle-menu', !menuActive)"
+            @click="$nuxt.$emit('toggle-menu', { active: !menuActive })"
           >
             <span></span>
             <span></span>
@@ -32,12 +32,12 @@
 export default {
   data() {
     return {
-      menuActive: true,
+      menuActive: false,
     }
   },
   mounted() {
-    this.$nuxt.$on('toggle-menu', (menuActive) => {
-      this.menuActive = menuActive
+    this.$nuxt.$on('toggle-menu', ({ active }) => {
+      this.menuActive = active
     })
   },
   methods: {},
