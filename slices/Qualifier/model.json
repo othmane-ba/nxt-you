@@ -11,33 +11,68 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Qualifier",
       "primary": {
-        "tagTitle": {
+        "title": {
           "config": {
-            "label": "Tag Title",
-            "placeholder": ""
+            "label": "Title",
+            "placeholder": "Section title"
           },
           "type": "Text"
         },
-        "tagDescription": {
+        "description": {
           "config": {
-            "label": "Tag Description",
-            "placeholder": "",
+            "label": "Description",
+            "placeholder": "Section description",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           },
           "type": "StructuredText"
         },
-        "contactTitle": {
+        "tagStepTitle": {
           "config": {
-            "label": "Contact Title",
-            "placeholder": ""
+            "label": "Tag Step Title",
+            "placeholder": "Title of first step (Tag Step)"
+          },
+          "type": "Text"
+        },
+        "contactStepTitle": {
+          "config": {
+            "label": "Contact Step Title",
+            "placeholder": "Title of second step (Contact Step)"
+          },
+          "type": "Text"
+        },
+        "budgetLowerLimit": {
+          "config": {
+            "label": "Budget Lower Limit",
+            "placeholder": "Lower Limit of Budgetvorstellung"
+          },
+          "type": "Number"
+        },
+        "budgetUpperLimit": {
+          "config": {
+            "label": "Budget Upper Limit",
+            "placeholder": "Upper Limit of Budgetvorstellung"
+          },
+          "type": "Number"
+        },
+        "prevLabel": {
+          "config": {
+            "label": "Previous Label",
+            "placeholder": "Text of previous step indicator"
+          },
+          "type": "Text"
+        },
+        "nextLabel": {
+          "config": {
+            "label": "Next Label",
+            "placeholder": "Text of next step indicator"
           },
           "type": "Text"
         },
         "submitLabel": {
           "config": {
             "label": "Submit Label",
-            "placeholder": ""
+            "placeholder": "Text of Submit Button"
           },
           "type": "Text"
         }

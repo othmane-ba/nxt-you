@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"qualifier","items":[{"tag":"mesh dynamic mindshare"},{"tag":"disintermediate best-of-breed content"},{"tag":"productize enterprise architectures"},{"tag":"visualize real-time bandwidth"},{"tag":"facilitate magnetic markets"},{"tag":"unleash back-end e-tailers"}],"primary":{"tagTitle":"revolutionize virtual deliverables","tagDescription":[{"type":"paragraph","text":"Cupidatat laboris aliquip dolore amet anim proident ut irure velit voluptate qui deserunt.","spans":[]}],"contactTitle":"redefine virtual relationships","submitLabel":"incubate next-generation web-readiness"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"qualifier","items":[{"tag":"integrate distributed deliverables"},{"tag":"whiteboard strategic methodologies"},{"tag":"reinvent rich e-markets"},{"tag":"whiteboard killer functionalities"},{"tag":"deploy revolutionary experiences"}],"primary":{"title":"embrace one-to-one methodologies","description":[{"type":"paragraph","text":"Ipsum amet excepteur sunt ut laboris nulla deserunt. Tempor irure ea labore minim cillum dolore in minim veniam tempor exercitation eu quis.","spans":[]}],"tagStepTitle":"generate plug-and-play synergies","contactStepTitle":"target efficient e-business","budgetLowerLimit":4237,"budgetUpperLimit":1525,"prevLabel":"orchestrate out-of-the-box web-readiness","nextLabel":"deliver virtual functionalities","submitLabel":"matrix B2B synergies"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

@@ -7,6 +7,14 @@ import noUiSlider from 'nouislider'
 
 export default {
   props: {
+    lowerLimit: {
+      type: Number,
+      default: 100000,
+    },
+    upperLimit: {
+      type: Number,
+      default: 5000,
+    },
     value: {
       type: Array,
       default: () => [14000, 68000],
@@ -19,8 +27,8 @@ export default {
       connect: true,
       tooltips: true,
       range: {
-        min: 5000,
-        max: 100000,
+        min: this.lowerLimit,
+        max: this.upperLimit,
       },
       format: {
         to: function (value) {

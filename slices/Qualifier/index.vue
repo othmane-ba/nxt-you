@@ -5,16 +5,19 @@
       v-animate
     >
       <h3 class="title" v-animate:text>
-        {{ slice.primary.tagTitle }}
+        {{ slice.primary.title }}
       </h3>
 
       <div class="lg:px-18">
-        <prismic-rich-text :field="slice.primary.tagDescription" />
+        <prismic-rich-text :field="slice.primary.description" />
       </div>
 
       <form @submit.prevent="submit">
         <Tabset @init="onInit" @select="onSelect" ref="tabset">
-          <Tab title="Services wählen" key="Services wählen">
+          <Tab
+            :title="slice.primary.tagStepTitle"
+            :key="slice.primary.tagStepTitle"
+          >
             <article>
               <div class="flex flex-wrap justify-center">
                 <Tag
@@ -28,7 +31,10 @@
               </div>
             </article>
           </Tab>
-          <Tab title="Kontakt aufnehmen" key="Kontakt aufnehmen">
+          <Tab
+            :title="slice.primary.contactStepTitle"
+            :key="slice.primary.contactStepTitle"
+          >
             <article>
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
@@ -76,7 +82,11 @@
                 <div class="lg:col-span-2">
                   <div class="text-left pl-2 pb-4">Budgetvorstellung</div>
                   <div class="pb-8">
-                    <RangeSlider v-model="qualifier.budget"></RangeSlider>
+                    <RangeSlider
+                      v-model="qualifier.budget"
+                      :lowerLimit="slice.primary.budgetLowerLimit"
+                      :upperLimit="slice.primary.budgetUpperLimit"
+                    ></RangeSlider>
                   </div>
                 </div>
               </div>
@@ -121,7 +131,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span>Zurück</span>
+                <span>{{ slice.primary.prevLabel }}</span>
               </TheButton>
             </div>
             <div
@@ -134,8 +144,7 @@
                 fgType="link"
                 @click="$refs.tabset.next()"
               >
-                <span>Weiter</span>
-
+                <span>{{ slice.primary.nextLabel }}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"

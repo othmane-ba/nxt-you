@@ -39,7 +39,18 @@
     "ImageGrid": {},
     "Intersection": {},
     "BorderIconList": {},
-    "Qualifier": {},
+    "Qualifier": {
+      "default-slice": {
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
     "PageHeader": {},
     "TextContainer": {}
   }

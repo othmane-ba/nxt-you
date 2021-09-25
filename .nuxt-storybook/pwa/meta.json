@@ -1,5 +1,5 @@
 {
-  "title": "NXT YOU",
+  "title": "NXTYOU",
   "meta": [
     {
       "hid": "charset",
@@ -18,17 +18,17 @@
     {
       "hid": "apple-mobile-web-app-title",
       "name": "apple-mobile-web-app-title",
-      "content": "NXT YOU"
+      "content": "NXTYOU"
     },
     {
       "hid": "description",
       "name": "description",
-      "content": "NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen."
+      "content": "NXTYOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat."
     },
     {
       "hid": "theme-color",
       "name": "theme-color",
-      "content": "#000000"
+      "content": "#2D5070"
     },
     {
       "hid": "og:type",
@@ -40,43 +40,43 @@
       "hid": "og:title",
       "name": "og:title",
       "property": "og:title",
-      "content": "NXT YOU"
+      "content": "NXTYOU"
     },
     {
       "hid": "og:site_name",
       "name": "og:site_name",
       "property": "og:site_name",
-      "content": "NXT YOU"
+      "content": "NXTYOU"
     },
     {
       "hid": "og:description",
       "name": "og:description",
       "property": "og:description",
-      "content": "NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen."
+      "content": "NXTYOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat."
     },
     {
       "hid": "og:url",
       "name": "og:url",
       "property": "og:url",
-      "content": "https://nxytyou.de/"
+      "content": "https://nxtyou.de/"
     },
     {
       "hid": "og:image",
       "name": "og:image",
       "property": "og:image",
-      "content": "https://nxytyou.de/NXTYOU.jpg"
+      "content": "https://nxtyou.de/NXTYOU.png"
     },
     {
       "hid": "og:image:width",
       "name": "og:image:width",
       "property": "og:image:width",
-      "content": "268"
+      "content": "1200"
     },
     {
       "hid": "og:image:height",
       "name": "og:image:height",
       "property": "og:image:height",
-      "content": "305"
+      "content": "627"
     },
     {
       "hid": "twitter:card",
@@ -88,7 +88,7 @@
       "hid": "twitter:creator",
       "name": "twitter:creator",
       "property": "twitter:creator",
-      "content": "NXT YOU"
+      "content": "NXTYOU"
     }
   ],
   "link": [
@@ -105,7 +105,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.44bfcdf8.json",
+      "href": "/_nuxt/manifest.fb7b4e3d.json",
       "hid": "manifest"
     }
   ],
