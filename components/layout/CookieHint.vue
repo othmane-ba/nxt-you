@@ -1,41 +1,44 @@
 <template>
-  <div class="fixed bottom-0 left-0 w-full z-40 lg:px-4">
+  <div>
     <div
       v-if="active"
       class="
-        container
-        bg-white
-        text-black
-        lg:py-2
+        fixed
+        right-0
+        bottom-0
+        md:bottom-4 md:right-4
+        w-72
+        md:w-96
+        bg-blue-dark
+        text-white
         p-4
-        mx-auto
-        flex flex-col
-        lg:flex-row lg:items-center
-        justify-between
+        text-xs
+        z-40
       "
     >
       <div>
         <p>
-          Diese Seite verwendet Cookies um Dienste bereitzustellen und Traffic
-          zu analysieren.
+          Wir nutzen Cookies um Dienste bereitzustellen und Traffic zu
+          analysieren.
         </p>
       </div>
-      <div class="flex space-x-4 pt-4 lg:pt-0">
-        <NuxtLink
-          to="/privacy"
-          class="py-2 px-4 rounded border"
-          data-pointer="large"
-        >
+      <div
+        class="
+          flex
+          items-center
+          justify-between
+          space-y-2
+          md:space-y-0 md:space-x-4
+          pt-4
+        "
+      >
+        <NuxtLink to="/privacy" class="link" data-pointer="large">
           Mehr erfahren
         </NuxtLink>
 
-        <button
-          @click="grant()"
-          class="py-2 px-4 rounded border border-blue text-blue"
-          data-pointer="large"
-        >
+        <TheButton @click="grant()" size="xs" data-pointer="large">
           Verstanden
-        </button>
+        </TheButton>
       </div>
     </div>
   </div>
