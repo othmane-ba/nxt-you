@@ -29,6 +29,12 @@
   "RangeSlider": {
     "description": "Auto imported from components/shared/RangeSlider.vue"
   },
+  "Tab": {
+    "description": "Auto imported from components/shared/Tab.vue"
+  },
+  "Tabset": {
+    "description": "Auto imported from components/shared/Tabset.vue"
+  },
   "Tag": {
     "description": "Auto imported from components/shared/Tag.vue"
   },

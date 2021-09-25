@@ -2,20 +2,35 @@
   <div
     data-pointer="large"
     class="
+      relative
       flex
       items-center
       justify-center
-      px-6
-      py-1
-      border border-gray-300
-      rounded
+      border-2 border-gray-600
+      rounded-3xl
+      text-white text-xs
+      uppercase
+      font-bold
+      tracking-widest
+      overflow-hidden
+      flex
+      items-center
+      justify-center
+      text-center
       transition-all
+      ease-in-out
+      duration-500
+      outline-none
+      appearance-none
       hover:border-blue
+      space-x-4
+      px-8
+      h-8
     "
     :class="{ 'border-blue': value, 'bg-blue': value }"
     @click="$emit('input', !value)"
   >
-    <div class="text-gray-300 mr-4">
+    <div>
       <svg
         v-if="value"
         xmlns="http://www.w3.org/2000/svg"
@@ -49,10 +64,8 @@
   </div>
 </template>
 
-<script >
-
-
-export default{
+<script>
+export default {
   props: {
     value: { type: Boolean, default: null },
     label: { type: String, default: null },

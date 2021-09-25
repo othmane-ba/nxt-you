@@ -16,5 +16,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Pointer>` | `<pointer>` (components/layout/Pointer.vue)
 - `<CnyVideo>` | `<cny-video>` (components/shared/CnyVideo.vue)
 - `<RangeSlider>` | `<range-slider>` (components/shared/RangeSlider.vue)
+- `<Tab>` | `<tab>` (components/shared/Tab.vue)
+- `<Tabset>` | `<tabset>` (components/shared/Tabset.vue)
 - `<Tag>` | `<tag>` (components/shared/Tag.vue)
 - `<TheButton>` | `<the-button>` (components/shared/TheButton.vue)

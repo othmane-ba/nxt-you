@@ -21,7 +21,7 @@ const jsonld = {
   breadcrumbs: [
     {
       url: 'https://nxtyou.de',
-      text: 'Home',
+      text: 'Startseite',
     },
   ],
 }
