@@ -28,7 +28,19 @@
 </template>
 
 <script>
-import * as THREE from 'three'
+import {
+  Color,
+  PerspectiveCamera,
+  Scene,
+  WebGLRenderer,
+  Line,
+  LineBasicMaterial,
+  BufferGeometry,
+  Vector3,
+  ShaderMaterial,
+  ShaderLib,
+  Points,
+} from 'three'
 
 class EventListener {
   constructor(type, fn, isDocumentListener = true) {
@@ -57,7 +69,7 @@ export default {
       sphereRotationSpeed: 0.1,
       particleCount: 1000,
       lineCount: 300,
-      color: new THREE.Color('#757575'),
+      color: new Color('#757575'),
       eventListener: [
         new EventListener('scroll', this.onScroll.bind(this)),
         new EventListener('mousemove', this.onDocumentMouseMove.bind(this)),
@@ -98,15 +110,15 @@ export default {
   },
   methods: {
     init() {
-      this.camera = new THREE.PerspectiveCamera(
+      this.camera = new PerspectiveCamera(
         75,
         this.screenWidth / this.screenHeight,
         1,
         10000
       )
       this.camera.position.z = this.sphereDistance
-      this.scene = new THREE.Scene()
-      this.renderer = new THREE.WebGLRenderer()
+      this.scene = new Scene()
+      this.renderer = new WebGLRenderer()
       this.renderer.setPixelRatio(window.devicePixelRatio)
       this.renderer.setSize(this.screenWidth, this.screenHeight)
       this.container.appendChild(this.renderer.domElement)
@@ -133,10 +145,10 @@ export default {
     },
 
     initParticles() {
-      const geometry = new THREE.BufferGeometry().setFromPoints([
-        new THREE.Vector3(0, 0, 0),
+      const geometry = new BufferGeometry().setFromPoints([
+        new Vector3(0, 0, 0),
       ])
-      const material = new THREE.ShaderMaterial({
+      const material = new ShaderMaterial({
         transparent: true,
         depthWrite: false,
         opacity: Math.random(),
@@ -145,7 +157,7 @@ export default {
           scale: { value: 1 },
           color: { value: this.color },
         },
-        vertexShader: THREE.ShaderLib.points.vertexShader,
+        vertexShader: ShaderLib.points.vertexShader,
         fragmentShader: `
     uniform vec3 color;
     void main() {
@@ -157,7 +169,7 @@ export default {
       })
       let particle
       for (let i = 0; i < this.particleCount; i++) {
-        particle = new THREE.Points(geometry, material)
+        particle = new Points(geometry, material)
         particle.position.x = Math.random() * 2 - 1
         particle.position.y = Math.random() * 2 - 1
         particle.position.z = Math.random() * 2 - 1
@@ -170,7 +182,7 @@ export default {
 
     initLines() {
       for (let i = 0; i < this.lineCount; i++) {
-        const vertex = new THREE.Vector3(
+        const vertex = new Vector3(
           Math.random() * 2 - 1,
           Math.random() * 2 - 1,
           Math.random() * 2 - 1
@@ -180,9 +192,9 @@ export default {
         const vertex2 = vertex.clone()
         vertex2.multiplyScalar(Math.random() * 0.3 + 1)
         this.scene.add(
-          new THREE.Line(
-            new THREE.BufferGeometry().setFromPoints([vertex, vertex2]),
-            new THREE.LineBasicMaterial({
+          new Line(
+            new BufferGeometry().setFromPoints([vertex, vertex2]),
+            new LineBasicMaterial({
               color: this.color,
               transparent: true,
               depthWrite: false,
@@ -192,7 +204,6 @@ export default {
         )
       }
     },
-
     addEventListener() {
       this.eventListener.forEach((listener) => listener.add())
       this.$nuxt.$on('page-loaded', () => {
