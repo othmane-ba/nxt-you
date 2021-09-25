@@ -21,6 +21,7 @@ module.exports = {
         100: '100',
       },
       height: {
+        12: '3rem',
         '4-screen': '400vh',
       },
       boxShadow: {
@@ -53,8 +54,6 @@ module.exports = {
     },
   },
   purge: {
-    // enabled: true,
-    // mode: postcss,
     content: [
       './slices/**/*.vue',
       './node_modules/swiper/**/*.js',
