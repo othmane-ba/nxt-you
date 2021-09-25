@@ -8,7 +8,7 @@ const { getStoriesPaths } = require('slice-machine-ui/helpers/storybook')
 export default {
   target: 'static',
   head: {
-    title: 'NXT YOU',
+    title: 'NXTYOU',
     titleTemplate: '%s - Make Your Vision Come Reality.',
     htmlAttrs: {
       lang: 'de',

@@ -5,11 +5,11 @@ export default {
     purpose: 'maskable',
   },
   manifest: {
-    name: 'NXT YOU',
-    short_name: 'NXT YOU.',
+    name: 'NXTYOU',
+    short_name: 'NXTYOU.',
     lang: 'de',
     description:
-      'NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.',
+      'NXTYOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat.',
     start_url: '',
     background_color: '#000000',
   },
@@ -17,9 +17,9 @@ export default {
   meta: {
     charset: 'utf-8',
     viewport: 'width=device-width, initial-scale=1',
-    name: 'NXT YOU',
+    name: 'NXTYOU',
     description:
-      'NXT YOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat. Unsere Projekte sind immer auf die Bedürfnisse unserer Kunden zugeschnitten. Wir lieben die Zusammenarbeit mit Marken, die unsere Vision teilen, etwas wirklich Einzigartiges und Außergewöhnliches zu schaffen.',
+      'NXTYOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat.',
     theme_color: '#2D5070',
     lang: 'de',
     ogHost: 'https://nxtyou.de/',
@@ -29,6 +29,6 @@ export default {
       height: '627',
     },
     twitterCard: 'summary_large_image',
-    twitterCreator: 'NXT YOU',
+    twitterCreator: 'NXTYOU',
   },
 }
