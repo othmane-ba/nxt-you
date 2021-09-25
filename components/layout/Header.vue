@@ -1,9 +1,9 @@
 <template>
-  <header class="top-0 w-full fixed z-50">
+  <header class="top-0 w-full fixed z-50 pointer-events-none">
     <div class="container mx-auto px-4 lg:px-16">
       <ul class="relative h-32">
         <li class="absolute left-0 bottom-1/2 translate-y-1/2">
-          <NuxtLink data-pointer="large" to="/">
+          <NuxtLink class="pointer-events-auto" data-pointer="large" to="/">
             <img
               class="w-16"
               data-not-lazy
@@ -14,7 +14,7 @@
         </li>
         <li class="absolute right-0 bottom-1/2 translate-y-1/2">
           <button
-            class="relative w-12 h-6"
+            class="relative w-12 h-6 pointer-events-auto"
             :class="{ 'menu-active': menuActive }"
             data-pointer="large"
             @click="$nuxt.$emit('toggle-menu', { active: !menuActive })"
