@@ -14,6 +14,7 @@
       appearance-none
       space-x-4
       disabled:opacity-50
+      h-12
     "
     :class="classes"
     data-pointer="large"
@@ -48,7 +49,7 @@ export default {
           'bg-gray-900 border-2 border-gray-900 rounded-3xl text-white text-xs uppercase font-bold tracking-widest overflow-hidden transition ease-in-out duration-500 hover:bg-transparent',
         ]
       } else if (this.fgType === 'link') {
-        return ['link']
+        return ['link', 'h-auto']
       }
     },
   },
