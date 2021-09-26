@@ -13,24 +13,34 @@
             v-for="(item, i) in slice.items"
             :key="`slice-item-${i}`"
           >
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-              <div>
+            <div class="grid lg:grid-cols-5 gap-4 items-center">
+              <div class="lg:col-span-2">
+                <h4 class="font-bold uppercase text-4xl">
+                  {{ item.title }}
+                </h4>
+
                 <div
-                  class="relative bg-gray-400 max-w-xl mx-auto mb-4 w-full h-px"
+                  class="
+                    relative
+                    transform
+                    lg:translate-x-8
+                    z-10
+                    bg-black
+                    p-4
+                    mb-4
+                  "
                 >
+                  <prismic-rich-text :field="item.description" />
+                </div>
+
+                <div class="relative bg-gray-400 mr-auto mb-4 w-24 h-px">
                   <div
                     data-gsap-target="featureSlider"
                     class="absolute bg-white top-0 left-0 h-full w-0"
                   ></div>
                 </div>
-
-                <h4 class="font-bold uppercase text-4xl mb-4">
-                  {{ item.title }}
-                </h4>
-
-                <prismic-rich-text :field="item.description" />
               </div>
-              <div>
+              <div class="lg:col-span-3">
                 <prismic-image
                   class="w-full"
                   v-if="item.image"

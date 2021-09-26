@@ -5,11 +5,11 @@
     "slice_type": "marketing_slider",
     "items": [
       {
-        "title": "syndicate mission-critical initiatives",
+        "title": "productize strategic interfaces",
         "description": [
           {
             "type": "paragraph",
-            "text": "Reprehenderit eiusmod ad ad eiusmod nostrud consequat magna nostrud enim cillum elit. Incididunt adipisicing qui adipisicing velit reprehenderit sint pariatur do Lorem.",
+            "text": "Non in reprehenderit tempor Lorem esse anim ea est. Nostrud non ipsum est esse enim laboris non pariatur anim irure ea ex ex. Labore adipisicing aute eiusmod incididunt do laborum laborum ex qui qui velit non eu cupidatat reprehenderit.",
             "spans": []
           }
         ],
@@ -20,16 +20,16 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
         },
-        "video": "grow 24/365 eyeballs"
+        "video": "transition cross-platform portals"
       },
       {
-        "title": "transform end-to-end interfaces",
+        "title": "exploit frictionless mindshare",
         "description": [
           {
             "type": "paragraph",
-            "text": "Lorem deserunt reprehenderit velit ipsum aliqua esse mollit est ullamco tempor. Sunt esse fugiat occaecat cupidatat sit culpa irure proident nulla excepteur velit.",
+            "text": "Quis cillum dolore exercitation nulla Lorem adipisicing voluptate ut qui nostrud dolore. Incididunt do exercitation ad eu tempor dolore tempor sunt aliquip Lorem pariatur magna ad. Adipisicing occaecat esse duis culpa dolore eu cillum sint adipisicing culpa Lorem duis commodo enim.",
             "spans": []
           }
         ],
@@ -40,16 +40,16 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
         },
-        "video": "deliver efficient functionalities"
+        "video": "orchestrate world-class markets"
       },
       {
-        "title": "recontextualize cross-platform users",
+        "title": "architect frictionless web-readiness",
         "description": [
           {
             "type": "paragraph",
-            "text": "Enim magna et enim mollit sint in fugiat consequat sit magna commodo et anim nulla amet. Magna laboris excepteur Lorem sit eu non minim cillum id occaecat occaecat voluptate.",
+            "text": "Eu aliqua ullamco ea. Sint consequat magna culpa dolor est aliquip reprehenderit occaecat amet magna.",
             "spans": []
           }
         ],
@@ -60,13 +60,33 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
         },
-        "video": "orchestrate B2C partnerships"
+        "video": "e-enable world-class methodologies"
+      },
+      {
+        "title": "deliver customized infrastructures",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Consectetur nisi ex nulla pariatur dolor. Nostrud proident exercitation aliquip commodo. In sint amet ullamco exercitation magna et magna dolor labore ea consectetur nulla mollit.",
+            "spans": []
+          }
+        ],
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
+        },
+        "video": "seize 24/365 web services"
       }
     ],
     "primary": {
-      "autoplaySpeed": 1353
+      "autoplaySpeed": 8751
     }
   }
 ]

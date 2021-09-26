@@ -1,13 +1,26 @@
 {
-  "id": "0643394d-0bdd-402e-a3a7-05aa00952930",
-  "uid": "amet-at-placeat",
+  "id": "bb4a74ea-3971-4abb-9406-1c27db33940a",
+  "uid": "velit-nobis-vel",
   "type": "homepage",
   "data": {
-    "metaTitle": "engineer user-centric deliverables",
-    "meta_description": "recontextualize customized schemas",
-    "social_cards": [
+    "metaTitle": "reintermediate real-time niches",
+    "metaDescription": "whiteboard one-to-one relationships",
+    "socialCards": [
       {
-        "social_card_image": {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "enhance magnetic web-readiness",
+        "socialCardDescription": "revolutionize strategic architectures"
+      },
+      {
+        "socialCardImage": {
           "dimensions": {
             "width": 900,
             "height": 500
@@ -16,11 +29,11 @@
           "copyright": null,
           "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
         },
-        "social_card_title": "exploit global niches",
-        "social_card_description": "innovate distributed systems"
+        "socialCardTitle": "cultivate innovative technologies",
+        "socialCardDescription": "reintermediate virtual ROI"
       },
       {
-        "social_card_image": {
+        "socialCardImage": {
           "dimensions": {
             "width": 900,
             "height": 500
@@ -29,47 +42,8 @@
           "copyright": null,
           "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
         },
-        "social_card_title": "innovate extensible technologies",
-        "social_card_description": "exploit robust supply-chains"
-      },
-      {
-        "social_card_image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
-        },
-        "social_card_title": "facilitate leading-edge infomediaries",
-        "social_card_description": "e-enable B2C schemas"
-      },
-      {
-        "social_card_image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
-        },
-        "social_card_title": "optimize clicks-and-mortar eyeballs",
-        "social_card_description": "streamline distributed web services"
-      },
-      {
-        "social_card_image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
-        },
-        "social_card_title": "aggregate B2C methodologies",
-        "social_card_description": "benchmark integrated e-markets"
+        "socialCardTitle": "orchestrate best-of-breed e-services",
+        "socialCardDescription": "leverage cross-platform technologies"
       }
     ]
   }

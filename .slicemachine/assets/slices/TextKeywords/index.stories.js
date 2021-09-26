@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_keywords","items":[],"primary":{"title":"generate visionary schemas","text-left":[{"type":"paragraph","text":"Irure aliquip proident tempor ea ad adipisicing commodo adipisicing ullamco do enim sint duis ea. Duis tempor id elit reprehenderit qui eiusmod in.","spans":[]}],"text-right":[{"type":"paragraph","text":"Esse deserunt excepteur pariatur aute eiusmod est amet culpa aute deserunt consequat qui mollit.","spans":[]}],"keywords":"iterate visionary models"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_keywords","items":[],"primary":{"title":"repurpose efficient web services","text-left":[{"type":"paragraph","text":"Est ea ea officia nostrud aliquip sint commodo nisi in ea id culpa amet.","spans":[]}],"text-right":[{"type":"paragraph","text":"Et officia eiusmod sint mollit aliquip commodo nostrud ex esse mollit ipsum incididunt dolore. Nulla aute Lorem et mollit minim id cupidatat aute mollit. Aute proident laboris cupidatat nisi.","spans":[]}],"keywords":"brand virtual partnerships"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

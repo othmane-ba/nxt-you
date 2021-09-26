@@ -9,7 +9,7 @@ export default {
     short_name: 'NXTYOU.',
     lang: 'de',
     description:
-      'NXTYOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat.',
+      'NXTYOU ist die Exklusivagentur, für Markenaufbau, Content-Erstellung und digitales Marketing.',
     start_url: '',
     background_color: '#000000',
   },
@@ -19,7 +19,7 @@ export default {
     viewport: 'width=device-width, initial-scale=1',
     name: 'NXTYOU',
     description:
-      'NXTYOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat.',
+      'NXTYOU ist die Exklusivagentur, für Markenaufbau, Content-Erstellung und digitales Marketing.',
     theme_color: '#2D5070',
     lang: 'de',
     ogHost: 'https://nxtyou.de/',

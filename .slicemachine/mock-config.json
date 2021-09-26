@@ -1,7 +1,11 @@
 {
   "_cts": {
-    "homepage": {},
-    "page": {}
+    "homepage": {
+      "socialCards": {}
+    },
+    "page": {
+      "socialCards": {}
+    }
   },
   "slices": {
     "TextKeywords": {},
@@ -9,48 +13,15 @@
     "StickyVideo": {},
     "BorderSlogan": {},
     "NumberTextAction": {},
-    "VideoGrid": {
-      "default-slice": {
-        "items": {}
-      }
-    },
-    "FeatureSlider": {
-      "default-slice": {
-        "primary": {},
-        "items": {
-          "subtitle": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          },
-          "description": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        }
-      }
-    },
+    "VideoGrid": {},
+    "FeatureSlider": {},
     "RevealGrid": {},
     "MarketingSlider": {},
     "ImageCaptionGrid": {},
     "ImageGrid": {},
     "Intersection": {},
     "BorderIconList": {},
-    "Qualifier": {
-      "default-slice": {
-        "primary": {
-          "description": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        }
-      }
-    },
+    "Qualifier": {},
     "PageHeader": {},
     "TextContainer": {}
   }

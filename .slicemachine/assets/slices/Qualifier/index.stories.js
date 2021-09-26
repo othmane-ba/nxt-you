@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"qualifier","items":[{"tag":"integrate distributed deliverables"},{"tag":"whiteboard strategic methodologies"},{"tag":"reinvent rich e-markets"},{"tag":"whiteboard killer functionalities"},{"tag":"deploy revolutionary experiences"}],"primary":{"title":"embrace one-to-one methodologies","description":[{"type":"paragraph","text":"Ipsum amet excepteur sunt ut laboris nulla deserunt. Tempor irure ea labore minim cillum dolore in minim veniam tempor exercitation eu quis.","spans":[]}],"tagStepTitle":"generate plug-and-play synergies","contactStepTitle":"target efficient e-business","budgetLowerLimit":4237,"budgetUpperLimit":1525,"prevLabel":"orchestrate out-of-the-box web-readiness","nextLabel":"deliver virtual functionalities","submitLabel":"matrix B2B synergies"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"qualifier","items":[{"tag":"generate synergistic e-markets"},{"tag":"drive enterprise blockchains"}],"primary":{"title":"transition back-end technologies","description":[{"type":"paragraph","text":"Laborum ut ullamco enim incididunt sint mollit ad est aliqua dolore pariatur est sint veniam qui.","spans":[]}],"tagStepTitle":"expedite proactive functionalities","contactStepTitle":"incubate leading-edge e-services","budgetLowerLimit":7051,"budgetUpperLimit":4063,"prevLabel":"engage seamless architectures","nextLabel":"recontextualize web-enabled web services","submitLabel":"synthesize synergistic networks"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

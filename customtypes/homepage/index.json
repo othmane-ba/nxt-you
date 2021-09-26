@@ -64,39 +64,42 @@
           "placeholder": "My title for Search Engine"
         }
       },
-      "meta_description": {
+      "metaDescription": {
         "type": "Text",
         "config": {
           "label": "Meta Description",
-          "placeholder": "The description that will appear in search engine"
+          "placeholder": "The description for search engine"
         }
       },
-      "social_cards": {
+      "socialCards": {
         "type": "Group",
         "config": {
+          "label": "Social Cards - Facebook & Twitter",
+          "placeholder": "",
           "fields": {
-            "social_card_image": {
+            "socialCardImage": {
               "type": "Image",
               "config": {
+                "label": "Social Card Image",
                 "constraint": {},
-                "thumbnails": [],
-                "label": "Social Card Image"
+                "thumbnails": []
               }
             },
-            "social_card_title": {
+            "socialCardTitle": {
               "type": "Text",
               "config": {
-                "label": "Social Card TItle"
+                "label": "Social Card Title",
+                "placeholder": ""
               }
             },
-            "social_card_description": {
+            "socialCardDescription": {
               "type": "Text",
               "config": {
-                "label": "Social card description"
+                "label": "Social Card Description",
+                "placeholder": ""
               }
             }
-          },
-          "label": "Social Cards - Facebook & Twitter"
+          }
         }
       }
     }

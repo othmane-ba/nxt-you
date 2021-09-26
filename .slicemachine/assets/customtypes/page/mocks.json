@@ -1,36 +1,63 @@
 {
-  "id": "0a2c2a9b-c289-47a6-a941-37be162b8528",
-  "uid": "et-numquam-nihil",
+  "id": "32f9611b-fd07-4137-b3e0-35ff0fb7c06d",
+  "uid": "fugiat-qui-deleniti",
   "type": "page",
   "data": {
-    "meta_title": "exploit leading-edge infrastructures",
-    "meta_description": "revolutionize interactive interfaces",
-    "social_cards": [
+    "metaTitle": "embrace open-source deliverables",
+    "metaDescription": "utilize wireless metrics",
+    "crawlable": true,
+    "socialCards": [
       {
-        "social_card_image": {
+        "socialCardImage": {
           "dimensions": {
             "width": 900,
             "height": 500
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
         },
-        "social_card_title": "expedite one-to-one users",
-        "social_card_description": "transform efficient applications"
+        "socialCardTitle": "productize open-source platforms",
+        "socialCardDescription": "repurpose wireless eyeballs"
       },
       {
-        "social_card_image": {
+        "socialCardImage": {
           "dimensions": {
             "width": 900,
             "height": 500
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
         },
-        "social_card_title": "orchestrate robust niches",
-        "social_card_description": "aggregate seamless models"
+        "socialCardTitle": "transform out-of-the-box web services",
+        "socialCardDescription": "reintermediate wireless interfaces"
+      },
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "facilitate plug-and-play models",
+        "socialCardDescription": "matrix strategic solutions"
+      },
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "generate virtual applications",
+        "socialCardDescription": "repurpose distributed blockchains"
       }
     ]
   }
