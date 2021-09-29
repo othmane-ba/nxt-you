@@ -11,13 +11,17 @@
             data-pointer="large"
           >
             <div class="relative w-full aspect-h-3 md:aspect-h-2 aspect-w-3">
-              <prismic-image
-                :field="item.image"
+              <img
+                v-lazy
                 class="client-list__item__image"
+                :data-src="item.image.url"
+                :alt="item.image.alt"
               />
-              <prismic-image
-                :field="item.imageActive"
+              <img
+                v-lazy
                 class="client-list__item__image client-list__item__image--hover"
+                :data-src="item.imageActive.url"
+                :alt="item.imageActive.alt"
               />
             </div>
           </a>
@@ -47,7 +51,7 @@
                   justify-center
                   text-blue
                 "
-                 v-animate:text
+                v-animate:text
               >
                 <span>This Spot</span>
                 <span>Awaits</span>

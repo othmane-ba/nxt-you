@@ -40,5 +40,8 @@
   },
   "TheButton": {
     "description": "Auto imported from components/shared/TheButton.vue"
+  },
+  "TheImage": {
+    "description": "Auto imported from components/shared/TheImage.vue"
   }
 }

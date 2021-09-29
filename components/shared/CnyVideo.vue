@@ -1,5 +1,6 @@
 <template>
   <video
+    v-lazy
     :playsinline="playsinline"
     :loop="loop"
     :muted="muted"
@@ -8,7 +9,7 @@
   >
     <source
       v-for="format of types"
-      :src="cnySrc(format)"
+      :data-src="cnySrc(format)"
       :type="'video/' + format"
     />
     Your browser does not support HTML5 video tags.

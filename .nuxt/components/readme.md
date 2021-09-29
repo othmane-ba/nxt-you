@@ -20,3 +20,4 @@ You can directly use them in pages and other components without the need to impo
 - `<Tabset>` | `<tabset>` (components/shared/Tabset.vue)
 - `<Tag>` | `<tag>` (components/shared/Tag.vue)
 - `<TheButton>` | `<the-button>` (components/shared/TheButton.vue)
+- `<TheImage>` | `<the-image>` (components/shared/TheImage.vue)

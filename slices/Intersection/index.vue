@@ -1,6 +1,6 @@
 <template>
   <section class="intersection m-0">
-    <div class="relative h-64 w-full overflow-hidden"  >
+    <div class="relative h-64 w-full overflow-hidden">
       <div
         class="
           absolute
@@ -11,10 +11,12 @@
           -translate-x-1/2 -translate-y-1/2
         "
       >
-        <prismic-image
-          class="w-full"
-          :field="slice.primary.image"
+        <img
+          v-lazy
           v-simple-parallax
+          class="w-full"
+          :data-src="slice.primary.image.url"
+          :alt="slice.primary.image.alt"
         />
       </div>
 

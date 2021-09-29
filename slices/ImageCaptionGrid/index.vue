@@ -14,9 +14,11 @@
             'lg:text-left pl-4 lg:pl-0 lg:pr-32': i % 2 !== 0,
           }"
         >
-          <prismic-image
+          <img
             class="w-full h-auto"
-            :field="item.image"
+            v-lazy
+            :data-src="item.image.url"
+            :alt="item.image.alt"
             v-simple-parallax="{
               overflow: true,
               scale: i % 2 <= 0 ? 1.25 : 1.15,
@@ -31,7 +33,7 @@
           >
             <span
               class="text-white font-bold text-4xl uppercase"
-               v-animate:text
+              v-animate:text
             >
               {{ item.caption }}
             </span>

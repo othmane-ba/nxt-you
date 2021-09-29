@@ -60,10 +60,7 @@ export default {
     dev: process.env.NODE_ENV !== 'production',
   },
 
-  css: [
-    // Load a Node.js module directly (here it's a Sass file)
-    'splitting/dist/splitting.css',
-  ],
+  css: ['splitting/dist/splitting.css'],
 
   plugins: [
     '~/plugins/vue-awesome-swiper.client.js',
@@ -73,6 +70,7 @@ export default {
     '~/plugins/jsonld.js',
     '~/plugins/vue-gtag.client.js',
     '~/plugins/animate.client.js',
+    '~/plugins/lazy-load.client.js',
   ],
   components: {
     dirs: ['~/components/home', '~/components/layout', '~/components/shared'],
@@ -93,7 +91,6 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/cloudinary',
-    'nuxt-lazy-load',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap', // If you use other modules, always declare the sitemap module at end of array
   ],
@@ -131,6 +128,7 @@ export default {
       ],
     },
   },
+
   build: {
     transpile: ['vue-slicezone', 'nuxt-sm', 'splitting'],
   },

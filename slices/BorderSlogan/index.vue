@@ -60,10 +60,10 @@
             lg:left-auto
           "
         >
-          <prismic-image
-            :field="item.image"
+          <img
             v-for="(item, i) in slice.items"
             :key="`slice-item-${i}`"
+            v-lazy
             v-simple-parallax="{
               overflow: true,
               scale: 1.6 * (i % 2 === 0 ? 1 : 1.2),
@@ -72,6 +72,8 @@
               'relative w-full h-auto lg:h-full lg:w-auto': i <= 0,
               'absolute top-0 left-0 h-full w-full object-contain z-10': i > 0,
             }"
+            :data-src="item.image.url"
+            :alt="item.image.alt"
           />
         </div>
       </div>

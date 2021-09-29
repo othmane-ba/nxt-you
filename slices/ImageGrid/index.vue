@@ -3,14 +3,16 @@
     <div class="container px-4 mx-auto">
       <div
         class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4"
-         v-animate:children
+        v-animate:children
       >
-        <prismic-image
+        <img
           v-for="(item, i) in slice.items"
+          v-lazy
           :key="`slice-item-${i}`"
           v-simple-parallax
           class="w-full"
-          :field="item.image"
+          :data-src="item.image.url"
+          :alt="item.image.alt"
         />
       </div>
     </div>

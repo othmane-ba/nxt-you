@@ -41,6 +41,7 @@
     "splitting": "^1.0.6",
     "swiper": "^6.5.9",
     "three": "^0.128.0",
+    "vanilla-lazyload": "^17.5.0",
     "vue-awesome-swiper": "^4.1.1",
     "vue-gtag": "^1.16.1",
     "vue-range-component": "^1.0.3",

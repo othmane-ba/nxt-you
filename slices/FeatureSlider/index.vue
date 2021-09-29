@@ -89,9 +89,11 @@
                       ]"
                       :key="index + j"
                     >
-                      <prismic-image
+                      <img
+                        v-lazy
                         class="h-14 w-14 mx-auto object-contain"
-                        :field="feature['icon' + indicator]"
+                        :data-src="feature['icon' + indicator].url"
+                        :alt="feature['icon' + indicator].alt"
                       />
 
                       <div class="text-center uppercase font-bold">

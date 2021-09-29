@@ -12,6 +12,7 @@ export { default as Tab } from '../..\\components\\shared\\Tab.vue'
 export { default as Tabset } from '../..\\components\\shared\\Tabset.vue'
 export { default as Tag } from '../..\\components\\shared\\Tag.vue'
 export { default as TheButton } from '../..\\components\\shared\\TheButton.vue'
+export { default as TheImage } from '../..\\components\\shared\\TheImage.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

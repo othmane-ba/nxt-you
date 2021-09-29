@@ -41,10 +41,11 @@
                 </div>
               </div>
               <div class="lg:col-span-3">
-                <prismic-image
+                <img
+                  v-lazy
                   class="w-full"
-                  v-if="item.image"
-                  :field="item.image"
+                  :data-src="item.image.url"
+                  :alt="item.image.alt"
                 />
 
                 <CnyVideo

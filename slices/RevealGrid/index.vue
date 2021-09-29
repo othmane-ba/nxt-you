@@ -37,7 +37,8 @@
           :key="j"
           v-simple-parallax="{ overflow: true }"
         >
-          <prismic-image
+          <img
+            v-lazy
             class="
               absolute
               top-0
@@ -49,10 +50,11 @@
               ease-in-out
               duration-1000
             "
-            :field="item[image]"
+            :data-src="item[image].url"
             :alt="item[image].alt"
           />
-          <prismic-image
+          <img
+            v-lazy
             class="
               absolute
               top-0
@@ -65,7 +67,7 @@
               ease-in-out
               duration-1000
             "
-            :field="item[image + 'Reveal']"
+            :data-src="item[image + 'Reveal'].url"
             :alt="item[image + 'Reveal'].alt"
           />
         </div>

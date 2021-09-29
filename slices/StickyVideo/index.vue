@@ -39,8 +39,10 @@
         </div>
         <div ref="container" class="w-full mx-auto">
           <img
+            v-lazy
             class="relative z-10 w-full h-auto origin-top hidden lg:block"
-            :src="require('~/assets/images/mac.png')"
+            alt="Mac"
+            :data-src="require('~/assets/images/mac.png')"
           />
           <CnyVideo
             :width="800"
