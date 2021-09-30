@@ -1,11 +1,39 @@
 {
-  "id": "bb4a74ea-3971-4abb-9406-1c27db33940a",
-  "uid": "velit-nobis-vel",
+  "id": "cca64fa7-4c49-4776-8721-ed8945ff807c",
+  "uid": "possimus-voluptatem-aut",
   "type": "homepage",
   "data": {
-    "metaTitle": "reintermediate real-time niches",
-    "metaDescription": "whiteboard one-to-one relationships",
+    "metaTitle": "matrix next-generation portals",
+    "metaDescription": "optimize open-source users",
+    "breadcrumbTitle": "productize front-end partnerships",
+    "crawlable": false,
     "socialCards": [
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "incentivize bleeding-edge models",
+        "socialCardDescription": "reinvent visionary ROI"
+      },
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "integrate web-enabled users",
+        "socialCardDescription": "innovate intuitive markets"
+      },
       {
         "socialCardImage": {
           "dimensions": {
@@ -16,8 +44,8 @@
           "copyright": null,
           "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
         },
-        "socialCardTitle": "enhance magnetic web-readiness",
-        "socialCardDescription": "revolutionize strategic architectures"
+        "socialCardTitle": "whiteboard granular niches",
+        "socialCardDescription": "seize transparent relationships"
       },
       {
         "socialCardImage": {
@@ -27,10 +55,10 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
         },
-        "socialCardTitle": "cultivate innovative technologies",
-        "socialCardDescription": "reintermediate virtual ROI"
+        "socialCardTitle": "innovate vertical architectures",
+        "socialCardDescription": "exploit world-class technologies"
       },
       {
         "socialCardImage": {
@@ -40,10 +68,23 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
         },
-        "socialCardTitle": "orchestrate best-of-breed e-services",
-        "socialCardDescription": "leverage cross-platform technologies"
+        "socialCardTitle": "leverage vertical synergies",
+        "socialCardDescription": "scale B2C functionalities"
+      },
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "e-enable sexy relationships",
+        "socialCardDescription": "integrate one-to-one schemas"
       }
     ]
   }

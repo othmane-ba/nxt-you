@@ -114,6 +114,13 @@
           }
         }
       },
+      "breadcrumbTitle": {
+        "config": {
+          "label": "Breadcrumb Title",
+          "placeholder": "Google breadcrumb markup"
+        },
+        "type": "Text"
+      },
       "crawlable": {
         "config": {
           "label": "Crawlable",

@@ -23,7 +23,7 @@
     {
       "hid": "description",
       "name": "description",
-      "content": "NXTYOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat."
+      "content": "NXTYOU ist die Exklusivagentur für Markenaufbau, Content-Erstellung und digitales Marketing."
     },
     {
       "hid": "theme-color",
@@ -52,7 +52,7 @@
       "hid": "og:description",
       "name": "og:description",
       "property": "og:description",
-      "content": "NXTYOU ist eine Exklusivagentur, die sich auf Markenaufbau, Content-Erstellung und digitales Marketing spezialisiert hat."
+      "content": "NXTYOU ist die Exklusivagentur für Markenaufbau, Content-Erstellung und digitales Marketing."
     },
     {
       "hid": "og:url",
@@ -105,7 +105,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.fb7b4e3d.json",
+      "href": "/_nuxt/manifest.38e61768.json",
       "hid": "manifest"
     }
   ],

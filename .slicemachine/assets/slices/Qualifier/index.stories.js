@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"qualifier","items":[{"tag":"generate synergistic e-markets"},{"tag":"drive enterprise blockchains"}],"primary":{"title":"transition back-end technologies","description":[{"type":"paragraph","text":"Laborum ut ullamco enim incididunt sint mollit ad est aliqua dolore pariatur est sint veniam qui.","spans":[]}],"tagStepTitle":"expedite proactive functionalities","contactStepTitle":"incubate leading-edge e-services","budgetLowerLimit":7051,"budgetUpperLimit":4063,"prevLabel":"engage seamless architectures","nextLabel":"recontextualize web-enabled web services","submitLabel":"synthesize synergistic networks"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"qualifier","items":[{"tag":"engage transparent web-readiness"},{"tag":"evolve viral paradigms"}],"primary":{"title":"streamline dot-com synergies","description":[{"type":"paragraph","text":"Officia eiusmod mollit laborum tempor consequat est eiusmod adipisicing minim excepteur enim ut aliquip nisi. Irure reprehenderit occaecat aliqua excepteur adipisicing incididunt ipsum est.","spans":[]}],"tagStepTitle":"utilize B2C vortals","contactStepTitle":"optimize one-to-one deliverables","budgetLowerLimit":8985,"budgetUpperLimit":6414,"prevLabel":"iterate magnetic convergence","nextLabel":"synergize wireless portals","submitLabel":"revolutionize seamless eyeballs"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
