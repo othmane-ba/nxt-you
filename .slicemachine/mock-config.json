@@ -5,6 +5,10 @@
     },
     "page": {
       "socialCards": {}
+    },
+    "menu": {
+      "primaryLinks": {},
+      "secondaryLinks": {}
     }
   },
   "slices": {

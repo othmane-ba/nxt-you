@@ -11,8 +11,6 @@ const getPages = async () => {
     )
     .then((p) => p.results)
 
-  console.log('allPages', allPages)
-
   const disallowedPages = [
     '/preview',
     ...allPages.flatMap((p) => (!p.data.crawlable ? [`/${p.uid || ''}`] : [])),
@@ -127,7 +125,6 @@ export default async () => {
     plugins: [
       '~/plugins/vue-awesome-swiper.client.js',
       '~/plugins/simple-parallax.client.js',
-      '~/plugins/vue-range-component.client.js',
       '~/plugins/vuelidate.js',
       '~/plugins/jsonld.js',
       '~/plugins/vue-gtag.client.js',
@@ -141,7 +138,6 @@ export default async () => {
     buildModules: [
       '@nuxtjs/tailwindcss',
       '@nuxtjs/device',
-      '@nuxtjs/svg',
       'nuxt-gsap-module',
       '@nuxtjs/toast',
       '@nuxtjs/pwa',

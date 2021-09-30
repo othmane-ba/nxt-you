@@ -35,6 +35,7 @@
                   "
                 ></div>
                 <img
+                  v-lazy
                   ref="phoneImg"
                   v-for="(publicId, i) in images"
                   :src="
@@ -60,8 +61,15 @@
             >
               <div class="flex-1 overflow-y-auto">
                 <ul class="text-4xl tracking-wider uppercase nav-list">
-                  <li>
-                    <NuxtLink data-pointer="large" to="/">Startseite</NuxtLink>
+                  <li
+                    v-for="primaryLink in menuData.primaryLinks"
+                    :key="primaryLink.id"
+                  >
+                    <NuxtLink
+                      data-pointer="large"
+                      :to="primaryLink.link.uid || '/'"
+                      >{{ primaryLink.label }}</NuxtLink
+                    >
                   </li>
                 </ul>
               </div>
@@ -69,14 +77,11 @@
               <div class="grid lg:grid-cols-2 gap-4">
                 <div class="">
                   <ul class="">
-                    <li>
-                      <NuxtLink class="link" to="/terms"
-                        >Impressum und AGB</NuxtLink
-                      >
-                    </li>
-                    <li>
-                      <NuxtLink class="link" to="/privacy"
-                        >Datenschutzerklärung</NuxtLink
+                    <li v-for="secondaryLink in menuData.secondaryLinks">
+                      <NuxtLink
+                        class="link"
+                        :to="secondaryLink.link.uid || '/'"
+                        >{{ secondaryLink.label }}</NuxtLink
                       >
                     </li>
                   </ul>
@@ -85,7 +90,7 @@
                 <div>
                   <div class="button">
                     <TheButton href="mailto:info@nxtyou.de">
-                      Kontakt aufnehmen
+                      {{ menuData.buttonLabel }}
                     </TheButton>
                   </div>
                 </div>
@@ -165,6 +170,7 @@ export default {
   data() {
     return {
       active: false,
+      menuData: {},
       images: [
         'nxt-you/home-brand-02_gbvxfq',
         'nxt-you/home-brand-01_xrdamj',
@@ -173,6 +179,11 @@ export default {
         'nxt-you/home-brand-05_iguadj',
       ],
     }
+  },
+  async fetch() {
+    this.menuData = await this.$prismic.api
+      .getSingle('menu')
+      .then((m) => m.data)
   },
   mounted() {
     this.$nuxt.$on('toggle-menu', ({ active, ease = true }) => {
@@ -227,6 +238,13 @@ export default {
 </script>
 
 <style scoped lang="postcss">
+.nav-list ul {
+  counter-reset: item;
+}
+.nav-list li {
+  counter-increment: item;
+}
+
 .nav-list a,
 .nav-list a:after,
 .nav-list a:before {
@@ -239,7 +257,7 @@ export default {
 
 .nav-list a:after {
   @apply block absolute top-0 right-0 text-white text-opacity-30 text-sm transform translate-x-5 -translate-y-1;
-  content: '01';
+  content: '0' counter(item);
 }
 
 .nav-list a:before {
