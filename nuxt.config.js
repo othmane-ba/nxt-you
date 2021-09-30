@@ -65,8 +65,6 @@ export default async () => {
   return {
     target: 'static',
     head: {
-      title: 'NXTYOU',
-      titleTemplate: '%s - Make Your Vision Come Reality.',
       htmlAttrs: {
         lang: 'de',
       },
