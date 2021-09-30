@@ -5,15 +5,19 @@
         class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4"
         v-animate:children
       >
-        <img
-          v-for="(item, i) in slice.items"
-          v-lazy
-          :key="`slice-item-${i}`"
-          v-simple-parallax
+        <div
           class="w-full"
-          :data-src="item.image.url"
-          :alt="item.image.alt"
-        />
+          v-for="(item, i) in slice.items"
+          :key="`slice-item-${i}`"
+        >
+          <img
+            v-lazy
+            v-simple-parallax
+            class="w-full"
+            :data-src="item.image.url"
+            :alt="item.image.alt"
+          />
+        </div>
       </div>
     </div>
   </section>
