@@ -10,7 +10,22 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "BorderIconList",
-      "primary": {},
+      "primary": {
+        "slug": {
+          "config": {
+            "label": "Slug",
+            "placeholder": "Scroll target for this slice"
+          },
+          "type": "Text"
+        },
+        "link": {
+          "config": {
+            "label": "Link",
+            "placeholder": "Link for 'This Spot ....' button"
+          },
+          "type": "Text"
+        }
+      },
       "items": {
         "image": {
           "config": {

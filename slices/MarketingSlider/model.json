@@ -11,6 +11,13 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "MarketingSlider",
       "primary": {
+        "slice": {
+          "config": {
+            "label": "Slice",
+            "placeholder": "Scroll target for this slice"
+          },
+          "type": "Text"
+        },
         "autoplaySpeed": {
           "config": {
             "label": "Autoplay Speed",

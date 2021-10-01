@@ -4,6 +4,10 @@
     :is="tag"
     :type="tag === 'button' && type"
     :disabled="disabled"
+    :href="href"
+    :to="to"
+    :rel="target === '_blank' && 'noopener noreferrer'"
+    :target="target"
     class="
       relative
       flex
@@ -14,7 +18,6 @@
       appearance-none
       space-x-4
       disabled:opacity-50
-      h-12
     "
     :class="classes"
     data-pointer="large"
@@ -25,27 +28,27 @@
 
 <script>
 const Widths = {
-  xs: 36,
-  sm: 44,
-  md: 52,
+  xs: 'w-36',
+  sm: 'w-44',
+  md: 'w-52',
 }
 
 const Heights = {
-  xs: 9,
-  sm: 10,
-  md: 12,
+  xs: 'h-9',
+  sm: 'h-10',
+  md: 'h-12',
 }
 
 export default {
   computed: {
     tag() {
-      return this.href ? 'a' : 'button'
+      return this.href ? 'a' : this.to ? 'nuxt-link' : 'button'
     },
     classes() {
       if (this.fgType === 'button') {
         return [
-          'w-' + Widths[this.size],
-          'h-' + Heights[this.size],
+          Widths[this.size],
+          Heights[this.size],
           'bg-gray-900 border-2 border-gray-900 rounded-3xl text-white text-xs uppercase font-bold tracking-widest overflow-hidden transition ease-in-out duration-500 hover:bg-transparent',
         ]
       } else if (this.fgType === 'link') {
@@ -58,6 +61,8 @@ export default {
   },
   props: {
     href: { type: String, default: null },
+    target: { type: String, default: null },
+    to: { type: String, default: null },
     size: { type: String, default: 'md' },
     disabled: { type: Boolean, default: false },
     fgType: { type: String, default: 'button' },

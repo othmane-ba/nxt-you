@@ -1,5 +1,5 @@
 <template>
-  <section class="image-grid">
+  <section class="image-grid" :id="slice.primary.slug">
     <div class="container px-4 mx-auto">
       <div
         class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4"

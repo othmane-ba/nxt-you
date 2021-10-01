@@ -1,5 +1,5 @@
 <template>
-  <section class="border-icon-list">
+  <section class="border-icon-list" :id="slice.primary.slug">
     <div class="container mx-auto max-w-6xl px-4 client-list">
       <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <li v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
@@ -9,8 +9,12 @@
             rel="noopener noreferrer"
             class="flex align-middle justify-center p-4"
             data-pointer="large"
+            :aria-label="'Follow Link to ' + item.image.alt"
           >
             <div class="relative w-full aspect-h-3 md:aspect-h-2 aspect-w-3">
+              <span class="sr-only">{{
+                'Follow Link to ' + item.image.alt
+              }}</span>
               <img
                 v-lazy
                 class="client-list__item__image"
@@ -27,8 +31,8 @@
           </a>
         </li>
         <li>
-          <a
-            href="#"
+          <NuxtLink
+            :to="slice.primary.link"
             class="
               relative
               w-full
@@ -58,7 +62,7 @@
                 <span>You</span>
               </div>
             </div>
-          </a>
+          </NuxtLink>
         </li>
       </ul>
     </div>

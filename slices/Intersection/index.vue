@@ -30,7 +30,7 @@
         "
       >
         <div data-animation-box>
-          <a
+          <NuxtLink
             class="
               flex
               w-20
@@ -42,9 +42,7 @@
               text-black
             "
             aria-label="Follow Link"
-            :href="slice.primary.link"
-            :rel="slice.primary.targetBlank && 'noopener noreferrer'"
-            :target="slice.primary.targetBlank ? '_blank' : '_self'"
+            :to="slice.primary.link"
             data-pointer="right"
           >
             <span class="sr-only">Follow Link</span>
@@ -77,7 +75,7 @@
                 opacity-75
               "
             ></span>
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>

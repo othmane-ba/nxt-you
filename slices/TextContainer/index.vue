@@ -1,5 +1,5 @@
 <template>
-  <section class="text-container">
+  <section class="text-container" :id="slice.primary.slug">
     <div class="container mx-auto px-4 lg:px-32">
       <prismic-rich-text :field="slice.primary.text" />
     </div>

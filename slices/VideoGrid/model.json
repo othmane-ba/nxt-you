@@ -10,7 +10,15 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "VideoGrid",
-      "primary": {},
+      "primary": {
+        "slug": {
+          "config": {
+            "label": "Slug",
+            "placeholder": "Scroll target for this slice"
+          },
+          "type": "Text"
+        }
+      },
       "items": {
         "video": {
           "config": {

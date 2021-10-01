@@ -12,25 +12,78 @@
     }
   },
   "slices": {
-    "TextKeywords": {},
+    "TextKeywords": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
     "Hero": {},
-    "StickyVideo": {},
-    "BorderSlogan": {},
-    "NumberTextAction": {},
-    "VideoGrid": {},
-    "FeatureSlider": {},
-    "RevealGrid": {},
-    "MarketingSlider": {},
-    "ImageCaptionGrid": {},
-    "ImageGrid": {},
+    "StickyVideo": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "BorderSlogan": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "NumberTextAction": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "VideoGrid": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "FeatureSlider": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "RevealGrid": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "MarketingSlider": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "ImageCaptionGrid": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "ImageGrid": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
     "Intersection": {
       "default-slice": {
         "primary": {}
       }
     },
-    "BorderIconList": {},
-    "Qualifier": {},
+    "BorderIconList": {
+      "default-slice": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "Qualifier": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
     "PageHeader": {},
-    "TextContainer": {}
+    "TextContainer": {
+      "default-slice": {
+        "primary": {}
+      }
+    }
   }
 }

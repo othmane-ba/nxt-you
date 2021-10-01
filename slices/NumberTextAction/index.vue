@@ -36,9 +36,9 @@
             <div>
               <prismic-rich-text :field="slice.primary.description" />
             </div>
-            <div>
-              <TheButton>
-                {{ slice.primary.buttonText }}
+            <div v-if="slice.primary.buttonLabel" class="pt-2">
+              <TheButton :to="slice.primary.buttonLink">
+                {{ slice.primary.buttonLabel }}
               </TheButton>
             </div>
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <section class="border-slogan">
+  <section class="border-slogan" :id="slice.primary.slug">
     <div class="container mx-auto px-4 lg:px-52" v-animate>
       <div
         class="relative lg:aspect-h-1 lg:aspect-w-2 border-4 border-blue-dark"

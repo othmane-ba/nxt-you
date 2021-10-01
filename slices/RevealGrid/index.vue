@@ -1,5 +1,5 @@
 <template>
-  <section class="reveal-grid">
+  <section class="reveal-grid" :id="slice.primary.slug">
     <div class="container mx-auto px-4 lg:px-32 grid gap-4" v-animate:children>
       <div
         class="grid grid-cols-2 lg:grid-cols-3 gap-4"

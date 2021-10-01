@@ -1,5 +1,5 @@
 <template>
-  <section class="qualifier">
+  <section class="qualifier" :id="slice.primary.slug">
     <div
       class="container text-center mx-auto px-4 lg:px-36 space-y-8"
       v-animate

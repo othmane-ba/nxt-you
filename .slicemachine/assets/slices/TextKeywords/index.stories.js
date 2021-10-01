@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_keywords","items":[],"primary":{"title":"transform interactive paradigms","text-left":[{"type":"paragraph","text":"Velit et cupidatat adipisicing duis veniam incididunt ea incididunt reprehenderit ullamco nostrud. Mollit deserunt reprehenderit consequat in anim labore mollit consequat.","spans":[]}],"text-right":[{"type":"paragraph","text":"Cillum duis cillum est proident sit minim culpa ea duis ad tempor elit laboris cupidatat. Dolor magna enim minim duis tempor eu sit nisi culpa aute exercitation aute sit fugiat. Excepteur magna aliqua fugiat culpa occaecat.","spans":[]}],"keywords":"engage customized schemas"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_keywords","items":[],"primary":{"slug":"enable global methodologies","title":"monetize turn-key applications","text-left":[{"type":"paragraph","text":"Consequat minim aute magna tempor magna consequat eiusmod velit officia enim incididunt in. Do labore exercitation reprehenderit minim sunt eiusmod qui amet pariatur laboris ex. Occaecat non ex anim laboris nulla ex.","spans":[]}],"text-right":[{"type":"paragraph","text":"Quis aute labore laborum id ea cillum nisi. In tempor consectetur cupidatat laboris tempor. Ipsum ullamco est duis culpa cupidatat quis et.","spans":[]}],"keywords":"incentivize e-business eyeballs"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

@@ -1,5 +1,5 @@
 <template>
-  <section class="marketing-slider">
+  <section class="marketing-slider" :id="slice.primary.slug">
     <div class="container mx-auto px-4 lg:px-32 overflow-hidden" v-animate>
       <div
         class="overflow-hidden w-full"

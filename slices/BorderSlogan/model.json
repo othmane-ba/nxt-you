@@ -11,6 +11,13 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "BorderSlogan",
       "primary": {
+        "slug": {
+          "config": {
+            "label": "Slug",
+            "placeholder": "Scroll target for this slice"
+          },
+          "type": "Text"
+        },
         "slogan": {
           "config": {
             "label": "Slogan",

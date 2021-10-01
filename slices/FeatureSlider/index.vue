@@ -1,5 +1,5 @@
 <template>
-  <section class="feature-slider">
+  <section class="feature-slider" :id="slice.primary.slug">
     <div
       class="container mx-auto p-4 lg:p-16 overflow-hidden relative"
       v-animate

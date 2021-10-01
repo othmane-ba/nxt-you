@@ -1,5 +1,5 @@
 <template>
-  <section class="text-keywords-section">
+  <section class="text-keywords-section" :id="slice.primary.slug">
     <div class="container max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" v-animate:children>
         <div class="lg:col-span-2">

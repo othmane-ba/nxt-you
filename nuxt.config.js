@@ -120,7 +120,7 @@ export default async () => {
 
     css: ['splitting/dist/splitting.css'],
 
-    plugins: [
+      plugins: [
       '~/plugins/vue-awesome-swiper.client.js',
       '~/plugins/simple-parallax.client.js',
       '~/plugins/vuelidate.js',

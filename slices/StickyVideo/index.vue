@@ -1,5 +1,5 @@
 <template>
-  <section v-animate>
+  <section v-animate :id="slice.primary.slug">
     <div class="sticky-video" ref="wrapper">
       <div class="relative lg:sticky top-0 left-0 w-full overflow-hidden">
         <div class="lg:absolute h-full max-h-screen w-full">

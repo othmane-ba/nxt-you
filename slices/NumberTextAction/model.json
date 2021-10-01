@@ -34,13 +34,6 @@
           },
           "type": "Number"
         },
-        "buttonText": {
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
         "rtl": {
           "config": {
             "label": "Right to Left",
@@ -49,6 +42,20 @@
             "default_value": false
           },
           "type": "Boolean"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       },
       "items": {}

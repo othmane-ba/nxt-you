@@ -1,5 +1,5 @@
 <template>
-  <section class="video-grid">
+  <section class="video-grid" :id="slice.primary.slug">
     <div class="container mx-auto px-4 lg:px-16">
       <div
         class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2"
