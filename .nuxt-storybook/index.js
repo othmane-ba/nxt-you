@@ -27,7 +27,6 @@ import nuxt_plugin_gsapModule_adac81ae from 'nuxt_plugin_gsapModule_adac81ae' //
 import nuxt_plugin_deviceplugin_3f1cf6b3 from 'nuxt_plugin_deviceplugin_3f1cf6b3' // Source: .\\device.plugin.js (mode: 'all')
 import nuxt_plugin_vueawesomeswiperclient_06965d5d from 'nuxt_plugin_vueawesomeswiperclient_06965d5d' // Source: ..\\plugins\\vue-awesome-swiper.client.js (mode: 'client')
 import nuxt_plugin_simpleparallaxclient_52ca400c from 'nuxt_plugin_simpleparallaxclient_52ca400c' // Source: ..\\plugins\\simple-parallax.client.js (mode: 'client')
-import nuxt_plugin_vuerangecomponentclient_12480e64 from 'nuxt_plugin_vuerangecomponentclient_12480e64' // Source: ..\\plugins\\vue-range-component.client.js (mode: 'client')
 import nuxt_plugin_vuelidate_4be431c8 from 'nuxt_plugin_vuelidate_4be431c8' // Source: ..\\plugins\\vuelidate.js (mode: 'all')
 import nuxt_plugin_jsonld_2ff766e1 from 'nuxt_plugin_jsonld_2ff766e1' // Source: ..\\plugins\\jsonld.js (mode: 'all')
 import nuxt_plugin_vuegtagclient_0490790e from 'nuxt_plugin_vuegtagclient_0490790e' // Source: ..\\plugins\\vue-gtag.client.js (mode: 'client')
@@ -82,7 +81,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"NXTYOU","titleTemplate":"%s - Make Your Vision Come Reality.","htmlAttrs":{"lang":"de"},"bodyAttrs":{"class":"bg-black text-white"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":"\u002Ffavicon-16x16.png"}],"script":[{"src":"https:\u002F\u002Fcdn.polyfill.io\u002Fv2\u002Fpolyfill.min.js?features=Element.prototype.classList"},{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Ffocus-visible@5.0.2\u002Fdist\u002Ffocus-visible.min.js"},{"src":"https:\u002F\u002Fstatic.cdn.prismic.io\u002Fprismic.js?new=true&repo=nxtyou"}],"style":[]},
+    head: {"htmlAttrs":{"lang":"de"},"bodyAttrs":{"class":"bg-black text-white"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":"\u002Ffavicon-16x16.png"}],"script":[{"src":"https:\u002F\u002Fcdn.polyfill.io\u002Fv2\u002Fpolyfill.min.js?features=Element.prototype.classList"},{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Ffocus-visible@5.0.2\u002Fdist\u002Ffocus-visible.min.js"},{"src":"https:\u002F\u002Fstatic.cdn.prismic.io\u002Fprismic.js?new=true&repo=nxtyou"},{"type":"application\u002Fld+json","json":[{"@context":"https:\u002F\u002Fschema.org","@type":"Organization","url":"https:\u002F\u002Fnxtyou.de\u002F","logo":"https:\u002F\u002Fnxtyou.de\u002Flogo.png"},{"@context":"https:\u002F\u002Fschema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https:\u002F\u002Fnxtyou.de\u002F"}]}]}],"style":[]},
 
     router,
     nuxt: {
@@ -254,10 +253,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_simpleparallaxclient_52ca400c === 'function') {
     await nuxt_plugin_simpleparallaxclient_52ca400c(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_vuerangecomponentclient_12480e64 === 'function') {
-    await nuxt_plugin_vuerangecomponentclient_12480e64(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vuelidate_4be431c8 === 'function') {

@@ -23,7 +23,11 @@
     "MarketingSlider": {},
     "ImageCaptionGrid": {},
     "ImageGrid": {},
-    "Intersection": {},
+    "Intersection": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
     "BorderIconList": {},
     "Qualifier": {},
     "PageHeader": {},

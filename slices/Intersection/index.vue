@@ -41,8 +41,13 @@
               bg-white
               text-black
             "
+            aria-label="Follow Link"
+            :href="slice.primary.link"
+            :rel="slice.primary.targetBlank && 'noopener noreferrer'"
+            :target="slice.primary.targetBlank ? '_blank' : '_self'"
             data-pointer="right"
           >
+            <span class="sr-only">Follow Link</span>
             <span class="block relative z-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,18 +99,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.section {
-  position: relative;
-  background: #f7f7f7;
-  color: #111;
-  padding: 4em;
-  text-align: center;
-}
-a {
-  color: #111;
-}
-.title {
-  margin-bottom: 2em;
-}
-</style>
+<style scoped></style>

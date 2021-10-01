@@ -6,7 +6,7 @@
         v-animate:children
       >
         <div
-          class="w-full"
+          class="w-full overflow-hidden"
           v-for="(item, i) in slice.items"
           :key="`slice-item-${i}`"
         >

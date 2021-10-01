@@ -15,6 +15,7 @@ import { createApp } from '../'
 window.__NUXT__ = { config: {"_app":{"basePath":"/","assetsPath":"/_nuxt/","cdnURL":null}} };
 ;
 ;
+;
 
 // Fetch mixin
 if (!Vue.__nuxt__fetch__mixin__) {

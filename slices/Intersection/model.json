@@ -18,6 +18,22 @@
             "thumbnails": []
           },
           "type": "Image"
+        },
+        "targetBlank": {
+          "config": {
+            "label": "Open in new window",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        },
+        "link": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       },
       "items": {}
