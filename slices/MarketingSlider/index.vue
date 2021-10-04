@@ -35,13 +35,14 @@
 
                 <div class="relative bg-gray-400 mr-auto mb-4 w-24 h-px">
                   <div
-                    data-gsap-target="featureSlider"
+                    data-gsap-target="marketingSlider"
                     class="absolute bg-white top-0 left-0 h-full w-0"
                   ></div>
                 </div>
               </div>
               <div class="lg:col-span-3">
                 <img
+                  v-if="item.image"
                   v-lazy
                   class="w-full"
                   :data-src="item.image.url"
@@ -96,7 +97,7 @@ export default {
       this.clock = this.$gsap
         .timeline({ repeat: -1, paused: false })
         .fromTo(
-          '[data-gsap-target="featureSlider"]',
+          '[data-gsap-target="marketingSlider"]',
           this.slice.primary.autoplaySpeed,
           { width: '0%' },
           { width: '100%' }

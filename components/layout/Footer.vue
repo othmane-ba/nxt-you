@@ -56,7 +56,7 @@
       <div class="container mx-auto px-4 lg:px-32 py-2 text-sm">
         <div class="grid grid-cols-3 gap-4">
           <div class="hidden lg:block">
-            <h5>&copy; NXT YOU GmbH</h5>
+            <span>&copy; NXT YOU GmbH</span>
           </div>
           <div class="flex col-span-3 lg:col-span-2 space-x-4 lg:space-x-16">
             <NuxtLink to="terms" data-pointer="large"

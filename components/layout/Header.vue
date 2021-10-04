@@ -21,6 +21,7 @@
           >
             <span></span>
             <span></span>
+            <span class="sr-only">Toggle Menu</span>
           </button>
         </li>
       </ul>

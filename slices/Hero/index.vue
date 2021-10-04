@@ -66,6 +66,7 @@
                 d="M19 14l-7 7m0 0l-7-7m7 7V3"
               />
             </svg>
+            <span class="sr-only">Scroll Down</span>
           </button>
         </div>
       </div>
@@ -112,19 +113,19 @@ export default {
 .hero__button__icon {
   @apply absolute left-1/2 transform -translate-x-1/2 transition-all ease-out-expo duration-500;
 }
-.hero__button__icon:first-child {
+.hero__button__icon:nth-child(1) {
   @apply top-1/2 -translate-y-1/2 transition-none;
 }
-.hero__button__icon:last-child {
+.hero__button__icon:nth-child(2) {
   @apply -top-32 translate-y-0 transition-none;
 }
 .hero__button:hover .hero__button__icon {
   @apply transition-all ease-out duration-150;
 }
-.hero__button:hover .hero__button__icon:first-child {
+.hero__button:hover .hero__button__icon:nth-child(1) {
   @apply top-32 translate-y-0;
 }
-.hero__button:hover .hero__button__icon:last-child {
+.hero__button:hover .hero__button__icon:nth-child(2) {
   @apply top-1/2 -translate-y-1/2;
 }
 </style>

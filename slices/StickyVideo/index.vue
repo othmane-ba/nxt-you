@@ -22,6 +22,7 @@
             "
             :class="{ 'border-blue': !muted }"
           >
+            <span class="sr-only">Toggle Volume</span>
             <svg
               class="block text-lg"
               version="1.1"
