@@ -1,6 +1,6 @@
 <template>
   <video
-    v-lazy
+    v-lazy="lazyOptions"
     :playsinline="playsinline"
     :loop="loop"
     :muted="muted"
@@ -35,6 +35,7 @@ export default {
     muted: { type: Boolean, default: true },
     autoplay: { type: Boolean, default: true },
     playsinline: { type: Boolean, default: true },
+    lazyOptions: { type: Object, default: () => {} },
   },
   computed: {},
   methods: {

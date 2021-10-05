@@ -45,14 +45,14 @@
             alt="Mac"
             :data-src="require('~/assets/images/mac.png')"
           />
-          <CnyVideo
+          <TheVideo
             :width="800"
             ref="video"
             :muted="muted"
             publicId="nxt-you/nxtyou-trailer-desktop_tkqd75"
             class="lg:absolute object-cover"
           >
-          </CnyVideo>
+          </TheVideo>
         </div>
       </div>
     </div>

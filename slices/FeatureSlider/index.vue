@@ -6,7 +6,7 @@
     >
       <div>
         <div class="relative overflow-hidden w-full z-20">
-          <div v-swiper="options" :auto-destroy="true" @ready="onReady">
+          <div v-swiper:featureSlider="options" @ready="onReady">
             <div class="swiper-wrapper">
               <div
                 v-for="(feature, index) in slice.items"
@@ -90,8 +90,7 @@
                       :key="index + j"
                     >
                       <img
-                        v-lazy
-                        class="h-14 w-14 mx-auto object-contain"
+                        class="h-14 w-14 mx-auto object-contain swiper-lazy"
                         :data-src="feature['icon' + indicator].url"
                         :alt="feature['icon' + indicator].alt"
                       />
@@ -126,7 +125,7 @@
           ></div>
         </div>
 
-        <CnyVideo
+        <TheVideo
           class="
             absolute
             top-1/2
@@ -141,7 +140,7 @@
           muted
           loop
           autoplay
-        ></CnyVideo>
+        ></TheVideo>
       </div>
     </div>
   </section>
@@ -181,7 +180,7 @@ export default {
           '[data-gsap-target="featureSlider"]',
           this.slice.primary.autoplaySpeed,
           { width: '0%' },
-          { width: '100%' }
+          { width: '100%', ease: 'Linear.easeNone' }
         )
         .add(() => {
           swiper.slideNext()

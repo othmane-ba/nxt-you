@@ -20,7 +20,7 @@
             @mouseover="play(i)"
             @mouseout="pause(i)"
           >
-            <CnyVideo
+            <TheVideo
               class="
                 absolute
                 top-1/2
@@ -34,7 +34,7 @@
               muted
               loop
               :autoplay="false"
-            ></CnyVideo>
+            ></TheVideo>
             <div
               class="
                 absolute
