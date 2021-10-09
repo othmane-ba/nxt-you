@@ -1,4 +1,4 @@
-const stories = ['../../components/**/*.stories.@(ts|js)','C:/Users/fabia/WebstormProjects/nxt-you/.slicemachine/assets/**/*.stories.js']
+const stories = ['../../components/**/*.stories.@(ts|js)','../.slicemachine/assets/**/*.stories.@(js|jsx|ts|tsx|svelte)']
 const addons  = ["@storybook\u002Faddon-essentials"]
 
 function nuxifyStorybook(storybookConfig) {
