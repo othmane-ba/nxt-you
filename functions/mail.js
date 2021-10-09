@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 require('dotenv').config()
 
 const formatTags = (tags) => {
@@ -30,7 +29,7 @@ exports.handler = function (event, context, callback) {
 
   const mailOptions = {
     from: form.email,
-    to: 'info@nxtyou.de',
+    to: 'fabianpiper@web.de',
     subject: `[nxtyou.de] Neues Formular von ${form.name}`,
     html: `
     <h1>Neues Formular von ${form.name}</h1>

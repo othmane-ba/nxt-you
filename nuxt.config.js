@@ -137,7 +137,6 @@ export default async () => {
       '@nuxtjs/tailwindcss',
       '@nuxtjs/device',
       'nuxt-gsap-module',
-      '@nuxtjs/toast',
       '@nuxtjs/pwa',
       'cookie-universal-nuxt',
       '@nuxtjs/prismic',
@@ -161,10 +160,6 @@ export default async () => {
     },
     cloudinary: {
       cloudName: process.env.CLOUDINARY_CLOUDNAME,
-    },
-    toast: {
-      position: 'bottom-right',
-      duration: 3000,
     },
     pwa,
     tailwindcss: {
