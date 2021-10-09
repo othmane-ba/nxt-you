@@ -9,6 +9,7 @@
       class="pointer"
       :style="{ left: mouseX + 'px', top: mouseY + 'px' }"
       :class="{
+        'pointer--small': small,
         'pointer--play': play,
         'pointer--right': right,
         'pointer--large': large,

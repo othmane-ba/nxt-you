@@ -3,6 +3,7 @@
     <div class="container mx-auto lg:px-32" v-animate>
       <div class="relative space-y-4">
         <div
+          class="overflow-hidden"
           v-swiper:marketingSwiper="contentOptions"
           @ready="onReady"
           v-simple-parallax
@@ -38,7 +39,7 @@
                   muted
                   loop
                   autoplay
-                  :width="800"
+                  :width="1000"
                   :lazyOptions="{ use_native: true }"
                 ></TheVideo>
               </div>

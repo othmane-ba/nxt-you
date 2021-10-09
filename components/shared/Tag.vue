@@ -2,6 +2,8 @@
   <div
     data-pointer="large"
     class="
+      m-1
+      sm:m-2
       relative
       flex
       items-center
@@ -23,8 +25,10 @@
       outline-none
       appearance-none
       hover:border-blue
-      space-x-4
-      px-8
+      space-x-2
+      sm:space-x-4
+      px-2
+      sm:px-8
       h-8
     "
     :class="{ 'border-blue': value, 'bg-blue': value }"

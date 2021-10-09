@@ -69,7 +69,7 @@
 export default {
   props: {},
   mounted() {
-    this.select(0)
+    this.select(0, true)
     this.$emit('init', {
       totalTabs: this.tabs.length,
       currentIndex: this.currentIndex,
@@ -88,7 +88,10 @@ export default {
         this.currentIndex >= this.tabs.length ? this.currentIndex - 1 : 0
       this.select(prevIndex)
     },
-    select(i) {
+    select(i, force = false) {
+      if (!force && this.tabs[i].disabled) {
+        return
+      }
       this.currentIndex = i
       this.$emit('select', {
         currentIndex: this.currentIndex,
