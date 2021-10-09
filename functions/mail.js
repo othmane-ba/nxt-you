@@ -29,7 +29,7 @@ exports.handler = function (event, context, callback) {
 
   const mailOptions = {
     from: form.email,
-    to: 'fabianpiper@web.de',
+    to: 'info@nxtyou.de',
     subject: `[nxtyou.de] Neues Formular von ${form.name}`,
     html: `
     <h1>Neues Formular von ${form.name}</h1>
