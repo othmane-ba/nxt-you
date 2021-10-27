@@ -4,8 +4,7 @@
       <div class="relative space-y-4">
         <div
           class="overflow-hidden"
-          v-swiper:marketingSwiper="contentOptions"
-          @ready="onReady"
+          v-swiper:marketingControlSwiper="options"
           v-simple-parallax
         >
           <div class="swiper-wrapper">
@@ -46,29 +45,34 @@
             </div>
           </div>
         </div>
-
         <div
           class="
             lg:absolute lg:bottom-0
+            w-full
             flex flex-col
             lg:flex-row
-            items-center
-            lg:items-end
-            w-full
             z-10
+            lg:items-end
           "
         >
-          <div class="max-w-2xl flex-shrink-1 text-right">
+          <div class="w-full max-w-2xl lg:text-right p-4 lg:p-8 bg-black">
             <div
-              v-for="(item, i) in slice.items"
-              :key="`description-slice-item-${i}`"
-              v-if="activeIndex === i"
+              class="overflow-hidden"
+              v-swiper:marketingDescriptionSwiper="options"
             >
-              <div class="bg-black p-4 lg:p-8 space-y-4">
-                <h4 class="title">{{ item.title }}</h4>
+              <div class="swiper-wrapper">
+                <div
+                  v-for="(item, i) in slice.items"
+                  :key="`description-slice-item-${i}`"
+                  class="swiper-slide"
+                >
+                  <div class="space-y-4">
+                    <h4 class="title">{{ item.title }}</h4>
 
-                <div>
-                  <prismic-rich-text :field="item.description" />
+                    <div>
+                      <prismic-rich-text :field="item.description" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -76,14 +80,15 @@
 
           <div
             class="
-              bg-black
-              flex-1
               p-4
               flex
               items-center
               space-x-4
-              justify-end
+              justify-center
+              lg:justify-end
               text-opacity-50 text-white
+              bg-black
+              flex-1
             "
           >
             <span class="proportional-nums">{{
@@ -119,12 +124,24 @@ export default {
       },
     },
   },
-  mounted() {},
+  mounted() {
+    this.$nextTick(() => {
+      this.marketingControlSwiper.controller.control =
+        this.marketingDescriptionSwiper
+      console.log(
+        'marketingDescriptionSwiper',
+        this.marketingDescriptionSwiper,
+        'marketingControlSwiper',
+        this.marketingControlSwiper
+      )
+      this.initClock()
+    })
+  },
   data() {
     return {
       clock: null,
       activeIndex: 0,
-      contentOptions: {
+      options: {
         allowTouchMove: false,
         lazy: true,
         effect: 'fade',
@@ -134,8 +151,9 @@ export default {
       },
     }
   },
+
   methods: {
-    onReady(swiper) {
+    initClock() {
       this.clock = this.$gsap
         .timeline({ repeat: -1, paused: false })
         .fromTo(
@@ -144,11 +162,10 @@ export default {
           { width: '0%' },
           { width: '100%', ease: 'Linear.easeNone' }
         )
-        .add(() => {
-          this.onSlideChange(swiper)
-        })
+        .add(() => this.nextSlide())
     },
-    onSlideChange(swiper) {
+    nextSlide() {
+      const swiper = this.marketingControlSwiper
       const previousIndex = swiper.realIndex
       const activeIndex = swiper.isEnd ? 0 : swiper.realIndex + 1
       this.activeIndex = activeIndex

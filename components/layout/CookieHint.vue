@@ -4,9 +4,8 @@
       v-if="active"
       class="
         fixed
-        right-0
-        bottom-0
-        md:bottom-4 md:right-4
+        right-4
+        bottom-4
         w-72
         md:w-96
         bg-blue-dark

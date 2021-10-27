@@ -1,71 +1,45 @@
 <template>
   <footer class="w-full">
-    <!--
-    <div class="container mx-auto p-4 lg:py-8 lg:px-32 text-white bg-black">
-      <div
-        class="
-          grid grid-cols-2
-          lg:grid-cols-3
-          gap-4
-          lg:divide-x
-          divide-gray-400
-        "
-      >
-        <div class="lg:p-8 lg:pl-0">
-          <p>
-            NXT YOU ist die Exklusivagentur für Markenaufbau, Content-Erstellung
-            und digitales Marketing
-          </p>
-        </div>
-        <div class="lg:p-8 lg:pr-0">
-          <div class="mb-16">
-            <div class="text-sm uppercase mb-4">Email</div>
-            <div class="text-xl">
-              <a data-pointer="right" href="mailto:info@nxtyou.de"
-                >info@nxtyou.de</a
-              >
-            </div>
+    <div class="container mx-auto flex px-4 lg:px-32 py-32">
+      <div class="inline-flex flex-col space-y-8 ml-auto text-right">
+        <div>
+          <div class="flex items-center justify-end space-x-4">
+            <img src="~/assets/images/logo.png" alt="NXT YOU" class="w-10" />
+            <h4 class="text-2xl font-semibold tracking-widest">NXT YOU</h4>
           </div>
-          <div class="mb-4">
-            <div class="text-sm uppercase mb-4">Telefon</div>
-
-            <div class="text-xl">
-              <a data-pointer="right" href="mailto:info@nxtyou.de"
-                >info@nxtyou.de</a
-              >
-            </div>
-          </div>
+          <div class="text-xl"><p>Make your Vision Come Reality.</p></div>
         </div>
-        <div
-          class="
-            order-first
-            lg:order-last
-            col-span-2
-            lg:col-span-1
-            justify-self-center
-            lg:justify-self-start
-            p-8
-          "
-        >
-          <img src="~/assets/images/logo.png" alt="NXT YOU" class="w-32" />
-        </div>
-      </div>
-    </div>
--->
-    <div class="w-full bg-white text-black">
-      <div class="container mx-auto px-4 lg:px-32 py-2 text-sm">
-        <div class="grid grid-cols-3 gap-4">
-          <div class="hidden lg:block">
-            <span>&copy; NXT YOU GmbH</span>
-          </div>
-          <div class="flex col-span-3 lg:col-span-2 space-x-4 lg:space-x-16">
-            <NuxtLink to="terms" data-pointer="large"
+        <ul class="">
+          <li class="space-x-8">
+            <NuxtLink to="/" data-pointer="large" class="link"
+              >Startseite</NuxtLink
+            >
+            <NuxtLink to="terms" data-pointer="large" class="link"
               >Impressum und AGB</NuxtLink
             >
-            <NuxtLink to="privacy" data-pointer="large"
+            <NuxtLink to="privacy" data-pointer="large" class="link"
               >Datenschutzerklärung</NuxtLink
             >
-          </div>
+          </li>
+        </ul>
+
+        <div class="text-xs opacity-75">
+          Copyright
+          <svg
+            class="w-3 h-3 inline-block mb-1 mx-1"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            viewBox="0 0 367.467 367.467"
+            fill="currentColor"
+          >
+            <path
+              d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716   c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518   c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817   C326.536,262.466,262.481,326.518,183.73,326.518z"
+            />
+            <path
+              d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915   c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129   c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982   c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154   l2.658-7.133h-44.28L244.036,217.014z"
+            />
+          </svg>
+          NXT YOU GmbH
         </div>
       </div>
     </div>
