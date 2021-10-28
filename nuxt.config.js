@@ -158,6 +158,7 @@ export default async () => {
         },
       },
     },
+
     cloudinary: {
       cloudName: process.env.CLOUDINARY_CLOUDNAME,
     },
