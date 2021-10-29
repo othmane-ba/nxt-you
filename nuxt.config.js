@@ -10,7 +10,6 @@ const getPages = async () => {
       api.query(Prismic.Predicates.any('document.type', ['page', 'homepage']))
     )
     .then((p) => p.results)
-
   const disallowedPages = [
     '/preview',
     ...allPages.flatMap((p) => (!p.data.crawlable ? [`/${p.uid || ''}`] : [])),
@@ -159,6 +158,10 @@ export default async () => {
       },
     },
 
+    generate: {
+      routes: allPages.map((p) => (p.uid ? `/${p.uid}` : '/')),
+    },
+
     cloudinary: {
       cloudName: process.env.CLOUDINARY_CLOUDNAME,
     },
@@ -173,6 +176,10 @@ export default async () => {
       apiOptions: {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         routes: [
+          {
+            type: 'homepage',
+            path: '/',
+          },
           {
             type: 'page',
             path: '/:uid',
@@ -199,7 +206,7 @@ export default async () => {
     sitemap: {
       hostname: 'https://nxtyou.de',
       exclude: disallowedPages,
-      routes: ['/', ...allPages.map((p) => `/${p.uid}`)],
+      routes: allPages.map((p) => (p.uid ? `/${p.uid}` : '/')),
     },
   }
 }
