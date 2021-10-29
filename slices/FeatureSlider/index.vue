@@ -4,9 +4,38 @@
       class="container mx-auto p-4 lg:p-16 overflow-hidden relative"
       v-animate
     >
+      <div
+        class="
+          p-4
+          flex
+          items-center
+          justify-start
+          text-opacity-50 text-white
+          bg-black
+          relative
+          space-x-1
+          z-20
+          w-60
+          justify-items-stretch
+        "
+      >
+        <div
+          class="relative bg-white bg-opacity-50 h-0.5 w-full"
+          v-for="(indicator, i) in slice.items"
+          :key="i"
+          ref="indicator"
+        >
+          <div
+            class="absolute bg-white top-0 left-0 h-full w-0"
+            :class="{ '!w-full': activeIndex >= i }"
+            data-gsap-target="featureSwiper"
+          ></div>
+        </div>
+      </div>
+
       <div>
         <div class="relative overflow-hidden w-full z-20">
-          <div v-swiper:featureSlider="options" @ready="onReady">
+          <div v-swiper:featureSwiper="options">
             <div class="swiper-wrapper">
               <div
                 v-for="(feature, index) in slice.items"
@@ -17,23 +46,6 @@
                   <h4 class="title text-center">
                     {{ feature.title }}
                   </h4>
-
-                  <div
-                    class="
-                      relative
-                      bg-gray-400
-                      max-w-xl
-                      mx-auto
-                      mb-4
-                      w-full
-                      h-px
-                    "
-                  >
-                    <div
-                      data-gsap-target="featureSlider"
-                      class="absolute bg-white top-0 left-0 h-full w-0"
-                    ></div>
-                  </div>
 
                   <div
                     class="
@@ -161,6 +173,7 @@ export default {
   data() {
     return {
       clock: null,
+      activeIndex: 0,
       options: {
         allowTouchMove: false,
         loop: true,
@@ -172,19 +185,25 @@ export default {
       },
     }
   },
+  mounted() {
+    this.$nextTick(this.initClock.bind(this))
+  },
   methods: {
-    onReady(swiper) {
+    initClock() {
       this.clock = this.$gsap
         .timeline({ repeat: -1, paused: false })
         .fromTo(
-          '[data-gsap-target="featureSlider"]',
+          '[data-gsap-target="featureSwiper"]',
           this.slice.primary.autoplaySpeed,
           { width: '0%' },
           { width: '100%', ease: 'Linear.easeNone' }
         )
-        .add(() => {
-          swiper.slideNext()
-        })
+        .add(this.nextSlide.bind(this))
+    },
+    nextSlide() {
+      const index = this.featureSwiper.realIndex + 1
+      this.activeIndex = index < this.slice.items.length ? index : 0
+      this.featureSwiper.slideNext()
     },
   },
 }

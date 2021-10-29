@@ -128,12 +128,6 @@ export default {
     this.$nextTick(() => {
       this.marketingControlSwiper.controller.control =
         this.marketingDescriptionSwiper
-      console.log(
-        'marketingDescriptionSwiper',
-        this.marketingDescriptionSwiper,
-        'marketingControlSwiper',
-        this.marketingControlSwiper
-      )
       this.initClock()
     })
   },
