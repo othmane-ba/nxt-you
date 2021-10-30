@@ -82,7 +82,7 @@
                   <ul class="">
                     <li v-for="secondaryLink in menuData.secondaryLinks">
                       <NuxtLink
-                        class="link text-xs lg:text-base"
+                        class="link"
                         :to="secondaryLink.link.uid || '/'"
                         >{{ secondaryLink.label }}</NuxtLink
                       >

@@ -41,8 +41,8 @@
             title-lg
             bg-clip-text
             text-transparent
-            bg-gradient-to-r
-            from-red-600
+            bg-gradient-to-tr
+            from-black
             via-blue
             to-white
             animate-gradient-xy

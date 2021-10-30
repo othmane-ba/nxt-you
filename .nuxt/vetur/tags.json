@@ -2,9 +2,6 @@
   "HeroHeadline": {
     "description": "Auto imported from components/home/HeroHeadline.vue"
   },
-  "Sphere": {
-    "description": "Auto imported from components/home/Sphere.vue"
-  },
   "CookieHint": {
     "description": "Auto imported from components/layout/CookieHint.vue"
   },
@@ -22,6 +19,9 @@
   },
   "Pointer": {
     "description": "Auto imported from components/layout/Pointer.vue"
+  },
+  "Sphere": {
+    "description": "Auto imported from components/layout/Sphere.vue"
   },
   "RangeSlider": {
     "description": "Auto imported from components/shared/RangeSlider.vue"

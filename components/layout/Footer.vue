@@ -106,7 +106,7 @@
           <ul class="flex justify-end space-x-4 text-xs">
             <li>
               <NuxtLink to="terms" data-pointer="large" class="link"
-                >Impressum/AGB</NuxtLink
+                >Impressum und AGB</NuxtLink
               >
             </li>
             <li>
