@@ -21,12 +21,27 @@
             -translate-x-1/2 -translate-y-1/2
           "
         >
-          <img
-            class="w-28"
-            data-not-lazy
-            alt="NXTYOU Logo"
-            src="~/assets/images/logo.png"
-          />
+          <div
+            class="
+              flex
+              items-center
+              justify-center
+              w-32
+              h-32
+              p-6
+              rounded-full
+              border-2 border-blue-dark
+              overflow-hidden
+            "
+          >
+            <img
+              data-transition-logo
+              class="w-full"
+              data-not-lazy
+              alt="NXTYOU Logo"
+              src="~/assets/images/logo.png"
+            />
+          </div>
         </div>
         <div
           class="

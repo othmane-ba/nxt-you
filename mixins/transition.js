@@ -14,6 +14,9 @@ export default {
         autoAlpha: 0,
         marginTop: '-20px',
       })
+      /*
+      .fromTo('[data-transition-logo]', { autoAlpha: 0 }, { autoAlpha: 1 })
+*/
       .to('[data-transition-dark]', { height: 0 }, 0.1)
       .to('[data-transition-light]', { height: 0 }, 0.5)
       .to(
