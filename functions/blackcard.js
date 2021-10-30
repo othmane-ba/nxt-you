@@ -51,7 +51,7 @@ exports.handler = function (event, context, callback) {
     <tr>
       <td style="vertical-align: top; padding: 6px 14px 6px 0; font-weight: bolder;">Telefon Nummer:</td>
       <td style="vertical-align: top; padding: 6px 0;">${
-        form.website === '' ? '[keine Angabe]' : form.phone
+        form.phone === '' ? '[keine Angabe]' : form.phone
       }</td>
     </tr>
     <tr>
