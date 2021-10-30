@@ -41,11 +41,9 @@
             title-lg
             bg-clip-text
             text-transparent
-            bg-gradient-to-tr
-            from-black
-            via-blue
-            to-white
-            animate-gradient-xy
+            bg-gradient-to-bl
+            from-gray-200
+            to-black
           "
         >
           {{ slice.primary.title }}
