@@ -13,7 +13,8 @@
     >
       <div class="container px-4 space-y-4 text-center" v-animate:children>
         <prismic-image
-          class="w-40 2xl: w-48 mx-auto mb-12"
+          class="w-40 2xl: w-48 mx-auto"
+          :class="{ 'mb-10': onlyTitle }"
           :field="slice.primary.logo"
         />
         <div v-if="slice.primary.showHeadline">
@@ -94,10 +95,11 @@
 <script>
 export default {
   name: 'Hero',
-  data() {
-    return {
-      showPage: false,
-    }
+  computed: {
+    onlyTitle() {
+      const { title, subtitle, showHeadline } = this.slice.primary
+      return !!title && !subtitle && !showHeadline
+    },
   },
   props: {
     slice: {

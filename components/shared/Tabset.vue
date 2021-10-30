@@ -17,7 +17,7 @@
             w-auto
             opacity-25
           "
-          :class="{ 'opacity-100': currentIndex === i }"
+          :class="{ '!opacity-100': currentIndex === i }"
           @click="select(i)"
           data-pointer="large"
         >

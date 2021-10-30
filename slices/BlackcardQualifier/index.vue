@@ -225,7 +225,7 @@
                       v-if="touched && $v.qualifier.phone.$error"
                       class="form-error"
                     >
-                      <li v-if="!$v.qualifier.phone.customphone">
+                      <li v-if="!$v.qualifier.phone.customPhone">
                         Diese Telefonnummer ist ungültig.
                       </li>
                     </ul>
