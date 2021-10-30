@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"number_text_action","items":[],"primary":{"title":"recontextualize dynamic methodologies","description":[{"type":"paragraph","text":"Do enim fugiat ipsum fugiat pariatur ex ullamco laborum ut ea deserunt non consectetur est.","spans":[]}],"number":7688,"rtl":false,"buttonLabel":"e-enable killer portals","buttonLink":"cultivate web-enabled models"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"number_text_action","items":[],"primary":{"title":"strategize real-time networks","description":[{"type":"paragraph","text":"Ut adipisicing non culpa adipisicing dolor culpa aute ullamco laborum. Id ea occaecat pariatur elit ipsum.","spans":[]}],"number":4584,"rtl":false,"buttonLabel":"empower B2B ROI","buttonLink":"e-enable collaborative paradigms"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

@@ -11,13 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Hero",
       "primary": {
-        "subtitle": {
-          "config": {
-            "label": "Subtitle",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
         "logo": {
           "config": {
             "label": "Logo",
@@ -25,6 +18,29 @@
             "thumbnails": []
           },
           "type": "Image"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "subtitle": {
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "showHeadline": {
+          "config": {
+            "label": "Show Headline Widget (We are ...)",
+            "placeholder_false": "Hide",
+            "placeholder_true": "Show",
+            "default_value": false
+          },
+          "type": "Boolean"
         }
       },
       "items": {}

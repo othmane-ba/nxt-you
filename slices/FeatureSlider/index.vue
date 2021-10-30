@@ -5,7 +5,18 @@
       v-animate
     >
       <div>
-        <div class="relative overflow-hidden w-full z-20 pt-16 pr-4 lg:pr-0">
+        <div
+          class="
+            relative
+            overflow-hidden
+            w-full
+            z-20
+            pt-12
+            md:pt-32
+            pr-4
+            lg:pr-0
+          "
+        >
           <div class="flex items-center">
             <div
               class="

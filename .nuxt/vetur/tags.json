@@ -23,6 +23,9 @@
   "Pointer": {
     "description": "Auto imported from components/layout/Pointer.vue"
   },
+  "BaseQualifier": {
+    "description": "Auto imported from components/shared/BaseQualifier.vue"
+  },
   "RangeSlider": {
     "description": "Auto imported from components/shared/RangeSlider.vue"
   },

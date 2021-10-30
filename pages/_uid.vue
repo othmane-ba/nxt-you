@@ -1,5 +1,10 @@
 <template>
-  <SliceZone type="page" :uid="$route.params.uid" />
+  <div>
+    <Sphere v-if="page.data.backgroundType === 'sphere'"></Sphere>
+    <div>
+      <SliceZone type="page" :uid="$route.params.uid" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -47,6 +52,7 @@ export default {
   },
   async asyncData({ $prismic, params, error }) {
     const document = await $prismic.api.getByUID('page', params.uid)
+    console.log('document', document)
     if (document) {
       return {
         page: document,

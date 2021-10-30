@@ -14,6 +14,7 @@ You can directly use them in pages and other components without the need to impo
 - `<HeaderMenu>` | `<header-menu>` (components/layout/HeaderMenu.vue)
 - `<PageLoader>` | `<page-loader>` (components/layout/PageLoader.vue)
 - `<Pointer>` | `<pointer>` (components/layout/Pointer.vue)
+- `<BaseQualifier>` | `<base-qualifier>` (components/shared/BaseQualifier.vue)
 - `<RangeSlider>` | `<range-slider>` (components/shared/RangeSlider.vue)
 - `<Tab>` | `<tab>` (components/shared/Tab.vue)
 - `<Tabset>` | `<tabset>` (components/shared/Tabset.vue)

@@ -11,12 +11,12 @@
         overflow-hidden
       "
     >
-      <div class="container px-4" v-animate:children>
+      <div class="container px-4 space-y-4 text-center" v-animate:children>
         <prismic-image
-          class="w-40 2xl: w-52 mx-auto"
+          class="w-40 2xl: w-48 mx-auto mb-12"
           :field="slice.primary.logo"
         />
-        <div class="mt-4 mb-4">
+        <div v-if="slice.primary.showHeadline">
           <HeroHeadline
             class="text-center"
             :words="[
@@ -33,7 +33,24 @@
             We are
           </HeroHeadline>
         </div>
-        <div class="mt-4 mb-12 text-center max-w-xl mx-auto px-4">
+
+        <h1
+          v-if="slice.primary.title"
+          class="
+            title-lg
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r
+            from-red-600
+            via-blue
+            to-white
+            animate-gradient-xy
+          "
+        >
+          {{ slice.primary.title }}
+        </h1>
+
+        <div v-if="slice.primary.subtitle" class="max-w-xl mx-auto px-4">
           {{ slice.primary.subtitle }}
         </div>
         <div

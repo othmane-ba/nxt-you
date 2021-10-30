@@ -23,9 +23,20 @@ section:first-child {
 }
 
 .title,
+.title-lg,
 .title-md,
 .text-container h2 {
-  @apply text-3xl lg:text-4xl font-bold uppercase;
+  @apply font-bold uppercase;
+}
+
+.title-lg {
+  @apply text-4xl lg:text-5xl;
+}
+
+.title,
+.title-md,
+.text-container h2 {
+  @apply text-3xl lg:text-4xl;
 }
 
 .title-sm,

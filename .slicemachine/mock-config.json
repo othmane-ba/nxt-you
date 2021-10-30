@@ -4,7 +4,10 @@
       "socialCards": {}
     },
     "page": {
-      "socialCards": {}
+      "socialCards": {},
+      "backgroundType": {
+        "content": "default"
+      }
     },
     "menu": {
       "primaryLinks": {},
@@ -12,77 +15,13 @@
     }
   },
   "slices": {
-    "TextKeywords": {
+    "Hero": {
       "default-slice": {
-        "primary": {}
-      }
-    },
-    "Hero": {},
-    "StickyVideo": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "BorderSlogan": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "NumberTextAction": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "VideoGrid": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "FeatureSlider": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "RevealGrid": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "MarketingSlider": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "ImageCaptionGrid": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "ImageGrid": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "Intersection": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "BorderIconList": {
-      "default-slice": {
-        "items": {},
-        "primary": {}
-      }
-    },
-    "Qualifier": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "PageHeader": {},
-    "TextContainer": {
-      "default-slice": {
-        "primary": {}
+        "primary": {
+          "showHeadline": {
+            "content": false
+          }
+        }
       }
     }
   }

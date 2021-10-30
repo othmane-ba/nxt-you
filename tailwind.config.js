@@ -45,11 +45,44 @@ module.exports = {
       animation: {
         slide: 'slide 1s ease-in-out infinite',
         'ping-slow': 'ping 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite',
+        'gradient-x': 'gradient-x 10s ease-in-out infinite',
+        'gradient-y': 'gradient-y 10s ease-in-out infinite',
+        'gradient-xy': 'gradient-xy 10s ease-in-out infinite',
       },
       keyframes: {
         slide: {
           '0%': { left: '-1px', transform: 'translateX(-100%)' },
           '100%': { left: 'calc(100% + 1px)', transform: 'translateX(0)' },
+        },
+        'gradient-y': {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'center top',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'center center',
+          },
+        },
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
+        'gradient-xy': {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
         },
       },
     },

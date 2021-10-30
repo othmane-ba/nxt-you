@@ -11,6 +11,18 @@
           "placeholder": "unique-identifier-eg-homepage"
         }
       },
+      "backgroundType": {
+        "config": {
+          "label": "Background Type",
+          "placeholder": "Select page background type",
+          "options": [
+            "default",
+            "sphere"
+          ],
+          "default_value": "default"
+        },
+        "type": "Select"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

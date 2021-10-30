@@ -5,11 +5,11 @@
     "slice_type": "reveal_grid",
     "items": [
       {
-        "title": "extend wireless niches",
+        "title": "embrace 24/365 web-readiness",
         "description": [
           {
             "type": "paragraph",
-            "text": "Non laborum labore laboris duis officia laborum in cillum. Nisi irure pariatur velit voluptate.",
+            "text": "Duis elit do ipsum proident excepteur ad cillum ut veniam reprehenderit veniam. Est Lorem proident nisi eiusmod non dolor voluptate exercitation tempor qui proident.",
             "spans": []
           }
         ],
@@ -20,7 +20,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
         },
         "imageFirstReveal": {
           "dimensions": {
@@ -29,9 +29,38 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
         },
         "imageSecond": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+        },
+        "imageSecondReveal": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
+        },
+        "rtl": false
+      },
+      {
+        "title": "leverage one-to-one architectures",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Et ad fugiat adipisicing nulla laboris nulla cillum aliqua ullamco mollit sit ex ad ad.",
+            "spans": []
+          }
+        ],
+        "imageFirst": {
           "dimensions": {
             "width": 900,
             "height": 500
@@ -40,6 +69,24 @@
           "copyright": null,
           "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
         },
+        "imageFirstReveal": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+        },
+        "imageSecond": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"
+        },
         "imageSecondReveal": {
           "dimensions": {
             "width": 900,
@@ -47,20 +94,141 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
         },
         "rtl": true
       },
       {
-        "title": "recontextualize cross-media action-items",
+        "title": "synergize impactful technologies",
         "description": [
           {
             "type": "paragraph",
-            "text": "Ad dolore laborum laborum adipisicing.",
+            "text": "Enim sit quis excepteur. Exercitation ea reprehenderit occaecat aute proident. Magna Lorem quis minim culpa ullamco cillum sint incididunt deserunt consectetur aute.",
             "spans": []
           }
         ],
         "imageFirst": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+        },
+        "imageFirstReveal": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+        },
+        "imageSecond": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+        },
+        "imageSecondReveal": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+        },
+        "rtl": true
+      },
+      {
+        "title": "e-enable efficient infomediaries",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Cupidatat ipsum minim consequat excepteur incididunt veniam amet officia irure ex commodo dolor culpa. Reprehenderit veniam aliqua minim ea excepteur aliqua irure voluptate.",
+            "spans": []
+          }
+        ],
+        "imageFirst": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+        },
+        "imageFirstReveal": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+        },
+        "imageSecond": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+        },
+        "imageSecondReveal": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+        },
+        "rtl": true
+      },
+      {
+        "title": "whiteboard mission-critical blockchains",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Aliquip fugiat et irure consequat fugiat sunt sunt mollit occaecat quis id Lorem.",
+            "spans": []
+          }
+        ],
+        "imageFirst": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+        },
+        "imageFirstReveal": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+        },
+        "imageSecond": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
+        },
+        "imageSecondReveal": {
           "dimensions": {
             "width": 900,
             "height": 500
@@ -69,85 +237,11 @@
           "copyright": null,
           "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
         },
-        "imageFirstReveal": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
-        },
-        "imageSecond": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=900&h=500&fit=crop"
-        },
-        "imageSecondReveal": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
-        },
-        "rtl": false
-      },
-      {
-        "title": "strategize vertical convergence",
-        "description": [
-          {
-            "type": "paragraph",
-            "text": "Minim reprehenderit culpa ullamco. Velit cillum in excepteur tempor consequat cillum ut culpa. Laborum dolor officia Lorem sint minim mollit culpa do adipisicing esse proident nostrud enim.",
-            "spans": []
-          }
-        ],
-        "imageFirst": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
-        },
-        "imageFirstReveal": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
-        },
-        "imageSecond": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
-        },
-        "imageSecondReveal": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
-        },
-        "rtl": false
+        "rtl": true
       }
     ],
     "primary": {
-      "slug": "generate granular relationships"
+      "slug": "implement bricks-and-clicks technologies"
     }
   }
 ]
