@@ -1,59 +1,77 @@
 <template>
   <section class="feature-slider" :id="slice.primary.slug">
     <div
-      class="container mx-auto p-4 lg:p-16 overflow-hidden relative"
+      class="container mx-auto py-4 lg:px-16 overflow-hidden relative"
       v-animate
     >
-      <div
-        class="
-          p-4
-          flex
-          items-center
-          justify-start
-          text-opacity-50 text-white
-          bg-black
-          relative
-          space-x-1
-          z-20
-          w-60
-          justify-items-stretch
-        "
-      >
-        <div
-          class="relative bg-white bg-opacity-50 h-0.5 w-full"
-          v-for="(indicator, i) in slice.items"
-          :key="i"
-          ref="indicator"
-        >
-          <div
-            class="absolute bg-white top-0 left-0 h-full w-0"
-            :class="{ '!w-full': activeIndex >= i }"
-            data-gsap-target="featureSwiper"
-          ></div>
-        </div>
-      </div>
-
       <div>
-        <div class="relative overflow-hidden w-full z-20">
-          <div v-swiper:featureSwiper="options">
-            <div class="swiper-wrapper">
+        <div class="relative overflow-hidden w-full z-20 pt-16 pr-4 lg:pr-0">
+          <div class="flex items-center">
+            <div
+              class="
+                flex flex-col
+                text-opacity-50 text-white
+                relative
+                p-4
+                z-20
+                h-40
+                space-y-2
+                items-center
+              "
+            >
               <div
-                v-for="(feature, index) in slice.items"
-                class="swiper-slide"
-                :key="index"
+                class="relative bg-white bg-opacity-50 flex-grow w-0.5"
+                v-for="(indicator, i) in slice.items"
+                :key="i"
+                ref="indicator"
               >
-                <div class="w-full space-y-8 lg:space-y-16">
-                  <h4 class="title text-center">
-                    {{ feature.title }}
-                  </h4>
+                <div
+                  class="absolute bg-white top-0 left-0 h-0 w-full"
+                  :class="{
+                    '!h-0': activeIndex < i,
+                    '!h-full': activeIndex > i,
+                  }"
+                  data-gsap-target="featureSlider"
+                ></div>
+              </div>
+            </div>
+            <div class="absolute left-0 top-0 w-full overflow-hidden">
+              <div
+                v-simple-parallax="{ overflow: true }"
+                class="
+                  text-7xl
+                  md:text-9xl
+                  leading-none
+                  font-extrabold
+                  bg-clip-text
+                  text-transparent
+                  opacity-50
+                  bg-gradient-to-b
+                  from-white
+                  to-blue-dark
+                  via-blue
+                  tracking-tighter
+                "
+              >
+                {{ slice.items[activeIndex].title }}
+              </div>
+            </div>
 
+            <div v-swiper:featureSlider="options">
+              <div class="swiper-wrapper items-center">
+                <div
+                  v-for="(feature, index) in slice.items"
+                  class="swiper-slide space-y-4 lg:space-y-8"
+                  :key="index"
+                >
                   <div
                     class="
-                      mx-auto
                       max-w-4xl
+                      mx-auto
                       grid grid-cols-1
                       gap-4
                       lg:grid-cols-2 lg:gap-8
+                      relative
                     "
                   >
                     <div>
@@ -83,15 +101,9 @@
                         flex-1 flex flex-col
                         items-center
                         justify-center
-                        border-4 border-transparent
-                        rounded-xl
-                        transition-all
-                        hover:border-gray-100
                         overflow-hidden
-                        p-8
                         space-y-4
                       "
-                      data-pointer="large"
                       v-for="(indicator, j) of [
                         'First',
                         'Second',
@@ -102,7 +114,7 @@
                       :key="index + j"
                     >
                       <img
-                        class="h-14 w-14 mx-auto object-contain swiper-lazy"
+                        class="h-10 w-10 mx-auto object-contain swiper-lazy"
                         :data-src="feature['icon' + indicator].url"
                         :alt="feature['icon' + indicator].alt"
                       />
@@ -127,13 +139,12 @@
             w-full
             h-full
             bg-gradient-to-b
-            via-black
             from-black
             z-10
           "
         >
           <div
-            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80"
+            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60"
           ></div>
         </div>
 
@@ -176,7 +187,6 @@ export default {
       activeIndex: 0,
       options: {
         allowTouchMove: false,
-        loop: true,
         lazy: true,
         effect: 'fade',
         fadeEffect: {
@@ -193,17 +203,17 @@ export default {
       this.clock = this.$gsap
         .timeline({ repeat: -1, paused: false })
         .fromTo(
-          '[data-gsap-target="featureSwiper"]',
+          '[data-gsap-target="featureSlider"]',
           this.slice.primary.autoplaySpeed,
-          { width: '0%' },
-          { width: '100%', ease: 'Linear.easeNone' }
+          { height: '0%' },
+          { height: '100%', ease: 'Linear.easeNone' }
         )
         .add(this.nextSlide.bind(this))
     },
     nextSlide() {
-      const index = this.featureSwiper.realIndex + 1
+      const index = this.featureSlider.realIndex + 1
       this.activeIndex = index < this.slice.items.length ? index : 0
-      this.featureSwiper.slideNext()
+      this.featureSlider.slideTo(this.activeIndex)
     },
   },
 }
