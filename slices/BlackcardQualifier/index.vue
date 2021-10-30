@@ -406,7 +406,7 @@ export default {
       this.overlayActive = true
       try {
         const { data } = await this.$axios.post(
-          '/mail',
+          '/blackcard',
           JSON.stringify(this.qualifier)
         )
         this.error = !data.success
