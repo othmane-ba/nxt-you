@@ -14,7 +14,7 @@
         </li>
         <li class="absolute right-0 bottom-1/2 translate-y-1/2">
           <button
-            class="relative w-14 h-7 pointer-events-auto"
+            class="relative w-12 h-7 pointer-events-auto"
             :class="{ 'menu-active': menuActive }"
             data-pointer="large"
             @click="$nuxt.$emit('toggle-menu', { active: !menuActive })"

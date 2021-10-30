@@ -28,9 +28,9 @@
               justify-center
               w-32
               h-32
-              p-6
+              p-4
               rounded-full
-              border-2 border-blue-dark
+              border-4 border-blue-dark
               overflow-hidden
             "
           >
@@ -99,7 +99,6 @@ export default {
         .to(this.$refs.loaderContent, {
           autoAlpha: 1,
           duration: 0.4,
-          ease: 'Power2.easeInOut',
         })
         .to(this.progress, {
           var: 100,
@@ -111,6 +110,12 @@ export default {
             })
           },
         })
+        .fromTo(
+          '[data-transition-logo]',
+          { autoAlpha: 0, y: 20 },
+          { autoAlpha: 1, y: 0, duration: 1.4 },
+          0
+        )
     },
   },
 }

@@ -14,9 +14,6 @@ export default {
         autoAlpha: 0,
         marginTop: '-20px',
       })
-      /*
-      .fromTo('[data-transition-logo]', { autoAlpha: 0 }, { autoAlpha: 1 })
-*/
       .to('[data-transition-dark]', { height: 0 }, 0.1)
       .to('[data-transition-light]', { height: 0 }, 0.5)
       .to(
@@ -30,24 +27,22 @@ export default {
       )
 
     onPageLeave = tl()
-      .to(
-        '[data-transition-layout]',
-        {
-          autoAlpha: 0,
-          marginTop: '-20px',
-          ease: 'Power3.easeOut',
-        },
-        0.4
-      )
+      .set('[data-transition-logo]', { autoAlpha: 0, y: 20 })
+      .to('[data-transition-layout]', {
+        autoAlpha: 0,
+        marginTop: '-20px',
+        ease: 'Power3.easeOut',
+      })
+      .to('[data-transition-logo]', { autoAlpha: 1, y: 0 }, 0.8)
       .to(
         '[data-transition-dark]',
         { transformOrigin: 'bottom', height: '100vh' },
-        0.8
+        0.4
       )
       .to(
         '[data-transition-light]',
         { transformOrigin: 'bottom', height: '100vh' },
-        0.4
+        0
       )
   },
   transition: {
