@@ -176,9 +176,9 @@
                     <input
                       data-pointer="small"
                       id="email"
+                      type="text"
                       name="name"
                       v-model.trim="$v.qualifier.email.$model"
-                      type="email"
                       placeholder="E-Mail Adresse"
                       :class="{
                         'border-red-600 placeholder-red-600':

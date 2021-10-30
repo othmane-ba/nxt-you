@@ -22,7 +22,7 @@
           "
         >
           <img
-            class="w-40"
+            class="w-28"
             data-not-lazy
             alt="NXTYOU Logo"
             src="~/assets/images/logo.png"

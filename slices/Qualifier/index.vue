@@ -120,7 +120,7 @@
                       d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <p>Die Nachricht wurde erfolgreich übermittelt.</p>
+                  <p>Die Anfrage wurde erfolgreich verschickt.</p>
                   <div
                     class="
                       flex
@@ -166,7 +166,7 @@
                     id="email"
                     name="name"
                     v-model.trim="$v.qualifier.email.$model"
-                    type="email"
+                    type="text"
                     placeholder="E-Mail Adresse"
                     :class="{
                       'border-red-600 placeholder-red-600':
@@ -213,9 +213,9 @@
                     }"
                   />
                 </div>
-                <div class="lg:col-span-2">
+                <div class="form-group lg:col-span-2 w-full overflow-hidden">
                   <div class="text-left pl-2 pb-4">Budgetvorstellung</div>
-                  <div class="pb-8">
+                  <div class="pb-12">
                     <RangeSlider
                       v-model.trim="$v.qualifier.budget.$model"
                       :lowerLimit="slice.primary.budgetLowerLimit"

@@ -15,9 +15,12 @@
               <div
                 class="
                   absolute
-                  top-0
-                  left-0
+                  top-1/2
+                  left-1/2
+                  transform
+                  -translate-y-1/2 -translate-x-1/2
                   w-full
+                  max-w-sm
                   h-full
                   lg:relative
                   block
@@ -74,12 +77,12 @@
                 </ul>
               </div>
 
-              <div class="grid lg:grid-cols-2 gap-4">
+              <div class="grid lg:grid-cols-2 gap-8">
                 <div class="">
                   <ul class="">
                     <li v-for="secondaryLink in menuData.secondaryLinks">
                       <NuxtLink
-                        class="link"
+                        class="link text-xs lg:text-base"
                         :to="secondaryLink.link.uid || '/'"
                         >{{ secondaryLink.label }}</NuxtLink
                       >
@@ -155,8 +158,30 @@
                 </a>
               </li>
               <li class="">
-                <a href="mailto:info@nxtyou.de" class="link text-sm">
-                  info@nxtyou.de
+                <a
+                  class="
+                    block
+                    transition-opacity
+                    ease-in-out
+                    duration-500
+                    hover:opacity-75
+                  "
+                  data-pointer="right"
+                  href="mailto:info@nxtyou.de"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                  >
+                    <path
+                      d="M0 2v13h17v-13h-17zM8.494 9.817l-6.896-6.817h13.82l-6.924 6.817zM5.755 8.516l-4.755 4.682v-9.383l4.755 4.701zM6.466 9.219l2.026 2.003 1.996-1.966 4.8 4.744h-13.677l4.855-4.781zM11.201 8.555l4.799-4.725v9.467l-4.799-4.742z"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <span class="sr-only">Email</span>
                 </a>
               </li>
             </ul>

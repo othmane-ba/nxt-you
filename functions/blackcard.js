@@ -29,8 +29,8 @@ exports.handler = function (event, context, callback) {
 
   const mailOptions = {
     from: form.email,
-    to: 'fabianpiper@web.de',
-    subject: `[nxtyou.de Blackcard Membership] Anfrage von ${form.name}`,
+    to: 'info@nxtyou.de',
+    subject: `[nxtyou.de] Blackcard Membership Anfrage von ${form.name}`,
     html: `
     <h1>Blackcard Membership Anfrage von ${form.name}</h1>
   <table style="border-collapse: collapse;"    >
