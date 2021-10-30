@@ -25,20 +25,26 @@ export default {
         },
         0.5
       )
+      .to('body', { position: 'static', overflowY: 'auto' })
 
     onPageLeave = tl()
       .set('[data-transition-logo]', { autoAlpha: 0, y: 20 })
-      .to('[data-transition-layout]', {
-        autoAlpha: 0,
-        marginTop: '-20px',
-        ease: 'Power3.easeOut',
-      })
+      .to(
+        '[data-transition-layout]',
+        {
+          autoAlpha: 0,
+          marginTop: '-20px',
+          ease: 'Power3.easeOut',
+        },
+        0
+      )
       .to('[data-transition-logo]', { autoAlpha: 1, y: 0 }, 0.8)
       .to(
         '[data-transition-dark]',
         { transformOrigin: 'bottom', height: '100vh' },
         0.4
       )
+      .to('body', { position: 'fixed', overflowY: 'scroll' })
       .to(
         '[data-transition-light]',
         { transformOrigin: 'bottom', height: '100vh' },

@@ -138,7 +138,7 @@ export default {
 
 <style scoped lang="postcss">
 .pointer {
-  @apply box-border w-2.5 h-2.5 fixed top-2/4 -left-2/4 transform -translate-x-2/4 -translate-y-2/4 rounded-full overflow-hidden bg-blue-light pointer-events-none z-50 transition-size duration-500 ease-out-expo;
+  @apply box-border w-2.5 h-2.5 fixed top-2/4 -left-2/4 transform -translate-x-2/4 -translate-y-2/4 rounded-full overflow-hidden bg-blue-light pointer-events-none z-70 transition-size duration-500 ease-out-expo;
 }
 
 .pointer--large {

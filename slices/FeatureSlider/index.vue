@@ -1,22 +1,11 @@
 <template>
   <section class="feature-slider" :id="slice.primary.slug">
     <div
-      class="container mx-auto py-4 lg:px-16 overflow-hidden relative"
+      class="container mx-auto py-8 lg:px-16 overflow-hidden relative"
       v-animate
     >
       <div>
-        <div
-          class="
-            relative
-            overflow-hidden
-            w-full
-            z-20
-            pt-12
-            md:pt-32
-            pr-4
-            lg:pr-0
-          "
-        >
+        <div class="relative overflow-hidden w-full z-20 pr-4 lg:pr-0">
           <div class="flex items-center">
             <div
               class="
@@ -24,6 +13,7 @@
                 text-opacity-50 text-white
                 relative
                 p-4
+                lg:pr-20
                 z-20
                 h-40
                 space-y-2
@@ -46,53 +36,29 @@
                 ></div>
               </div>
             </div>
-            <div class="absolute left-0 top-0 w-full overflow-hidden">
-              <div
-                v-simple-parallax="{ overflow: true }"
-                class="
-                  text-7xl
-                  md:text-9xl
-                  leading-none
-                  font-extrabold
-                  bg-clip-text
-                  text-transparent
-                  opacity-50
-                  bg-gradient-to-b
-                  from-white
-                  to-blue-dark
-                  via-blue
-                  tracking-tighter
-                "
-              >
-                {{ slice.items[activeIndex].title }}
-              </div>
-            </div>
-
             <div v-swiper:featureSlider="options">
               <div class="swiper-wrapper items-center">
                 <div
                   v-for="(feature, index) in slice.items"
-                  class="swiper-slide space-y-4 lg:space-y-8"
+                  class="swiper-slide space-y-8"
                   :key="index"
                 >
-                  <div
-                    class="
-                      max-w-4xl
-                      mx-auto
-                      grid grid-cols-1
-                      gap-4
-                      lg:grid-cols-2 lg:gap-8
-                      relative
-                    "
-                  >
+                  <div class="max-w-4xl mx-auto relative space-y-8">
                     <div>
-                      <prismic-rich-text
-                        class="font-bold uppercase lg:text-2xl"
-                        :field="feature.subtitle"
-                      />
+                      <h4 class="title text-center">
+                        {{ feature.title }}
+                      </h4>
                     </div>
-                    <div>
-                      <prismic-rich-text :field="feature.description" />
+                    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
+                      <div>
+                        <prismic-rich-text
+                          class="font-bold uppercase lg:text-2xl"
+                          :field="feature.subtitle"
+                        />
+                      </div>
+                      <div>
+                        <prismic-rich-text :field="feature.description" />
+                      </div>
                     </div>
                   </div>
                   <ul
@@ -103,7 +69,7 @@
                       md:grid-cols-3
                       lg:grid-cols-5
                       z-10
-                      gap-4
+                      gap-8
                     "
                   >
                     <li
@@ -114,6 +80,8 @@
                         justify-center
                         overflow-hidden
                         space-y-4
+                        px-4
+                        lg:py-4
                       "
                       v-for="(indicator, j) of [
                         'First',
@@ -130,7 +98,7 @@
                         :alt="feature['icon' + indicator].alt"
                       />
 
-                      <div class="text-center uppercase font-bold">
+                      <div class="text-center uppercase font-bold text-sm">
                         <span class="break-words">
                           {{ feature['text' + indicator] }}
                         </span>
@@ -155,7 +123,7 @@
           "
         >
           <div
-            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60"
+            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-90"
           ></div>
         </div>
 

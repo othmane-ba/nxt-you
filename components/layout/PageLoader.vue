@@ -21,27 +21,13 @@
             -translate-x-1/2 -translate-y-1/2
           "
         >
-          <div
-            class="
-              flex
-              items-center
-              justify-center
-              w-32
-              h-32
-              p-4
-              rounded-full
-              border-4 border-blue-dark
-              overflow-hidden
-            "
-          >
-            <img
-              data-transition-logo
-              class="w-full"
-              data-not-lazy
-              alt="NXTYOU Logo"
-              src="~/assets/images/logo.png"
-            />
-          </div>
+          <img
+            data-transition-logo
+            class="w-24"
+            data-not-lazy
+            alt="NXTYOU Logo"
+            src="~/assets/images/logo.png"
+          />
         </div>
         <div
           class="
@@ -96,6 +82,7 @@ export default {
           paused: true,
           defaults: { delay: 0.1, ease: 'Power2.easeInOut' },
         })
+        .set('body', { position: 'fixed', overflowY: 'scroll' })
         .to(this.$refs.loaderContent, {
           autoAlpha: 1,
           duration: 0.4,
