@@ -5,20 +5,26 @@
     "slice_type": "video_grid",
     "items": [
       {
-        "video": "transition scalable e-tailers"
+        "video": "seize B2C experiences"
       },
       {
-        "video": "evolve enterprise paradigms"
+        "video": "reinvent bricks-and-clicks e-tailers"
       },
       {
-        "video": "deploy dynamic blockchains"
+        "video": "streamline clicks-and-mortar e-business"
       },
       {
-        "video": "harness value-added networks"
+        "video": "maximize next-generation action-items"
+      },
+      {
+        "video": "deploy cross-platform web services"
+      },
+      {
+        "video": "exploit B2B content"
       }
     ],
     "primary": {
-      "slug": "leverage intuitive experiences"
+      "slug": "optimize sexy platforms"
     }
   }
 ]

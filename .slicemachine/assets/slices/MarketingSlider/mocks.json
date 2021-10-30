@@ -5,11 +5,11 @@
     "slice_type": "marketing_slider",
     "items": [
       {
-        "title": "aggregate wireless eyeballs",
+        "title": "harness best-of-breed paradigms",
         "description": [
           {
             "type": "paragraph",
-            "text": "Esse elit ullamco laboris aute sit sunt ullamco duis. Sunt tempor laborum laborum consequat laboris aliqua. Incididunt irure proident excepteur sit cillum laborum elit adipisicing ad voluptate ex laboris nulla.",
+            "text": "Labore pariatur excepteur adipisicing magna. Cillum cupidatat eu tempor sint pariatur commodo aliquip duis incididunt anim aute commodo est aliquip nulla.",
             "spans": []
           }
         ],
@@ -20,16 +20,16 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
         },
-        "video": "reinvent web-enabled convergence"
+        "video": "disintermediate B2C niches"
       },
       {
-        "title": "empower bleeding-edge metrics",
+        "title": "grow one-to-one ROI",
         "description": [
           {
             "type": "paragraph",
-            "text": "Excepteur qui voluptate minim do ut irure sit ea.",
+            "text": "Dolor consectetur sit culpa ipsum qui esse irure aliquip nulla est. Velit irure commodo cupidatat ad ut anim incididunt ea occaecat cillum.",
             "spans": []
           }
         ],
@@ -40,34 +40,14 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
         },
-        "video": "transition ubiquitous synergies"
-      },
-      {
-        "title": "strategize mission-critical partnerships",
-        "description": [
-          {
-            "type": "paragraph",
-            "text": "Aliquip fugiat dolor anim do ullamco irure adipisicing.",
-            "spans": []
-          }
-        ],
-        "image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
-        },
-        "video": "leverage integrated portals"
+        "video": "maximize revolutionary web-readiness"
       }
     ],
     "primary": {
-      "slice": "reinvent value-added networks",
-      "autoplaySpeed": 6233
+      "slice": "evolve global vortals",
+      "autoplaySpeed": 1154
     }
   }
 ]

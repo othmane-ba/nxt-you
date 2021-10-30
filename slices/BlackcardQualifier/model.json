@@ -1,0 +1,93 @@
+{
+  "id": "blackcard_qualifier",
+  "type": "SharedSlice",
+  "name": "BlackcardQualifier",
+  "description": "BlackcardQualifier",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BlackcardQualifier",
+      "primary": {
+        "slug": {
+          "config": {
+            "label": "Slug",
+            "placeholder": "Scroll target for this slice"
+          },
+          "type": "Text"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": "Section title"
+          },
+          "type": "Text"
+        },
+        "tagStepTitle": {
+          "config": {
+            "label": "Tag Step Title",
+            "placeholder": "Title of first step (Tag Step)"
+          },
+          "type": "Text"
+        },
+        "tagDescription": {
+          "config": {
+            "label": "Tag Step Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "contactStepTitle": {
+          "config": {
+            "label": "Contact Step Title",
+            "placeholder": "Title of second step (Contact Step)"
+          },
+          "type": "Text"
+        },
+        "contactDescription": {
+          "config": {
+            "label": "Contact Step Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "prevLabel": {
+          "config": {
+            "label": "Previous Label",
+            "placeholder": "Text of previous step indicator"
+          },
+          "type": "Text"
+        },
+        "nextLabel": {
+          "config": {
+            "label": "Next Label",
+            "placeholder": "Text of next step indicator"
+          },
+          "type": "Text"
+        },
+        "submitLabel": {
+          "config": {
+            "label": "Submit Label",
+            "placeholder": "Text of Submit Button"
+          },
+          "type": "Text"
+        }
+      },
+      "items": {
+        "tag": {
+          "config": {
+            "label": "Tag",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

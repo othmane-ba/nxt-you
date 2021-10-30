@@ -51,6 +51,9 @@
             },
             "qualifier": {
               "type": "SharedSlice"
+            },
+            "blackcard_qualifier": {
+              "type": "SharedSlice"
             }
           }
         }

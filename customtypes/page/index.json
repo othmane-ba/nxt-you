@@ -75,6 +75,9 @@
             },
             "video_grid": {
               "type": "SharedSlice"
+            },
+            "blackcard_qualifier": {
+              "type": "SharedSlice"
             }
           }
         }

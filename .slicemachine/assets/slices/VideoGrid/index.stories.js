@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"video_grid","items":[{"video":"transition scalable e-tailers"},{"video":"evolve enterprise paradigms"},{"video":"deploy dynamic blockchains"},{"video":"harness value-added networks"}],"primary":{"slug":"leverage intuitive experiences"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"video_grid","items":[{"video":"seize B2C experiences"},{"video":"reinvent bricks-and-clicks e-tailers"},{"video":"streamline clicks-and-mortar e-business"},{"video":"maximize next-generation action-items"},{"video":"deploy cross-platform web services"},{"video":"exploit B2B content"}],"primary":{"slug":"optimize sexy platforms"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

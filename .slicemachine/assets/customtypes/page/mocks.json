@@ -1,13 +1,13 @@
 {
-  "id": "6c66f412-5726-42ec-9fd7-5635073d65e3",
-  "uid": "ipsum-in-et",
+  "id": "cbfe01e5-9dff-49e1-a1e3-665d887d5ab2",
+  "uid": "similique-illo-optio",
   "type": "page",
   "data": {
     "backgroundType": "default",
-    "metaTitle": "synergize scalable experiences",
-    "metaDescription": "deliver granular infomediaries",
-    "breadcrumbTitle": "enhance out-of-the-box blockchains",
-    "crawlable": true,
+    "metaTitle": "syndicate B2B models",
+    "metaDescription": "strategize sexy users",
+    "breadcrumbTitle": "optimize intuitive e-tailers",
+    "crawlable": false,
     "socialCards": [
       {
         "socialCardImage": {
@@ -17,10 +17,10 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
         },
-        "socialCardTitle": "reinvent clicks-and-mortar partnerships",
-        "socialCardDescription": "deploy synergistic methodologies"
+        "socialCardTitle": "matrix customized vortals",
+        "socialCardDescription": "transition out-of-the-box communities"
       },
       {
         "socialCardImage": {
@@ -30,10 +30,10 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"
         },
-        "socialCardTitle": "reintermediate plug-and-play supply-chains",
-        "socialCardDescription": "incubate intuitive action-items"
+        "socialCardTitle": "innovate enterprise synergies",
+        "socialCardDescription": "seize virtual experiences"
       },
       {
         "socialCardImage": {
@@ -43,10 +43,10 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
         },
-        "socialCardTitle": "redefine synergistic infrastructures",
-        "socialCardDescription": "grow leading-edge metrics"
+        "socialCardTitle": "whiteboard viral e-tailers",
+        "socialCardDescription": "whiteboard compelling interfaces"
       },
       {
         "socialCardImage": {
@@ -56,10 +56,36 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
         },
-        "socialCardTitle": "enable mission-critical niches",
-        "socialCardDescription": "streamline front-end architectures"
+        "socialCardTitle": "morph enterprise networks",
+        "socialCardDescription": "seize collaborative ROI"
+      },
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "grow viral infrastructures",
+        "socialCardDescription": "extend killer content"
+      },
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "enable back-end channels",
+        "socialCardDescription": "facilitate intuitive eyeballs"
       }
     ]
   }
