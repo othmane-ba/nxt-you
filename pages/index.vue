@@ -1,8 +1,9 @@
 <template>
   <div>
     <Sphere></Sphere>
-    <div>
+    <div data-transition-layout>
       <SliceZone type="homepage" queryType="single" />
+      <Footer></Footer>
     </div>
   </div>
 </template>

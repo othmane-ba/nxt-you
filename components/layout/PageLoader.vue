@@ -80,9 +80,8 @@ export default {
       this.tlLoaderInit = this.$gsap
         .timeline({
           paused: true,
-          defaults: { delay: 0.1, ease: 'Power2.easeInOut' },
+          defaults: { delay: 0.1, ease: 'Power3.easeInOut' },
         })
-        .set('body', { position: 'fixed', overflowY: 'scroll' })
         .to(this.$refs.loaderContent, {
           autoAlpha: 1,
           duration: 0.4,
@@ -99,7 +98,7 @@ export default {
         })
         .fromTo(
           '[data-transition-logo]',
-          { autoAlpha: 0, y: 20 },
+          { autoAlpha: 0, y: 40 },
           { autoAlpha: 1, y: 0, duration: 1.4 },
           0
         )

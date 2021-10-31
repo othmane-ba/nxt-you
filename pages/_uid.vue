@@ -1,8 +1,9 @@
 <template>
   <div>
     <Sphere v-if="page.data.backgroundType === 'sphere'"></Sphere>
-    <div>
+    <div data-transition-layout>
       <SliceZone type="page" :uid="$route.params.uid" />
+      <Footer></Footer>
     </div>
   </div>
 </template>

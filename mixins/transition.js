@@ -12,28 +12,27 @@ export default {
     onPageEnter = tl()
       .set('[data-transition-layout]', {
         autoAlpha: 0,
-        marginTop: '-20px',
+        y: 40,
       })
       .to('[data-transition-dark]', { height: 0 }, 0.1)
+      .to('[data-transition-logo]', { autoAlpha: 0, y: 40 }, 0)
       .to('[data-transition-light]', { height: 0 }, 0.5)
       .to(
         '[data-transition-layout]',
         {
           autoAlpha: 1,
-          marginTop: 0,
-          ease: 'Power3.easeIn',
+          y: 0,
         },
-        0.5
+        0.8
       )
-      .to('body', { position: 'static', overflowY: 'auto' })
 
     onPageLeave = tl()
-      .set('[data-transition-logo]', { autoAlpha: 0, y: 20 })
+      .set('[data-transition-logo]', { autoAlpha: 0, y: 40 })
       .to(
         '[data-transition-layout]',
         {
           autoAlpha: 0,
-          marginTop: '-20px',
+          y: 80,
           ease: 'Power3.easeOut',
         },
         0
@@ -44,7 +43,6 @@ export default {
         { transformOrigin: 'bottom', height: '100vh' },
         0.4
       )
-      .to('body', { position: 'fixed', overflowY: 'scroll' })
       .to(
         '[data-transition-light]',
         { transformOrigin: 'bottom', height: '100vh' },

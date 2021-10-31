@@ -4,10 +4,7 @@
     <Pointer />
     <Header></Header>
     <HeaderMenu></HeaderMenu>
-    <div data-transition-layout>
-      <Nuxt />
-      <Footer></Footer>
-    </div>
+    <Nuxt />
     <CookieHint></CookieHint>
   </div>
 </template>
