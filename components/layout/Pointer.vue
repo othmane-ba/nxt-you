@@ -140,7 +140,7 @@ export default {
 
 <style scoped lang="postcss">
 .pointer {
-  @apply box-border w-2.5 h-2.5 fixed top-2/4 -left-2/4 transform -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden bg-blue-light pointer-events-none z-70 transition-all duration-500 ease-out-expo;
+  @apply box-border w-2.5 h-2.5 fixed top-2/4 -left-2/4 transform -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden bg-blue-light pointer-events-none z-70 transition-size duration-500 ease-out-expo;
 }
 
 [data-pointer='initial'] .pointer {
