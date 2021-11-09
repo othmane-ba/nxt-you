@@ -1,10 +1,5 @@
 <template>
-  <div data-pointer="initial">
-    <embed
-      src="/NXTYOU_Capetown.pdf"
-      class="relative top-0 left-0 w-screen h-screen z-60"
-    />
-  </div>
+  <PDFObject path="/NXTYOU_Capetown.pdf"></PDFObject>
 </template>
 
 <script>

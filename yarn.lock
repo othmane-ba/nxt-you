@@ -12383,6 +12383,11 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+pdfobject@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/pdfobject/-/pdfobject-2.2.7.tgz#487ec2ab425c9385f2d80eea5890d632f503cac2"
+  integrity sha512-9ptX0XNCtpYz0hNWz6j/1O4rvJkcPR2rct3UDBhs8ZEosOO67dCEAu4VpBvVJ64SMh8Mrn9pWWODnyLjgFQYgg==
+
 pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
