@@ -78,6 +78,9 @@
             },
             "blackcard_qualifier": {
               "type": "SharedSlice"
+            },
+            "pdf_object": {
+              "type": "SharedSlice"
             }
           }
         }

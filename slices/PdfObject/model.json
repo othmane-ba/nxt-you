@@ -1,0 +1,26 @@
+{
+  "id": "pdf_object",
+  "type": "SharedSlice",
+  "name": "PdfObject",
+  "description": "PdfObject",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PdfObject",
+      "primary": {
+        "media": {
+          "config": {
+            "label": "Media",
+            "placeholder": "PDF File",
+            "select": "media"
+          },
+          "type": "Link"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

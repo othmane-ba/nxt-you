@@ -1,0 +1,14 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "pdf_object",
+    "items": [],
+    "primary": {
+      "media": {
+        "link_type": "media",
+        "url": "https://source.unsplash.com/daily"
+      }
+    }
+  }
+]

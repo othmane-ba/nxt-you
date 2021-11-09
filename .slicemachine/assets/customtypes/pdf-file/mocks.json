@@ -1,0 +1,52 @@
+{
+  "id": "b9c0e726-30d8-4e11-8a02-1a97887c7b2c",
+  "uid": "consequatur-illum-ex",
+  "type": "pdf-file",
+  "data": {
+    "metaTitle": "transition ubiquitous applications",
+    "metaDescription": "deliver collaborative channels",
+    "breadcrumbTitle": "architect customized content",
+    "crawlable": true,
+    "socialCards": [
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "strategize seamless markets",
+        "socialCardDescription": "transform cutting-edge schemas"
+      },
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "empower cross-media e-tailers",
+        "socialCardDescription": "brand transparent interfaces"
+      },
+      {
+        "socialCardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+        },
+        "socialCardTitle": "streamline scalable e-tailers",
+        "socialCardDescription": "synthesize wireless schemas"
+      }
+    ]
+  }
+}

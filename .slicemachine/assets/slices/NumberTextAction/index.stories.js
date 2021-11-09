@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"number_text_action","items":[],"primary":{"title":"deliver wireless blockchains","description":[{"type":"paragraph","text":"Ipsum nostrud velit eiusmod enim laborum Lorem duis nostrud fugiat ea proident.","spans":[]}],"number":9034,"rtl":true,"buttonLabel":"maximize global interfaces","buttonLink":"enhance 24/7 e-tailers"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"number_text_action","items":[],"primary":{"title":"transform strategic supply-chains","description":[{"type":"paragraph","text":"Et cillum pariatur aute.","spans":[]}],"number":4038,"rtl":false,"buttonLabel":"monetize vertical web services","buttonLink":"target distributed e-tailers"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
