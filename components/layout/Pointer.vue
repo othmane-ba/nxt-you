@@ -1,9 +1,5 @@
 <template>
-  <transition
-    enter-active-class="transition-size duration-1000 delay-500 ease-out-expo"
-    enter-class="w-0 h-0"
-    mode="out-in"
-  >
+  <div>
     <div
       v-show="active"
       class="pointer"
@@ -42,7 +38,8 @@
         />
       </svg>
     </div>
-  </transition>
+    <slot></slot>
+  </div>
 </template>
 
 <script>
@@ -117,7 +114,10 @@ export default {
       ),
     ]
 
-    if (this.$device.isDesktop) {
+    if (
+      this.$device.isDesktop &&
+      !document.querySelectorAll('[data-pointer="initial"]').length > 0
+    ) {
       this.active = true
       document.addEventListener('mousemove', (event) => {
         this.mouseX = event.clientX
@@ -125,6 +125,8 @@ export default {
 
         events.forEach((e) => e.init())
       })
+    } else {
+      this.active = false
     }
   },
 }
@@ -138,7 +140,11 @@ export default {
 
 <style scoped lang="postcss">
 .pointer {
-  @apply box-border w-2.5 h-2.5 fixed top-2/4 -left-2/4 transform -translate-x-2/4 -translate-y-2/4 rounded-full overflow-hidden bg-blue-light pointer-events-none z-70 transition-size duration-500 ease-out-expo;
+  @apply box-border w-2.5 h-2.5 fixed top-2/4 -left-2/4 transform -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden bg-blue-light pointer-events-none z-70 transition-all duration-500 ease-out-expo;
+}
+
+[data-pointer='initial'] .pointer {
+  @apply hidden;
 }
 
 .pointer--large {

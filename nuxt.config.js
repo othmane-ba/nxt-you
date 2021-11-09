@@ -4,6 +4,8 @@ import Prismic from '@prismicio/client'
 
 const { getStoriesPaths } = require('slice-machine-ui/helpers/storybook')
 
+const specialPages = ['/capetown']
+
 const getPages = async () => {
   const allPages = await Prismic.getApi(process.env.PRISMIC_API_URL)
     .then((api) =>
@@ -159,7 +161,10 @@ export default async () => {
     },
 
     generate: {
-      routes: allPages.map((p) => (p.uid ? `/${p.uid}` : '/')),
+      routes: [
+        ...allPages.map((p) => (p.uid ? `/${p.uid}` : '/')),
+        ...specialPages,
+      ],
     },
 
     cloudinary: {

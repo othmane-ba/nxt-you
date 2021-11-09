@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _cb861f22 = () => interopDefault(import('.\\prismic\\pages\\preview.vue' /* webpackChunkName: "" */))
+const _0b60a2d0 = () => interopDefault(import('..\\pages\\capetown.vue' /* webpackChunkName: "pages/capetown" */))
 const _1bbb24a2 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _e721a478 = () => interopDefault(import('..\\pages\\_uid.vue' /* webpackChunkName: "pages/_uid" */))
 
@@ -23,6 +24,10 @@ export const routerOptions = {
     path: "/preview",
     component: _cb861f22,
     name: "prismic-preview"
+  }, {
+    path: "/capetown",
+    component: _0b60a2d0,
+    name: "capetown"
   }, {
     path: "/",
     component: _1bbb24a2,

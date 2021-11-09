@@ -1,10 +1,9 @@
 <template>
   <div>
     <PageLoader />
-    <Pointer />
     <Header></Header>
     <HeaderMenu></HeaderMenu>
-    <Nuxt />
+    <Pointer> <Nuxt /> </Pointer>
     <CookieHint></CookieHint>
   </div>
 </template>

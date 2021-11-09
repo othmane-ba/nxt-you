@@ -7,6 +7,14 @@
     "_name": "_cb861f22"
   },
   {
+    "name": "capetown",
+    "path": "/capetown",
+    "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\capetown.vue",
+    "chunkName": "pages/capetown",
+    "url": "/capetown",
+    "_name": "_0b60a2d0"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\fabia\\\\WebstormProjects\\\\nxt-you\\\\pages\\\\index.vue",
