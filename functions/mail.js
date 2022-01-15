@@ -1,4 +1,6 @@
 require('dotenv').config()
+const nodemailer = require('nodemailer')
+const smtpTransport = require('nodemailer-smtp-transport')
 
 const formatTags = (tags) => {
   return tags.join(', ').replace(/, ([^,]*)$/, ', $1')
@@ -6,8 +8,6 @@ const formatTags = (tags) => {
 
 exports.handler = function (event, context, callback) {
   console.log('called mail.js')
-  const nodemailer = require('nodemailer')
-  const smtpTransport = require('nodemailer-smtp-transport')
 
   const transporter = nodemailer.createTransport(
     smtpTransport({

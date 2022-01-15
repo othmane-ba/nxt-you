@@ -38,7 +38,7 @@
                   muted
                   loop
                   autoplay
-                  :width="1000"
+                  :width="1200"
                   :lazyOptions="{ use_native: true }"
                 ></TheVideo>
               </div>
@@ -113,6 +113,8 @@
 </template>
 
 <script>
+import enterView from 'enter-view'
+
 export default {
   name: 'MarketingSlider',
   props: {

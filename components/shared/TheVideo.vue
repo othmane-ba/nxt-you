@@ -41,7 +41,7 @@ export default {
   methods: {
     cnySrc(format) {
       return this.$cloudinary.video.url(this.publicId, {
-        crop: 'scale',
+        crop: 'crop',
         width: this.width,
         format,
       })
