@@ -125,6 +125,7 @@ export default async () => {
       '~/plugins/vuelidate.js',
       '~/plugins/jsonld.js',
       '~/plugins/vue-gtag.client.js',
+      '~/plugins/hotjar.js',
       '~/plugins/animate.client.js',
       '~/plugins/lazy-load.client.js',
     ],
